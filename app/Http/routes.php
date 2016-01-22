@@ -12,8 +12,90 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('about', function()
+{
+    return View::make('about');
+});
+
+Route::get('contact', function()
+{
+    return View::make('contact');
+});
+
+Route::get('accomodation', function()
+{
+    return View::make('accomodation');
+});
+
+Route::get('accomodation2', function()
+{
+    return View::make('accomodation2');
+});
+
+Route::get('blog', function()
+{
+    return View::make('blog');
+});
+
+
+Route::get('blog-post', function()
+{
+    return View::make('blog-post');
+});
+
+Route::get('faqs', function()
+{
+    return View::make('faqs');
+});
+
+Route::get('gallery', function()
+{
+    return View::make('gallery');
+});
+
+Route::get('guest-book', function()
+{
+    return View::make('guest-book');
+});
+
+Route::get('location', function()
+{
+    return View::make('location');
+});
+
+Route::get('restaurent', function()
+{
+    return View::make('restaurent');
+});
+
+Route::get('room', function()
+{
+    return View::make('room');
+});
+
+Route::get('room2', function()
+{
+    return View::make('room2');
+});
+
+Route::get('single', function()
+{
+    return View::make('single');
+});
+
+Route::get('sitemap', function()
+{
+    return View::make('sitemap');
+});
+
+Route::get('specials', function()
+{
+    return View::make('specials');
+});
+
 
 /*
 |--------------------------------------------------------------------------
