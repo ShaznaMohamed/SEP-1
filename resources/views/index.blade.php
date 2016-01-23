@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-<!-- Base Hotel: HTML Template by Klaye Morrison (http://klayemorrison.com) -->
 <html>
 <head>
 <meta charset="utf-8">
