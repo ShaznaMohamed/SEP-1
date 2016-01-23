@@ -32,7 +32,7 @@ if(empty($_POST['booking-phone'])){
 
 if($continue===true){
 		
-	require 'system/email/phpmailer/PHPMailerAutoload.php';
+	require '/email/phpmailer/PHPMailerAutoload.php';
 	
 	// Hotel Details
 	
@@ -41,7 +41,7 @@ if($continue===true){
 	
 	// Send Email to Hotel
 	
-	$message = file_get_contents('system/email/template-hotel-reservation.php');
+	$message = file_get_contents('/email/template-hotel-reservation.php');
 	$message = str_replace('[date]', $_POST['booking-date'], $message);
 	$message = str_replace('[people]', $_POST['booking-people'], $message);
 	$message = str_replace('[name]', $_POST['booking-name'], $message);
@@ -72,16 +72,16 @@ else {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>themelock.com - Base Hotel - Restaurant</title>
-<link rel="stylesheet" href="system/css/global.css">
-<link class="colour" rel="stylesheet" href="system/css/colour-blue.css">
-<link class="pattern" rel="stylesheet" href="system/css/pattern-china.css">
+<link rel="stylesheet" href="/css/global.css">
+<link class="colour" rel="stylesheet" href="/css/colour-blue.css">
+<link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
 <!-- Navigation | START -->
 <div id="nav">
     <div class="centre">
-        <a href="index.html" class="logo"><img alt="" src="system/images/logo.png" /></a>
+        <a href="index.html" class="logo"><img alt="" src="/images/logo.png" /></a>
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
@@ -573,7 +573,7 @@ else {
     </div>
 </div>
 <!-- Promo Popup | END -->
-<script src="system/js/plugins.js"></script>
-<script src="system/js/global.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/global.js"></script>
 </body>
 </html>

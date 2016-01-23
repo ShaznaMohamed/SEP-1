@@ -5,16 +5,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>themelock.com - Base Hotel - Experience Luxury</title>
-<link rel="stylesheet" href="system/css/global.css">
-<link class="colour" rel="stylesheet" href="/system/css/colour-blue.css">
-<link class="pattern" rel="stylesheet" href="/system/css/pattern-china.css">
+<link rel="stylesheet" href="/css/global.css">
+<link class="colour" rel="stylesheet" href="/css/colour-gold.css">
+<link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body class="home2 fullwidth">
 <!-- Navigation | START -->
 <div id="nav">
     <div class="centre">
-        <a href="index.html" class="logo"><img alt="" src="system/images/logo.png" /></a>
+        <a href="index.html" class="logo"><img alt="" src="/images/logo.png" /></a>
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
@@ -52,7 +52,7 @@
                         <li><a class="promopopup">Promo Popup</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.php">Contact</a></li>
+                <li>{{ Html::link('about', 'About Us') }}</li>
             </ul>
             <a id="pull"><i class="fa fa-bars"></i></a>
         </nav>
@@ -290,7 +290,7 @@
     </div>
 </div>
 <!-- Promo Popup | END -->
-<script src="system/js/plugins.js"></script>
-<script src="system/js/global.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/global.js"></script>
 </body>
 </html>

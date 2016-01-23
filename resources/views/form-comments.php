@@ -24,7 +24,7 @@ if(empty($_POST['comment-message'])){
 
 if($continue===true){
 		
-	require 'system/email/phpmailer/PHPMailerAutoload.php';
+	require '/email/phpmailer/PHPMailerAutoload.php';
 	
 	// Hotel Details
 	
@@ -33,7 +33,7 @@ if($continue===true){
 	
 	// Send Email to Hotel
 	
-	$message = file_get_contents('system/email/template-hotel-comment.php');
+	$message = file_get_contents('/email/template-hotel-comment.php');
 	$message = str_replace('[post]', $_POST['comment-post'], $message);
 	$message = str_replace('[name]', $_POST['comment-name'], $message);
 	$message = str_replace('[email]', $_POST['comment-email'], $message);
@@ -62,11 +62,11 @@ else {
 <head>
 <meta charset="utf-8">
 <title>themelock.com - Leave a Comment</title>
-<link rel="stylesheet" href="system/css/global.css">
-<link class="colour" rel="stylesheet" href="system/css/colour-blue.css">
+<link rel="stylesheet" href="/css/global.css">
+<link class="colour" rel="stylesheet" href="/css/colour-blue.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<script src="system/js/plugins.js"></script>
-<script src="system/js/global.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/global.js"></script>
 <script src="preview/js/styler.js"></script>
 </head>
 <body>

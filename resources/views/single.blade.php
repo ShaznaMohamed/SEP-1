@@ -5,16 +5,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>themelock.com - Base Hotel - Experience Luxury</title>
-<link rel="stylesheet" href="system/css/global.css">
-<link class="colour" rel="stylesheet" href="system/css/colour-blue.css">
-<link class="pattern" rel="stylesheet" href="system/css/pattern-china.css">
+<link rel="stylesheet" href="/css/global.css">
+<link class="colour" rel="stylesheet" href="/css/colour-blue.css">
+<link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body class="singlepage fullwidth">
 <!-- Navigation | START -->
 <div id="nav">
     <div class="centre">
-        <img alt="" src="system/images/logo.png" class="logo" />
+        <img alt="" src="/images/logo.png" class="logo" />
         <div class="shadow"></div>
     </div>
 </div>
@@ -268,7 +268,7 @@
 			var marker = new google.maps.Marker({
 			position: latlng, 
 			map: map,
-			icon: "system/images/point.png"
+			icon: "/images/point.png"
 			});
 			}
 			function loadScript() {
@@ -318,7 +318,7 @@
     </footer>
     <!-- Footer | END -->
 </div>
-<script src="system/js/plugins.js"></script>
-<script src="system/js/global.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/global.js"></script>
 </body>
 </html>
