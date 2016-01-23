@@ -17,7 +17,6 @@
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
-
                 <li>{{ Html::link('/', 'Home') }}</li>
                 <li>{{ Html::link('accommodation', 'Accommodation') }}
                 	<ul>
@@ -28,14 +27,14 @@
                     </ul>
                 </li>
                 <li>{{ Html::link('about', 'More Pages') }}
-                	<ul>
-                        <li>{{ Html::link('about', 'About Us') }}</li>
-                        <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
+                    <ul>
+                        <li>{{ Html::link('about', 'About Hotel') }}</li>
+                        <li>{{ Html::link('restaurent', 'Restaurent') }}</li>
                         <li>{{ Html::link('specials', 'Special Offers') }}</li>
                         <li>{{ Html::link('gallery', 'Photo Gallery') }}</li>
-                        <li>{{ Html::link('location', 'Location') }}</li>
-                        <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
-                        	<ul>
+                        <li>{{ Html::link('locatoin', 'Location') }}</li>
+                        <li>{{ Html::link('blog', 'Our Blog') }}<i class="fa fa-chevron-right"></i></a>
+                            <ul>
                                 <li>{{ Html::link('blog', 'Blog Overview') }}</li>
                                 <li>{{ Html::link('blog-post', 'Blog Post') }}</li>
                             </ul>
@@ -45,7 +44,7 @@
                         <li><a class="promopopup">Promo Popup</a></li>
                     </ul>
                 </li>
-                <li>{{ Html::link('contact', 'Contact') }}</li>
+                <li>{{ Html::link('contact', 'Contact Us') }}</li>
             </ul>
             <a id="pull"><i class="fa fa-bars"></i></a>
         </nav>
