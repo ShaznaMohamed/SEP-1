@@ -77,11 +77,33 @@
     <!-- Featured Slider | START -->
     <div id="featured">
         <div class="slider">
-        	<div class="item" style="background-image:url(http://dummyimage.com/1800x1100);">
+        	<div class="item">
                 <div class="details">
-                    <div class="title"><span>Absolute Waterfront Luxury</span></div>
-                    <div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
+                    <!--<div class="title"><span></span></div>-->
+                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
                 </div>
+                <img alt="" src="images/slideshow/1.jpg" width="1800" height="800" />
+            </div>
+            <div class="item">
+                <div class="details">
+                    <!--<div class="title"><span></span></div>-->
+                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
+                </div>
+                <img alt="" src="images/slideshow/2.jpg" width="1800" height="800" />
+            </div>
+            <div class="item">
+                <div class="details">
+                    <!--<div class="title"><span></span></div>-->
+                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
+                </div>
+                <img alt="" src="images/slideshow/3.jpg" width="1800" height="800" />
+            </div>
+            <div class="item">
+                <div class="details">
+                    <!--<div class="title"><span></span></div>-->
+                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
+                </div>
+                <img alt="" src="images/slideshow/4.jpg" width="1800" height="800" />
             </div>
         </div>
         <div class="centre">
