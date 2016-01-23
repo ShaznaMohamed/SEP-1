@@ -15,7 +15,7 @@ Laravel is accessible, yet powerful, providing powerful tools needed for large, 
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
 ## Setting up
-Clone <your_username>/SEP
+`git clone <your_username>/SEP`<br>
 `composer install`
 
 ##Running
