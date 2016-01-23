@@ -1,10 +1,9 @@
 <!DOCTYPE HTML>
-<!-- Base Hotel: HTML Template by Klaye Morrison (http://klayemorrison.com) -->
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>themelock.com - Base Hotel - Blog Post</title>
+<title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
 <link rel="stylesheet" href="/css/global.css">
 <link class="colour" rel="stylesheet" href="/css/colour-gold.css">
 <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
@@ -18,20 +17,13 @@
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
-                <li><a href="index.html">Home</a>
+                <li>{{ Html::link('/', 'Home') }}</li>
+                <li>{{ Html::link('accommodation', 'Accommodation') }}
                 	<ul>
-                    	<li><a href="index.html">Home 1 &nbsp;(Default)</a></li>
-                        <li><a href="index2.html">Home 2 &nbsp;(Full Screen)</a></li>
-                        <li><a href="index3.html">Home 3 &nbsp;(Colourful)</a></li>
-                        <li><a href="single.html">Single Page</a></li>
-                    </ul>
-                </li>
-                <li><a href="accommodation.html">Accommodation</a>
-                	<ul>
-                    	<li><a href="accommodation.html">Accommodation List 1</a></li>
-                        <li><a href="accommodation2.html">Accommodation List 2</a></li>
-                        <li><a href="room.html">Room Detail 1</a></li>
-                        <li><a href="room2.html">Room Detail 2</a></li>
+                    	<li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
+                        <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
+                        <li>{{ Html::link('room', 'Room Detail 1') }}</li>
+                        <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
                     </ul>
                 </li>
                 <li><a href="about.html">More Pages</a>
