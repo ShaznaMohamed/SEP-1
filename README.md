@@ -2,10 +2,10 @@
 ####Amalya Reach Holiday Resort Website
 
 ###Group Members
-######Savithra
-######ChamalSilva
-######ShaznaMohamed
-######Vishwnv
+#####Savithra
+#####ChamalSilva
+#####ShaznaMohamed
+#####Vishwnv
 
 ### Setting up
 `git clone <your_username>/SEP`<br>
