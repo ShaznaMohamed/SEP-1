@@ -26,21 +26,21 @@
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
                     </ul>
                 </li>
-                <li><a href="about.html">More Pages</a>
+                <li>{{ Html::link('about', 'About Us') }}
                 	<ul>
-                    	<li><a href="about.html">About Hotel</a></li>
-                        <li><a href="restaurant.php">Restaurant</a></li>
-                        <li><a href="specials.html">Special Offers</a></li>
-                        <li><a href="gallery.html">Photo Gallery</a></li>
-                        <li><a href="location.html">Location</a></li>
+                    	<li>{{ Html::link('about', 'About Us') }}</li>
+                        <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
+                        <li>{{ Html::link('specials', 'Special Offers') }}</li>
+                        <li>{{ Html::link('gallery', 'Photo Gallery') }}</li>
+                        <li>{{ Html::link('location', 'Location') }}</li>
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                         	<ul>
-                                <li><a href="blog.html">Blog Overview</a></li>
-                                <li><a href="blog-post.html">Blog Post</a></li>
+                                <li>{{ Html::link('blog', 'Blog Overview') }}</li>
+                                <li>{{ Html::link('blog-post', 'Blog Post') }}</li>
                             </ul>
                         </li>
-                        <li><a href="guest-book.html">Guest Book</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
+                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>
+                        <li>{{ Html::link('faqs', 'FAQs') }}</li>
                         <li><a class="promopopup">Promo Popup</a></li>
                     </ul>
                 </li>
@@ -283,7 +283,7 @@
     	<!-- Footer Links | START -->
     	<div id="footerlinks">
         	<div class="centre">
-            	<span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Base Hotel</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><span><a href="http://themeforest.net/item/base-hotel-responsive-booking-gallery-template/10517095?ref=Klayemore" target="_blank">Template By KM</a></span><span><a href="http://klayemorrison.com" target="_blank">Theme by KM</a></span>
+            	            	<span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Amalya Reach Holiday Resort</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><span>
             </div>
         </div>
         <!-- Footer Links | END -->

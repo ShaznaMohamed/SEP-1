@@ -65,9 +65,9 @@ Route::get('location', function()
     return View::make('location');
 });
 
-Route::get('restaurent', function()
+Route::get('restaurant', function()
 {
-    return View::make('restaurent');
+    return View::make('restaurant');
 });
 
 Route::get('room', function()
