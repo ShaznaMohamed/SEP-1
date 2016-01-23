@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 <html>
 <head>
 <meta charset="utf-8">
@@ -18,12 +21,19 @@
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
+<<<<<<< HEAD
                 <li>{{ Html::link('/', 'Home') }}
 
                 </li>
                 <li>{{ Html::link('accommodation', 'Accommodation') }}
                     <ul>
                         <li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
+=======
+                <li>{{ Html::link('/', 'Home') }}</li>
+                <li>{{ Html::link('accommodation', 'Accommodation') }}
+                	<ul>
+                    	<li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
+>>>>>>> origin/master
                         <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
                         <li>{{ Html::link('room', 'Room Detail 1') }}</li>
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
