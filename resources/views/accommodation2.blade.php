@@ -30,7 +30,7 @@
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
                     </ul>
                 </li>
-                <li><a href="about.html">More Pages</a>
+                <li>{{ Html::link('about', 'More Pages') }}
                 	<ul>
                         <li>{{ Html::link('about', 'About Us') }}</li>
                         <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
