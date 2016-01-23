@@ -17,14 +17,11 @@
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
-                <li>{{ Html::link('/', 'Home') }}
-                	<ul>
-                        {{ Html::link('/', 'Home') }}
-                    </ul>
-                </li>
+
+                <li>{{ Html::link('/', 'Home') }}</li>
                 <li>{{ Html::link('accommodation', 'Accommodation') }}
                 	<ul>
-                        <li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
+                    	<li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
                         <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
                         <li>{{ Html::link('room', 'Room Detail 1') }}</li>
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
@@ -287,7 +284,7 @@
     	<!-- Footer Links | START -->
     	<div id="footerlinks">
         	<div class="centre">
-            	<span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Base Hotel</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><span><a href="http://themeforest.net/item/base-hotel-responsive-booking-gallery-template/10517095?ref=Klayemore" target="_blank">Template By KM</a></span><span></span>
+            	            	<span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Amalya Reach Holiday Resort</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><span>
             </div>
         </div>
         <!-- Footer Links | END -->
