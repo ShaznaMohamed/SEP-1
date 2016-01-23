@@ -1,10 +1,9 @@
 <!DOCTYPE HTML>
-<!-- Base Hotel: HTML Template by Klaye Morrison (http://klayemorrison.com) -->
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>themelock.com - Base Hotel - Accommodation</title>
+<title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
 <link rel="stylesheet" href="/css/global.css">
 <link class="colour" rel="stylesheet" href="/css/colour-gold.css">
 <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
@@ -18,45 +17,43 @@
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
-                <li><a href="index.html">Home</a>
+                <li>{{ Html::link('/', 'Home') }}
                 	<ul>
-                    	<li><a href="index.html">Home 1 &nbsp;(Default)</a></li>
-                        <li><a href="index2.html">Home 2 &nbsp;(Full Screen)</a></li>
-                        <li><a href="index3.html">Home 3 &nbsp;(Colourful)</a></li>
-                        <li><a href="single.html">Single Page</a></li>
+                        {{ Html::link('/', 'Home') }}
                     </ul>
                 </li>
-                <li><a href="accommodation.html">Accommodation</a>
+                <li>{{ Html::link('accommodation', 'Accommodation') }}
                 	<ul>
-                    	<li><a href="accommodation.html">Accommodation List 1</a></li>
-                        <li><a href="accommodation2.html">Accommodation List 2</a></li>
-                        <li><a href="room.html">Room Detail 1</a></li>
-                        <li><a href="room2.html">Room Detail 2</a></li>
+                        <li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
+                        <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
+                        <li>{{ Html::link('room', 'Room Detail 1') }}</li>
+                        <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
                     </ul>
                 </li>
                 <li><a href="about.html">More Pages</a>
                 	<ul>
-                    	<li><a href="about.html">About Hotel</a></li>
-                        <li><a href="restaurant.php">Restaurant</a></li>
-                        <li><a href="specials.html">Special Offers</a></li>
-                        <li><a href="gallery.html">Photo Gallery</a></li>
-                        <li><a href="location.html">Location</a></li>
+                        <li>{{ Html::link('about', 'About Us') }}</li>
+                        <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
+                        <li>{{ Html::link('specials', 'Special Offers') }}</li>
+                        <li>{{ Html::link('gallery', 'Photo Gallery') }}</li>
+                        <li>{{ Html::link('location', 'Location') }}</li>
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                         	<ul>
-                                <li><a href="blog.html">Blog Overview</a></li>
-                                <li><a href="blog-post.html">Blog Post</a></li>
+                                <li>{{ Html::link('blog', 'Blog Overview') }}</li>
+                                <li>{{ Html::link('blog-post', 'Blog Post') }}</li>
                             </ul>
                         </li>
-                        <li><a href="guest-book.html">Guest Book</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
+                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>
+                        <li>{{ Html::link('faqs', 'FAQs') }}</li>
                         <li><a class="promopopup">Promo Popup</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.php">Contact</a></li>
+                <li>{{ Html::link('contact', 'Contact') }}</li>
             </ul>
             <a id="pull"><i class="fa fa-bars"></i></a>
         </nav>
         <!-- Languages | START -->
+        <!--
         <div id="language">
         	<ul>
             	<li class="en"><a>EN</a></li>
@@ -66,6 +63,7 @@
                 <li class="it"><a href="#">IT</a></li>
             </ul>
         </div>
+        -->
         <!-- Languages | END -->
         <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
         <div class="shadow"></div>
