@@ -25,21 +25,20 @@ Route::get('contact', function()
     return View::make('contact');
 });
 
-Route::get('accomodation', function()
+Route::get('accommodation', function()
 {
-    return View::make('accomodation');
+    return View::make('accommodation');
 });
 
-Route::get('accomodation2', function()
+Route::get('accommodation2', function()
 {
-    return View::make('accomodation2');
+    return View::make('accommodation2');
 });
 
 Route::get('blog', function()
 {
     return View::make('blog');
 });
-
 
 Route::get('blog-post', function()
 {
