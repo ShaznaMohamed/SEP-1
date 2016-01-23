@@ -4,34 +4,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>themelock.com - Base Hotel - Experience Luxury</title>
-<link rel="stylesheet" href="system/css/global.css">
-<link class="colour" rel="stylesheet" href="/system/css/colour-blue.css">
-<link class="pattern" rel="stylesheet" href="/system/css/pattern-china.css">
+<title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
+<link rel="stylesheet" href="/css/global.css">
+<link class="colour" rel="stylesheet" href="/css/colour-gold.css">
+<link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body class="home2 fullwidth">
 <!-- Navigation | START -->
 <div id="nav">
     <div class="centre">
-        <a href="index.html" class="logo"><img alt="" src="system/images/logo.png" /></a>
+        <a href="index.html" class="logo"><img alt="" src="/images/logo.png" /></a>
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
-                <li><a href="index.html">Home</a>
+                <li>{{ Html::link('/', 'Home') }}</li>
+                <li>{{ Html::link('accommodation', 'Accommodation') }}
                 	<ul>
-                    	<li><a href="index.html">Home 1 &nbsp;(Default)</a></li>
-                        <li><a href="index2.html">Home 2 &nbsp;(Full Screen)</a></li>
-                        <li><a href="index3.html">Home 3 &nbsp;(Colourful)</a></li>
-                        <li><a href="single.html">Single Page</a></li>
-                    </ul>
-                </li>
-                <li><a href="accommodation.html">Accommodation</a>
-                	<ul>
-                    	<li><a href="accommodation.html">Accommodation List 1</a></li>
-                        <li><a href="accommodation2.html">Accommodation List 2</a></li>
-                        <li><a href="room.html">Room Detail 1</a></li>
-                        <li><a href="room2.html">Room Detail 2</a></li>
+                    	<li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
+                        <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
+                        <li>{{ Html::link('room', 'Room Detail 1') }}</li>
+                        <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
                     </ul>
                 </li>
                 <li><a href="about.html">More Pages</a>
@@ -52,11 +45,12 @@
                         <li><a class="promopopup">Promo Popup</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.php">Contact</a></li>
+                <li>{{ Html::link('about', 'About Us') }}</li>
             </ul>
             <a id="pull"><i class="fa fa-bars"></i></a>
         </nav>
         <!-- Languages | START -->
+        <!--
         <div id="language">
         	<ul>
             	<li class="en"><a>EN</a></li>
@@ -66,6 +60,7 @@
                 <li class="it"><a href="#">IT</a></li>
             </ul>
         </div>
+        -->
         <!-- Languages | END -->
         <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
         <div class="shadow"></div>
@@ -77,11 +72,33 @@
     <!-- Featured Slider | START -->
     <div id="featured">
         <div class="slider">
-        	<div class="item" style="background-image:url(http://dummyimage.com/1800x1100);">
+        	<div class="item">
                 <div class="details">
-                    <div class="title"><span>Absolute Waterfront Luxury</span></div>
-                    <div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
+                    <!--<div class="title"><span></span></div>-->
+                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
                 </div>
+                <img alt="" src="images/slideshow/1.jpg" width="1800" height="800" />
+            </div>
+            <div class="item">
+                <div class="details">
+                    <!--<div class="title"><span></span></div>-->
+                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
+                </div>
+                <img alt="" src="images/slideshow/2.jpg" width="1800" height="800" />
+            </div>
+            <div class="item">
+                <div class="details">
+                    <!--<div class="title"><span></span></div>-->
+                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
+                </div>
+                <img alt="" src="images/slideshow/3.jpg" width="1800" height="800" />
+            </div>
+            <div class="item">
+                <div class="details">
+                    <!--<div class="title"><span></span></div>-->
+                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
+                </div>
+                <img alt="" src="images/slideshow/4.jpg" width="1800" height="800" />
             </div>
         </div>
         <div class="centre">
@@ -290,7 +307,7 @@
     </div>
 </div>
 <!-- Promo Popup | END -->
-<script src="system/js/plugins.js"></script>
-<script src="system/js/global.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/global.js"></script>
 </body>
 </html>

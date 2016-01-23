@@ -5,16 +5,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>themelock.com - Base Hotel - Photo Gallery</title>
-<link rel="stylesheet" href="system/css/global.css">
-<link class="colour" rel="stylesheet" href="system/css/colour-blue.css">
-<link class="pattern" rel="stylesheet" href="system/css/pattern-china.css">
+<link rel="stylesheet" href="/css/global.css">
+<link class="colour" rel="stylesheet" href="/css/colour-gold.css">
+<link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
 <!-- Navigation | START -->
 <div id="nav">
     <div class="centre">
-        <a href="index.html" class="logo"><img alt="" src="system/images/logo.png" /></a>
+        <a href="index.html" class="logo"><img alt="" src="/images/logo.png" /></a>
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
@@ -129,49 +129,49 @@
 <!-- Feature --><figure class="item-w2 item-h2">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="system/images/blank.png" />
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <figure class="">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="system/images/blank.png" />
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <figure class="">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="system/images/blank.png" />
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <figure class="">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="system/images/blank.png" />
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <figure class="">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="system/images/blank.png" />
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <!-- Portrait --><figure class="item-h2">
     <a href="http://dummyimage.com/600x900">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/600x900" width="600" height="900" src="system/images/blank.png" />
+        <img alt="" data-original="http://dummyimage.com/600x900" width="600" height="900" src="/images/blank.png" />
     </a>
 </figure>
 <!-- Portrait --><figure class="item-h2">
     <a href="http://dummyimage.com/600x900">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/600x900" width="600" height="900" src="system/images/blank.png" />
+        <img alt="" data-original="http://dummyimage.com/600x900" width="600" height="900" src="/images/blank.png" />
     </a>
 </figure>
 <!-- Feature --><figure class="item-w2 item-h2">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="system/images/blank.png" />
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 
@@ -293,7 +293,7 @@
     </div>
 </div>
 <!-- Promo Popup | END -->
-<script src="system/js/plugins.js"></script>
-<script src="system/js/global.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/global.js"></script>
 </body>
 </html>
