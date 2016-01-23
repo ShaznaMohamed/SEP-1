@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>themelock.com - Base Hotel - Accommodation</title>
 <link rel="stylesheet" href="/css/global.css">
-<link class="colour" rel="stylesheet" href="/css/colour-blue.css">
+<link class="colour" rel="stylesheet" href="/css/colour-gold.css">
 <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
