@@ -239,8 +239,8 @@
                 <!-- Subscribe / Social | START -->
                 <div class="news">
                 	<div class="title"><span>News & Offers</span></div>
-                    <div class="subscribe">
-                        <form>
+                    <div class="subscribe"> 
+                        <form action="{{route('newsletter')}}" method="post">
                             <input name="email" type="text" placeholder="Your email address" />
                             <button><span data-hover="Sign Up">Sign Up</span></button>
                         </form>

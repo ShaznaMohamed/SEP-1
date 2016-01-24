@@ -108,5 +108,19 @@ Route::get('specials', function()
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('/newsletter',[
+    'uses' => '\App\Http\Controllers\subscribeController@getSubscribe',
+    'as' => 'newsletter',
+    
+                        ]);
+
+    Route::post('/newsletter',[
+    'uses' => '\App\Http\Controllers\subscribeController@postSubscribe',
+    
+    
+                        ]);
+    
 });
+
+
+
