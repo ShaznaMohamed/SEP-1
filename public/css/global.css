@@ -1,9 +1,4 @@
 /*
-Base Hotel: HTML Template by Klaye Morrison (http://klayemorrison.com)
-
-- If you prefer multiple line CSS, no worries - just use a formatter like http://cssbeautify.com.
-- Hover states are declared with '.hover' - Only non-touch browsers have the '.hover' class applied, so touch devices don't apply hover states.
-- Colours, patterns, layouts and backgrounds are declared in separate style sheets. Please read the documentation for help.
 
 [Style Index]
 
@@ -87,12 +82,11 @@ a img { border:none; }
 #nav nav { position:absolute; top:50%; right:308px; margin-top:-20px; }
 #nav nav li { float:left; position:relative; }
 #nav nav li.mobile { display:none; }
-#nav nav li a { height:40px; padding:0 14px; font:12px/40px 'Open Sans', sans-serif; color:#000; letter-spacing:.8px; text-transform:uppercase; display:block; position:relative; }
+#nav nav li a { height:40px; padding:0 10px; font:14px/40px 'Open Sans', sans-serif; color:#000; letter-spacing:.5px; display:block; position:relative; }
 #nav nav li a:after { content:""; width:calc(100% - 24px); height:2px; position:absolute; bottom:7px; left:12px; }
 #nav nav li.active a { font-weight:800; opacity:1; }
 #pull { width:25px; font-size:25px; position:absolute; top:7px; right:236px; display:none; cursor:pointer; }
-.hover #nav .logo:hover { opacity:.5; }
-.hover #nav nav li:hover a:after { background:rgba(0,0,0,.1); }
+.hover #nav nav li:hover a:after { background:rgba(0,0,0,0); }
 
 /* 1.1 - Drop Downs */
 

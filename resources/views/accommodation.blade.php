@@ -26,12 +26,13 @@
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
                     </ul>
                 </li>
+                <li>{{ Html::link('gallery', 'Photo Gallery') }}</li>
                 <li>{{ Html::link('about', 'More Pages') }}
                     <ul>
                         <li>{{ Html::link('about', 'About Hotel') }}</li>
                         <li>{{ Html::link('restaurent', 'Restaurent') }}</li>
                         <li>{{ Html::link('specials', 'Special Offers') }}</li>
-                        <li>{{ Html::link('gallery', 'Photo Gallery') }}</li>
+                        
                         <li>{{ Html::link('locatoin', 'Location') }}</li>
                         <li>{{ Html::link('blog', 'Our Blog') }}<i class="fa fa-chevron-right"></i></a>
                             <ul>
