@@ -26,25 +26,25 @@
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
                     </ul>
                 </li>
-                <li><a href="about.html">More Pages</a>
-                	<ul>
-                    	<li><a href="about.html">About Hotel</a></li>
-                        <li><a href="restaurant.php">Restaurant</a></li>
-                        <li><a href="specials.html">Special Offers</a></li>
-                        <li><a href="gallery.html">Photo Gallery</a></li>
-                        <li><a href="location.html">Location</a></li>
-                        <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
-                        	<ul>
-                                <li><a href="blog.html">Blog Overview</a></li>
-                                <li><a href="blog-post.html">Blog Post</a></li>
+                <li>{{ Html::link('about', 'More Pages') }}
+                    <ul>
+                        <li>{{ Html::link('about', 'About Hotel') }}</li>
+                        <li>{{ Html::link('restaurent', 'Restaurent') }}</li>
+                        <li>{{ Html::link('specials', 'Special Offers') }}</li>
+                        <li>{{ Html::link('gallery', 'Photo Gallery') }}</li>
+                        <li>{{ Html::link('locatoin', 'Location') }}</li>
+                        <li>{{ Html::link('blog', 'Our Blog') }}<i class="fa fa-chevron-right"></i></a>
+                            <ul>
+                                <li>{{ Html::link('blog', 'Blog Overview') }}</li>
+                                <li>{{ Html::link('blog-post', 'Blog Post') }}</li>
                             </ul>
                         </li>
-                        <li><a href="guest-book.html">Guest Book</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
+                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>
+                        <li>{{ Html::link('faqs', 'FAQs') }}</li>
                         <li><a class="promopopup">Promo Popup</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.php">Contact</a></li>
+                <li>{{ Html::link('contact', 'Contact Us') }}</li>
             </ul>
             <a id="pull"><i class="fa fa-bars"></i></a>
         </nav>
