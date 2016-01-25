@@ -124,7 +124,7 @@
 <!-- Feature --><figure class="item-w2 item-h2">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
+        <img alt=""  width="900" height="600" src="/uploads/gal1.png" />
     </a>
 </figure>
 <figure class="">

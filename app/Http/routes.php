@@ -130,7 +130,19 @@ Route::group(['middleware' => ['web']], function () {
     
                         ]);
     
+/*
+**
+gallery control route
+*/
+
+    Route::get('upload', function() {
+      return View::make('galleryUpload');
+    });
+    Route::post('apply/upload', 'galleryController@upload');
+
+
 });
+
 
 
 
