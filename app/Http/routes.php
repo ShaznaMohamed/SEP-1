@@ -11,9 +11,19 @@
 |
 */
 
+
+/*----------------commented by vish -------------------
 Route::get('/', function () {
     return view('index');
 });
+*/
+
+Route::get('/',[
+    'uses' => '\App\Http\Controllers\HomeController@index',
+    'as' => 'home',
+    
+                        ]);
+
 
 Route::get('about', function()
 {

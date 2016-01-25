@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Auth\Athenticatable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 
-class Subscription extends Model implements AuthenticatableContract
+class Subscription extends Model 
 {
-    use Authenticatable;
+   
     protected $table = 'subscriptions';
     
     protected $fillable = [

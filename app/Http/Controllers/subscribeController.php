@@ -33,7 +33,7 @@ class subscribeController extends Controller
         
         ]);    
             return redirect()
-            ->route('index')
+            ->route('home')
             ->with('info', 'You are now subscribed to our newsletter');
             
         
