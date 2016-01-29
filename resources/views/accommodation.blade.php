@@ -17,7 +17,6 @@
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
-
                 <li>{{ Html::link('/', 'Home') }}</li>
                 <li>{{ Html::link('accommodation', 'Accommodation') }}
                 	<ul>
@@ -27,47 +26,33 @@
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
                     </ul>
                 </li>
-                <li>{{ Html::link('about', 'More Pages') }}
-                	<ul>
-                        <li>{{ Html::link('about', 'About Us') }}</li>
-                        <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
-                        <li>{{ Html::link('specials', 'Special Offers') }}</li>
-                        <li>{{ Html::link('gallery', 'Photo Gallery') }}</li>
-                        <li>{{ Html::link('location', 'Location') }}</li>
+                <li>{{ Html::link('gallery', 'Gallery') }}</li>                
+                <li>{{ Html::link('specials', 'Special Offers') }}</li> 
+                <li>{{ Html::link('location', 'Location') }}</li>
+                <li>{{ Html::link('about', 'About Us') }}</li>
+                <li>{{ Html::link('about', 'More') }}
+                	<ul>                         
+                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                         	<ul>
                                 <li>{{ Html::link('blog', 'Blog Overview') }}</li>
                                 <li>{{ Html::link('blog-post', 'Blog Post') }}</li>
                             </ul>
-                        </li>
-                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>
+                        </li>                        
                         <li>{{ Html::link('faqs', 'FAQs') }}</li>
                         <li><a class="promopopup">Promo Popup</a></li>
                     </ul>
                 </li>
-                <li>{{ Html::link('contact', 'Contact') }}</li>
-            </ul>
+            </ul>            
             <a id="pull"><i class="fa fa-bars"></i></a>
-        </nav>
-        <!-- Languages | START -->
-        <!--
-        <div id="language">
-        	<ul>
-            	<li class="en"><a>EN</a></li>
-                <li class="cn"><a href="#">CN</a></li>
-                <li class="fr"><a href="#">FR</a></li>
-                <li class="de"><a href="#">DE</a></li>
-                <li class="it"><a href="#">IT</a></li>
-            </ul>
-        </div>
-        -->
-        <!-- Languages | END -->
+        </nav>        
         <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
         <div class="shadow"></div>
     </div>
 </div>
 <!-- Navigation | END -->
 <div id="container">
+    <!-- Header | Start -->
 	<header>
     	<div id="header">
         	<div class="h1">

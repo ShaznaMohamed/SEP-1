@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<!-- Base Hotel: HTML Template by Klaye Morrison (http://klayemorrison.com) -->
+
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>themelock.com - Base Hotel - Experience Luxury</title>
+<title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
 <link rel="stylesheet" href="/css/global.css">
 <link class="colour" rel="stylesheet" href="/css/colour-gold.css">
 <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
