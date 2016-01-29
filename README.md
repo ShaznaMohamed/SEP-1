@@ -14,7 +14,7 @@
 ### :repeat_one: Database Migration
 `php artisan migrate`
 
-### :repeat_one: Running
+### :running: Running
 `php artisan serve`
 
 ### Laravel PHP Framework
