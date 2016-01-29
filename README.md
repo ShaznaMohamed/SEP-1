@@ -14,7 +14,7 @@
 ###Database Migration
 `php artisan migrate`
 
-##Running
+###Running
 `php artisan serve`
 
 ### Laravel PHP Framework
