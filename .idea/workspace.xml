@@ -5,21 +5,8 @@
     <list default="true" id="1428a5e1-da9d-4fa3-85bb-2f02d3ca49cb" name="Default" comment="" />
 =======
     <list default="true" id="67199bb3-8334-45ea-8112-a7fc10d5831e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env.example" afterPath="$PROJECT_DIR$/.env.example" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/about.blade.php" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/accommodation.blade.php" afterPath="$PROJECT_DIR$/resources/views/accommodation.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/accommodation2.blade.php" afterPath="$PROJECT_DIR$/resources/views/accommodation2.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/blog-post.blade.php" afterPath="$PROJECT_DIR$/resources/views/blog-post.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/blog.blade.php" afterPath="$PROJECT_DIR$/resources/views/blog.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/faqs.blade.php" afterPath="$PROJECT_DIR$/resources/views/faqs.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/location.blade.php" afterPath="$PROJECT_DIR$/resources/views/location.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/restaurant.blade.php" afterPath="$PROJECT_DIR$/resources/views/restaurant.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/sitemap.blade.php" afterPath="$PROJECT_DIR$/resources/views/sitemap.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/specials.blade.php" afterPath="$PROJECT_DIR$/resources/views/specials.blade.php" />
     </list>
 >>>>>>> refs/remotes/origin/master
     <ignored path="SEP.iws" />
@@ -52,7 +39,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
 >>>>>>> refs/remotes/origin/master
               <folding />
@@ -100,9 +87,14 @@
       <file leaf-file-name="accommodation2.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/accommodation2.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.47241378">
+              <caret line="204" column="32" selection-start-line="204" selection-start-column="32" selection-end-line="204" selection-end-column="32" />
+=======
             <state vertical-scroll-proportion="0.6448276">
               <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
 >>>>>>> refs/remotes/origin/master
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -112,12 +104,17 @@
         <entry file="file://$PROJECT_DIR$/resources/views/accommodation.blade.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+=======
+<<<<<<< HEAD
             <state vertical-scroll-proportion="-5.8846154">
               <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
 =======
             <state vertical-scroll-proportion="-9.153846">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
 >>>>>>> refs/remotes/origin/master
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -133,7 +130,7 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-56.884617">
+            <state vertical-scroll-proportion="0.0">
               <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
 >>>>>>> refs/remotes/origin/master
               <folding />
@@ -216,9 +213,13 @@
     <panes>
 <<<<<<< HEAD
       <pane id="Scope" />
+=======
+<<<<<<< HEAD
+      <pane id="Scope" />
       <pane id="Scratches" />
 =======
 >>>>>>> refs/remotes/origin/master
+>>>>>>> origin/master
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,6 +302,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
 <<<<<<< HEAD
@@ -313,7 +336,6 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
 =======
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,7 +365,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
 <<<<<<< HEAD
@@ -389,10 +411,22 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/accommodation2.blade.php">
+=======
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/accommodation.blade.php">
 =======
     <entry file="file://$PROJECT_DIR$/resources/views/about.blade.php">
 >>>>>>> refs/remotes/origin/master
+>>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -401,14 +435,39 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/resources/views/accommodation.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/about.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+=======
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
 =======
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/resources/views/about.blade.php">
 >>>>>>> refs/remotes/origin/master
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -437,7 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -470,7 +528,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-56.884617">
+        <state vertical-scroll-proportion="0.0">
           <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
 >>>>>>> refs/remotes/origin/master
           <folding />
@@ -487,8 +545,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+<<<<<<< HEAD
+=======
 >>>>>>> refs/remotes/origin/master
           <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -502,8 +563,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="5.8846154">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
 >>>>>>> refs/remotes/origin/master
           <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -517,8 +581,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="9.807693">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
 >>>>>>> refs/remotes/origin/master
           <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -530,7 +597,7 @@
 =======
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
+        <state vertical-scroll-proportion="-0.0">
           <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
 >>>>>>> refs/remotes/origin/master
           <folding />
@@ -545,13 +612,34 @@
 =======
     <entry file="file://$PROJECT_DIR$/resources/views/accommodation.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+=======
         <state vertical-scroll-proportion="-9.153846">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
 >>>>>>> refs/remotes/origin/master
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11724138">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/accommodation2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47241378">
+          <caret line="204" column="32" selection-start-line="204" selection-start-column="32" selection-end-line="204" selection-end-column="32" />
+=======
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/sitemap.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -563,6 +651,7 @@
         <state vertical-scroll-proportion="0.6448276">
           <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
 >>>>>>> refs/remotes/origin/master
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
