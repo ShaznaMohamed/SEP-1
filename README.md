@@ -2,10 +2,10 @@
 ####Amalya Reach Holiday Resort Website
 
 ### :busts_in_silhouette: Group Members
-#####Savithra
-#####ChamalSilva
-#####ShaznaMohamed
-#####Vishwnv
+##### :bowtie: Savithra
+##### :baby: ChamalSilva
+##### :icecream: ShaznaMohamed
+##### :saxophone: Vishwnv
 
 ### :v: Setting up
 `git clone <your_username>/SEP`<br>
