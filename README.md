@@ -11,6 +11,9 @@
 `git clone <your_username>/SEP`<br>
 `composer install`
 
+##Database Migration
+`php artisan migrate`
+
 ##Running
 `php artisan serve`
 
