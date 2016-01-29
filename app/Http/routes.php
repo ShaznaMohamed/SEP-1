@@ -30,6 +30,11 @@ Route::get('about', function()
     return View::make('about');
 });
 
+Route::get('admin', function()
+{
+    return View::make('admin');
+});
+
 Route::get('contact', function()
 {
     return View::make('contact');
