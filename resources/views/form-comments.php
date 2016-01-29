@@ -57,11 +57,11 @@ else {
 }
 ?>
 <!DOCTYPE HTML>
-<!-- Base Hotel: HTML Template by Klaye Morrison (http://klayemorrison.com) -->
+
 <html>
 <head>
 <meta charset="utf-8">
-<title>themelock.com - Leave a Comment</title>
+<title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
 <link rel="stylesheet" href="/css/global.css">
 <link class="colour" rel="stylesheet" href="/css/colour-blue.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
