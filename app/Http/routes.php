@@ -31,12 +31,12 @@ Route::get('about', function()
 
 Route::get('admin', function()
 {
-    return View::make('admin');
+    return View::make('admin/admin');
 });
 
 Route::get('contact', function()
 {
-    return View::make('contact');
+    return View::make('contact/contact');
 });
 
 Route::get('accommodation', function()
