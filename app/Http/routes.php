@@ -24,6 +24,7 @@ Route::get('/',[
     
                         ]);
 
+
 Route::get('about', function()
 {
     return View::make('about');
@@ -31,32 +32,32 @@ Route::get('about', function()
 
 Route::get('admin', function()
 {
-    return View::make('admin/admin');
+    return View::make('admin');
 });
 
 Route::get('contact', function()
 {
-    return View::make('contact/contact');
+    return View::make('contact');
 });
 
 Route::get('accommodation', function()
 {
-    return View::make('accommodation/accommodation');
+    return View::make('accommodation');
 });
 
 Route::get('accommodation2', function()
 {
-    return View::make('accommodation/accommodation2');
+    return View::make('accommodation2');
 });
 
 Route::get('blog', function()
 {
-    return View::make('blog/blog');
+    return View::make('blog');
 });
 
 Route::get('blog-post', function()
 {
-    return View::make('blog/blog-post');
+    return View::make('blog-post');
 });
 
 Route::get('faqs', function()
@@ -81,17 +82,17 @@ Route::get('location', function()
 
 Route::get('restaurant', function()
 {
-    return View::make('restaurant/restaurant');
+    return View::make('restaurant');
 });
 
 Route::get('room', function()
 {
-    return View::make('room/room');
+    return View::make('room');
 });
 
 Route::get('room2', function()
 {
-    return View::make('room/room2');
+    return View::make('room2');
 });
 
 Route::get('single', function()
@@ -108,7 +109,6 @@ Route::get('specials', function()
 {
     return View::make('specials');
 });
-
 
 
 /*
@@ -147,6 +147,9 @@ gallery control route
 
 
 });
+
+
+
 
 
 Route::group(['middleware' => 'web'], function () {
