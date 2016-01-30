@@ -11,28 +11,9 @@
 |
 */
 
-
-/*----------------commented by vish -------------------
-Route::get('/', function () {
-    return view('index');
-});
-*/
-
-Route::get('/',[
-    'uses' => '\App\Http\Controllers\HomeController@index',
-    'as' => 'home',
-    
-                        ]);
-
-
 Route::get('about', function()
 {
     return View::make('about');
-});
-
-Route::get('admin', function()
-{
-    return View::make('admin');
 });
 
 Route::get('contact', function()
@@ -126,14 +107,11 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/newsletter',[
     'uses' => '\App\Http\Controllers\subscribeController@getSubscribe',
     'as' => 'newsletter',
-    
-                        ]);
+]);
 
     Route::post('/newsletter',[
     'uses' => '\App\Http\Controllers\subscribeController@postSubscribe',
-    
-    
-                        ]);
+]);
     
 /*
 **
@@ -144,10 +122,15 @@ gallery control route
       return View::make('galleryUpload');
     });
     Route::post('apply/upload', 'galleryController@upload');
-
-
 });
 
 
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    
+    Route::get('/', function () {
+        return view('index');
+    });
 
-
+    Route::get('/home', 'HomeController@index');
+});

@@ -9,7 +9,7 @@
 <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
-<body class="home2 fullwidth">
+<body class="fullwidth">
 <!-- Navigation | START -->
 <div id="nav">
     <div class="centre">
@@ -31,9 +31,7 @@
                 <li>{{ Html::link('location', 'Location') }}</li>
                 <li>{{ Html::link('about', 'About Us') }}</li>
                 <li>{{ Html::link('about', 'More') }}
-                	<ul>
-                        <li><a href="http://localhost:8000/login">Login</a></li>
-                        <li><a href="http://localhost:8000/register">Register</a></li>                                    
+                	<ul>                         
                         <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                         	<ul>
@@ -47,137 +45,166 @@
                 </li>
             </ul>            
             <a id="pull"><i class="fa fa-bars"></i></a>
-        </nav>
+        </nav>        
         <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
         <div class="shadow"></div>
     </div>
 </div>
 <!-- Navigation | END -->
-<!-- Header | START -->
-<header>
-    <!-- Featured Slider | START -->
-    <div id="featured">
-        <div class="slider">
-        	<div class="item">
-                <div class="details">
-                    <!--<div class="title"><span></span></div>-->
-                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
-                </div>
-                <img alt="" src="images/slideshow/1.jpg" width="1800" height="800" />
-            </div>
-            <div class="item">
-                <div class="details">
-                    <!--<div class="title"><span></span></div>-->
-                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
-                </div>
-                <img alt="" src="images/slideshow/2.jpg" width="1800" height="800" />
-            </div>
-            <div class="item">
-                <div class="details">
-                    <!--<div class="title"><span></span></div>-->
-                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
-                </div>
-                <img alt="" src="images/slideshow/3.jpg" width="1800" height="800" />
-            </div>
-            <div class="item">
-                <div class="details">
-                    <!--<div class="title"><span></span></div>-->
-                    <!--<div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>-->
-                </div>
-                <img alt="" src="images/slideshow/4.jpg" width="1800" height="800" />
-            </div>
-        </div>
-        <div class="centre">
-            <div class="nav">
-                <a class="prev"><i class="fa fa-chevron-left"></i></a>
-                <a class="next"><i class="fa fa-chevron-right"></i></a>
-            </div>
-        </div>
-    </div>
-    <!-- Featured Slider | END -->
-    <!-- Check Rates Banner | START -->
-    <div id="check">
-        <div class="centre">
-            <form action="contact.php" method="post">
-                <div class="field calendar"><input name="arrival" type="text" placeholder="Arrival" id="arrival" readonly /><i class="fa fa-calendar-o"></i></div>
-                <div class="field calendar"><input name="departure" type="text" placeholder="Departure" id="departure" readonly /><i class="fa fa-calendar-o"></i></div>
-                <div class="field select">
-                    <select name="rooms">
-                        <option value="1 Room">1 Room</option>
-                        <option value="2 Rooms">2 Rooms</option>
-                        <option value="3 Rooms">3 Rooms</option>
-                    </select>
-                    <i class="fa fa-chevron-down"></i>
-                </div>
-                <div class="field select">
-                    <select name="adults">
-                        <option value="1 Adult">1 Adult</option>
-                        <option value="2 Adults">2 Adults</option>
-                        <option value="3 Adults">3 Adults</option>
-                        <option value="4 Adults">4 Adults</option>
-                        <option value="5 Adults">5 Adults</option>
-                    </select>
-                    <i class="fa fa-chevron-down"></i>
-                </div>
-                <div class="field select">
-                    <select name="children">
-                        <option value="0 Children">0 Children</option>
-                        <option value="1 Child">1 Child</option>
-                        <option value="2 Children">2 Children</option>
-                        <option value="3 Children">3 Children</option>
-                        <option value="4 Children">4 Children</option>
-                    </select>
-                    <i class="fa fa-chevron-down"></i>
-                </div>
-                <button><span data-hover="Book a Room">Book a Room</span></button>
-            </form>
-        </div>
-    </div>
-    <!-- Check Rates Banner | END -->
-</header>
-<!-- Header | END -->
 <div id="container">
+    <!-- Header | Start -->
+	<header>
+    	<div id="header">
+        	<div class="h1">
+                <h1><span>Accommodation</span>
+                <span class="tagline">Modern Rooms & Spacious Suites</span></h1>
+            </div>
+        </div>
+        <!-- Check Rates Banner | START -->
+        <div id="check">
+        	<div class="centre">
+            	<form action="contact.php" method="post">
+                	<div class="field calendar"><input name="arrival" type="text" placeholder="Arrival" id="arrival" readonly /><i class="fa fa-calendar-o"></i></div>
+                    <div class="field calendar"><input name="departure" type="text" placeholder="Departure" id="departure" readonly /><i class="fa fa-calendar-o"></i></div>
+                    <div class="field select">
+                        <select name="rooms">
+                            <option value="1 Room">1 Room</option>
+                            <option value="2 Rooms">2 Rooms</option>
+                            <option value="3 Rooms">3 Rooms</option>
+                        </select>
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="field select">
+                        <select name="adults">
+                            <option value="1 Adult">1 Adult</option>
+                            <option value="2 Adults">2 Adults</option>
+                            <option value="3 Adults">3 Adults</option>
+                            <option value="4 Adults">4 Adults</option>
+                            <option value="5 Adults">5 Adults</option>
+                        </select>
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="field select">
+                        <select name="children">
+                        	<option value="0 Children">0 Children</option>
+                            <option value="1 Child">1 Child</option>
+                            <option value="2 Children">2 Children</option>
+                            <option value="3 Children">3 Children</option>
+                            <option value="4 Children">4 Children</option>
+                        </select>
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <button><span data-hover="Book a Room">Book a Room</span></button>
+                </form>
+            </div>
+        </div>
+        <!-- Check Rates Banner | END -->
+    </header>
+    <!-- Header | END -->
     <!-- Content | START -->
     <main>
     	<div class="centre">
-            <h1>Experience Luxury & <strong>Find Your Base</strong></h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.</p>
-            <!-- USP Boxes | START -->
-            <section class="usp">
-            	<div class="box">
-                	<i class="fa fa-trophy"></i>
-                	<h3>Rated #1 on TripAdvisor</h3>
-                	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.</p>
+            <!-- List Items (Rooms) | START -->
+            <section id="rooms" class="list grid">
+                <div class="item">
+                	<div class="container">
+                        <div class="imgcontainer"><img alt="" src="http://dummyimage.com/380x380" width="380" height="380" /></div>
+                        <div class="details">
+                            <a href="room.html">
+                                <h3 class="title">Standard Room<br />
+                                <span>Stay from $149 per night</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</p>
+                                <div class="button"><span data-hover="View Room">View Room</span></div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="box">
-                	<i class="fa fa-cutlery"></i>
-                	<h3>Award-Winning Restaurant</h3>
-                	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.</p>
+                <div class="item">
+                	<div class="container">
+                        <div class="imgcontainer"><img alt="" src="http://dummyimage.com/380x380" width="380" height="380" /></div>
+                        <div class="details">
+                            <a href="room.html">
+                                <h3 class="title">Ocean View Room<br />
+                                <span>Stay from $199 per night</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</p>
+                                <div class="button"><span data-hover="View Room">View Room</span></div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="box">
-                	<i class="fa fa-user"></i>
-                	<h3>24 Hour Concierge Service</h3>
-                	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.</p>
+                <div class="item">
+                	<div class="container">
+                        <div class="imgcontainer"><img alt="" src="http://dummyimage.com/380x380" width="380" height="380" /></div>
+                        <div class="details">
+                            <a href="room.html">
+                                <h3 class="title">Deluxe Room<br />
+                                <span>Stay from $225 per night</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</p>
+                                <div class="button"><span data-hover="View Room">View Room</span></div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <!-- USP Boxes | END -->
+            <!-- List Items (Rooms) | END -->
+            <div id="content">
+                <h2><strong>Find Your Base</strong> with our selection of rooms & suites</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
+                <table>
+                    <tr>
+                        <th>Room Type</th>
+                        <th>Low Season</th>
+                        <th>Mid Season</th>
+                        <th>High Season</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Standard Room</strong></td>
+                        <td>$149</td>
+                        <td>$169</td>
+                        <td>$199</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ocean View Room</strong></td>
+                        <td>$199</td>
+                        <td>$219</td>
+                        <td>$249</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Deluxe Room</strong></td>
+                        <td>$225</td>
+                        <td>$245</td>
+                        <td>$275</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Junior Suite</strong></td>
+                        <td>$240</td>
+                        <td>$260</td>
+                        <td>$290</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premiere Suite</strong></td>
+                        <td>$279</td>
+                        <td>$299</td>
+                        <td>$329</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3 Bed Penthouse</strong></td>
+                        <td>$329</td>
+                        <td>$349</td>
+                        <td>$379</td>
+                    </tr>
+                </table>
+                <a href="contact.php" class="button"><span data-hover="Book a Room">Book a Room</span></a>
+            </div>
+            <!-- Video | START -->
+            <div id="video">
+                <div class="embed-container"><iframe src="http://dummyimage.com/1200x675" width="1200" height="675" allowfullscreen></iframe></div>
+            </div>
+            <!-- Video | END -->
         </div>
     </main>
     <!-- Content | END -->
-    <!-- Gallery Slider | START -->
-    <div id="galleryslider">
-    	<div class="slidecontainer">
-            <div class="slider"></div>
-            <div class="centre">
-                <div class="nav">
-                    <a class="prev"><i class="fa fa-chevron-left"></i></a>
-                    <a class="next"><i class="fa fa-chevron-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <a href="gallery.html" class="button"><span data-hover="Browse Our Gallery">Browse Our Gallery</span></a>
-    </div>
-    <!-- Gallery Slider | END -->
     <!-- Sitewide Extras | START -->
     <div id="extras">
     	<div class="centre">
@@ -241,8 +268,8 @@
                 <!-- Subscribe / Social | START -->
                 <div class="news">
                 	<div class="title"><span>News & Offers</span></div>
-                    <div class="subscribe"> 
-                        <form action="{{route('newsletter')}}" method="post">
+                    <div class="subscribe">
+                        <form>
                             <input name="email" type="text" placeholder="Your email address" />
                             <button><span data-hover="Sign Up">Sign Up</span></button>
                         </form>
