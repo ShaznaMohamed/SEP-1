@@ -21,9 +21,7 @@ Route::get('/', function () {
 Route::get('/',[
     'uses' => '\App\Http\Controllers\HomeController@index',
     'as' => 'home',
-    
-                        ]);
-
+]);
 
 Route::get('about', function()
 {
@@ -126,14 +124,11 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/newsletter',[
     'uses' => '\App\Http\Controllers\subscribeController@getSubscribe',
     'as' => 'newsletter',
-    
-                        ]);
+]);
 
     Route::post('/newsletter',[
     'uses' => '\App\Http\Controllers\subscribeController@postSubscribe',
-    
-    
-                        ]);
+]);
     
 /*
 **
@@ -147,10 +142,6 @@ gallery control route
 
 
 });
-
-
-
-
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
