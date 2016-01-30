@@ -30,6 +30,7 @@
                 <li>{{ Html::link('specials', 'Special Offers') }}</li> 
                 <li>{{ Html::link('location', 'Location') }}</li>
                 <li>{{ Html::link('about', 'About Us') }}</li>
+                <li>{{Html::link('login','Login')}}</li>
                 <li>{{ Html::link('about', 'More') }}
                 	<ul>                         
                         <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              

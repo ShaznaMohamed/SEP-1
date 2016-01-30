@@ -24,7 +24,6 @@ Route::get('/',[
     
                         ]);
 
-
 Route::get('about', function()
 {
     return View::make('about');
@@ -111,6 +110,7 @@ Route::get('specials', function()
 });
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -149,5 +149,8 @@ gallery control route
 });
 
 
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
 
-
+    Route::get('/home', 'HomeController@index');
+});
