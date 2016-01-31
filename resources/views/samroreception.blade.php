@@ -128,7 +128,7 @@
                         <a href="{{url('weddingform')}}">
                             <h3 class="title">Samro Reception<br />
                                 <span>Stay with 200-400 guests</span></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</p>
+                            <p>Get inside the glittering cave full of tumbling golden drops.</p>
                             <div class="button"><span data-hover="Plan Wedding">Plan Wedding</span></div>
                         </a>
                     </div>
@@ -193,7 +193,7 @@
                 </div>
             <!-- Video | START -->
             <div id="video">
-                <div class="embed-container"><iframe src="http://dummyimage.com/1200x675" width="1200" height="675" allowfullscreen></iframe></div>
+                <div class="embed-container"><iframe src="/wedimages/wed2.jpg" width="1200" height="675" allowfullscreen></iframe></div>
             </div>
             <!-- Video | END -->
         </div>
@@ -207,13 +207,13 @@
                 <div class="back">
                     <div class="slider">
                         <div class="item">
-                            <img alt="" src="http://dummyimage.com/1200x400" width="1200" height="400" />
+                            <img alt="" src="/wedimages/img.jpg" width="1200" height="400" />
                             <div class="details">
-                                <a href="specials.html">
+                                <a href="{{url('specials')}}">
                                     <div class="title">Family Escape<br />
-                                        <span>Activity Package</span></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.<br />
-                                        <strong>Stay from $249 per night</strong></p>
+                                        <span>Special Offers</span></div>
+                                    <p>Now it's time to make an impression.<br />
+                                        <strong>Posses your Luck</strong></p>
                                     <div class="button"><span data-hover="View Special">View Special</span></div>
                                 </a>
                             </div>

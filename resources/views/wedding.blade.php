@@ -126,9 +126,14 @@
             <!-- Slideshow | END -->
             <div id="left">
                 <div id="content">
-                    <h2><strong>Standard Room</strong> Inclusions</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
+                    <h2><strong>Amalya   </strong>Sphere</h2>
+                    <p>Toast your new beginning and let the magic of the day continue. Take in the ambiance created just for you. AMALYA helps coordinate every detail of your wedding reception. Our professional planners ensure your event is handled expertly, while our innovative dining options and stylish venues make your party unforgettable. From lush garden parties to grand ballroom dinners, AMALYA Lapse in Luxury provides a stylish, upscale setting for your wedding reception.
+
+                    </p>
+                    <p>Tranquilizing atmosphere, elegant modern décor and delectable international cuisines from the finest interier designers &
+                        "A salient experience for the romantic atmosphere."
+
+                    </p>
                     <ul class="tags">
                         <li>Spa Bath</li>
                         <li>King Size Bed</li>
@@ -164,7 +169,7 @@
             <aside class="layout2">
                 <div id="scroll">
                     <div id="block">
-                        <div class="blocktitle"><a href="contact.php">Stay from <span>$149</span> per night</a></div>
+                        <div class="blocktitle"> <span>Banquet Halls</span></div>
                         <!-- Sub Navigation | START -->
                         <ul class="nav">
                             <li>{{ Html::link('samroreception', 'Samro Reception') }}</li>
@@ -179,11 +184,11 @@
                     <div id="specials" class="list">
                         <div class="slider">
                             <div class="item">
-                                <img alt="" src="http://dummyimage.com/380x250" width="380" height="250" />
+                                <img alt="" src="/wedimages/offer.jpg" width="380" height="250" />
                                 <div class="details">
-                                    <a href="specials.html">
+                                    <a href="{{url('specials')}}">
                                         <div class="title">Family Escape<br />
-                                            <span>Activity Package</span></div>
+                                            <span>Special Offers</span></div>
                                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.<br />
                                             <strong>Stay from $249 per night</strong></p>
                                         <div class="button"><span data-hover="View Special">View Special</span></div>

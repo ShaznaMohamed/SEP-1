@@ -105,10 +105,10 @@
                 </form>
             </div>
             <!-- Contact Form | END -->
-            <h2 style="margin:0;"><strong>+61 8 3456 7890</strong></h2>
-            <p style="margin:0;"><a href="mailto:stay@basehotel.com">stay@basehotel.com</a><br />
-                101 Luxury Street, Perth, WA Australia 6000<br />
-                <a href="location.html"><i class="fa fa-map-marker"></i> Explore Our Location</a></p>
+            <h2 style="margin:0;"><strong>+94 11 2748913</strong></h2>
+            <p style="margin:0;"><a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br />
+                No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka.<br />
+                <a href="{{url('location')}}"><i class="fa fa-map-marker"></i> Explore Our Location</a></p>
         </div>
 
     </main>
@@ -121,13 +121,13 @@
                 <div class="back">
                     <div class="slider">
                         <div class="item">
-                            <img alt="" src="http://dummyimage.com/1200x400" width="1200" height="400" />
+                            <img alt="" src="/wedimages/wed3.jpg" width="1200" height="400" />
                             <div class="details">
-                                <a href="specials.html">
+                                <a href="{{url('specials')}}">
                                     <div class="title">Family Escape<br />
-                                        <span>Activity Package</span></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.<br />
-                                        <strong>Stay from $249 per night</strong></p>
+                                        <span>Special Offers</span></div>
+                                    <p>Now it's time to make an impression.<br />
+                                        <strong>Posses your Luck</strong></p>
                                     <div class="button"><span data-hover="View Special">View Special</span></div>
                                 </a>
                             </div>

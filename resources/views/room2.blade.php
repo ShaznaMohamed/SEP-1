@@ -18,42 +18,41 @@
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
-                <li>{{ Html::link('/', 'Home') }}
-
-                </li>
+                <li>{{ Html::link('/', 'Home') }}</li>
                 <li>{{ Html::link('accommodation', 'Accommodation') }}
-                    <ul>
-                        <li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
+                	<ul>
+                    	<li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
                         <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
                         <li>{{ Html::link('room', 'Room Detail 1') }}</li>
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
                     </ul>
                 </li>
-                <li>{{ Html::link('about', 'More Pages') }}
-                    <ul>
-                        <li>{{ Html::link('about', 'About Hotel') }}</li>
-                        <li>{{ Html::link('restaurent', 'Restaurent') }}</li>
-                        <li>{{ Html::link('specials', 'Special Offers') }}</li>
-                        <li>{{ Html::link('gallery', 'Photo Gallery') }}</li>
-                        <li>{{ Html::link('locatoin', 'Location') }}</li>
-                        <li>{{ Html::link('blog', 'Our Blog') }}<i class="fa fa-chevron-right"></i></a>
-                            <ul>
+                <li>{{ Html::link('gallery', 'Gallery') }}</li>                
+                <li>{{ Html::link('specials', 'Special Offers') }}</li> 
+                <li>{{ Html::link('location', 'Location') }}</li>
+                <li>{{ Html::link('about', 'About Us') }}</li>
+                <li>{{ Html::link('about', 'More') }}
+                	<ul>                         
+                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              
+                        <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
+                        	<ul>
                                 <li>{{ Html::link('blog', 'Blog Overview') }}</li>
                                 <li>{{ Html::link('blog-post', 'Blog Post') }}</li>
                             </ul>
-                        </li>
-                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>
+                        </li>                        
                         <li>{{ Html::link('faqs', 'FAQs') }}</li>
                         <li><a class="promopopup">Promo Popup</a></li>
                     </ul>
                 </li>
-                <li>{{ Html::link('contact', 'Contact Us') }}</li>
-            </ul>
+            </ul>            
             <a id="pull"><i class="fa fa-bars"></i></a>
         </nav>
+<<<<<<< HEAD
         <!-- Languages | START -->
 
         <!-- Languages | END -->
+=======
+>>>>>>> 330a6cff6e18cb6b0fd2c68f4965609a1283a23b
         <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
         <div class="shadow"></div>
     </div>
