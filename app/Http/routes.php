@@ -18,27 +18,27 @@ Route::get('about', function()
 
 Route::get('contact', function()
 {
-    return View::make('contact');
+    return View::make('contact/contact');
 });
 
 Route::get('accommodation', function()
 {
-    return View::make('accommodation');
+    return View::make('accommodation/accommodation');
 });
 
 Route::get('accommodation2', function()
 {
-    return View::make('accommodation2');
+    return View::make('accommodation/accommodation2');
 });
 
 Route::get('blog', function()
 {
-    return View::make('blog');
+    return View::make('blog/blog');
 });
 
 Route::get('blog-post', function()
 {
-    return View::make('blog-post');
+    return View::make('blog/blog-post');
 });
 
 Route::get('faqs', function()
@@ -63,17 +63,17 @@ Route::get('location', function()
 
 Route::get('restaurant', function()
 {
-    return View::make('restaurant');
+    return View::make('restaurant/restaurant');
 });
 
 Route::get('room', function()
 {
-    return View::make('room');
+    return View::make('room/room');
 });
 
 Route::get('room2', function()
 {
-    return View::make('room2');
+    return View::make('room/room2');
 });
 
 Route::get('single', function()
