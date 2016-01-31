@@ -122,6 +122,23 @@ gallery control route
       return View::make('galleryUpload');
     });
     Route::post('apply/upload', 'galleryController@upload');
+<<<<<<< HEAD
+=======
+
+
+    // Events route
+    Route::get('/events',[
+        'uses' => '\App\Http\Controllers\EventsController@getEvents',
+        'as' => 'events',
+
+    ]);
+
+    Route::post('/events',[
+        'uses' => '\App\Http\Controllers\EventsController@postEvents',
+
+    ]);
+
+>>>>>>> refs/remotes/origin/pr/13
 });
 
 
@@ -132,5 +149,11 @@ Route::group(['middleware' => 'web'], function () {
         return view('index');
     });
 
+<<<<<<< HEAD
     Route::get('/home', 'HomeController@index');
 });
+=======
+
+
+
+>>>>>>> refs/remotes/origin/pr/13
