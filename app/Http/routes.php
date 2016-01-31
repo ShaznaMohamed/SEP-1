@@ -129,9 +129,6 @@ Route::group(['middleware' => ['web']], function () {
 
     ]);
 
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Gallery control route
@@ -143,9 +140,6 @@ Route::get('upload', function() {
     });
     Route::post('apply/upload', 'galleryController@upload');
 });
-
-
-
 
 Route::post('apply/upload', 'galleryController@upload');
 
@@ -165,12 +159,10 @@ Route::post('/events',[
 
 ]);
 
-
 Route::post('/wedding',[
     'uses' => '\App\Http\Controllers\WedreservationController@insertdata',
     'as' => 'wedding',
 ]);
-
 
 /*
 |--------------------------------------------------------------------------
