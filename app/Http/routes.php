@@ -11,20 +11,6 @@
 |
 */
 
-
-/*----------------commented by vish -------------------
-Route::get('/', function () {
-    return view('index');
-});
-*/
-
-Route::get('/',[
-    'uses' => '\App\Http\Controllers\HomeController@index',
-    'as' => 'home',
-    
-                        ]);
-
-
 Route::get('about', function()
 {
     return View::make('about');
@@ -32,27 +18,27 @@ Route::get('about', function()
 
 Route::get('contact', function()
 {
-    return View::make('contact');
+    return View::make('contact/contact');
 });
 
 Route::get('accommodation', function()
 {
-    return View::make('accommodation');
+    return View::make('accommodation/accommodation');
 });
 
 Route::get('accommodation2', function()
 {
-    return View::make('accommodation2');
+    return View::make('accommodation/accommodation2');
 });
 
 Route::get('blog', function()
 {
-    return View::make('blog');
+    return View::make('blog/blog');
 });
 
 Route::get('blog-post', function()
 {
-    return View::make('blog-post');
+    return View::make('blog/blog-post');
 });
 
 Route::get('faqs', function()
@@ -77,17 +63,17 @@ Route::get('location', function()
 
 Route::get('restaurant', function()
 {
-    return View::make('restaurant');
+    return View::make('restaurant/restaurant');
 });
 
 Route::get('room', function()
 {
-    return View::make('room');
+    return View::make('room/room');
 });
 
 Route::get('room2', function()
 {
-    return View::make('room2');
+    return View::make('room/room2');
 });
 
 Route::get('single', function()
@@ -128,35 +114,50 @@ Route::group(['middleware' => ['web']], function () {
     'uses' => '\App\Http\Controllers\subscribeController@postSubscribe',
     
     
-                        ]);
-    
+                        ]);   
 /*
-**
-gallery control route
+|--------------------------------------------------------------------------
+| Gallery control route
+|--------------------------------------------------------------------------
 */
 
-    Route::get('upload', function() {
+Route::get('upload', function() {
       return View::make('galleryUpload');
-    });
-    Route::post('apply/upload', 'galleryController@upload');
+});
+    
+Route::post('apply/upload', 'galleryController@upload');
 
+/*
+|--------------------------------------------------------------------------
+| Events routes
+|--------------------------------------------------------------------------
+*/
 
-    // Events route
-    Route::get('/events',[
+Route::get('/events',[
         'uses' => '\App\Http\Controllers\EventsController@getEvents',
         'as' => 'events',
+]);
 
-    ]);
-
-    Route::post('/events',[
+Route::post('/events',[
         'uses' => '\App\Http\Controllers\EventsController@postEvents',
 
-    ]);
+]);
 
 });
+/*
+|--------------------------------------------------------------------------
+| Authentication routes
+|--------------------------------------------------------------------------
+*/
 
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    
+    Route::get('/', function () {
+        return view('index');
+});
 
-
-
+Route::get('/home', 'HomeController@index');
+});
 
 

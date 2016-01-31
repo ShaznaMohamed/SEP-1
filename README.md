@@ -1,17 +1,20 @@
-##SLIIT SE SEP 010
+## :mortar_board: SLIIT SE SEP 010
 ####Amalya Reach Holiday Resort Website
 
-###Group Members
-#####Savithra
-#####ChamalSilva
-#####ShaznaMohamed
-#####Vishwnv
+### :busts_in_silhouette: Group Members
+##### :bowtie: Savithra
+##### :baby: ChamalSilva
+##### :icecream: ShaznaMohamed
+##### :saxophone: Vishwnv
 
-### Setting up
+### :v: Setting up
 `git clone <your_username>/SEP`<br>
 `composer install`
 
-##Running
+### :repeat_one: Database Migration
+`php artisan migrate`
+
+### :running: Running
 `php artisan serve`
 
 ### Laravel PHP Framework

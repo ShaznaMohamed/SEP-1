@@ -57,9 +57,9 @@
     	<!-- Google Map | START -->
         <script>
 			function initialize() {
-			var latlng = new google.maps.LatLng(-31.957482,115.856868);
+			var latlng = new google.maps.LatLng(6.84026 ,80.021092);
 			var myOptions = {
-			zoom: 14,
+			zoom: 16,
 			center: latlng,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 			scrollwheel: false
@@ -129,14 +129,14 @@
     <main>
     	<div class="centre">
             <div id="content">
-                <h1><strong>Absolute Waterfront Luxury</strong></h1>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
-                <p><strong>101 Luxury Street, Perth, WA Australia 6000</strong></p>
-                <a href="https://www.google.com/maps/dir/Current+Location/-31.957482,115.856868" target="_blank" class="button"><span data-hover="Get Directions">Get Directions</span></a>
+                <h1><strong>Luxury amidst the rustle of the city</strong></h1>
+                <p></p>
+                <h2><strong>No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka</strong></h2>
+                <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank" class="button"><span data-hover="Get Directions">Get Directions from your location</span></a>
                 <!-- Slideshow | START -->
                 <div id="slideshow">
                     <div class="slider">
-                        <div class="item"><img alt="" src="http://dummyimage.com/1200x600" width="1200" height="600" /></div>
+                        <div class="item"><img alt="" src="images\location\1.png" width="1200" height="600" /></div>
                     </div>
                     <div class="nav">
                         <a class="prev"><i class="fa fa-chevron-left"></i></a>
@@ -149,17 +149,17 @@
         <!-- Feature List | START -->
         <section id="featurelist">
         	<div class="centre">
-            	<h2>Things to do in Perth</h2>
+            	<h2>Things to do in Homagama</h2>
                 <div class="featurelist">
                     <div class="feature">
-                        <img alt="" src="http://dummyimage.com/120x120" width="120" height="120" class="thumb" />
+                        <img alt="" src="images/zoo.png" width="120" height="120" class="thumb" />
                         <div class="details">
-                            <h3>The Bell Tower</h3>
-                            <p>Barrack Square Riverside Drive<br /><br />
-                            <a href="#"><i class="fa fa-external-link"></i> Visit Website</a></p>
+                            <h3>Dehiwala Zoological Gardens</h3>
+                            <p>Anagarika Dharmapala Mawatha, Dehiwala<br /><br />
+                            <a href="http://nationalzoo.gov.lk/en/dehiwala-zoological-gardens"><i class="fa fa-external-link"></i> Visit Website</a></p>
                         </div>
                         <div class="copy">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat.</p>
+                            <p>National Zoological Gardens of Sri Lanka (also called Colombo Zoo or Dehiwala Zoo) is a zoological garden in Dehiwala, Sri Lanka, founded in 1936. Its sprawling areas are host to a variety of animals and birds. The zoo exhibits animals but also places an emphasis on animal conservation and welfare, and education.</p>
                         </div>
                     </div>
                 </div>
@@ -170,28 +170,7 @@
     <!-- Content | END -->
     <!-- Sitewide Extras | START -->
     <div id="extras">
-    	<div class="centre">
-            <!-- List Items (Specials Slider) | START -->
-            <div id="specials" class="list">
-                <div class="back">
-                    <div class="slider">
-                    	<div class="item">
-                        	<img alt="" src="http://dummyimage.com/1200x400" width="1200" height="400" />
-                            <div class="details">
-                                <a href="specials.html">
-                                    <div class="title">Family Escape<br />
-                                    <span>Activity Package</span></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.<br />
-                                    <strong>Stay from $249 per night</strong></p>
-                                    <div class="button"><span data-hover="View Special">View Special</span></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav"></div>
-            </div>
-            <!-- List Items (Specials Slider) | END -->
+    	<div class="centre">            
         	<!-- Recent Blog Posts | START -->
             <div class="recent">
                 <a href="blog-post.html">
@@ -231,8 +210,8 @@
                 <!-- Subscribe / Social | START -->
                 <div class="news">
                 	<div class="title"><span>News & Offers</span></div>
-                    <div class="subscribe">
-                        <form>
+                    <div class="subscribe"> 
+                        <form action="{{route('newsletter')}}" method="post">
                             <input name="email" type="text" placeholder="Your email address" />
                             <button><span data-hover="Sign Up">Sign Up</span></button>
                         </form>
@@ -247,11 +226,10 @@
                 <!-- Subscribe / Social | END -->
             	<!-- Contact Details | START -->
             	<div class="contact">
-                	<p><strong class="phone">+61 8 3456 7890</strong><br />
-                    <a href="mailto:stay@basehotel.com">stay@basehotel.com</a><br /><br />
-                    <i class="fa fa-map-marker"></i> 101 Luxury Street<br />
-                    Perth, WA Australia 6000<br />
-                    <a href="https://www.google.com/maps/dir/Current+Location/-31.957482,115.856868" target="_blank"><strong>Get Directions</strong></a></p>
+                	<p><strong class="phone">+94 11 2748913, +94 77 7743612</strong><br />
+                    <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
+                    <i class="fa fa-map-marker"></i> No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka<br />
+                    <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank"><strong>Get Directions</strong></a></p>
                 </div>
                 <!-- Contact Details | END -->
                 <div class="dark"></div>
