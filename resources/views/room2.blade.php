@@ -47,12 +47,10 @@
             </ul>            
             <a id="pull"><i class="fa fa-bars"></i></a>
         </nav>
-<<<<<<< HEAD
+
         <!-- Languages | START -->
 
         <!-- Languages | END -->
-=======
->>>>>>> 330a6cff6e18cb6b0fd2c68f4965609a1283a23b
         <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
         <div class="shadow"></div>
     </div>
