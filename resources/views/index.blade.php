@@ -13,7 +13,7 @@
 <!-- Navigation | START -->
 <div id="nav">
     <div class="centre">
-        <a href="index.html" class="logo"><img alt="" src="/images/logo.png" /></a>
+        <a href="/" class="logo"><img alt="" src="/images/logo.png" /></a>
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
