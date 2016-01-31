@@ -115,37 +115,49 @@
 <figure class="">
     <a href="images/gallery/gallery-1.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="images/gallery/gallery-1.jpg" width="900" height="600" src="/images/blank.png" />
+
+        <img alt="" width="900" height="600" src="/uploads/gal2.png" />
+
     </a>
 </figure>
 <figure class="">
     <a href=images/gallery/gallery-2.jpg>
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="galleryphotos/1.jpg" width="900" height="600" src="images/gallery/gallery-2.jpg" />
+
+        <img alt="" width="900" height="600" src="/uploads/gal3.png" />
+
     </a>
 </figure>
 <figure class="">
     <a href="galleryphotos/3.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="galleryphotos/3.jpg" width="900" height="600" src="/images/blank.png" />
+
+        <img alt="" width="900" height="600" src="/uploads/gal4.png" />
+
     </a>
 </figure>
 <figure class="">
     <a href="galleryphotos/4.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="galleryphotos/4.jpg" width="900" height="600" src="/images/blank.png" />
+
+        <img alt="" width="900" height="600" src="/uploads/gal5.png" />
+
     </a>
 </figure>
 <!-- Portrait --><figure class="item-h2">
     <a href="galleryphotos/5.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="galleryphotos/5.jpg" width="600" height="900" src="/images/blank.png" />
+
+        <img alt="" width="600" height="900" src="/uploads/gal6.png" />
+
     </a>
 </figure>
 <!-- Portrait --><figure class="item-h2">
     <a href="galleryphotos/6.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="galleryphotos/6.jpg" width="600" height="900" src="/images/blank.png" />
+
+        <img alt="" width="600" height="900" src="/uploads/gal7.png" />
+
     </a>
 </figure>
 <!-- Feature --><figure class="item-w2 item-h2">
