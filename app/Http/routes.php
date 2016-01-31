@@ -95,6 +95,21 @@ Route::get('hallDetails', function()
     return View::make('hallDetails');
 });
 
+Route::get('wedding', function()
+{
+    return View::make('wedding');
+});
+
+Route::get('samroreception', function()
+{
+    return View::make('samroreception');
+});
+
+Route::get('weddingform', function()
+{
+    return View::make('weddingform');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -107,44 +122,47 @@ Route::get('hallDetails', function()
 */
 
 Route::group(['middleware' => ['web']], function () {
+    
     Route::get('/newsletter',[
     'uses' => '\App\Http\Controllers\subscribeController@getSubscribe',
     'as' => 'newsletter',
-    
-                        ]);
+    ]);
 
     Route::post('/newsletter',[
     'uses' => '\App\Http\Controllers\subscribeController@postSubscribe',
+    ]);  
+     
+    /*
+    |--------------------------------------------------------------------------
+    | Gallery control route
+    |--------------------------------------------------------------------------
+    */
+
+    Route::get('upload', function() {
+        return View::make('galleryUpload');
+    });
+        
+    Route::post('apply/upload', 'galleryController@upload');
+
+    /*
+    |--------------------------------------------------------------------------
+    | Events routes
+    |--------------------------------------------------------------------------
+    */
+
+    Route::get('/events',[
+            'uses' => '\App\Http\Controllers\EventsController@getEvents',
+            'as' => 'events',
+    ]);
+
+    Route::post('/events',[
+            'uses' => '\App\Http\Controllers\EventsController@postEvents',
+    ]);
     
-    
-                        ]);   
-/*
-|--------------------------------------------------------------------------
-| Gallery control route
-|--------------------------------------------------------------------------
-*/
-
-Route::get('upload', function() {
-      return View::make('galleryUpload');
-});
-    
-Route::post('apply/upload', 'galleryController@upload');
-
-/*
-|--------------------------------------------------------------------------
-| Events routes
-|--------------------------------------------------------------------------
-*/
-
-Route::get('/events',[
-        'uses' => '\App\Http\Controllers\EventsController@getEvents',
-        'as' => 'events',
-]);
-
-Route::post('/events',[
-        'uses' => '\App\Http\Controllers\EventsController@postEvents',
-
-]);
+    Route::post('/wedding',[
+    'uses' => '\App\Http\Controllers\WedreservationController@insertdata',
+    'as' => 'wedding',
+    ]);
 
 });
 /*
