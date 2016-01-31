@@ -24,6 +24,7 @@
                         <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
                         <li>{{ Html::link('room', 'Room Detail 1') }}</li>
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
+                        <li>{{ Html::link('wedding', 'Wedding') }}</li>
                     </ul>
                 </li>
                 <li>{{ Html::link('gallery', 'Gallery') }}</li>                

@@ -94,6 +94,24 @@ Route::get('hallDetails', function()
 {
     return View::make('hallDetails');
 });
+<<<<<<< HEAD
+
+Route::get('wedding', function()
+{
+    return View::make('wedding');
+});
+
+Route::get('samroreception', function()
+{
+    return View::make('samroreception');
+});
+
+Route::get('weddingform', function()
+{
+    return View::make('weddingform');
+});
+=======
+>>>>>>> refs/remotes/origin/master
 
 Route::get('wedding', function()
 {
@@ -180,5 +198,3 @@ Route::group(['middleware' => 'web'], function () {
 
 Route::get('/home', 'HomeController@index');
 });
-
-
