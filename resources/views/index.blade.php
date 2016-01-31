@@ -32,12 +32,9 @@
                 <li>{{ Html::link('about', 'About Us') }}</li>
                 <li>{{ Html::link('about', 'More') }}
                 	<ul>
-<<<<<<< HEAD
-                        <li><a href="http://localhost:8000/login">Login</a></li>
-                        <li><a href="http://localhost:8000/register">Register</a></li>                                    
-=======
+                        <li>{{ Html::link('login', 'Login') }}</li>
+                        <li>{{ Html::link('register', 'Register') }}</li>                                    
                         <li>{{ Html::link('events', 'Meetings and Events') }}</li>
->>>>>>> refs/remotes/origin/pr/13
                         <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                         	<ul>

@@ -112,48 +112,49 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/newsletter',[
     'uses' => '\App\Http\Controllers\subscribeController@postSubscribe',
 ]);
-    
+
+});   
 /*
-**
-gallery control route
+|--------------------------------------------------------------------------
+| Gallery control route
+|--------------------------------------------------------------------------
 */
 
-    Route::get('upload', function() {
+Route::get('upload', function() {
       return View::make('galleryUpload');
-    });
-    Route::post('apply/upload', 'galleryController@upload');
-<<<<<<< HEAD
-=======
+});
+    
+Route::post('apply/upload', 'galleryController@upload');
 
+/*
+|--------------------------------------------------------------------------
+| Events routes
+|--------------------------------------------------------------------------
+*/
 
-    // Events route
-    Route::get('/events',[
+Route::get('/events',[
         'uses' => '\App\Http\Controllers\EventsController@getEvents',
         'as' => 'events',
+]);
 
-    ]);
-
-    Route::post('/events',[
+Route::post('/events',[
         'uses' => '\App\Http\Controllers\EventsController@postEvents',
 
-    ]);
+]);
 
->>>>>>> refs/remotes/origin/pr/13
-});
-
+/*
+|--------------------------------------------------------------------------
+| Authentication routes
+|--------------------------------------------------------------------------
+*/
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
     
     Route::get('/', function () {
         return view('index');
-    });
-
-<<<<<<< HEAD
-    Route::get('/home', 'HomeController@index');
 });
-=======
 
+Route::get('/home', 'HomeController@index');
+});
 
-
->>>>>>> refs/remotes/origin/pr/13
