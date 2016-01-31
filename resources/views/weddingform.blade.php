@@ -85,8 +85,6 @@
                         <div class="field calendar"><input name="arrival" type="text" placeholder="Arrival Date" id="contact-arrival" readonly /><i class="fa fa-calendar-o"></i></div>
                         <div class="field calendar"><input name="departure" type="text" placeholder="Departure Date" id="contact-departure" readonly /><i class="fa fa-calendar-o"></i></div>
                         <div class="select">
-
-
                             <select name="halltype" id="contact-rooms" class="infants">
                                 <option value="1" selected="selected">Samro Reception</option>
                                 <option value="2" >Pool side ball room</option>
@@ -98,10 +96,8 @@
                     <div class="col">
                         <div class="field"><textarea name="message" placeholder="Message" id="contact-message"></textarea></div>
                     </div>
-
-                    <button><span data-hover="Send Booking Request">Send Booking Request</span></button>
-
-                  <!--  <input type="hidden" name="_token" value="{{ Session::token() }}">-->
+                    <input type="hidden" name="_token" value="{{ Session::token() }}">
+                    <button><span data-hover="Send Booking Request">Send Booking Request</span></button>                                      
                 </form>
             </div>
             <!-- Contact Form | END -->
