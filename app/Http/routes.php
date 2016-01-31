@@ -141,7 +141,21 @@ gallery control route
     Route::post('apply/upload', 'galleryController@upload');
 
 
+    // Events route
+    Route::get('/events',[
+        'uses' => '\App\Http\Controllers\EventsController@getEvents',
+        'as' => 'events',
+
+    ]);
+
+    Route::post('/events',[
+        'uses' => '\App\Http\Controllers\EventsController@postEvents',
+
+    ]);
+
 });
+
+
 
 
 

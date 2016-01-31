@@ -6,7 +6,7 @@
 
 
 
-<div class="about-section">
+<div class="container">
    <div class="text-content">
      <div class="span7 offset1">
         @if(Session::has('success'))
@@ -14,7 +14,7 @@
           <h2>{!! Session::get('success') !!}</h2>
           </div>
         @endif
-        <div class="secure">Upload form</div>
+        <div class="secure"><h2>Gallery Management</h2></div>
         {!! Form::open(array('url'=>'apply/upload','method'=>'POST', 'files'=>true)) !!}
          <div class="control-group">
           <div class="controls">
@@ -30,4 +30,14 @@
       {!! Form::close() !!}
       </div>
    </div>
+    
+    
+    <div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img alt="" src="/uploads/gal1.png" />
+    </a>
+  </div>
+  
+    </div>
 </div>

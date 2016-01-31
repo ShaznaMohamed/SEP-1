@@ -31,7 +31,8 @@
                 <li>{{ Html::link('location', 'Location') }}</li>
                 <li>{{ Html::link('about', 'About Us') }}</li>
                 <li>{{ Html::link('about', 'More') }}
-                	<ul>                         
+                	<ul>
+                        <li>{{ Html::link('events', 'Meetings and Events') }}</li>
                         <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                         	<ul>
