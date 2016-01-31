@@ -306,11 +306,10 @@
                 <!-- Subscribe / Social | END -->
                 <!-- Contact Details | START -->
                 <div class="contact">
-                    <p><strong class="phone">+94 11 2748913</strong><br />
-                        <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
-                        <i class="fa fa-map-marker"></i> No:556 Moragahahena<br />
-                        Pitipana North Homagama Sri Lanka<br />
-                        <a href="https://www.google.com/maps/dir/Current+Location/@6.8402657,80.0189031,17z" target="_blank"><strong>Get Directions</strong></a></p>
+                	<p><strong class="phone">+94 11 2748913, +94 77 7743612</strong><br />
+                    <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
+                    <i class="fa fa-map-marker"></i> No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka<br />
+                    <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank"><strong>Get Directions</strong></a></p>
                 </div>
                 <!-- Contact Details | END -->
                 <div class="dark"></div>

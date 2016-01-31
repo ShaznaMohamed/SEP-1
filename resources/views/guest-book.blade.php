@@ -254,11 +254,10 @@
                 <!-- Subscribe / Social | END -->
             	<!-- Contact Details | START -->
             	<div class="contact">
-                	<p><strong class="phone">+61 8 3456 7890</strong><br />
-                    <a href="mailto:stay@basehotel.com">stay@basehotel.com</a><br /><br />
-                    <i class="fa fa-map-marker"></i> 101 Luxury Street<br />
-                    Perth, WA Australia 6000<br />
-                    <a href="https://www.google.com/maps/dir/Current+Location/-31.957482,115.856868" target="_blank"><strong>Get Directions</strong></a></p>
+                	<p><strong class="phone">+94 11 2748913, +94 77 7743612</strong><br />
+                    <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
+                    <i class="fa fa-map-marker"></i> No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka<br />
+                    <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank"><strong>Get Directions</strong></a></p>
                 </div>
                 <!-- Contact Details | END -->
                 <div class="dark"></div>
