@@ -36,6 +36,7 @@
                         <li>{{ Html::link('login', 'Login') }}</li>
                         <li>{{ Html::link('register', 'Register') }}</li>                                    
                         <li>{{ Html::link('events', 'Meetings and Events') }}</li>
+                        <li>{{ Html::link('hallDetails', 'Reception Halls') }}</li>
                         <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                         	<ul>
@@ -177,7 +178,7 @@
                 </div>
             </div>
         </div>
-        <a href="gallery.html" class="button"><span data-hover="Browse Our Gallery">Browse Our Gallery</span></a>
+        <a href="gallery" class="button"><span data-hover="Browse Our Gallery">Browse Our Gallery</span></a>
     </div>
     <!-- Gallery Slider | END -->
     <!-- Sitewide Extras | START -->

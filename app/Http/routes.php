@@ -94,6 +94,7 @@ Route::get('hallDetails', function()
 {
     return View::make('hallDetails');
 });
+<<<<<<< HEAD
 
 Route::get('wedding', function()
 {
@@ -109,6 +110,8 @@ Route::get('weddingform', function()
 {
     return View::make('weddingform');
 });
+=======
+>>>>>>> refs/remotes/origin/master
 
 /*
 |--------------------------------------------------------------------------
