@@ -35,6 +35,7 @@
                         <li>{{ Html::link('login', 'Login') }}</li>
                         <li>{{ Html::link('register', 'Register') }}</li>                                    
                         <li>{{ Html::link('events', 'Meetings and Events') }}</li>
+                        <li>{{ Html::link('hallDetails', 'Reception Halls') }}</li>
                         <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                         	<ul>
