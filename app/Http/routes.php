@@ -105,6 +105,20 @@ Route::get('specials', function()
     return View::make('specials');
 });
 
+Route::get('wedding', function()
+{
+    return View::make('wedding');
+});
+
+Route::get('samroreception', function()
+{
+    return View::make('samroreception');
+});
+
+Route::get('weddingform', function()
+{
+    return View::make('weddingform');
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -126,9 +140,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::post('/newsletter',[
     'uses' => '\App\Http\Controllers\subscribeController@postSubscribe',
-    
-    
-                        ]);
+    ]);
     
 /*
 **
@@ -139,9 +151,33 @@ gallery control route
       return View::make('galleryUpload');
     });
     Route::post('apply/upload', 'galleryController@upload');
-
-
 });
+
+   /*Route::group(['middleware'=>['web']],function(){
+       Route::get('/wedding',[
+           'uses'=>'\App\Http\Controllers\subscribeController@getdata',
+           'as'=>'wedding',
+       ]);
+   });
+   */
+
+
+
+
+
+
+Route::post('/wedding',[
+    'uses' => '\App\Http\Controllers\WedreservationController@insertdata',
+    'as' => 'wedding',
+]);
+
+
+
+/*Route::post('/wed',function(Request $request){
+    $name=$request->input('name');
+    echo 'You entered'.$name;
+});
+*/
 
 
 

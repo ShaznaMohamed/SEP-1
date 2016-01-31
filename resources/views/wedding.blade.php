@@ -2,13 +2,13 @@
 
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
-<link rel="stylesheet" href="/css/global.css">
-<link class="colour" rel="stylesheet" href="/css/colour-gold.css">
-<link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link class="colour" rel="stylesheet" href="/css/colour-gold.css">
+    <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
 <!-- Navigation | START -->
@@ -17,7 +17,7 @@
         <a href="index.html" class="logo"><img alt="" src="/images/logo.png" /></a>
         <nav>
             <ul>
-            	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
+                <li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
                 <li>{{ Html::link('/', 'Home') }}
 
                 </li>
@@ -60,18 +60,18 @@
 </div>
 <!-- Navigation | END -->
 <div id="container">
-	<header>
-    	<div id="header">
-        	<div class="h1">
-                <h1><span>Standard Room</span>
-                <span class="tagline">Luxurious by Reputation</span></h1>
+    <header>
+        <div id="header">
+            <div class="h1">
+                <h1><span>Wedding</span>
+                    <span class="tagline">Lapse in Luxuries</span></h1>
             </div>
         </div>
         <!-- Check Rates Banner | START -->
         <div id="check">
-        	<div class="centre">
-            	<form action="contact.php" method="post">
-                	<div class="field calendar"><input name="arrival" type="text" placeholder="Arrival" id="arrival" readonly /><i class="fa fa-calendar-o"></i></div>
+            <div class="centre">
+                <form action="contact.php" method="post">
+                    <div class="field calendar"><input name="arrival" type="text" placeholder="Arrival" id="arrival" readonly /><i class="fa fa-calendar-o"></i></div>
                     <div class="field calendar"><input name="departure" type="text" placeholder="Departure" id="departure" readonly /><i class="fa fa-calendar-o"></i></div>
                     <div class="field select">
                         <select name="rooms">
@@ -93,7 +93,7 @@
                     </div>
                     <div class="field select">
                         <select name="children">
-                        	<option value="0 Children">0 Children</option>
+                            <option value="0 Children">0 Children</option>
                             <option value="1 Child">1 Child</option>
                             <option value="2 Children">2 Children</option>
                             <option value="3 Children">3 Children</option>
@@ -110,25 +110,27 @@
     <!-- Header | END -->
     <!-- Content | START -->
     <main>
-    	<div class="centre">
-        	<!-- Slideshow | START -->
-        	<div id="slideshow">
+        <div class="centre">
+            <!-- Slideshow | START -->
+            <slideshow>
+            <div id="slideshow">
                 <div class="slider">
-                    <div class="item"><img alt="" src="http://dummyimage.com/1200x600" width="1200" height="600" /></div>
+                    <div class="item"><img alt="" src=/wedimages/wed1.jpg width="1200" height="600" /></div>
                 </div>
                 <div class="nav">
                     <a class="prev"><i class="fa fa-chevron-left"></i></a>
                     <a class="next"><i class="fa fa-chevron-right"></i></a>
                 </div>
             </div>
+            </slideshow>
             <!-- Slideshow | END -->
-        	<div id="left">
+            <div id="left">
                 <div id="content">
                     <h2><strong>Standard Room</strong> Inclusions</h2>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.</p>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
                     <ul class="tags">
-                    	<li>Spa Bath</li>
+                        <li>Spa Bath</li>
                         <li>King Size Bed</li>
                         <li>Air Conditioning</li>
                         <li>CD Player</li>
@@ -160,31 +162,30 @@
                 </div>
             </div>
             <aside class="layout2">
-            	<div id="scroll">
+                <div id="scroll">
                     <div id="block">
                         <div class="blocktitle"><a href="contact.php">Stay from <span>$149</span> per night</a></div>
                         <!-- Sub Navigation | START -->
                         <ul class="nav">
-                            <li><a href="room.html">Standard Room</a></li>
-                            <li><a href="room.html">Ocean View Room</a></li>
-                            <li><a href="room.html">Deluxe Room</a></li>
-                            <li><a href="room.html">Junior Suite</a></li>
-                            <li><a href="room.html">Premiere Suite</a></li>
-                            <li><a href="room.html">3 Bed Penthouse</a></li>
+                            <li>{{ Html::link('samroreception', 'Samro Reception') }}</li>
+                            <li>{{ Html::link('accommodation2', 'Pool Side Ball Room') }}</li>
+                            <li>{{ Html::link('accommodation2', 'Silver Ball Room') }}</li>
+                            <li>{{ Html::link('accommodation2', 'Grand Ball Room') }}</li>
+
                         </ul>
                         <!-- Sub Navigation | END -->
                     </div>
                     <!-- List Items (Specials Slider) | START -->
                     <div id="specials" class="list">
                         <div class="slider">
-                        	<div class="item">
+                            <div class="item">
                                 <img alt="" src="http://dummyimage.com/380x250" width="380" height="250" />
                                 <div class="details">
                                     <a href="specials.html">
                                         <div class="title">Family Escape<br />
-                                        <span>Activity Package</span></div>
+                                            <span>Activity Package</span></div>
                                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.<br />
-                                        <strong>Stay from $249 per night</strong></p>
+                                            <strong>Stay from $249 per night</strong></p>
                                         <div class="button"><span data-hover="View Special">View Special</span></div>
                                     </a>
                                 </div>
@@ -200,20 +201,20 @@
     <!-- Content | END -->
     <!-- Sitewide Extras | START -->
     <div id="extras">
-    	<div class="centre">
-        	<!-- Recent Blog Posts | START -->
+        <div class="centre">
+            <!-- Recent Blog Posts | START -->
             <div class="recent">
                 <a href="blog-post.html">
-                	<div class="date">
-                    	<span class="month">Dec</span>
+                    <div class="date">
+                        <span class="month">Dec</span>
                         <span class="day">12</span>
                     </div>
                     <p class="title">Our Latest Hotel Awards</p>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque...</p>
                 </a>
                 <a href="blog-post.html">
-                	<div class="date">
-                    	<span class="month">Nov</span>
+                    <div class="date">
+                        <span class="month">Nov</span>
                         <span class="day">27</span>
                     </div>
                     <p class="title">Free Wi-Fi in all rooms</p>
@@ -221,9 +222,9 @@
                 </a>
             </div>
             <!-- Recent Blog Posts | END -->
-        	<!-- Footer Testimonial | START -->
+            <!-- Footer Testimonial | START -->
             <div class="footertestimonial">
-            	<i class="fa fa-quote-left"></i>
+                <i class="fa fa-quote-left"></i>
                 <p class="title">Comfortable & spacious apartment</p>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet...</p>
                 <div class="author">&ndash; <strong>John Smith</strong> <span>(Sydney, Australia)</span></div>
@@ -235,11 +236,11 @@
     <!-- Sitewide Extras | END -->
     <!-- Footer | START -->
     <footer>
-    	<div id="footer">
-        	<div class="centre">
+        <div id="footer">
+            <div class="centre">
                 <!-- Subscribe / Social | START -->
                 <div class="news">
-                	<div class="title"><span>News & Offers</span></div>
+                    <div class="title"><span>News & Offers</span></div>
                     <div class="subscribe">
                         <form>
                             <input name="email" type="text" placeholder="Your email address" />
@@ -247,29 +248,29 @@
                         </form>
                     </div>
                     <div class="social">
-                    	<a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
                         <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
                         <a href="#" title="Google+"><i class="fa fa-google-plus"></i></a>
                         <a href="#" title="Pinterest"><i class="fa fa-pinterest-p"></i></a>
                     </div>
                 </div>
                 <!-- Subscribe / Social | END -->
-            	<!-- Contact Details | START -->
-            	<div class="contact">
-                	<p><strong class="phone">+61 8 3456 7890</strong><br />
-                    <a href="mailto:stay@basehotel.com">stay@basehotel.com</a><br /><br />
-                    <i class="fa fa-map-marker"></i> 101 Luxury Street<br />
-                    Perth, WA Australia 6000<br />
-                    <a href="https://www.google.com/maps/dir/Current+Location/-31.957482,115.856868" target="_blank"><strong>Get Directions</strong></a></p>
+                <!-- Contact Details | START -->
+                <div class="contact">
+                    <p><strong class="phone">+61 8 3456 7890</strong><br />
+                        <a href="mailto:stay@basehotel.com">stay@basehotel.com</a><br /><br />
+                        <i class="fa fa-map-marker"></i> 101 Luxury Street<br />
+                        Perth, WA Australia 6000<br />
+                        <a href="https://www.google.com/maps/dir/Current+Location/-31.957482,115.856868" target="_blank"><strong>Get Directions</strong></a></p>
                 </div>
                 <!-- Contact Details | END -->
                 <div class="dark"></div>
             </div>
         </div>
-    	<!-- Footer Links | START -->
-    	<div id="footerlinks">
-        	<div class="centre">
-            	<span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Base Hotel</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><span><a href="http://themeforest.net/item/base-hotel-responsive-booking-gallery-template/10517095?ref=Klayemore" target="_blank">Template By KM</a></span><span></span>
+        <!-- Footer Links | START -->
+        <div id="footerlinks">
+            <div class="centre">
+                <span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Base Hotel</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><span><a href="http://themeforest.net/item/base-hotel-responsive-booking-gallery-template/10517095?ref=Klayemore" target="_blank">Template By KM</a></span><span></span>
             </div>
         </div>
         <!-- Footer Links | END -->
@@ -278,10 +279,10 @@
 </div>
 <!-- Promo Popup | START -->
 <div id="pop">
-	<img alt="" src="http://dummyimage.com/400x150" width="400" height="150" />
+    <img alt="" src="http://dummyimage.com/400x150" width="400" height="150" />
     <div class="container">
         <p class="title"><strong>Our latest special offers,</strong><br />
-        straight to your inbox</p>
+            straight to your inbox</p>
         <p>Stay up to date with the latest specials from Base Hotel. Subscribe and save on your next stay.</p>
         <form>
             <input name="email" type="text" placeholder="Your email address" />
