@@ -96,8 +96,9 @@
                     <div class="col">
                         <div class="field"><textarea name="message" placeholder="Message" id="contact-message"></textarea></div>
                     </div>
-                    <input type="hidden" name="_token" value="{{ Session::token() }}">
-                    <button><span data-hover="Send Booking Request">Send Booking Request</span></button>                                      
+
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                    <button><span data-hover="Send Booking Request">Send Booking Request</span></button>
                 </form>
             </div>
             <!-- Contact Form | END -->
