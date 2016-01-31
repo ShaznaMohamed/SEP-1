@@ -143,7 +143,13 @@ gallery control route
     Route::get('upload', function() {
       return View::make('galleryUpload');
     });
-    Route::post('apply/upload', 'galleryController@upload');
+    Route::post('apply/upload1', 'galleryController@uploadImg1');
+    Route::post('apply/upload2', 'galleryController@uploadImg2');
+    Route::post('apply/upload3', 'galleryController@uploadImg3');
+    Route::post('apply/upload4', 'galleryController@uploadImg4');
+    Route::post('apply/upload5', 'galleryController@uploadImg5');
+    Route::post('apply/upload6', 'galleryController@uploadImg6');
+    Route::post('apply/upload7', 'galleryController@uploadImg7');
 
 
 });
