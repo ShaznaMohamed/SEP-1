@@ -194,7 +194,7 @@
             <!-- form | start -->
 
             <div class="wrap_event">
-                <div class="row">
+                <div class="raw">
                     <div class="col-lg-6" >
                         <h1>MAKE A REQUEST</h1>
                             <form name="form1" id="form1" class="form-vertical" role="form" method="post" action="{{route('events')}}">

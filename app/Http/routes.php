@@ -90,7 +90,10 @@ Route::get('specials', function()
 {
     return View::make('specials');
 });
-
+Route::get('hallDetails', function()
+{
+    return View::make('hallDetails');
+});
 
 /*
 |--------------------------------------------------------------------------
