@@ -107,51 +107,51 @@
         <div id="gallery">
     
 <!-- Feature --><figure class="item-w2 item-h2">
-    <a href="http://dummyimage.com/900x600">
+    <a href="/uploads/gal1.png">
         <span>Lorem ipsum dolor sit amet</span>
         <img alt=""  width="900" height="600" src="/uploads/gal1.png" />
     </a>
 </figure>
 <figure class="">
-    <a href="http://dummyimage.com/900x600">
+    <a href="images/gallery/gallery-1.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
+        <img alt="" data-original="images/gallery/gallery-1.jpg" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <figure class="">
-    <a href="http://dummyimage.com/900x600">
+    <a href=images/gallery/gallery-2.jpg>
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
+        <img alt="" data-original="galleryphotos/1.jpg" width="900" height="600" src="images/gallery/gallery-2.jpg" />
     </a>
 </figure>
 <figure class="">
-    <a href="http://dummyimage.com/900x600">
+    <a href="galleryphotos/3.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
+        <img alt="" data-original="galleryphotos/3.jpg" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <figure class="">
-    <a href="http://dummyimage.com/900x600">
+    <a href="galleryphotos/4.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
+        <img alt="" data-original="galleryphotos/4.jpg" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <!-- Portrait --><figure class="item-h2">
-    <a href="http://dummyimage.com/600x900">
+    <a href="galleryphotos/5.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/600x900" width="600" height="900" src="/images/blank.png" />
+        <img alt="" data-original="galleryphotos/5.jpg" width="600" height="900" src="/images/blank.png" />
     </a>
 </figure>
 <!-- Portrait --><figure class="item-h2">
-    <a href="http://dummyimage.com/600x900">
+    <a href="galleryphotos/6.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/600x900" width="600" height="900" src="/images/blank.png" />
+        <img alt="" data-original="galleryphotos/6.jpg" width="600" height="900" src="/images/blank.png" />
     </a>
 </figure>
 <!-- Feature --><figure class="item-w2 item-h2">
-    <a href="http://dummyimage.com/900x600">
+    <a href="galleryphotos/7.jpg">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
+        <img alt="" data-original="galleryphotos/7.jpg" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 
@@ -166,7 +166,7 @@
                 <div class="back">
                     <div class="slider">
                     	<div class="item">
-                        	<img alt="" src="http://dummyimage.com/1200x400" width="1200" height="400" />
+                        	<img alt="" src="galleryphotos/1.jpg1200x400" width="1200" height="400" />
                             <div class="details">
                                 <a href="specials.html">
                                     <div class="title">Family Escape<br />
@@ -259,7 +259,7 @@
 </div>
 <!-- Promo Popup | START -->
 <div id="pop">
-	<img alt="" src="http://dummyimage.com/400x150" width="400" height="150" />
+	<img alt="" src="galleryphotos/1.jpg400x150" width="400" height="150" />
     <div class="container">
         <p class="title"><strong>Our latest special offers,</strong><br />
         straight to your inbox</p>

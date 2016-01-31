@@ -176,7 +176,7 @@
                 </div>
             </div>
         </div>
-        <a href="gallery.html" class="button"><span data-hover="Browse Our Gallery">Browse Our Gallery</span></a>
+        <a href="gallery" class="button"><span data-hover="Browse Our Gallery">Browse Our Gallery</span></a>
     </div>
     <!-- Gallery Slider | END -->
     <!-- Sitewide Extras | START -->
