@@ -291,14 +291,13 @@ main blockquote { width:40%; margin:0 25px 25px -30px; font:bold 25px/30px 'Open
 
 /* 3.2 - Feature List */
 
-#featurelist { width:100%; text-align:left; background:#EEE url(../images/fadeback.jpg); background-size:100% 100%; position:relative; box-shadow:0 1px 0 rgba(0,0,0,.07),inset 0 1px 0 0 rgba(0,0,0,0.05),inset 0 20px 10px -17px rgba(0,0,0,0.05); z-index:1; }
+#featurelist { width:100%; text-align:left; background:#EEE url(../images/feature.png); background-size:100% 100%; position:relative; box-shadow:0 1px 0 rgba(0,0,0,.07),inset 0 1px 0 0 rgba(0,0,0,0.05),inset 0 20px 10px -17px rgba(0,0,0,0.05); z-index:1; }
 #featurelist .centre { z-index:1; }
-#featurelist h2 { margin:-20px 0 55px; font:italic 40px/45px 'Poly', georgia; text-align:center; letter-spacing:-.3px; text-transform:none; }
+#featurelist h2 { margin:-20px 0 55px; font:italic 40px/45px 'Poly', georgia; text-align:center; letter-spacing:-.3px; text-transform:none; color: white;}
 #featurelist #slideshow:before { background:rgba(255,255,255,.2); border-color:rgba(0,0,0,.12); }
-.featurelist { box-shadow:1px 1px 0 rgba(0,0,0,.1); border-radius:5px; overflow:hidden; }
-.feature { width:100%; margin-bottom:1px; padding:40px 30px 10px; background:rgba(255,255,255,.5); border-top:1px solid rgba(255,255,255,.6); box-sizing:border-box; }
+.feature { width:100%; padding:40px 30px 10px; background:#FFF; box-sizing:border-box; }
 .feature:last-child { margin:0; }
-.feature .thumb { margin-top:-10px; margin-bottom:20px; border-radius:60px; float:left; border:5px solid #FFF; box-sizing:border-box; box-shadow:1px 1px 0 rgba(0,0,0,.12); }
+.feature .thumb { margin-top:-10px; margin-bottom:20px; float:left; solid #FFF; box-sizing:border-box; box-shadow:1px 1px 0 rgba(0,0,0,.12); }
 .feature .details { width:310px; padding:0 40px; line-height:20px; float:left; box-sizing:border-box; }
 .feature .details h3 { margin-bottom:3px; font:800 16px/22px 'Open Sans', sans-serif; letter-spacing:1.5px; text-transform:uppercase; }
 .feature .details a { padding:10px 10px 10px 0; font:800 12px/20px 'Open Sans', sans-serif; letter-spacing:1.5px; text-transform:uppercase; border:none; }
@@ -306,7 +305,6 @@ main blockquote { width:40%; margin:0 25px 25px -30px; font:bold 25px/30px 'Open
 .feature .copy { width:calc(100% - 430px); float:left; }
 .feature:after { content:""; display:block; clear:both; }
 .hover .feature .details a:hover, .hover .feature .details a:hover i { color:#000; }
-.hover .feature:hover { background:#FFF; }
 .hover .feature:hover .thumb { transform:scale(1.2); border-radius:5px; border:none; box-shadow:none; }
 
 /* 3.3 - Pagination */
