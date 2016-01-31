@@ -107,13 +107,14 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/newsletter',[
     'uses' => '\App\Http\Controllers\subscribeController@getSubscribe',
     'as' => 'newsletter',
-]);
+    
+                        ]);
 
     Route::post('/newsletter',[
     'uses' => '\App\Http\Controllers\subscribeController@postSubscribe',
-]);
-
-});   
+    
+    
+                        ]);   
 /*
 |--------------------------------------------------------------------------
 | Gallery control route
@@ -142,6 +143,7 @@ Route::post('/events',[
 
 ]);
 
+});
 /*
 |--------------------------------------------------------------------------
 | Authentication routes
@@ -157,4 +159,5 @@ Route::group(['middleware' => 'web'], function () {
 
 Route::get('/home', 'HomeController@index');
 });
+
 
