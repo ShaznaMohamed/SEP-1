@@ -45,45 +45,21 @@
                 </li>
             </ul>            
             <a id="pull"><i class="fa fa-bars"></i></a>
-        </nav> 
+        </nav>        
         <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
         <div class="shadow"></div>
     </div>
 </div>
 <!-- Navigation | END -->
 <div id="container">
-	<!-- Header | START -->
+    <!-- Header | Start -->
 	<header>
-    	<!-- Google Map | START -->
-        <script>
-			function initialize() {
-			var latlng = new google.maps.LatLng(6.84026 ,80.021092);
-			var myOptions = {
-			zoom: 16,
-			center: latlng,
-			mapTypeId: google.maps.MapTypeId.ROADMAP,
-			scrollwheel: false
-			};
-			var map = new google.maps.Map(document.getElementById('googlemap'), myOptions);
-			var marker = new google.maps.Marker({
-			position: latlng, 
-			map: map,
-			icon: "/images/point.png"
-			});
-			}
-			function loadScript() {
-			var script = document.createElement('script');
-			script.type = 'text/javascript';
-			script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&'+'callback=initialize';
-			document.body.appendChild(script);
-			}
-			window.onload = loadScript;
-		</script>
-    	<div id="map">
-        	<img alt="" src="/images/spacer.png" width="1500" height="700" class="spacer" />
-            <div id="googlemap"></div>
+    	<div id="header">
+        	<div class="h1">
+                <h1><span>Accommodation</span>
+                <span class="tagline">Modern Rooms & Spacious Suites</span></h1>
+            </div>
         </div>
-        <!-- Google Map | END -->
         <!-- Check Rates Banner | START -->
         <div id="check">
         	<div class="centre">
@@ -128,49 +104,131 @@
     <!-- Content | START -->
     <main>
     	<div class="centre">
-            <div id="content">
-                <h1><strong>Luxury amidst the rustle of the city</strong></h1>
-                <p></p>
-                <h2><strong>No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka</strong></h2>
-                <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank" class="button"><span data-hover="Get Directions">Get Directions from your location</span></a>
-                <!-- Slideshow | START -->
-                <div id="slideshow">
-                    <div class="slider">
-                        <div class="item"><img alt="" src="images\location\1.png" width="1200" height="600" /></div>
-                    </div>
-                    <div class="nav">
-                        <a class="prev"><i class="fa fa-chevron-left"></i></a>
-                        <a class="next"><i class="fa fa-chevron-right"></i></a>
-                    </div>
-                </div>
-                <!-- Slideshow | END -->
-            </div>
-        </div>
-        <!-- Feature List | START -->
-        <section id="featurelist">
-        	<div class="centre">
-            	<h2>Things to do in Homagama</h2>
-                <div class="featurelist">
-                    <div class="feature">
-                        <img alt="" src="images/zoo.png" width="120" height="120" class="thumb" />
+            <!-- List Items (Rooms) | START -->
+            <section id="rooms" class="list grid">
+                <div class="item">
+                	<div class="container">
+                        <div class="imgcontainer"><img alt="" src="http://dummyimage.com/380x380" width="380" height="380" /></div>
                         <div class="details">
-                            <h3>Dehiwala Zoological Gardens</h3>
-                            <p>Anagarika Dharmapala Mawatha, Dehiwala<br /><br />
-                            <a href="http://nationalzoo.gov.lk/en/dehiwala-zoological-gardens"><i class="fa fa-external-link"></i> Visit Website</a></p>
-                        </div>
-                        <div class="copy">
-                            <p>National Zoological Gardens of Sri Lanka (also called Colombo Zoo or Dehiwala Zoo) is a zoological garden in Dehiwala, Sri Lanka, founded in 1936. Its sprawling areas are host to a variety of animals and birds. The zoo exhibits animals but also places an emphasis on animal conservation and welfare, and education.</p>
+                            <a href="room.html">
+                                <h3 class="title">Standard Room<br />
+                                <span>Stay from $149 per night</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</p>
+                                <div class="button"><span data-hover="View Room">View Room</span></div>
+                            </a>
                         </div>
                     </div>
                 </div>
+                <div class="item">
+                	<div class="container">
+                        <div class="imgcontainer"><img alt="" src="http://dummyimage.com/380x380" width="380" height="380" /></div>
+                        <div class="details">
+                            <a href="room.html">
+                                <h3 class="title">Ocean View Room<br />
+                                <span>Stay from $199 per night</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</p>
+                                <div class="button"><span data-hover="View Room">View Room</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                	<div class="container">
+                        <div class="imgcontainer"><img alt="" src="http://dummyimage.com/380x380" width="380" height="380" /></div>
+                        <div class="details">
+                            <a href="room.html">
+                                <h3 class="title">Deluxe Room<br />
+                                <span>Stay from $225 per night</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</p>
+                                <div class="button"><span data-hover="View Room">View Room</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- List Items (Rooms) | END -->
+            <div id="content">
+                <h2><strong>Find Your Base</strong> with our selection of rooms & suites</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
+                <table>
+                    <tr>
+                        <th>Room Type</th>
+                        <th>Low Season</th>
+                        <th>Mid Season</th>
+                        <th>High Season</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Standard Room</strong></td>
+                        <td>$149</td>
+                        <td>$169</td>
+                        <td>$199</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ocean View Room</strong></td>
+                        <td>$199</td>
+                        <td>$219</td>
+                        <td>$249</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Deluxe Room</strong></td>
+                        <td>$225</td>
+                        <td>$245</td>
+                        <td>$275</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Junior Suite</strong></td>
+                        <td>$240</td>
+                        <td>$260</td>
+                        <td>$290</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premiere Suite</strong></td>
+                        <td>$279</td>
+                        <td>$299</td>
+                        <td>$329</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3 Bed Penthouse</strong></td>
+                        <td>$329</td>
+                        <td>$349</td>
+                        <td>$379</td>
+                    </tr>
+                </table>
+                <a href="contact.php" class="button"><span data-hover="Book a Room">Book a Room</span></a>
             </div>
-        </section>
-        <!-- Feature List | END -->
+            <!-- Video | START -->
+            <div id="video">
+                <div class="embed-container"><iframe src="http://dummyimage.com/1200x675" width="1200" height="675" allowfullscreen></iframe></div>
+            </div>
+            <!-- Video | END -->
+        </div>
     </main>
     <!-- Content | END -->
     <!-- Sitewide Extras | START -->
     <div id="extras">
-    	<div class="centre">            
+    	<div class="centre">
+            <!-- List Items (Specials Slider) | START -->
+            <div id="specials" class="list">
+                <div class="back">
+                    <div class="slider">
+                    	<div class="item">
+                        	<img alt="" src="http://dummyimage.com/1200x400" width="1200" height="400" />
+                            <div class="details">
+                                <a href="specials.html">
+                                    <div class="title">Family Escape<br />
+                                    <span>Activity Package</span></div>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.<br />
+                                    <strong>Stay from $249 per night</strong></p>
+                                    <div class="button"><span data-hover="View Special">View Special</span></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav"></div>
+            </div>
+            <!-- List Items (Specials Slider) | END -->
         	<!-- Recent Blog Posts | START -->
             <div class="recent">
                 <a href="blog-post.html">
@@ -210,8 +268,8 @@
                 <!-- Subscribe / Social | START -->
                 <div class="news">
                 	<div class="title"><span>News & Offers</span></div>
-                    <div class="subscribe"> 
-                        <form action="{{route('newsletter')}}" method="post">
+                    <div class="subscribe">
+                        <form>
                             <input name="email" type="text" placeholder="Your email address" />
                             <button><span data-hover="Sign Up">Sign Up</span></button>
                         </form>
@@ -226,10 +284,11 @@
                 <!-- Subscribe / Social | END -->
             	<!-- Contact Details | START -->
             	<div class="contact">
-                	<p><strong class="phone">+94 11 2748913, +94 77 7743612</strong><br />
-                    <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
-                    <i class="fa fa-map-marker"></i> No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka<br />
-                    <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank"><strong>Get Directions</strong></a></p>
+                	<p><strong class="phone">+61 8 3456 7890</strong><br />
+                    <a href="mailto:stay@basehotel.com">stay@basehotel.com</a><br /><br />
+                    <i class="fa fa-map-marker"></i> 101 Luxury Street<br />
+                    Perth, WA Australia 6000<br />
+                    <a href="https://www.google.com/maps/dir/Current+Location/-31.957482,115.856868" target="_blank"><strong>Get Directions</strong></a></p>
                 </div>
                 <!-- Contact Details | END -->
                 <div class="dark"></div>

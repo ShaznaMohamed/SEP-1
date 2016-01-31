@@ -9,7 +9,7 @@
 <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
-<body class="fullwidth">
+<body class="page-blogpost page-sidebar">
 <!-- Navigation | START -->
 <div id="nav">
     <div class="centre">
@@ -51,39 +51,15 @@
     </div>
 </div>
 <!-- Navigation | END -->
-<div id="container">
-	<!-- Header | START -->
+<div id="container" class="post">
+	<!-- Header | Start -->
 	<header>
-    	<!-- Google Map | START -->
-        <script>
-			function initialize() {
-			var latlng = new google.maps.LatLng(6.84026 ,80.021092);
-			var myOptions = {
-			zoom: 16,
-			center: latlng,
-			mapTypeId: google.maps.MapTypeId.ROADMAP,
-			scrollwheel: false
-			};
-			var map = new google.maps.Map(document.getElementById('googlemap'), myOptions);
-			var marker = new google.maps.Marker({
-			position: latlng, 
-			map: map,
-			icon: "/images/point.png"
-			});
-			}
-			function loadScript() {
-			var script = document.createElement('script');
-			script.type = 'text/javascript';
-			script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&'+'callback=initialize';
-			document.body.appendChild(script);
-			}
-			window.onload = loadScript;
-		</script>
-    	<div id="map">
-        	<img alt="" src="/images/spacer.png" width="1500" height="700" class="spacer" />
-            <div id="googlemap"></div>
+    	<div id="header">
+        	<div class="h1">
+                <div><h1>Our Latest Hotel Awards</h1>
+                <span class="tagline"><strong>Hotel News</strong> &ndash; December 12, 2014</span></div>
+            </div>
         </div>
-        <!-- Google Map | END -->
         <!-- Check Rates Banner | START -->
         <div id="check">
         	<div class="centre">
@@ -128,49 +104,108 @@
     <!-- Content | START -->
     <main>
     	<div class="centre">
-            <div id="content">
-                <h1><strong>Luxury amidst the rustle of the city</strong></h1>
-                <p></p>
-                <h2><strong>No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka</strong></h2>
-                <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank" class="button"><span data-hover="Get Directions">Get Directions from your location</span></a>
-                <!-- Slideshow | START -->
-                <div id="slideshow">
-                    <div class="slider">
-                        <div class="item"><img alt="" src="images\location\1.png" width="1200" height="600" /></div>
-                    </div>
-                    <div class="nav">
-                        <a class="prev"><i class="fa fa-chevron-left"></i></a>
-                        <a class="next"><i class="fa fa-chevron-right"></i></a>
+            <div id="left">
+            	<!-- Slideshow | START -->
+            	<div id="slideshow">
+                	<div class="slider">
+                    	<img alt="" src="http://dummyimage.com/770x500" width="770" height="500" />
                     </div>
                 </div>
                 <!-- Slideshow | END -->
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.</p>
+                <blockquote>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+                <p class="fine credit"><i class="fa fa-edit"></i> Posted by <a href="#">Base Admin</a></p>
+                <hr />
+                <!-- Comments | START -->
+                <a href="form-comments.php?post=blog-post.html" class="button commentpop"><span data-hover="Leave a Comment">Leave a Comment</span></a>
+                <h2><i class="fa fa-comments-o"></i> 4 Comments</h2>
+                <ol id="comments">
+                    <li class="comment parent">
+                        <div class="quote">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.</p>
+                        </div>
+                        <a href="form-comments.php?post=blog-post.html" class="comment-reply-link commentpop">Reply to John</a><div class="comment-author">John <span>on December 18, 2014</span></div>
+                        <ol class="children">
+                            <li class="comment">
+                                <div class="quote">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel.</p>
+                                </div>
+                                <a href="form-comments.php?post=blog-post.html" class="comment-reply-link commentpop">Reply to Terry</a><div class="comment-author">Terry <span>on December 20, 2014</span></div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="comment parent">
+                        <div class="quote">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat.</p>
+                        </div>
+                        <a href="form-comments.php?post=blog-post.html" class="comment-reply-link commentpop">Reply to Jessica</a><div class="comment-author">Jessica <span>on December 16, 2014</span></div>
+                    </li>
+                    <li class="comment parent">
+                        <div class="quote">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.</p>
+                        </div>
+                        <a href="form-comments.php" class="comment-reply-link commentpop">Reply to Steve</a><div class="comment-author">Steve <span>on December 14, 2014</span></div>
+                    </li>
+                </ol>
+                <!-- Comments | END -->
             </div>
-        </div>
-        <!-- Feature List | START -->
-        <section id="featurelist">
-        	<div class="centre">
-            	<h2>Things to do in Homagama</h2>
-                <div class="featurelist">
-                    <div class="feature">
-                        <img alt="" src="images/zoo.png" width="120" height="120" class="thumb" />
-                        <div class="details">
-                            <h3>Dehiwala Zoological Gardens</h3>
-                            <p>Anagarika Dharmapala Mawatha, Dehiwala<br /><br />
-                            <a href="http://nationalzoo.gov.lk/en/dehiwala-zoological-gardens"><i class="fa fa-external-link"></i> Visit Website</a></p>
-                        </div>
-                        <div class="copy">
-                            <p>National Zoological Gardens of Sri Lanka (also called Colombo Zoo or Dehiwala Zoo) is a zoological garden in Dehiwala, Sri Lanka, founded in 1936. Its sprawling areas are host to a variety of animals and birds. The zoo exhibits animals but also places an emphasis on animal conservation and welfare, and education.</p>
-                        </div>
+            <!-- Sidebar | START -->
+            <aside>
+            	<div id="scroll">
+                    <div id="block" class="categories">
+                        <ul class="nav">
+                            <li><a href="#">Hotel News</a></li>
+                            <li><a href="#">What's on in Perth</a></li>
+                            <li><a href="#">Functions & Events</a></li>
+                            <li><a href="#">Leisure Escapes</a></li>
+                        </ul>
                     </div>
+                    <ul class="tags blogtags">
+                    	<li><a href="#">Accommodation</a></li>
+                        <li><a href="#">Dining</a></li>
+                        <li><a href="#">Wedding</a></li>
+                        <li><a href="#">Perth</a></li>
+                        <li><a href="#">Special</a></li>
+                        <li><a href="#">Awards</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                        <li><a href="#">Business</a></li>
+                    </ul>
+                    <!-- List Items (Specials Slider) | START -->
+                    <div id="specials" class="list">
+                        <div class="slider">
+                        	<div class="item">
+                                <img alt="" src="http://dummyimage.com/380x250" width="380" height="250" />
+                                <div class="details">
+                                    <a href="specials.html">
+                                        <div class="title">Family Escape<br />
+                                        <span>Activity Package</span></div>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.<br />
+                                        <strong>Stay from $249 per night</strong></p>
+                                        <div class="button"><span data-hover="View Special">View Special</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav"></div>
+                    </div>
+                    <!-- List Items (Specials Slider) | END -->
+                    <!-- Search | START -->
+                    <form id="search">
+                        <input name="search" type="text" placeholder="Search..." />
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
+                    <!-- Search | END -->
                 </div>
-            </div>
-        </section>
-        <!-- Feature List | END -->
+            </aside>
+            <!-- Sidebar | END -->
+        </div>
     </main>
     <!-- Content | END -->
     <!-- Sitewide Extras | START -->
     <div id="extras">
-    	<div class="centre">            
+    	<div class="centre">
         	<!-- Recent Blog Posts | START -->
             <div class="recent">
                 <a href="blog-post.html">
@@ -210,8 +245,8 @@
                 <!-- Subscribe / Social | START -->
                 <div class="news">
                 	<div class="title"><span>News & Offers</span></div>
-                    <div class="subscribe"> 
-                        <form action="{{route('newsletter')}}" method="post">
+                    <div class="subscribe">
+                        <form>
                             <input name="email" type="text" placeholder="Your email address" />
                             <button><span data-hover="Sign Up">Sign Up</span></button>
                         </form>
@@ -226,10 +261,11 @@
                 <!-- Subscribe / Social | END -->
             	<!-- Contact Details | START -->
             	<div class="contact">
-                	<p><strong class="phone">+94 11 2748913, +94 77 7743612</strong><br />
-                    <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
-                    <i class="fa fa-map-marker"></i> No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka<br />
-                    <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank"><strong>Get Directions</strong></a></p>
+                	<p><strong class="phone">+61 8 3456 7890</strong><br />
+                    <a href="mailto:stay@basehotel.com">stay@basehotel.com</a><br /><br />
+                    <i class="fa fa-map-marker"></i> 101 Luxury Street<br />
+                    Perth, WA Australia 6000<br />
+                    <a href="https://www.google.com/maps/dir/Current+Location/-31.957482,115.856868" target="_blank"><strong>Get Directions</strong></a></p>
                 </div>
                 <!-- Contact Details | END -->
                 <div class="dark"></div>
@@ -238,7 +274,7 @@
     	<!-- Footer Links | START -->
     	<div id="footerlinks">
         	<div class="centre">
-            	            	<span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Amalya Reach Holiday Resort</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><span>
+            	<span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Base Hotel</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><span><a href="http://themeforest.net/item/base-hotel-responsive-booking-gallery-template/10517095?ref=Klayemore" target="_blank">Template By KM</a></span><span></span>
             </div>
         </div>
         <!-- Footer Links | END -->
