@@ -13,7 +13,7 @@
 <!-- Navigation | START -->
 <div id="nav">
     <div class="centre">
-        <a href="/" class="logo"><img alt="" src="/images/logo.png" /></a>
+        <a href="index.html" class="logo"><img alt="" src="/images/logo.png" /></a>
         <nav>
             <ul>
             	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
@@ -24,7 +24,6 @@
                         <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
                         <li>{{ Html::link('room', 'Room Detail 1') }}</li>
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
-                        <li>{{ Html::link('wedding', 'Wedding') }}</li>
                     </ul>
                 </li>
                 <li>{{ Html::link('gallery', 'Gallery') }}</li>                
@@ -33,10 +32,8 @@
                 <li>{{ Html::link('about', 'About Us') }}</li>
                 <li>{{ Html::link('about', 'More') }}
                 	<ul>
-                        <li>{{ Html::link('login', 'Login') }}</li>
-                        <li>{{ Html::link('register', 'Register') }}</li>                                    
-                        <li>{{ Html::link('events', 'Meetings and Events') }}</li>
-                        <li>{{ Html::link('hallDetails', 'Reception Halls') }}</li>
+                        <li><a href="http://localhost:8000/login">Login</a></li>
+                        <li><a href="http://localhost:8000/register">Register</a></li>                                    
                         <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                         	<ul>
@@ -178,7 +175,7 @@
                 </div>
             </div>
         </div>
-        <a href="gallery" class="button"><span data-hover="Browse Our Gallery">Browse Our Gallery</span></a>
+        <a href="gallery.html" class="button"><span data-hover="Browse Our Gallery">Browse Our Gallery</span></a>
     </div>
     <!-- Gallery Slider | END -->
     <!-- Sitewide Extras | START -->

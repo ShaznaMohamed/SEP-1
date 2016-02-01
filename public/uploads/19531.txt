@@ -1,0 +1,133 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package daa;
+import java.util.Scanner;
+import java.util.Arrays;
+
+/**
+ *
+ * @author vish_v
+ */ 
+public class DAA  {
+  
+    public static void main(String[] args)  {
+        
+       
+        while(true) // all inputs
+        {
+            
+             
+            int m, n;
+            int secondLineCount = 0;
+            int programLinesCount = 0;
+            int mintime;
+            int minrmem=0;
+           
+            
+            
+            Scanner new_input = new Scanner(System.in);
+            m = Integer.parseInt(new_input.next());
+            n = Integer.parseInt(new_input.next());
+            
+            if(m==0 && n==0)
+            {
+                break;
+            }
+            int[] memSizeArray = new int [m];
+            int[] memoryArray = new int[n];
+            int[] timeArray = new int[n];
+            
+           
+            
+            
+            while(secondLineCount < m)
+            {
+                int temp;
+                temp = Integer.parseInt(new_input.next());
+                memSizeArray[secondLineCount]= temp; 
+                secondLineCount++;
+            }
+            
+            for (int i=0; i<memSizeArray.length;i++)
+            {
+                System.out.println(memSizeArray[i]);
+            }
+            
+            // getting the programs
+            
+           
+            
+            while(programLinesCount<n)
+            {
+                
+                 
+                
+                 int k = 0;
+                 int i = 0;
+                 k = Integer.parseInt(new_input.next());
+                 
+                 int[] tempmemoryArray = new int[k];
+                 int[] temptimeArray = new int[k];
+                 int[] temporiginaltimeArray = new int[k];
+                 
+                 if(k==1)
+                 {
+                     memoryArray[programLinesCount] = Integer.parseInt(new_input.next());
+                     timeArray[programLinesCount] = Integer.parseInt(new_input.next());
+                     i++;
+                     
+                 }
+                 
+    else {
+                 while(i<k)
+                 {
+                     tempmemoryArray[i] = Integer.parseInt(new_input.next());
+                     temptimeArray[i] = Integer.parseInt(new_input.next());
+                     temporiginaltimeArray[i] = temptimeArray[i]; 
+                     i++;
+                 }
+                
+                Arrays.sort(temptimeArray);
+                mintime = temptimeArray[0];
+                for(int j=0; j<k;j++)
+                {
+                    if(mintime == temporiginaltimeArray[j])
+                    {
+                        minrmem = j;
+                    }
+                }
+                
+                
+                memoryArray[programLinesCount] = tempmemoryArray[minrmem];
+                timeArray[programLinesCount] = mintime; 
+                
+         }
+                
+                programLinesCount++;
+                
+            }
+            
+             for (int i=0; i<memoryArray.length;i++)
+            {
+                System.out.println(memoryArray[i]);
+                System.out.println(timeArray[i]);
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+    
+        
+    }
+    
+}

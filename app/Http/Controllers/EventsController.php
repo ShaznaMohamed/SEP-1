@@ -41,11 +41,8 @@ class EventsController extends Controller
 
         ]);
         return redirect()
-            ->route('home')
+            ->route('hallDetails')
             ->with('info', 'You are now subscribed to our newsletter');
-
-
-
     }
 
 

@@ -53,19 +53,7 @@
             </ul>
             <a id="pull"><i class="fa fa-bars"></i></a>
         </nav>
-        <!-- Languages | START -->
-        <!--
-        <div id="language">
-        	<ul>
-            	<li class="en"><a>EN</a></li>
-                <li class="cn"><a href="#">CN</a></li>
-                <li class="fr"><a href="#">FR</a></li>
-                <li class="de"><a href="#">DE</a></li>
-                <li class="it"><a href="#">IT</a></li>
-            </ul>
-        </div>
-        -->
-        <!-- Languages | END -->
+
         <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
         <div class="shadow"></div>
     </div>
@@ -145,7 +133,7 @@
                     <div class="container">
                         <div class="imgcontainer"><img alt="" src="/images/hall.png" width="200" height="200" /></div>
                         <div class="details">
-                            <a href="room.blade.php">
+                            <a href="hallDetails">
                                 <h3 class="title">Pool Side Ballroom<br /></h3>
                                 <p>There are some events that are just meant to be held at Pool Side Ballroom, with its larger-than-life appeal and grand finishes.</p>
                                 <div class="button"><span data-hover="View Hall">View Hall</span></div>
@@ -157,7 +145,7 @@
                     <div class="container">
                         <div class="imgcontainer"><img alt="" src="/images/hall.png" width="380" height="380" /></div>
                         <div class="details">
-                            <a href="room.html">
+                            <a href="hallDetails">
                                 <h3 class="title">Silver Ballroom<br /></h3>
                                 <p>There are some events that are just meant to be held at Pool Side Ballroom, with its larger-than-life appeal and grand finishes.</p>
                                 <div class="button"><span data-hover="View Hall">View Hall</span></div>
@@ -169,7 +157,7 @@
                     <div class="container">
                         <div class="imgcontainer"><img alt="" src="/images/hall.png" width="380" height="380" /></div>
                         <div class="details">
-                            <a href="room.html">
+                            <a href="hallDetails">
                                 <h3 class="title">Samaro Ballroom<br /></h3>
                                 <p>There are some events that are just meant to be held at Pool Side Ballroom, with its larger-than-life appeal and grand finishes.</p>
                                 <div class="button"><span data-hover="View Hall">View Hall</span></div>
@@ -181,7 +169,7 @@
                     <div class="container">
                         <div class="imgcontainer"><img alt="" src="/images/hall.png" width="380" height="380" /></div>
                         <div class="details">
-                            <a href="room.html">
+                            <a href="hallDetails">
                                 <h3 class="title">Grand Ballroom<br /></h3>
                                 <p>There are some events that are just meant to be held at Pool Side Ballroom, with its larger-than-life appeal and grand finishes.</p>
                                 <div class="button"><span data-hover="View Hall">View Hall</span></div>
@@ -194,7 +182,7 @@
             <!-- form | start -->
 
             <div class="wrap_event">
-                <div class="raw">
+                <div class="row">
                     <div class="col-lg-6" >
                         <h1>MAKE A REQUEST</h1>
                             <form name="form1" id="form1" class="form-vertical" role="form" method="post" action="{{route('events')}}">
@@ -230,7 +218,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="period" class="control-label">Period(Date)* :</label>
+                                    <label for="period" class="control-label">Date* :</label>
                                     <input type="text" name="period" class="form-control" id="period" value="ex: xxxx-xx-xx xx:xx:xx">
                                 </div>
 
@@ -306,10 +294,11 @@
                 <!-- Subscribe / Social | END -->
                 <!-- Contact Details | START -->
                 <div class="contact">
-                	<p><strong class="phone">+94 11 2748913, +94 77 7743612</strong><br />
-                    <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
-                    <i class="fa fa-map-marker"></i> No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka<br />
-                    <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank"><strong>Get Directions</strong></a></p>
+                    <p><strong class="phone">+94 11 2748913</strong><br />
+                        <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
+                        <i class="fa fa-map-marker"></i> No:556 Moragahahena<br />
+                        Pitipana North Homagama Sri Lanka<br />
+                        <a href="https://www.google.com/maps/dir/Current+Location/@6.8402657,80.0189031,17z" target="_blank"><strong>Get Directions</strong></a></p>
                 </div>
                 <!-- Contact Details | END -->
                 <div class="dark"></div>

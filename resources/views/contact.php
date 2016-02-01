@@ -1,7 +1,7 @@
 <?php
 $alert = null;
 if(isset($_POST['send'])=="sendform"){
-	
+
 // Validation Check
 
 $continue = true;
@@ -23,16 +23,16 @@ if(empty($_POST['contact-phone'])){
 // Validation OK, send email
 
 if($continue===true){
-		
+
 	require '/email/phpmailer/PHPMailerAutoload.php';
-	
+
 	// Hotel Details
-	
+
 	$hotel_name = "Base Hotel";
 	$hotel_email = "test@klayemorrison.com";
-	
+
 	// Send Email to Guest
-	
+
 	$message = file_get_contents('/email/template-guest.php');
 	$message = str_replace('[name]', $_POST['contact-name'], $message);
 	$message = str_replace('[email]', $_POST['contact-email'], $message);
@@ -43,7 +43,7 @@ if($continue===true){
 	$message = str_replace('[adults]', $_POST['contact-adults'], $message);
 	$message = str_replace('[children]', $_POST['contact-children'], $message);
 	$message = str_replace('[message]', $_POST['contact-message'], $message);
-	
+
 	$mail = new PHPMailer;
 	$mail->setFrom($hotel_email, $hotel_name);
 	$mail->addAddress($_POST['contact-email'], $_POST['contact-name']);
@@ -51,9 +51,9 @@ if($continue===true){
 	$mail->MsgHTML($message);
 	$mail->IsHTML(true);
 	$mail->send();
-	
+
 	// Send Email to Hotel
-	
+
 	$message = file_get_contents('/email/template-hotel.php');
 	$message = str_replace('[name]', $_POST['contact-name'], $message);
 	$message = str_replace('[email]', $_POST['contact-email'], $message);
@@ -64,7 +64,7 @@ if($continue===true){
 	$message = str_replace('[adults]', $_POST['contact-adults'], $message);
 	$message = str_replace('[children]', $_POST['contact-children'], $message);
 	$message = str_replace('[message]', $_POST['contact-message'], $message);
-	
+
 	$mail = new PHPMailer;
 	$mail->setFrom($_POST['contact-email'], $_POST['contact-name']);
 	$mail->addAddress($hotel_email, $hotel_name);
@@ -93,6 +93,7 @@ else {
 <link class="colour" rel="stylesheet" href="/css/colour-blue.css">
 <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body class="fullwidth">
 <!-- Navigation | START -->
@@ -229,7 +230,7 @@ else {
 			};
 			var map = new google.maps.Map(document.getElementById('googlemap'), myOptions);
 			var marker = new google.maps.Marker({
-			position: latlng, 
+			position: latlng,
 			map: map,
 			icon: "/images/point.png"
 			});
@@ -327,10 +328,11 @@ else {
                 <!-- Subscribe / Social | END -->
             	<!-- Contact Details | START -->
             	<div class="contact">
-                	<p><strong class="phone">+94 11 2748913, +94 77 7743612</strong><br />
-                    <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
-                    <i class="fa fa-map-marker"></i> No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka<br />
-                    <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank"><strong>Get Directions</strong></a></p>
+                	<p><strong class="phone">+61 8 3456 7890</strong><br />
+                    <a href="mailto:stay@basehotel.com">stay@basehotel.com</a><br /><br />
+                    <i class="fa fa-map-marker"></i> 101 Luxury Street<br />
+                    Perth, WA Australia 6000<br />
+                    <a href="https://www.google.com/maps/dir/Current+Location/-31.957482,115.856868" target="_blank"><strong>Get Directions</strong></a></p>
                 </div>
                 <!-- Contact Details | END -->
                 <div class="dark"></div>

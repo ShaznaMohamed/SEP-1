@@ -107,63 +107,51 @@
         <div id="gallery">
     
 <!-- Feature --><figure class="item-w2 item-h2">
-    <a href="/uploads/gal1.png">
+    <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
         <img alt=""  width="900" height="600" src="/uploads/gal1.png" />
     </a>
 </figure>
 <figure class="">
-    <a href="images/gallery/gallery-1.jpg">
+    <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-
-        <img alt="" width="900" height="600" src="/uploads/gal2.png" />
-
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <figure class="">
-    <a href=images/gallery/gallery-2.jpg>
+    <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-
-        <img alt="" width="900" height="600" src="/uploads/gal3.png" />
-
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <figure class="">
-    <a href="galleryphotos/3.jpg">
+    <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-
-        <img alt="" width="900" height="600" src="/uploads/gal4.png" />
-
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <figure class="">
-    <a href="galleryphotos/4.jpg">
+    <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-
-        <img alt="" width="900" height="600" src="/uploads/gal5.png" />
-
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 <!-- Portrait --><figure class="item-h2">
-    <a href="galleryphotos/5.jpg">
+    <a href="http://dummyimage.com/600x900">
         <span>Lorem ipsum dolor sit amet</span>
-
-        <img alt="" width="600" height="900" src="/uploads/gal6.png" />
-
+        <img alt="" data-original="http://dummyimage.com/600x900" width="600" height="900" src="/images/blank.png" />
     </a>
 </figure>
 <!-- Portrait --><figure class="item-h2">
-    <a href="galleryphotos/6.jpg">
+    <a href="http://dummyimage.com/600x900">
         <span>Lorem ipsum dolor sit amet</span>
-
-        <img alt="" width="600" height="900" src="/uploads/gal7.png" />
-
+        <img alt="" data-original="http://dummyimage.com/600x900" width="600" height="900" src="/images/blank.png" />
     </a>
 </figure>
 <!-- Feature --><figure class="item-w2 item-h2">
-    <a href="galleryphotos/7.jpg">
+    <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="galleryphotos/7.jpg" width="900" height="600" src="/images/blank.png" />
+        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
     </a>
 </figure>
 
@@ -178,7 +166,7 @@
                 <div class="back">
                     <div class="slider">
                     	<div class="item">
-                        	<img alt="" src="galleryphotos/1.jpg1200x400" width="1200" height="400" />
+                        	<img alt="" src="http://dummyimage.com/1200x400" width="1200" height="400" />
                             <div class="details">
                                 <a href="specials.html">
                                     <div class="title">Family Escape<br />
@@ -249,10 +237,11 @@
                 <!-- Subscribe / Social | END -->
             	<!-- Contact Details | START -->
             	<div class="contact">
-                	<p><strong class="phone">+94 11 2748913, +94 77 7743612</strong><br />
-                    <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
-                    <i class="fa fa-map-marker"></i> No:556, Moragahahena, Pitipana North, Homagama, Sri Lanka<br />
-                    <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank"><strong>Get Directions</strong></a></p>
+                	<p><strong class="phone">+61 8 3456 7890</strong><br />
+                    <a href="mailto:stay@basehotel.com">stay@basehotel.com</a><br /><br />
+                    <i class="fa fa-map-marker"></i> 101 Luxury Street<br />
+                    Perth, WA Australia 6000<br />
+                    <a href="https://www.google.com/maps/dir/Current+Location/-31.957482,115.856868" target="_blank"><strong>Get Directions</strong></a></p>
                 </div>
                 <!-- Contact Details | END -->
                 <div class="dark"></div>
@@ -270,7 +259,7 @@
 </div>
 <!-- Promo Popup | START -->
 <div id="pop">
-	<img alt="" src="galleryphotos/1.jpg400x150" width="400" height="150" />
+	<img alt="" src="http://dummyimage.com/400x150" width="400" height="150" />
     <div class="container">
         <p class="title"><strong>Our latest special offers,</strong><br />
         straight to your inbox</p>
