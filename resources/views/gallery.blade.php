@@ -115,37 +115,37 @@
 <figure class="">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
+        <img alt="" width="900" height="600" src="/uploads/gal2.png" />
     </a>
 </figure>
 <figure class="">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
+        <img alt="" width="900" height="600" src="/uploads/gal3.png" />
     </a>
 </figure>
 <figure class="">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
+        <img alt="" width="900" height="600" src="/uploads/gal4.png" />
     </a>
 </figure>
 <figure class="">
     <a href="http://dummyimage.com/900x600">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/900x600" width="900" height="600" src="/images/blank.png" />
+        <img alt="" width="900" height="600" src="/uploads/gal5.png" />
     </a>
 </figure>
 <!-- Portrait --><figure class="item-h2">
     <a href="http://dummyimage.com/600x900">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/600x900" width="600" height="900" src="/images/blank.png" />
+        <img alt="" width="600" height="900" src="/uploads/gal6.png" />
     </a>
 </figure>
 <!-- Portrait --><figure class="item-h2">
     <a href="http://dummyimage.com/600x900">
         <span>Lorem ipsum dolor sit amet</span>
-        <img alt="" data-original="http://dummyimage.com/600x900" width="600" height="900" src="/images/blank.png" />
+        <img alt="" width="600" height="900" src="/uploads/gal7.png" />
     </a>
 </figure>
 <!-- Feature --><figure class="item-w2 item-h2">

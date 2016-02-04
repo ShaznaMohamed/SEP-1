@@ -291,11 +291,11 @@ main blockquote { width:40%; margin:0 25px 25px -30px; font:bold 25px/30px 'Open
 
 /* 3.2 - Feature List */
 
-#featurelist { width:100%; text-align:left; background:#EEE url(../images/feature.png); background-size:100% 100%; position:relative; box-shadow:0 1px 0 rgba(0,0,0,.07),inset 0 1px 0 0 rgba(0,0,0,0.05),inset 0 20px 10px -17px rgba(0,0,0,0.05); z-index:1; }
+#featurelist { width:100%; text-align:left; background-size:100% 100%; position:relative; box-shadow:0 1px 0 rgba(0,0,0,.07),inset 0 1px 0 0 rgba(0,0,0,0.05),inset 0 20px 10px -17px rgba(0,0,0,0.05); z-index:1; }
 #featurelist .centre { z-index:1; }
 #featurelist h2 { margin:-20px 0 55px; font:italic 40px/45px 'Poly', georgia; text-align:center; letter-spacing:-.3px; text-transform:none; color: white;}
 #featurelist #slideshow:before { background:rgba(255,255,255,.2); border-color:rgba(0,0,0,.12); }
-.feature { width:100%; padding:40px 30px 10px; background:#FFF; box-sizing:border-box; }
+.feature { width:100%; padding:40px 30px 10px; background:rgba(255,255,255,0.9); box-sizing:border-box; }
 .feature:last-child { margin:0; }
 .feature .thumb { margin-top:-10px; margin-bottom:20px; float:left; solid #FFF; box-sizing:border-box; box-shadow:1px 1px 0 rgba(0,0,0,.12); }
 .feature .details { width:310px; padding:0 40px; line-height:20px; float:left; box-sizing:border-box; }
@@ -603,7 +603,7 @@ article .button { margin:7px 30px 10px 0; float:left; }
 
 /******************** 12.0 - Guest Book ********************/
 
-#guestbook { margin:0; padding:60px 55px 0; display:block; background:#EEE url(../images/fadeback.jpg) !important; background-size:100% 100% !important; position:relative; box-shadow:0 1px 0 rgba(0,0,0,.07); z-index:1; }
+#guestbook { margin:0; padding:60px 55px 0; display:block; background:#EEE url(../images/pagemain/testimonials.png) !important; background-size:100% 100% !important; position:relative; box-shadow:0 1px 0 rgba(0,0,0,.07); z-index:1; }
 #guestbook .centre { width:100%; padding-left:0; padding-right:0; max-width:none; display:inline-block; text-align:center; }
 #guestbook .button { line-height:46px; border:2px solid #FFF; box-sizing:border-box; }
 #guestbook .pagination { margin-top:-20px; }
@@ -625,7 +625,7 @@ article .button { margin:7px 30px 10px 0; float:left; }
 #testimonials figure h2 { padding:0 40px; font:bold 25px/27px 'Open Sans', sans-serif; text-transform:none; letter-spacing:0; }
 #testimonials figure .name { margin-top:-5px; font-size:12px; line-height:17px; font-style:normal; text-transform:uppercase; }
 #testimonials figure .name span { font-size:10px; }
-#testimonials figure:before, #testimonials figure:after { position:absolute; width:40%; height:10px; content:""; left:12px; bottom:2px; background:transparent; transform:skew(-5deg) rotate(-5deg); box-shadow:0 6px 12px rgba(0,0,0,.2); z-index:-1; } 
+#testimonials figure:before, #testimonials figure:after { position:absolute; width:40%; height:10px; content:""; left:12px; bottom:2px; background:transparent; transform:skew(-5deg) rotate(-5deg); box-shadow:0 6px 12px rgba(0,0,0,.2); z-index:-1; }
 #testimonials figure:after { left:auto; right:12px; transform:skew(5deg) rotate(5deg); }
 
 /* 12.2 - Testimonials Cover */

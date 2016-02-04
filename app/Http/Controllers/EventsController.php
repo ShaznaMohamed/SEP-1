@@ -7,11 +7,9 @@ use App\Models\Event;
 
 class EventsController extends Controller
 {
-
     public function index()
     {
         return view('MeetingAndEvents');
-
     }
 
     public function getEvents()
@@ -21,7 +19,7 @@ class EventsController extends Controller
 
     public function postEvents(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'first_name' => 'required',
             'confirm_email' => 'required',
             'email' => 'required',
@@ -40,10 +38,9 @@ class EventsController extends Controller
             'confirm_email' => $request->input('confirm_email'),
 
         ]);
+
         return redirect()
             ->route('hallDetails')
             ->with('info', 'You are now subscribed to our newsletter');
     }
-
-
 }

@@ -27,24 +27,24 @@
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
                     </ul>
                 </li>
-                <li>{{ Html::link('gallery', 'Gallery') }}</li>                
-                <li>{{ Html::link('specials', 'Special Offers') }}</li> 
+                <li>{{ Html::link('gallery', 'Gallery') }}</li>
+                <li>{{ Html::link('specials', 'Special Offers') }}</li>
                 <li>{{ Html::link('location', 'Location') }}</li>
                 <li>{{ Html::link('about', 'About Us') }}</li>
                 <li>{{ Html::link('about', 'More') }}
-                	<ul>                         
-                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              
+                	<ul>
+                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                         	<ul>
                                 <li>{{ Html::link('blog', 'Blog Overview') }}</li>
                                 <li>{{ Html::link('blog-post', 'Blog Post') }}</li>
                             </ul>
-                        </li>                        
+                        </li>
                         <li>{{ Html::link('faqs', 'FAQs') }}</li>
                         <li><a class="promopopup">Promo Popup</a></li>
                     </ul>
                 </li>
-            </ul>            
+            </ul>
             <a id="pull"><i class="fa fa-bars"></i></a>
         </nav>
         <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
@@ -70,11 +70,7 @@
         	<div id="contact">
             	<img src="http://dummyimage.com/1200x400" width="1200" height="400" alt="" />
                 <form>
-                    <div class="col">
-                        <div class="field"><input name="contact-name" type="text" placeholder="Your Name" id="contact-name" /></div>
-                        <div class="field"><input name="contact-email" type="text" placeholder="Email Address" id="contact-email" /></div>
-                        <div class="field"><input name="contact-phone" type="text" placeholder="Phone Number" id="contact-phone" /></div>
-                    </div>
+                    
                     <div class="col">
                         <div class="field calendar"><input name="contact-arrival" type="text" placeholder="Arrival Date" id="contact-arrival" readonly /><i class="fa fa-calendar-o"></i></div>
                         <div class="field calendar"><input name="contact-departure" type="text" placeholder="Departure Date" id="contact-departure" readonly /><i class="fa fa-calendar-o"></i></div>
@@ -124,7 +120,7 @@
 			};
 			var map = new google.maps.Map(document.getElementById('googlemap'), myOptions);
 			var marker = new google.maps.Marker({
-			position: latlng, 
+			position: latlng,
 			map: map,
 			icon: "/images/point.png"
 			});

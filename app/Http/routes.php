@@ -11,91 +11,89 @@
 |
 */
 
-Route::get('about', function()
-{
-    return View::make('about');
+use Illuminate\Support\Facades\Mail;
+
+Route::get('email', function () {
+  Mail::send('emails.test', ['name' => 'Novica'], function ($message) {
+      $message->to('dsr931108@gmail.com', 'Some guy')->subject('Welcome');
+    });
 });
 
-Route::get('contact', function()
-{
-    return View::make('contact/contact');
+Route::get('profile', function () {
+    return View::make('profile');
 });
 
-Route::get('accommodation', function()
-{
-    return View::make('accommodation/accommodation');
+Route::get('testimonialsform', function () {
+    return View::make('testimonials/form-testimonials');
 });
 
-Route::get('accommodation2', function()
-{
-    return View::make('accommodation/accommodation2');
+Route::get('about', function () {
+    return View::make('about/about');
 });
 
-Route::get('blog', function()
-{
-    return View::make('blog/blog');
+Route::get('contact', function () {
+    return View::make('contact');
 });
 
-Route::get('blog-post', function()
-{
-    return View::make('blog/blog-post');
+Route::get('accommodation', function () {
+    return View::make('accommodation');
 });
 
-Route::get('faqs', function()
-{
+Route::get('accommodation2', function () {
+    return View::make('accommodation2');
+});
+
+Route::get('blog', function () {
+    return View::make('blog');
+});
+
+Route::get('blog-post', function () {
+    return View::make('blog-post');
+});
+
+Route::get('faqs', function () {
     return View::make('faqs');
 });
 
-Route::get('gallery', function()
-{
+Route::get('gallery', function () {
     return View::make('gallery');
 });
 
-Route::get('guest-book', function()
-{
-    return View::make('guest-book');
+Route::get('testimonials', function () {
+    return View::make('testimonials/guest-book');
 });
 
-Route::get('location', function()
-{
-    return View::make('location');
+Route::get('location', function () {
+    return View::make('location/location');
 });
 
-Route::get('restaurant', function()
-{
-    return View::make('restaurant/restaurant');
+Route::get('restaurant', function () {
+    return View::make('restaurant');
 });
 
-Route::get('room', function()
-{
-    return View::make('room/room');
+Route::get('room', function () {
+    return View::make('room');
 });
 
-Route::get('room2', function()
-{
-    return View::make('room/room2');
+Route::get('room2', function () {
+    return View::make('room2');
 });
 
-Route::get('single', function()
-{
+Route::get('single', function () {
     return View::make('single');
 });
 
-Route::get('sitemap', function()
-{
+Route::get('sitemap', function () {
     return View::make('sitemap');
 });
 
-Route::get('specials', function()
-{
+Route::get('specials', function () {
     return View::make('specials');
 });
 
-Route::get('hallDetails', function()
-{
+Route::get('hallDetails', function () {
     return View::make('hallDetails');
 });
-
 
 /*
 |--------------------------------------------------------------------------
@@ -109,54 +107,82 @@ Route::get('hallDetails', function()
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/newsletter',[
+
+/*
+|--------------------------------------------------------------------------
+| Newsletter Routes
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::get('/newsletter', [
     'uses' => '\App\Http\Controllers\subscribeController@getSubscribe',
     'as' => 'newsletter',
 ]);
 
-    Route::post('/newsletter',[
+Route::post('/newsletter', [
     'uses' => '\App\Http\Controllers\subscribeController@postSubscribe',
 ]);
 
-// Events route
-    Route::get('/events',[
-        'uses' => '\App\Http\Controllers\EventsController@getEvents',
-        'as' => 'events',
-    ]);
-
-    Route::post('/events',[
-        'uses' => '\App\Http\Controllers\EventsController@postEvents',
-    ]);
-
 /*
-**
-gallery control route
+|--------------------------------------------------------------------------
+| Events Routes
+|--------------------------------------------------------------------------
+|
 */
 
-    Route::get('upload', function() {
+Route::get('/events', [
+    'uses' => '\App\Http\Controllers\EventsController@getEvents',
+    'as' => 'events',
+]);
+
+Route::post('/events', [
+    'uses' => '\App\Http\Controllers\EventsController@postEvents',
+]);
+
+Route::get('/hallDetails', [
+    'uses' => '\App\Http\Controllers\HallController@index',
+    'as' => 'hallDetails',
+]);
+
+/*
+|--------------------------------------------------------------------------
+| Gallery Control Routes
+|--------------------------------------------------------------------------
+|
+*/
+
+    Route::get('upload', function () {
       return View::make('galleryUpload');
     });
-    Route::post('apply/upload', 'galleryController@upload');
+    Route::post('apply/upload1', 'galleryController@uploadImg1');
+    Route::post('apply/upload2', 'galleryController@uploadImg2');
+    Route::post('apply/upload3', 'galleryController@uploadImg3');
+    Route::post('apply/upload4', 'galleryController@uploadImg4');
+    Route::post('apply/upload5', 'galleryController@uploadImg5');
+    Route::post('apply/upload6', 'galleryController@uploadImg6');
+    Route::post('apply/upload7', 'galleryController@uploadImg7');
+
+/*
+|--------------------------------------------------------------------------
+| Application Routes End
+|--------------------------------------------------------------------------
+*/
 });
 
+/*
+|--------------------------------------------------------------------------
+| Authentication Routes
+|--------------------------------------------------------------------------
+|
+*/
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    //Route::get('/', function () {
-      //  return view('index');
-    //});
-
-    //Route::get('/home', 'HomeController@index');
-
-    Route::get('/',[
+    Route::get('/', [
         'uses' => '\App\Http\Controllers\HomeController@index',
         'as' => 'home',
-    ]);
-
-    Route::get('/hallDetails',[
-        'uses' => '\App\Http\Controllers\HallController@index',
-        'as' => 'hallDetails',
     ]);
 
 });
