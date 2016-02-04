@@ -79,7 +79,7 @@ class AuthController extends Controller
             'mobile' => $data['mobile'],
         ]);
         
-        Mail::send('emails.verify', ['name' => 'Novica'], function ($message) {
+        Mail::send('emails.verify', [], function ($message) {
             $message->to(Input::get('email'), Input::get('name'))
                 ->subject('Thank you for registering with Amalya Reach');
         });

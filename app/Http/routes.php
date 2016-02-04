@@ -56,7 +56,7 @@ Route::get('blog-post', function () {
 });
 
 Route::get('faqs', function () {
-    return View::make('faqs');
+    return View::make('faq/faqs');
 });
 
 Route::get('gallery', function () {

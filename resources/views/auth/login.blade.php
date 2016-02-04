@@ -12,7 +12,7 @@
     <main>
       <div class="centre">
         <div id="contact">
-          <img src="http://dummyimage.com/1200x400" width="1200" height="400" alt="" />
+          <img src="images/pagemain/login.png" width="1200" height="400" alt="" />
           <form role="form" method="POST" action="{{ url('/login') }}">
             {!! csrf_field() !!}
             <div class="col"></div>

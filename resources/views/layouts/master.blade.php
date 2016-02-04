@@ -34,6 +34,9 @@
           <li>{{ Html::link('blog', 'Blog') }}</li>
           <li>{{ Html::link('about', 'More') }}
             <ul>
+               <li>{{ Html::link('login', 'Login') }}</li>
+               <li>{{ Html::link('register', 'Register') }}</li>
+               <li>{{ Html::link('logout', 'Logout') }}</li>
               <li>{{ Html::link('faqs', 'FAQs') }}</li>
               <li><a class="promopopup">Promo Popup</a></li>
             </ul>
@@ -48,9 +51,7 @@
   <!-- Navigation | END -->
 
   <div id="container">
-
     @yield('maincontent')
-
     <div id="extras">
       <div class="centre">
 
