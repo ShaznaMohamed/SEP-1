@@ -72,4 +72,4 @@
         </div>
     </main>
     <!-- Content | END -->
-    	@endsection
+@endsection
