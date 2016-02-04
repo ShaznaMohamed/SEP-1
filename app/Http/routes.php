@@ -23,6 +23,10 @@ Route::get('profile', function () {
     return View::make('profile');
 });
 
+Route::get('profile', function () {
+    return View::make('profile');
+});
+
 Route::get('testimonialsform', function () {
     return View::make('testimonials/form-testimonials');
 });
@@ -93,6 +97,10 @@ Route::get('specials', function () {
 
 Route::get('hallDetails', function () {
     return View::make('hallDetails');
+});
+
+Route::get('home', function () {
+    return View::make('index');
 });
 
 /*

@@ -7,6 +7,11 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Mail;
+use Laracasts\FlashServiceProvider;
+use Illuminate\Support\Facades\Redirect;
+
 
 class AuthController extends Controller
 {
@@ -50,6 +55,7 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
+            'mobile' => 'required|numeric',
         ]);
     }
 
@@ -60,12 +66,25 @@ class AuthController extends Controller
      *
      * @return User
      */
+
     protected function create(array $data)
     {
-        return User::create([
+       User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'address1' => $data['address1'],
+            'address' => $data['address2'],
+            'address' => $data['address3'],
+            'mobile' => $data['mobile'],
         ]);
+        
+        Mail::send('emails.verify', ['name' => 'Novica'], function ($message) {
+            $message->to(Input::get('email'), Input::get('name'))
+                ->subject('Thank you for registering with Amalya Reach');
+        });
+        
+       return User::create();       
+           
     }
 }
