@@ -2,6 +2,10 @@
 
 <html>
 <head>
+<?php 
+$specialData = DB::table('packages')->orderBy('id','desc')->first();
+
+?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
@@ -108,13 +112,14 @@
     	<div class="centre">
         	<div class="special">
             	<div class="img">
-                	<div class="imgcontainer"><img alt="" src="http://dummyimage.com/770x400" width="770" height="400" /></div>
+                	<div class="imgcontainer"><img alt="" src="/uploads/specgal.png" width="770" height="400" /></div>
                 </div>
                 <div class="details">
-                	<h2>Family Escape<br />
-                    <span>Activity Package</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra.</p>
-                    <p class="price"><strong>Stay from $249 per night</strong></p>
+                	<h2>{{$data}}<br />
+                    <span>{{$type}}</span></h2>
+                    <p>{{$specialData->descript}}</p>
+                    <p class="price"><strong>Stay from ${{$specialData->price}} per night</strong></p>
+                    <p><b>Valide from {{$specialData->start_date}} to {{$specialData->end_date}} </b></p>
                     <a href="contact.php" class="button"><span data-hover="Book Special">Book Special</span></a>
                     <p class="terms"><strong>Terms & Conditions:</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel.</p>
                 </div>

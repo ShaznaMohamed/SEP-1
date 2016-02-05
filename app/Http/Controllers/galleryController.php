@@ -243,6 +243,42 @@ public function uploadImg7() {
 }
     
     
+/** specials image */
+    
+    
+    public function uploadspecials() {    
+      // getting all of the post data
+  $file = array('specimage' => Input::file('specimage'));
+  // setting up rules
+  $rules = array('specimage' => 'required|mimes:jpeg,png',); //mimes:jpeg,bmp,png and for max size max:10000
+  // doing the validation, passing post data, rules and the messages
+  $validator = Validator::make($file, $rules);
+  if ($validator->fails()) {
+    // send back to the page with the input data and errors
+    return Redirect::to('specadd')->withInput()->withErrors($validator);
+  }
+  else {
+    // checking file is valid.
+    if (Input::file('specimage')->isValid()) {
+      $destinationPath = 'uploads'; // upload path
+      $extension = Input::file('specimage')->getClientOriginalExtension(); // getting image extension
+      //$fileName = rand(11111,99999).'.'.$extension; // renameing image vish commented replacing following
+      $fileName = 'specgal.'.$extension;
+      Input::file('specimage')->move($destinationPath, $fileName); // uploading file to given path
+      // sending back with message
+      Session::flash('success', 'Upload successfully'); 
+      return Redirect::to('specadd');
+    }
+    else {
+      // sending back with error message.
+      Session::flash('error', 'uploaded file is not valid');
+      return Redirect::to('specadd');
+    }
+  }
+
+}
+    
+    
     
     
 }

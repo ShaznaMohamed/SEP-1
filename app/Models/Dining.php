@@ -13,25 +13,22 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 
-class Event extends Model
+class Dining extends Model
 {
 
-    protected $table = 'events';
+    protected $table = 'dining';
 
     protected $fillable = [
         'title',
         'first_name',
         'last_name',
-        'venue',
-        'pax',
-        'contact-arrival',
-        'start',
-        'end',
-        'contact_number',
-        'type_of_event',
-        'preferred_time',
         'email',
-        'confirm_email',
+        'phone',
+        'contact-arrival',
+        'arrival_time',
+        'arrival_adults',
+        'arrival_children',
+        'notes',
 
     ];
 

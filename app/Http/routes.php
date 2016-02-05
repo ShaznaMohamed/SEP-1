@@ -19,12 +19,14 @@ Route::get('email', function () {
     });
 });
 
-Route::get('profile', function () {
-    return View::make('profile');
+
+
+Route::get('admin', function () {
+    return View::make('admin/admin');
 });
 
 Route::get('profile', function () {
-    return View::make('profile');
+    return View::make('auth/profile');
 });
 
 Route::get('testimonialsform', function () {
@@ -139,14 +141,25 @@ Route::post('/newsletter', [
 |
 */
 
-Route::get('/events', [
-    'uses' => '\App\Http\Controllers\EventsController@getEvents',
-    'as' => 'events',
-]);
+Route::get('/events',[
+        'uses' => '\App\Http\Controllers\EventsController@getEvents',
+        'as' => 'events',
+    ]);
 
-Route::post('/events', [
-    'uses' => '\App\Http\Controllers\EventsController@postEvents',
-]);
+Route::post('/events',[
+        'uses' => '\App\Http\Controllers\EventsController@postEvents',
+    ]);
+
+
+    // Dining route
+Route::get('/dining',[
+        'uses' => '\App\Http\Controllers\DiningController@getEvents',
+        'as' => 'dining',
+    ]);
+
+Route::post('/dining',[
+        'uses' => '\App\Http\Controllers\DiningController@postEvents',
+    ]);
 
 Route::get('/hallDetails', [
     'uses' => '\App\Http\Controllers\HallController@index',
@@ -170,6 +183,82 @@ Route::get('/hallDetails', [
     Route::post('apply/upload5', 'galleryController@uploadImg5');
     Route::post('apply/upload6', 'galleryController@uploadImg6');
     Route::post('apply/upload7', 'galleryController@uploadImg7');
+    
+    /*
+**
+Specials control route
+*/
+
+    Route::get('/specadd',[ 
+        'uses' => '\App\Http\Controllers\packageController@editPackages',
+        // return View::make('specialsManage');
+    ]);
+    
+    Route::get('/specials',[ 
+        'uses' => '\App\Http\Controllers\packageController@getPackages',
+        // return View::make('specialsManage');
+    ]);
+    
+    Route::post('apply/spec2', 'packageController@postPackUpdate');
+    Route::post('apply/spec1', 'galleryController@uploadspecials');
+    
+    
+    //Wedding and Room
+    
+    Route::get('wedding', function()
+{
+    return View::make('wedding');
+});
+
+Route::get('samroreception', function()
+{
+    return View::make('samroreception');
+});
+
+Route::get('weddingform', function()
+{
+    return View::make('weddingform');
+});
+
+Route::get('poosideballroom', function()
+{
+    return View::make('poosideballroom');
+});
+
+Route::get('silverballroom', function()
+{
+    return View::make('silverballroom');
+});
+
+Route::get('specialform', function()
+{
+    return View::make('specialform');
+});
+
+Route::get('grandballroom', function()
+{
+    return View::make('grandballroom');
+});
+
+Route::get('royalsuite', function()
+{
+    return View::make('royalsuite');
+});
+
+Route::get('roomform', function()
+{
+    return View::make('roomform');
+});
+
+Route::post('/wedding',[
+    'uses' => '\App\Http\Controllers\WedreservationController@insertdata',
+    'as' => 'wedding',
+    ]);
+
+    Route::post('/room',[
+        'uses' => '\App\Http\Controllers\RoomreservationController@insertdata',
+        'as' => 'room',
+    ]);
 
 /*
 |--------------------------------------------------------------------------

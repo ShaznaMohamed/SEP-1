@@ -1,43 +1,59 @@
-<?php namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Input;
-//use Input;
-use Validator;
-use Redirect;
-use Request;
-use Session;
-class packageController extends Controller {
-public function edit() {
-/** image1 **/
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\packageModel;
+use DB;
+use App\Http\Controllers\Controller;
+
+class packageController extends Controller
+{
+    public function editPackages()
+    {
+        
+        return view('specialsManage');
+    }
     
-  // getting all of the post data
-  $file = array('image' => Input::file('image'));
-  // setting up rules
-  $rules = array('image' => 'required|mimes:jpeg,png',); //mimes:jpeg,bmp,png and for max size max:10000
-  // doing the validation, passing post data, rules and the messages
-  $validator = Validator::make($file, $rules);
-  if ($validator->fails()) {
-    // send back to the page with the input data and errors
-    return Redirect::to('upload')->withInput()->withErrors($validator);
-  }
-  else {
-    // checking file is valid.
-    if (Input::file('image')->isValid()) {
-      $destinationPath = 'uploads'; // upload path
-      $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
-      //$fileName = rand(11111,99999).'.'.$extension; // renameing image vish commented replacing following
-      $fileName = 'gal1.'.$extension;
-      Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
-      // sending back with message
-      Session::flash('success', 'Upload successfully'); 
-      return Redirect::to('upload');
+    public function getPackages()
+    {
+        $data = DB::table('packages')->orderBy('id','desc')->first();
+        return view('specials',
+                    ['data' => $data->package_name],
+                    ['type' => $data->package_type]
+                   
+                    
+                   );
     }
-    else {
-      // sending back with error message.
-      Session::flash('error', 'uploaded file is not valid');
-      return Redirect::to('upload');
+    
+    public function postPackUpdate(Request $request)
+    {
+        $this->validate($request,[
+            'package_name' => 'required',
+            'package_type' => 'required',
+            'price' => 'required',
+            'descrip' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+        ]);
+        
+        packageModel::create([
+            'package_name' => $request->input('package_name'),
+            'package_type' => $request->input('package_type'),
+            'price' => $request->input('price'),
+            'descript' => $request->input('descrip'),
+            'start_date' => $request->input('start_time'),
+            'end_date' => $request->input('end_time'),
+            
+        
+        ]);    
+            return redirect()
+            ->route('home')
+            ->with('info', 'You have added a new package !');
+            
+        
+        
     }
-  }
     
 }
-    
-}
+

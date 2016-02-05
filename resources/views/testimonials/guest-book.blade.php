@@ -61,53 +61,15 @@
                         <a href="testimonialsform" class="button" id="testimonialpop"><span data-hover="Write in Guest Book">Write in Guest Book</span></a>
                     </div>
                 </div>
-            </figure>
+            </figure>           
+            
+            
             <figure>
             	<div class="testimonial">
                     <i class="fa fa-quote-left"></i>
-                    <h2>Our favourite place to stay</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.</p>
-                    <p class="name">&ndash; <strong>Sam Owens</strong> <span>(Auckland, New Zealand)</span></p>
-                </div>
-            </figure>
-            <figure>
-            	<div class="testimonial">
-                    <i class="fa fa-quote-left"></i>
-                    <h2>Excellent Restaurant</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet.</p>
-                    <p class="name">&ndash; <strong>Jess Simpson</strong> <span>(Melbourne, Australia)</span></p>
-                </div>
-            </figure>
-            <figure>
-            	<div class="testimonial">
-                    <i class="fa fa-quote-left"></i>
-                    <h2>Comfortable & spacious apartment</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc.</p>
-                    <p class="name">&ndash; <strong>John Smith</strong> <span>(Sydney, Australia)</span></p>
-                </div>
-            </figure>
-            <figure>
-            	<div class="testimonial">
-                    <i class="fa fa-quote-left"></i>
-                    <h2>Impressive Hotel</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.</p>
-                    <p class="name">&ndash; <strong>Tammy Winters</strong> <span>(Perth, Australia)</span></p>
-                </div>
-            </figure>
-            <figure>
-            	<div class="testimonial">
-                    <i class="fa fa-quote-left"></i>
-                    <h2>Suites are perfect for families</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
-                    <p class="name">&ndash; <strong>Ben Peterson</strong> <span>(Melbourne, Australia)</span></p>
-                </div>
-            </figure>
-            <figure>
-            	<div class="testimonial">
-                    <i class="fa fa-quote-left"></i>
-                    <h2>Loved the pool</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet.</p>
-                    <p class="name">&ndash; <strong>Walter W</strong> <span>(Sydney, Australia)</span></p>
+                    <h2>Test</h2>
+                    <p>Test</p>
+                    <p class="name">&ndash; <strong>Test</strong> <span>(Test)</span></p>
                 </div>
             </figure>
         </div>

@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
     <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/events.css">
     <link class="colour" rel="stylesheet" href="/css/colour-gold.css">
     <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
 
 </head>
 <body class="fullwidth">
@@ -143,7 +141,7 @@
                 </p>
                 <div class="item">
                     <div class="container">
-                        <div class="imgcontainer"><img alt="" src="/images/hall.png" width="200" height="200" /></div>
+                        <div class="imgcontainer"><img alt="" src="/images/events/hall.png" width="200" height="200" /></div>
                         <div class="details">
                             <a href="hallDetails">
                                 <h3 class="title">Pool Side Ballroom<br /></h3>
@@ -155,7 +153,7 @@
                 </div>
                 <div class="item">
                     <div class="container">
-                        <div class="imgcontainer"><img alt="" src="/images/hall.png" width="380" height="380" /></div>
+                        <div class="imgcontainer"><img alt="" src="/images/events/hall.png" width="380" height="380" /></div>
                         <div class="details">
                             <a href="hallDetails">
                                 <h3 class="title">Silver Ballroom<br /></h3>
@@ -167,7 +165,7 @@
                 </div>
                 <div class="item">
                     <div class="container">
-                        <div class="imgcontainer"><img alt="" src="/images/hall.png" width="380" height="380" /></div>
+                        <div class="imgcontainer"><img alt="" src="/images/events/hall.png" width="380" height="380" /></div>
                         <div class="details">
                             <a href="hallDetails">
                                 <h3 class="title">Samaro Ballroom<br /></h3>
@@ -179,7 +177,7 @@
                 </div>
                 <div class="item">
                     <div class="container">
-                        <div class="imgcontainer"><img alt="" src="/images/hall.png" width="380" height="380" /></div>
+                        <div class="imgcontainer"><img alt="" src="/images/events/hall.png" width="380" height="380" /></div>
                         <div class="details">
                             <a href="hallDetails">
                                 <h3 class="title">Grand Ballroom<br /></h3>
@@ -190,14 +188,94 @@
                     </div>
                 </div>
             </section>
+            <br></br>
+            <br></br>
+            <!-- newform | start -->
+            <div class="centre">
+                <!-- Contact Form | START -->
+              <div id="contact">
+                  <h3><strong>MAKE A REQUEST</h3>
+                    <form name="form1" id="form1" class="form-vertical" role="form" method="post" action="{{route('events')}}">
+                        <div class="col">
+                          <select name="title" id="title" class="field">
+                            <option value="mr" selected="selected">Mr.</option>
+                            <option value="mrs" >Mrs.</option>
+                            <option value="Ms" >Ms.</option>
+                          </select>
+                          <br></br>
+                            <div class="field {{ $errors->has('first_name') ? ' has-error' : ''}}">
+                              <input name="first_name" type="text" placeholder="First Name" id="name" />
+                              @if ($errors->has('first_name'))
+                                  <span class="help-block">{{ $errors->first('first_name') }}</span>
+                              @endif
+                            </div>
+
+                            <div class="field"><input name="last_name" type="text" placeholder="Last Name" id="name" /></div>
+                            <div class="select">
+                              <select name="venue" class="field" id="venue" value="">
+                                  <option value="Pool Side Ballroom">Pool Side Ballroom (150-300 pax)</option>
+                                  <option value="Silver Ballroom">Silver Ballroom (150-300 pax)</option>
+                                  <option value="Samaro Ballroom">Samaro Ballroom (150-300 pax)</option>
+                                  <option value="Grand Ballroom">Grand Ballroom (200-400 pax)</option>
+                              </select>
+                                <br></br>
+                            </div>
+                            <div class="field"><input type="text" name="pax" placeholder="No of Pax" id="pax" /></div>
+                        </div>
+                        <div class="col">
+
+                            <div class="field calendar"><input name="contact-arrival" type="text" placeholder="Date" id="contact-arrival" readonly /><i class="fa fa-calendar-o"></i></div>
+                            <div class="field"><input type="text" name="start" placeholder="Starting Time" id="start" /></div>
+                            <div class="field"><input type="text" name="end" placeholder="Ending Time" id="end" /></div>
+                            <div class="field"><input type="text" name="contact_number" placeholder="Contact Number" id="contact_number" /></div>
+                            <div class="field"><input type="text" name="type_of_event" placeholder="Type of Event" id="type_of_event" /></div>
+
+
+                        </div>
+                        <div class="col">
+                          <div class="field"><input type="text" name="preferred_time" placeholder="Preferred time to receive call" id="preferred_time" /></div>
+                          <div class="field"><input name="email" type="text" placeholder="Email Address" id="email" />
+                          @if ($errors->has('email'))
+                              <span class="help-block">{{ $errors->first('email') }}</span>
+                          @endif
+                          </div>
+
+                          <div class="field"><input type="text" name="confirm_email" placeholder="Confirm Email Address" id="confirm_email" value="{{ Request::old('confirm_email') ?: '' }}" />
+                            @if ($errors->has('email'))
+                              <span class="help-block">{{ $errors->first('email') }}</span>
+                            @endif
+                          </div>
+
+                        </div>
+                        <button type="submit" class="btn btn-default"><span data-hover="Send Request">SUBMIT</span></button>
+
+                        <input type="hidden" name="_token" value="{{ Session::token() }}">
+
+                    </form>
+                </div>
+                <!-- Contact Form | END -->
+            </div>
+            <!-- newform | end -->
 
             <!-- form | start -->
 
-            <div class="wrap_event">
+            <!-- <div class="wrap_event">
                 <div class="row">
                     <div class="col-lg-6" >
                         <h1>MAKE A REQUEST</h1>
                             <form name="form1" id="form1" class="form-vertical" role="form" method="post" action="{{route('events')}}">
+
+                              <div class="form-group">
+                                  <label for="title" class="control-label">Title* :</label>
+                                  <div class="field select">
+                                    <select type="text" name="title" id="title" class="form-control" value="">
+                                      <option value="mr" selected="selected">Mr.</option>
+                                      <option value="mrs" >Mrs.</option>
+                                      <option value="Ms" >Ms.</option>
+                                    </select>
+                                  </div>
+                              </div>
+
                                 <div class="form-group{{ $errors->has('first_name') ? ' has-error' : ''}}">
                                     <label for="first_name" class="control-label"><b>First Name* :</b></label>
                                     <input type="text" name="first_name" class="form-control" id="first_name" value="">
@@ -230,8 +308,18 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="period" class="control-label">Date* :</label>
-                                    <input type="text" name="period" class="form-control" id="period" value="ex: xxxx-xx-xx xx:xx:xx">
+                                    <label for="contact-arrival" class="control-label">Date* :</label>
+                                    <div class="field calendar"><input type="text" name="contact-arrival" class="form-control" id="contact-arrival" value="" readonly><i class="fa fa-calendar-o"></i></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="start" class="control-label">Starting Time* :</label>
+                                    <input type="text" name="start" class="form-control" id="start" value="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="end" class="control-label">Ending Time* :</label>
+                                    <input type="text" name="end" class="form-control" id="end" value="">
                                 </div>
 
                                 <div class="form-group">
@@ -275,13 +363,14 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- form | END -->
-
             <!-- Footer Testimonial | START -->
             <!-- Footer Testimonial | END -->
         </div>
+
+        </main>
     <!-- Sitewide Extras | END -->
     <!-- Footer | START -->
     <footer>
@@ -332,7 +421,7 @@
     <div class="container">
         <p class="title"><strong>Our latest special offers,</strong><br />
             straight to your inbox</p>
-        <p>Stay up to date with the latest specials from Base Hotel. Subscribe and save on your next stay.</p>
+        <p>Stay up to date with the latest specials from Amalya Reach. Subscribe and save on your next stay.</p>
         <form>
             <input name="email" type="text" placeholder="Your email address" />
             <button><span data-hover="Subscribe">Subscribe</span></button>

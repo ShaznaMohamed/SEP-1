@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
     <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/events.css">
     <link class="colour" rel="stylesheet" href="/css/colour-gold.css">
     <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
 </head>
 <body class="fullwidth">
 <!-- Navigation | START -->
@@ -19,6 +17,7 @@
         <nav>
             <ul>
                 <li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
+
                 <li>{{ Html::link('/', 'Home') }}</li>
                 <li>{{ Html::link('accommodation', 'Accommodation') }}
                     <ul>
@@ -26,42 +25,58 @@
                         <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
                         <li>{{ Html::link('room', 'Room Detail 1') }}</li>
                         <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
+
                     </ul>
                 </li>
-                <li>{{ Html::link('gallery', 'Gallery') }}</li>
-                <li>{{ Html::link('specials', 'Special Offers') }}</li>
-                <li>{{ Html::link('about', 'More') }}
+                <li>{{ Html::link('about', 'More Pages') }}
                     <ul>
-                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>
+                        <li>{{ Html::link('about', 'About Us') }}</li>
+                        <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
+                        <li>{{ Html::link('specials', 'Special Offers') }}</li>
+                        <li>{{ Html::link('gallery', 'Photo Gallery') }}</li>
+                        <li>{{ Html::link('location', 'Location') }}</li>
                         <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
                             <ul>
                                 <li>{{ Html::link('blog', 'Blog Overview') }}</li>
                                 <li>{{ Html::link('blog-post', 'Blog Post') }}</li>
                             </ul>
                         </li>
+                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>
                         <li>{{ Html::link('faqs', 'FAQs') }}</li>
                         <li><a class="promopopup">Promo Popup</a></li>
                     </ul>
                 </li>
+                <li>{{ Html::link('contact', 'Contact') }}</li>
             </ul>
             <a id="pull"><i class="fa fa-bars"></i></a>
         </nav>
+        <!-- Languages | START -->
+        <!--
+        <div id="language">
+        	<ul>
+            	<li class="en"><a>EN</a></li>
+                <li class="cn"><a href="#">CN</a></li>
+                <li class="fr"><a href="#">FR</a></li>
+                <li class="de"><a href="#">DE</a></li>
+                <li class="it"><a href="#">IT</a></li>
+            </ul>
+        </div>
+        -->
+        <!-- Languages | END -->
         <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
         <div class="shadow"></div>
     </div>
 </div>
 <!-- Navigation | END -->
 <div id="container">
-    <!-- Header | Start -->
     <header>
         <div id="header">
             <div class="h1">
-                <h1><span>About Halls</span>
-                    <span class="tagline">Luxurious Facilities & Services</span></h1>
+                <h1><span>Grand Ball room</span>
+                    <span class="tagline">Gorgeous Cosmos</span></h1>
             </div>
         </div>
         <!-- Check Rates Banner | START -->
-        <!--
         <div id="check">
             <div class="centre">
                 <form action="contact.php" method="post">
@@ -99,106 +114,89 @@
                 </form>
             </div>
         </div>
-        -->
         <!-- Check Rates Banner | END -->
     </header>
     <!-- Header | END -->
     <!-- Content | START -->
     <main>
         <div class="centre">
-            <!-- Slideshow -->
-            <div id="slideshow">
-                <div class="slider">
-                    <div class="item"><img alt="" src="/images/events/meetings.png" width="400" height="400" /></div>
-                </div>
-                <div class="nav">
-                    <a class="prev"><i class="fa fa-chevron-left"></i></a>
-                    <a class="next"><i class="fa fa-chevron-right"></i></a>
-                </div>
-            </div>
-            <div id="content">
-                <h2><strong>An Experience</strong> Like No Other</h2>
-                <p>For meetings and events, a choice of stylish indoor and outdoor conference facilities are fully equipped and you can leave it to our experienced planner to take care of all the details that matter.  If you’re looking to build team spirit and bonding, ask about our inspiring range of team building activities.
-                    Celebrating a day well spent is effortless, with a cocktail reception and dinner of customised menus and great entertainment options..</p>
-                <ul class="tags">
-                    <li>On-site Restaurant</li>
-                    <li>24 Hour Concierge</li>
-                    <li>50m Lap Pool</li>
-                    <li>Day Spa & Sauna</li>
-                    <li>Tour Desk</li>
-                </ul>
-                <!-- Stats | START -->
-                <!-- Stats | END -->
-            </div>
-        </div>
-        <!-- Instagram | START -->
-        <!-- Feature List | START -->
-        <section id="">
-                <h2>Hall Details</h2>
-                <div class="featurelist">
-                    <table>
-                        <tr>
-                            <td>
-                    <div class="feature">
-                        <img alt="" src="/images/events/meetings.png" width="200" height="300" class="thumb" />
-                        <div class="details">
-                            <h3>Pool Side Ballroom</h3>
-                            <p>No of Pax : 150-300<br /><br />
-                            <h3>Silver Ballroom</h3>
-                            <p>No of Pax : 150-300<br /><br />
-                            <h3>Samaro Ballroom</h3>
-                            <p>No of Pax : 150-300<br /><br />
-                            <h3>Grand Ballroom</h3>
-                            <p>No of Pax : 200-400<br /><br />
-                                </p>
-                        </div>
+            <!-- List Items (Rooms) | START -->
+            <section id="rooms" class="list">
+                <div class="item">
+                    <div class="imgcontainer"><img alt="" src=/wedimages/grand.jpg  width="1200" height="400" /></div>
+                    <div class="details">
+                        <a href="{{url('weddingform')}}">
+                            <h3 class="title">Grand Ball Room<br />
+                                <span>Stay with 200-340 guests</span></h3><br>
+                            <p>Derive Amalya's Grand ball room to exchange vows for it to be a wow experience all the way for the prince & princess by the magic of the Grand ceremony.</p>
+                            <div class="button"><span data-hover="Plan Wedding">Plan Wedding</span></div>
+                        </a>
                     </div>
-                            </td>
-                            <td>
-                                <div class="copy" align="100">
-                                    <p>Advance Payment           – Rs.50,000/- (30,000/- Refundable)</p>
-                                    <p>  Minimum Pax             – 150 Pax(for an event)</p>
-                                    <p>  Hall Charges            – 05 Hours Free of Charges</p>
-                                    <p>  Additional Hour         – Rs.10,000/-</p>
-                                    <p>  Full Payment            – 14 Days Prior to the Function</p>
-                                    <p> Corkage                  – Free of Charges</p>
-                                    <p>  Beer Local              – Rs.300/- any Brand</p>
-                                    <p>  Iced Coffee             – 100/- Per Person</p>
-                                    <p>  Cutlery Service         – 100/- per person</p>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-
                 </div>
-        </section>
-        <!-- Feature List | END -->
-        <!-- Stats | START -->
-        <div class="centre">
+            </section>
+            <!-- List Items (Rooms) | END -->
             <div id="content">
-        <section id="stats">
-            <h3>Last Month at Amalya Reach Hotel</h3>
-            <figure>
-                <strong>26</strong><br />
-                <span>Guests Stayed</span>
-            </figure>
-            <figure>
-                <strong>478</strong><br />
-                <span>Meals Served</span>
-            </figure>
-            <figure>
-                <strong>10</strong><br />
-                <span>Events Booked</span>
-            </figure>
-            <figure>
-                <strong>10</strong><br />
-                <span>Meetings Booked</span>
-            </figure>
-        </section>
-            </div>
-        </div>
-        <!-- Stats | END -->
+                <h2>Feel <strong>Amalya's </strong>Majestic Amenities</h2>
+                <p>Make your dream come true. Begin your new episode with us. It's the time to make the rest be the best. Feel the magic a little closer to your heart at Grand Ball Room.
+                    Enjoy the magical miracle of your big day celebrations. Let Amalya bid the love of you and your spouce for a last long enrichment. Gather with all your invitees at Pool Side. We are always ready to provide irreplacable backdrops of paradise.</p>
+                <table>
 
+                    <tr>
+                        <th>Services</th>
+                        <th>Charges</th>
+
+                    </tr>
+                    <tr>
+                        <td><strong>Advance Payment</strong></td>
+                        <td>Rs. 50000 (Rs 30000 refundable)</td>
+
+                    </tr>
+                    <tr>
+                        <td><strong>Minimum Pax</strong></td>
+                        <td>200 pax</td>
+
+                    </tr>
+                    <tr>
+                        <td><strong>Additional Hour</strong></td>
+                        <td>Rs 10000</td>
+
+                    </tr>
+                    <tr>
+                        <td><strong>Full Payment</strong></td>
+                        <td>14 Days Prior to the function</td>
+
+                    </tr>
+                    <tr>
+                        <td><strong>Corkage</strong></td>
+                        <td>Free of Charge</td>
+
+                    </tr>
+                    <tr>
+                        <td><strong>Beer Local</strong></td>
+                        <td>Rs 300 Any Brand</td>
+
+                    </tr>
+                    <tr>
+                        <td><strong>Iced Coffee</strong></td>
+                        <td>Rs 100 per Person</td>
+
+                    </tr>
+                    <tr>
+                        <td><strong>Cutlery</strong></td>
+                        <td>Rs 100 per Person</td>
+
+                    </tr>
+                </table>
+                <a href="{{url('weddingform')}}" class="button"><span data-hover="Request for Quotation">Request for Quotation</span></a>
+
+
+            </div>
+            <!-- Video | START -->
+            <div id="video">
+                <div class="imgcontainer"><img alt="" src="/wedimages/granddd.jpg" width="1150" height="575" > </div>
+            </div>
+            <!-- Video | END -->
+        </div>
     </main>
     <!-- Content | END -->
     <!-- Sitewide Extras | START -->
@@ -209,14 +207,14 @@
                 <div class="back">
                     <div class="slider">
                         <div class="item">
-                            <img alt="" src="/images/events/events.jpg" width="1200" height="400" />
+                            <img alt="" src="/wedimages/img.jpg" width="1200" height="400" />
                             <div class="details">
-                                <a href="specials.html">
-                                    <div class="title">Join with us<br />
-                                    </div>
-                                    <p>We can make your event happen just like you have planned.<br />
-                                        <strong>Make your events stylish</strong></p>
-
+                                <a href="{{url('specials')}}">
+                                    <div class="title">Family Escape<br />
+                                        <span>Special Offers</span></div>
+                                    <p>Now it's time to make an impression.<br />
+                                        <strong>Posses your Luck</strong></p>
+                                    <div class="button"><span data-hover="View Special">View Special</span></div>
                                 </a>
                             </div>
                         </div>
@@ -226,8 +224,33 @@
             </div>
             <!-- List Items (Specials Slider) | END -->
             <!-- Recent Blog Posts | START -->
+            <div class="recent">
+                <a href="blog-post.html">
+                    <div class="date">
+                        <span class="month">Dec</span>
+                        <span class="day">12</span>
+                    </div>
+                    <p class="title">Our Latest Hotel Awards</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque...</p>
+                </a>
+                <a href="blog-post.html">
+                    <div class="date">
+                        <span class="month">Nov</span>
+                        <span class="day">27</span>
+                    </div>
+                    <p class="title">Free Wi-Fi in all rooms</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque...</p>
+                </a>
+            </div>
             <!-- Recent Blog Posts | END -->
             <!-- Footer Testimonial | START -->
+            <div class="footertestimonial">
+                <i class="fa fa-quote-left"></i>
+                <p class="title">Comfortable & spacious apartment</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet...</p>
+                <div class="author">&ndash; <strong>John Smith</strong> <span>(Sydney, Australia)</span></div>
+                <a href="guest-book.html" class="button"><span data-hover="Read Guest Book">Read Guest Book</span></a>
+            </div>
             <!-- Footer Testimonial | END -->
         </div>
     </div>
@@ -255,11 +278,11 @@
                 <!-- Subscribe / Social | END -->
                 <!-- Contact Details | START -->
                 <div class="contact">
-                    <p><strong class="phone">+94 11 2748913</strong><br />
+                    <p><strong class="phone">+94 11 2748913, +94 77 7743612</strong><br />
                         <a href="mailto:info@amalyareach.com">info@amalyareach.com</a><br /><br />
-                        <i class="fa fa-map-marker"></i> No:556 Moragahahena<br />
-                        Pitipana North Homagama Sri Lanka<br />
-                        <a href="https://www.google.com/maps/dir/Current+Location/@6.8402657,80.0189031,17z" target="_blank"><strong>Get Directions</strong></a></p>
+                        <i class="fa fa-map-marker"></i>No:556, Moragahahena, Pitipana North,<br />
+                        Homagama, Sri Lanka.<br />
+                        <a href="https://www.google.com/maps/dir/Current+Location/Amalya Reach Holiday Resort, Homagama, Sri Lanka" target="_blank"><strong>Get Directions</strong></a></p>
                 </div>
                 <!-- Contact Details | END -->
                 <div class="dark"></div>
@@ -268,7 +291,7 @@
         <!-- Footer Links | START -->
         <div id="footerlinks">
             <div class="centre">
-                <span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Amalya Reach Holiday Resort</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a>
+                <span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Amalya Reach Holiday Resort</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><span>
             </div>
         </div>
         <!-- Footer Links | END -->
