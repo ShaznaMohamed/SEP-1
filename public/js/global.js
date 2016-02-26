@@ -448,6 +448,30 @@ $(document).ready(function () {
 				$('#cboxClose').remove();
 			}
 		});
+		$('#emailpop').colorbox({
+			iframe:true,
+			opacity: '.6',
+			transition: 'fade',
+			innerWidth: 800,
+			innerHeight: 600,
+			fixed: true,
+			onLoad: function() {
+				$('#colorbox').addClass('formpopper');
+				$('#cboxClose').remove();
+			}
+		});
+		$('#userpop').colorbox({
+			iframe:true,
+			opacity: '.6',
+			transition: 'fade',
+			innerWidth: 800,
+			innerHeight: 700,
+			fixed: true,
+			onLoad: function() {
+				$('#colorbox').addClass('formpopper');
+				$('#cboxClose').remove();
+			}
+		});
 		$('.commentpop').colorbox({
 			iframe:true,
 			opacity: '.6',

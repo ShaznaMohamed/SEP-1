@@ -17,8 +17,12 @@ class TestimonialsController extends Controller
 
     public function getReview()
     {
-      $testimonials = testimonials::all();
-      return View("testimonials/testimonials")->with("testimonialsdata", $testimonials);
+      // $testimonials = testimonials::all();
+      // return View("testimonials/testimonials")->with("testimonialsdata", $testimonials);
+
+      return view::make('testimonials/testimonials',[
+        'testimonialsdata' => testimonials::where('hidden', '=', 0)->paginate(5)
+      ]);
     }
 
     public function getForm(){

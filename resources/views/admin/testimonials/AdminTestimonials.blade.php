@@ -19,6 +19,7 @@
                         <th>Location</th>
                         <th>Title</th>
                         <th>Message</th>
+                        <th>Hidden</th>
                         <th>Action</th>
                     </tr>
                     @foreach($testimonials as $testimonial)
@@ -29,6 +30,7 @@
                         <td>{{ $testimonial->location }}</td>
                         <td>{{ $testimonial->title }}</td>
                         <td>{{ $testimonial->message }}</td>
+                        <td>{{ $testimonial->hidden }}</td>
                         <td><a href="#" class="tablebutton"><i class="fa fa-eye-slash"></i></a></td>
                     </tr>
                     @endforeach

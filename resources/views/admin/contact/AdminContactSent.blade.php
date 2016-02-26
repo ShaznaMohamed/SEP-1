@@ -3,7 +3,7 @@
   <header>
     <div id="header">
       <div class="h1">
-        <h1><span>Contact Us Messages Inbox</span>
+        <h1><span>Contact Us Messages Sent</span>
         </div>
       </div>
     </header>
@@ -17,23 +17,23 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Email</th>
-                        <th>Mobile</th>
+                        <th>To</th>
+                        <th>Subject</th>
                         <th>Message</th>
                         <th>Actions</th>
                     </tr>
-                    @foreach($contact as $contacts)
+                    @foreach($contactsent as $contactsents)
                     <tr>
-                        <td>{{ $contacts->id }}</td>
-                        <td><strong>{{ $contacts->name }}</strong></td>
-                        <td>{{ $contacts->email }}</td>
-                        <td>{{ $contacts->mobile }}</td>
-                        <td>{{ $contacts->message }}</td>
+                        <td>{{ $contactsents->id }}</td>
+                        <td><strong>{{ $contactsents->name }}</strong></td>
+                        <td>{{ $contactsents->toemail }}</td>
+                        <td>{{ $contactsents->subject }}</td>
+                        <td>{{ $contactsents->message }}</td>
                         <td><a href="#" class="tablebutton"><i class="fa fa-reply"/></a></td>
                     </tr>
                     @endforeach
                 </table>
-                {{$contact->links()}}
+                {{$contactsent->links()}}
             </div>
         </div>
     </main>

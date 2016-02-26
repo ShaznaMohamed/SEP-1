@@ -178,12 +178,12 @@ Route::group(['middleware' => ['web']], function () {
     'uses' => '\App\Http\Controllers\TestimonialsController@postReview',
   ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | FAQ Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| FAQ Routes
+|--------------------------------------------------------------------------
+|
+*/
 
   Route::get('/faq', [
     'uses' => '\App\Http\Controllers\FaqController@getFaq',
@@ -211,12 +211,12 @@ Route::group(['middleware' => ['web']], function () {
       'as' => 'hallDetails',
   ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Dining Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Dining Routes
+|--------------------------------------------------------------------------
+|
+*/
   Route::get('/dining', [
       'uses' => '\App\Http\Controllers\DiningController@getEvents',
       'as' => 'dining',
@@ -310,12 +310,12 @@ Route::group(['middleware' => ['web']], function () {
       'as' => 'roomconfirm',
   ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Halls,Events,Dining Control Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Halls,Events,Dining Control Routes
+|--------------------------------------------------------------------------
+|
+*/
   Route::get('eventupload', function () {
       return View::make('events/event_hallupload');
   });
@@ -430,7 +430,7 @@ Route::group(['middleware' => ['web']], function () {
 // /*
 // /**************************************************************************
 // |--------------------------------------------------------------------------
-// | Adminitrator Routes
+// | Administrator Routes
 // |--------------------------------------------------------------------------
 // |**************************************************************************
 // */
@@ -438,6 +438,33 @@ Route::group(['middleware' => ['web']], function () {
 // Route::group(['middleware' => ['auth', 'admin','web']], function(){
 
   Route::get('/dashboard', 'AdminController@index');
+
+/*
+|--------------------------------------------------------------------------
+| Adminitrator Control
+|--------------------------------------------------------------------------
+|
+*/
+
+  Route::get('/adminlist', [
+      'uses' => '\App\Http\Controllers\AdminUsers@getAdminList',
+      'as' => 'adminlist',
+  ]);
+
+  Route::get('/adminadd', [
+    'uses' => '\App\Http\Controllers\AdminUsers@getForm',
+    'as' => 'adminadd',
+  ]);
+
+  Route::get('/adminadded', [
+    'uses' => '\App\Http\Controllers\AdminUsers@getAdded',
+    'as' => 'adminadded',
+  ]);
+
+  Route::post('/adminadd', [
+    'uses' => '\App\Http\Controllers\AdminUsers@postadmin',
+  ]);
+
 /*
 |--------------------------------------------------------------------------
 | FAQ
@@ -464,6 +491,32 @@ Route::group(['middleware' => ['web']], function () {
     'uses' => '\App\Http\Controllers\FaqController@postFaq',
   ]);
 
+  /*
+  |--------------------------------------------------------------------------
+  | Users
+  |--------------------------------------------------------------------------
+  |
+  */
+
+    Route::get('/adminusers', [
+        'uses' => '\App\Http\Controllers\UserController@getuserAdmin',
+        'as' => 'adminusers',
+    ]);
+
+    Route::get('/adminuseradd', [
+      'uses' => '\App\Http\Controllers\UserController@getForm',
+      'as' => 'adminuseradd',
+    ]);
+
+    Route::get('/adminuseradded', [
+      'uses' => '\App\Http\Controllers\UserController@getAdded',
+      'as' => 'adminuseradded',
+    ]);
+
+    Route::post('/adminuseradd', [
+      'uses' => '\App\Http\Controllers\UserController@userAdd',
+    ]);
+
 
 /*
 |--------------------------------------------------------------------------
@@ -477,15 +530,26 @@ Route::group(['middleware' => ['web']], function () {
       'as' => 'admincontactus',
   ]);
 
+  Route::get('/admincontactsent', [
+      'uses' => '\App\Http\Controllers\ContactController@indexSent',
+      'as' => 'admincontactussent',
+  ]);
+
   Route::get('/admincontactusreply', [
-      'uses' => '\App\Http\Controllers\ContactController@reply',
+      'uses' => '\App\Http\Controllers\ContactController@adminSendForm',
       'as' => 'admincontactusreply',
   ]);
 
   Route::post('/admincontactusreply', [
-      'uses' => '\App\Http\Controllers\ContactController@sendreply',
+      'uses' => '\App\Http\Controllers\ContactController@adminSend',
       'as' => 'admincontactusreply',
   ]);
+
+  Route::get('/admincontactusreplied', [
+      'uses' => '\App\Http\Controllers\ContactController@adminSent',
+      'as' => 'admincontactusreplied',
+  ]);
+
 
 /*
 |--------------------------------------------------------------------------
