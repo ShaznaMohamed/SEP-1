@@ -57,9 +57,8 @@
                 <div class="slider">
                     <img alt="" src="images/pagemain/faq.png" width="1200" height="400" />
                     <img alt="" src="images/pagemain/login.png" width="1200" height="400" />
-                    <img alt="" src="images/pagemain/about.png" />
-                    <img alt="" src="images/pagemain/finedining.png" />
-                    <img alt="" src="images/pagemain/location.png" />
+                    <img alt="" src="images/pagemain/about.png" width="1200" height="400"/>
+                    <img alt="" src="images/pagemain/location.png" width="1200" height="400"/>
                 </div>
             </div>
             <!-- Slideshow | END -->
@@ -67,7 +66,7 @@
             	<li>
                 	<h2 class="question">How do I register?</h2>
                     <p class="answer">Go to the Register page in the header navigation bar. You will get an emaik once you successfully registered.<br /><br />
-                </li>
+              </li>
             </ul>
         </div>
     </main>

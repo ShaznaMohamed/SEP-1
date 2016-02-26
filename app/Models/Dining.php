@@ -24,11 +24,12 @@ class Dining extends Model
         'last_name',
         'email',
         'phone',
-        'contact-arrival',
+        'arrival_date',
         'arrival_time',
         'arrival_adults',
         'arrival_children',
         'notes',
+        'type'
 
     ];
 

@@ -9,9 +9,9 @@ class subscribeController extends Controller
 {
     public function getSubscribe()
     {
-        return view('newslettersignup');
+        return view('newsletter/newslettersignup');
     }
-    
+
     public function postSubscribe(Request $request)
     {
         $this->validate($request,[
@@ -19,7 +19,7 @@ class subscribeController extends Controller
             'confirm_email' => 'required',
             'email' => 'required',
         ]);
-        
+
         Subscription::create([
             'first_name' => $request->input('first_name'),
             'last_name' => $request->input('last_name'),
@@ -30,15 +30,14 @@ class subscribeController extends Controller
             'country' => $request->input('country'),
             'email' => $request->input('email'),
             'confirm_email' => $request->input('confirm_email'),
-        
-        ]);    
+
+        ]);
             return redirect()
             ->route('home')
             ->with('info', 'You are now subscribed to our newsletter');
-            
-        
-        
-    }
-    
-}
 
+
+
+    }
+
+}

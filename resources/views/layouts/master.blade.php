@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
 <head>
   <meta charset="utf-8">
@@ -20,31 +19,56 @@
           <li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
           <li>{{ Html::link('accommodation', 'Accommodation') }}
             <ul>
-              <li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
-              <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
-              <li>{{ Html::link('room', 'Room Detail 1') }}</li>
-              <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
+              <li>{{ Html::link('room', 'Rooms') }}</li>
+              <li>{{ Html::link('dining', 'Dining') }}</li>
+              <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
             </ul>
           </li>
+          <li>{{ Html::link('wedding', 'Weddings') }}</li>
+
+          <li>{{ Html::link('events', 'Events') }}
+            <ul>
+            <li>{{ Html::link('hallDetails', 'Hall Details') }}</li>
+            </ul>
+            </li>
+
+
           <li>{{ Html::link('gallery', 'Gallery') }}</li>
           <li>{{ Html::link('specials', 'Offers') }}</li>
           <li>{{ Html::link('location', 'Location') }}</li>
-          <li>{{ Html::link('about', 'About Us') }}</li>
           <li>{{ Html::link('testimonials', 'Testimonials') }}</li>
           <li>{{ Html::link('blog', 'Blog') }}</li>
-          <li>{{ Html::link('about', 'More') }}
+          <li>{{ Html::link('contact', 'Contact Us') }}
+          <ul>
+            <li>{{ Html::link('about', 'About Us') }}</li>
+          </ul>
+          </li>
+          <li>{{ Html::link('faqs', 'FAQ') }}</li>
+
+          <li>{{ Html::link('#', 'More') }}
             <ul>
-               <li>{{ Html::link('login', 'Login') }}</li>
-               <li>{{ Html::link('register', 'Register') }}</li>
-               <li>{{ Html::link('logout', 'Logout') }}</li>
-              <li>{{ Html::link('faqs', 'FAQs') }}</li>
+              @if(Auth::check())
+                <li>{{ Html::link('profile', 'Profile') }}</li>
+                <li>{{ Html::link('logout', 'Logout') }}</li>
+              @endif
+
+              @if(!Auth::check())
+                <li>{{ Html::link('login', 'Login') }}</li>
+                <li>{{ Html::link('register', 'Register') }}</li>
+              @endif
+              <li>{{ Html::link('local', 'Local Information') }}</li>
               <li><a class="promopopup">Promo Popup</a></li>
             </ul>
           </li>
         </ul>
         <a id="pull"><i class="fa fa-bars"></i></a>
       </nav>
-      <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
+      @if(Auth::check())
+        <a href="profile" class="book"><span data-hover="Profile">Profile</span> <i class="fa fa-check-circle"></i></a>
+      @endif
+      @if(!Auth::check())
+        <a href="login" class="book"><span data-hover="Login">Login</span> <i class="fa fa-check-circle"></i></a>
+      @endif      
       <div class="shadow"></div>
     </div>
   </div>
@@ -54,11 +78,10 @@
     @yield('maincontent')
     <div id="extras">
       <div class="centre">
-
         @yield('extracontent')
-
       </div>
     </div>
+ </div>
 
     <!-- Footer | START -->
     <footer>
@@ -94,16 +117,14 @@
         </div>
     	<!-- Footer Links | START -->
     	<div id="footerlinks">
-        	<div class="centre">
-            	            	<span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Amalya Reach Holiday Resort</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><a href="faq">FAQ</a>
-<span>
-            </div>
+        <div class="centre">
+          <span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Amalya Reach Holiday Resort</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><a href="faq">FAQ</a><span>
         </div>
+      </div>
         <!-- Footer Links | END -->
     </footer>
-      <!-- Footer | END -->
+    <!-- Footer | END -->
     </div>
-
     <script src="/js/plugins.js"></script>
     <script src="/js/global.js"></script>
   </body>

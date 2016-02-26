@@ -65,18 +65,18 @@
             </div>
             <div id="content">
                 <h2><strong>An Experience</strong> Like No Other</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.</p>
+                <p>Amalya Reach guarantees, no matter what your requirement is, we are fully committed to making your stay with us or your event with us, the best expierience you will get from a hotel.</p>
                 <ul class="tags">
                     <li>On-site Restaurant</li>
                     <li>24 Hour Concierge</li>
-                    <li>50m Lap Pool</li>
-                    <li>Day Spa & Sauna</li>
-                    <li>Tennis Court</li>
+                    <li>Metting Rooms</li>
+                    <li>Wedding Planning</li>
+                    <li>Local Cuisine</li>
                     <li>Tour Desk</li>
                 </ul>
                 <!-- Stats | START -->
                 <section id="stats">
-                	<h3>Last Month at Base Hotel</h3>
+                	<h3>Last Month at Amalya Reach</h3>
                     <figure>
                     	<strong>266</strong><br />
                         <span>Guests Stayed</span>
@@ -99,8 +99,7 @@
         </div>
         <!-- Instagram | START -->
         <div id="instagram">
-            <p>@basehotel <a href="#">Facebook</a> <a href="#">Twitter</a> <a href="#">Google+</a> <a href="#">Pinterest</a></p>
-            <a href="#" class="button"><span data-hover="See our Instagram">See our Instagram</span></a>
+            <p><a href="#">@AmalyaReach</a> <a href="#">Facebook</a></p>
         </div>
         <!-- Instagram | END -->
         <!-- Feature List | START -->
@@ -111,15 +110,14 @@
                     <div class="feature">
                         <img alt="" src="http://dummyimage.com/120x120" width="120" height="120" class="thumb" />
                         <div class="details">
-                            <h3>John Smith</h3>
-                            <p>Base Hotel General Manager<br /><br />
-                            <a href="#"><i class="fa fa-external-link"></i> Contact John</a><br />
-                            <a href="#"><i class="fa fa-external-link"></i> Linked In</a></p>
+                            <h3>Test Test</h3>
+                            <p>Manager, Amalya Reach Holiday Resort<br /><br />
+
                         </div>
                         <div class="copy">
-                        	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat.</p>
-                        </div>
+													<p>Test</p>
+													<p>Test</p>
+												</div>
                     </div>
                 </div>
             </div>

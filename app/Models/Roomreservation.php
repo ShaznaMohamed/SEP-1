@@ -23,6 +23,7 @@ class Roomreservation extends Model
         'message',
         'adult',
         'children',
+        'status',
 
 
     ];

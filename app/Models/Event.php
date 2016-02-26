@@ -24,7 +24,7 @@ class Event extends Model
         'last_name',
         'venue',
         'pax',
-        'contact-arrival',
+        'arrival_date',
         'start',
         'end',
         'contact_number',
@@ -32,6 +32,7 @@ class Event extends Model
         'preferred_time',
         'email',
         'confirm_email',
+        'type'
 
     ];
 

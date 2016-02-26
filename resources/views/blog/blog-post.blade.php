@@ -8,6 +8,28 @@
 <link class="colour" rel="stylesheet" href="/css/colour-gold.css">
 <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+<!-- getting data for the comments and posts sections -->
+<?php
+$specialData = DB::table('packages')->get();
+
+
+$reply_data = DB::table('comments')
+                    ->join('users', 'users.id', '=', 'comments.user_id')
+                    ->select('users.name', 'comments.body', 'comments.post_id', 'comments.created_at','comments.parent_id')
+                    ->get();
+
+
+$comment_data = DB::table('comments')
+                    ->join('users', 'users.id', '=', 'comments.user_id')
+                    ->select('users.name', 'comments.body', 'comments.post_id', 'comments.created_at', 'comments.user_id', 'comments.id')
+                    ->where('comments.parent_id', '=', null)
+                    ->get();
+
+$count = count($comment_data);
+
+?>
+    
 </head>
 <body class="page-blogpost page-sidebar">
 <!-- Navigation | START -->
@@ -119,36 +141,35 @@
                 <p class="fine credit"><i class="fa fa-edit"></i> Posted by <a href="#">Base Admin</a></p>
                 <hr />
                 <!-- Comments | START -->
-                <a href="form-comments.php?post=blog-post.html" class="button commentpop"><span data-hover="Leave a Comment">Leave a Comment</span></a>
-                <h2><i class="fa fa-comments-o"></i> 4 Comments</h2>
-                <ol id="comments">
+                <a href="{{route('leavecom')}}" class="button commentpop"><span data-hover="Leave a Comment">Leave a Comment</span></a>
+                <h2><i class="fa fa-comments-o"></i> {{$count}} Comments</h2>
+@foreach ($comment_data as $rs)
+
+                 <ol id="comments">
                     <li class="comment parent">
                         <div class="quote">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.</p>
+                            <p>{{$rs->body}}</p>
                         </div>
-                        <a href="form-comments.php?post=blog-post.html" class="comment-reply-link commentpop">Reply to John</a><div class="comment-author">John <span>on December 18, 2014</span></div>
+                        <a href="{{route('leaverep')}}" class="comment-reply-link commentpop">Reply to {{$rs->name}}</a><div class="comment-author">{{$rs->name}} <span>on {{$rs->created_at}}</span></div>
+                        
+                        @foreach($reply_data as $res)
+                        @if($rs->id === $res->parent_id)
                         <ol class="children">
                             <li class="comment">
                                 <div class="quote">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel.</p>
+                                    <p>{{$res->body}}</p>
                                 </div>
-                                <a href="form-comments.php?post=blog-post.html" class="comment-reply-link commentpop">Reply to Terry</a><div class="comment-author">Terry <span>on December 20, 2014</span></div>
+                                <!--commented by vish <a href="form-comments.php?post=blog-post.html" class="comment-reply-link commentpop">Reply to Terry</a>--><div class="comment-author">{{$res->name}} <span>on {{$res->created_at}}</span></div>
                             </li>
                         </ol>
+                        @endif
+                        @endforeach
+                        
                     </li>
-                    <li class="comment parent">
-                        <div class="quote">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat.</p>
-                        </div>
-                        <a href="form-comments.php?post=blog-post.html" class="comment-reply-link commentpop">Reply to Jessica</a><div class="comment-author">Jessica <span>on December 16, 2014</span></div>
-                    </li>
-                    <li class="comment parent">
-                        <div class="quote">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.</p>
-                        </div>
-                        <a href="form-comments.php" class="comment-reply-link commentpop">Reply to Steve</a><div class="comment-author">Steve <span>on December 14, 2014</span></div>
-                    </li>
+                  
                 </ol>
+                
+@endforeach
                 <!-- Comments | END -->
             </div>
             <!-- Sidebar | START -->

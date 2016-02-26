@@ -9,9 +9,9 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 
 class packageModel extends Model 
 {
-   
+
     protected $table = 'packages';
-    
+
     protected $fillable = [
         'package_name',
         'package_type',
@@ -19,10 +19,10 @@ class packageModel extends Model
         'descript',
         'start_date',
         'end_date',
-     
-        
+
+
     ];
 
-    
-    
+
+
 }

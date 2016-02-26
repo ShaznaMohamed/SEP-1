@@ -17,7 +17,7 @@
             {!! csrf_field() !!}
             <div class="col"></div>
             <div class="col">
-              
+
               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                 <div class="field"><input type="text" class="form-control" name="name" required placeholder="Name" value="{{ old('name') }}"></div>
                 @if ($errors->has('name'))

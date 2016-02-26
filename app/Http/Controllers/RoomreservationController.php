@@ -10,28 +10,35 @@ use App\Http\Controllers\Controller;
 
 class RoomreservationController extends Controller
 {
-    public function getdata()
+    public function getdataa()
     {
         return view('roomform');
     }
+
+    public function getroom()
+    {
+        return view('room');
+    }
+
+    public function getroomconfirm()
+    {
+        return view('roomconfirm');
+    }
+
     public function insertdata(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'phone' => 'required|numeric|min:10',
             'arrival' => 'required',
             'departure' => 'required',
+            'noofrooms'=> 'required|numeric|max:12',
 
-        ],
-
-            [
-
-                'required' => 'The :attribute field is required.',
-
-            ]
+        ]
         );
 
+        $status = "unconfirmed";
         Roomreservation::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
@@ -43,14 +50,15 @@ class RoomreservationController extends Controller
             'message' => $request->input('message'),
             'adult' => $request->input('adult'),
             'children' => $request->input('children'),
+            'status' => $status
 
         ]);
 
 
-//        return redirect()
-//            ->route('wedding')
-//            ->with('info', 'You request is submitted successfully ');
+        return redirect()
+            ->route('roomform')
+            ->with('info', 'You request is submitted successfully ');
 
-        return view('room', [' Your booking request is sent successfully.']);
+       // return view('room', [' Your booking request is sent successfully.']);
     }
 }

@@ -40,6 +40,7 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'logout']);
+
     }
 
     /**
@@ -74,17 +75,19 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'address1' => $data['address1'],
-            'address' => $data['address2'],
-            'address' => $data['address3'],
+            'address2' => $data['address2'],
+            'address3' => $data['address3'],
             'mobile' => $data['mobile'],
         ]);
-        
+
         Mail::send('emails.verify', [], function ($message) {
             $message->to(Input::get('email'), Input::get('name'))
                 ->subject('Thank you for registering with Amalya Reach');
         });
-        
-       return User::create();       
-           
+
+       return User::create();
+
     }
+
+
 }

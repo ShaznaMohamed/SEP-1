@@ -21,6 +21,6 @@ class HallController extends Controller
      */
     public function index()
     {
-        return view('hallDetails');
+        return view('events/hallDetails');
     }
 }

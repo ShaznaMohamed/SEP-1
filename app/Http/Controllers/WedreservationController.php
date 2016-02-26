@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Input;
+use Laracasts\FlashServiceProvider;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use DB;
 
 
@@ -17,23 +23,45 @@ class WedreservationController extends  Controller
     {
         return view('weddingform');
     }
+
+    public function getwedding()
+    {
+        return view('wedding');
+    }
+
+    public function getLeague()
+    {
+        $getSelectValue = Input::get('halltype');
+
+
+        $my = $_POST['select_halltype'];
+        echo "you have selected".$my;
+    }
+
+
+    public function getspecialform()
+    {
+        return view('specialform');
+    }
     public function insertdata(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'phone' => 'required|numeric',
             'arrival' => 'required',
             'departure' => 'required',
+            'pax'=> 'required|numeric|max:400',
 
-        ],
+        ]);
 
-            [
+//            [
+//
+//                'required' => 'The :attribute field is required.',
+//
+//            ]
 
-                'required' => 'The :attribute field is required.',
 
-            ]
-        );
 
         Wedreservation::create([
             'name' => $request->input('name'),
@@ -50,66 +78,60 @@ class WedreservationController extends  Controller
         ]);
 
 
-//        return redirect()
-//            ->route('wedding')
-//            ->with('info', 'You request is submitted successfully ');
-
-        return view('wedding', [' Your request is sent successfully.']);
-    }
+//        Mail::send('confirmation', [], function ($message) {
+//            $message->to(Input::get('email'), Input::get('name'))
+//                ->subject('Thank you for Booking in Amalya Reach');
+//        });
 
 
-
-    public function index()
-    {
-        $data=DB::table('wedreservation')->get();
-        return view('specialform')->with('data',$data);
-
+       return redirect()
+            ->route('weddingform')
+            ->with('info', 'You request is submitted successfully ');
+//        return Redirect::to('/wedding')->with('success',true)->with('message','That was great!');
 
     }
 
-    public function validation()
-    {
-
-        $rules = array(
-            'name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'arrival' => 'required',
-            'departure' => 'required',
-        );
-
-        $messages = array(
-            'required' => 'The :attribute is really really really important.',
-
-        );
 
 
-        $validator = Validator::make(Input::all(),$rules,$messages);
 
-        if($validator->fails()){
-            $messages = $validator->messages();
-            return Redirect::to('weddingform')
-                ->withErrors($validator);
-        }
-        else{
-            $Wedreservation = new Wedreservation;
-            $Wedreservation->name = Input::get('name');
-            $Wedreservation->email = Input::get('email');
-            $Wedreservation->phone = Input::get('phone');
-            $Wedreservation->pax = Input::get('pax');
-            $Wedreservation->arrival = Input::get('arrival');
-            $Wedreservation->departure = Input::get('departure');
-            $Wedreservation->halltype = Input::get('halltype');
-            $Wedreservation->message = Input::get('message');
-            $Wedreservation->session = Input::get('session');
-            $Wedreservation->flexibility = Input::get('flexibility');
+//    public function index()
+//    {
+//       return view('specialform')->with('data',$data);
+//        $data = DB::table('wedreservation')->get();
+//        return view('specialform',
+//            ['datas' => $data->name]
+//
+//        );
+//    }
 
-            $Wedreservation->save();
+//    protected function create(array $data)
+//    {
+//        Wedreservation::create([
+//            'name' => $data['name'],
+//            'email' => $data['email'],
+//            'phone' => $data['phone'],
+//            'pax' => $data['pax'],
+//            'arrival' => $data['arrival'],
+//            'departure' => $data['departure'],
+//            'halltype' => $data['halltype'],
+//            'message' => $data['message'],
+//            'session' => $data['session'],
+//            'flexibility' => $data['flexibility'],
+//        ]);
+//
+//        Mail::send('confirmation', [], function ($message) {
+//            $message->to(Input::get('email'), Input::get('name'))
+//                ->subject('Thank you for Booking in Amalya Reach');
+//        });
+//
+//
+//
+//        return Wedreservation::create();
+//
+//    }
 
-            return Redirect::to('weddingform')->with('message', 'Request is sent Successfully !!!');
-        }
-    }
 
 
-    }
+
+}
 
