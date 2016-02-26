@@ -62,12 +62,17 @@
                 </div>
             </div>
             <!-- Slideshow | END -->
-        	<ul id="faqs">
-            	<li>
-                	<h2 class="question">How do I register?</h2>
-                    <p class="answer">Go to the Register page in the header navigation bar. You will get an emaik once you successfully registered.<br /><br />
-              </li>
-            </ul>
+
+              @foreach($faqdata as $faqdata)
+                <ul id="faqs">
+                <li>
+                  	 <h2 class="question">{{ $faqdata->question }}</h2>
+                      <p class="answer">{{ $faqdata->answer }}</p>
+                </li>
+                </ul>
+              </br>
+  		        @endforeach
+
         </div>
     </main>
     <!-- Content | END -->

@@ -436,6 +436,18 @@ $(document).ready(function () {
 				$('#cboxClose').remove();
 			}
 		});
+		$('#faqpop').colorbox({
+			iframe:true,
+			opacity: '.6',
+			transition: 'fade',
+			innerWidth: 800,
+			innerHeight: 450,
+			fixed: true,
+			onLoad: function() {
+				$('#colorbox').addClass('formpopper');
+				$('#cboxClose').remove();
+			}
+		});
 		$('.commentpop').colorbox({
 			iframe:true,
 			opacity: '.6',

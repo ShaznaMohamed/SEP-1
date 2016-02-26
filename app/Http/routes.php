@@ -50,10 +50,6 @@ Route::group(['middleware' => ['web']], function () {
       return View::make('about/about');
   });
 
-  Route::get('faqs', function () {
-      return View::make('faq/faqs');
-  });
-
   Route::get('gallery', function () {
       return View::make('gallery/gallery');
   });
@@ -180,6 +176,18 @@ Route::group(['middleware' => ['web']], function () {
 
   Route::post('/testimonialsform', [
     'uses' => '\App\Http\Controllers\TestimonialsController@postReview',
+  ]);
+
+  /*
+  |--------------------------------------------------------------------------
+  | FAQ Routes
+  |--------------------------------------------------------------------------
+  |
+  */
+
+  Route::get('/faq', [
+    'uses' => '\App\Http\Controllers\FaqController@getFaq',
+    'as' => 'faq',
   ]);
 
 /*
@@ -430,6 +438,54 @@ Route::group(['middleware' => ['web']], function () {
 // Route::group(['middleware' => ['auth', 'admin','web']], function(){
 
   Route::get('/dashboard', 'AdminController@index');
+/*
+|--------------------------------------------------------------------------
+| FAQ
+|--------------------------------------------------------------------------
+|
+*/
+
+  Route::get('/adminfaq', [
+      'uses' => '\App\Http\Controllers\FaqController@getFaqAdmin',
+      'as' => 'adminfaq',
+  ]);
+
+  Route::get('/faqadd', [
+    'uses' => '\App\Http\Controllers\FaqController@getForm',
+    'as' => 'faqadd',
+  ]);
+
+  Route::get('/faqadded', [
+    'uses' => '\App\Http\Controllers\FaqController@getAdded',
+    'as' => 'faqadded',
+  ]);
+
+  Route::post('/faqadd', [
+    'uses' => '\App\Http\Controllers\FaqController@postFaq',
+  ]);
+
+
+/*
+|--------------------------------------------------------------------------
+| Contact Us
+|--------------------------------------------------------------------------
+|
+*/
+
+  Route::get('/admincontactus', [
+      'uses' => '\App\Http\Controllers\ContactController@index',
+      'as' => 'admincontactus',
+  ]);
+
+  Route::get('/admincontactusreply', [
+      'uses' => '\App\Http\Controllers\ContactController@reply',
+      'as' => 'admincontactusreply',
+  ]);
+
+  Route::post('/admincontactusreply', [
+      'uses' => '\App\Http\Controllers\ContactController@sendreply',
+      'as' => 'admincontactusreply',
+  ]);
 
 /*
 |--------------------------------------------------------------------------
@@ -437,10 +493,6 @@ Route::group(['middleware' => ['web']], function () {
 |--------------------------------------------------------------------------
 |
 */
-  Route::get('/admincontactus', [
-      'uses' => '\App\Http\Controllers\ContactController@index',
-      'as' => 'admincontactus',
-  ]);
 
   Route::get('/adminweddingpage', [
       'uses' => '\App\Http\Controllers\weddingservicesController@getdataa',

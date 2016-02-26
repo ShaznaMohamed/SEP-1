@@ -9,11 +9,6 @@ use View;
 class ContactController extends Controller
 {
     public function index()
-    // {
-    //   $contact = contact::all();
-    //   return View("admin/contact/admincontact")->with("contact", $contact);
-    // }
-
     {
       return view::make('admin/contact/admincontact',[
         'contact' => contact::paginate(5)

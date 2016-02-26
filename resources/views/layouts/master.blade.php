@@ -43,7 +43,7 @@
             <li>{{ Html::link('about', 'About Us') }}</li>
           </ul>
           </li>
-          <li>{{ Html::link('faqs', 'FAQ') }}</li>
+          <li>{{ Html::link('faq', 'FAQ') }}</li>
 
           <li>{{ Html::link('#', 'More') }}
             <ul>
@@ -68,7 +68,7 @@
       @endif
       @if(!Auth::check())
         <a href="login" class="book"><span data-hover="Login">Login</span> <i class="fa fa-check-circle"></i></a>
-      @endif      
+      @endif
       <div class="shadow"></div>
     </div>
   </div>
