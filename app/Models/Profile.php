@@ -16,12 +16,9 @@ class Profile extends Model
         'name',
         'email',
         'phone',
-        'pax',
-        'arrival',
-        'departure',
-        'halltype',
-        'message',
-        'sessionn',
-        'flexibility',
+        'address1',
+        'address2',
+        'address3',
+        'mobile',
     ];
 }

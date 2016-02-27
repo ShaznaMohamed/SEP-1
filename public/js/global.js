@@ -147,6 +147,11 @@ $(document).ready(function () {
         $(this).parent().find('.answer').stop().toggle(350, 'easeInOutQuart');
     });
 
+		$('#faqss .question').click(function () {
+		$(this).parent().stop().toggleClass('reveal');
+				$(this).parent().find('.answer').stop().toggle(350, 'easeInOutQuart');
+		});
+
 	/******************** Date Picker ********************/
 
 	// Check Rates & Contact

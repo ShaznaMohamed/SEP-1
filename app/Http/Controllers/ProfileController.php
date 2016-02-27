@@ -1,9 +1,7 @@
-<?php
+<?php namespace App\Http\Controllers;
 
-namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-
+use Auth;
+use View;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -23,7 +21,12 @@ class ProfileController extends Controller
 
   public function index()
   {
-        return view('auth/profile');
+        if (Auth::user())
+        {
+          return view::make('profile/profile',[
+            'loggeduser' => Auth::user()
+          ]);
+        }
   }
 
   public function show($id)
