@@ -12,7 +12,7 @@ class Faq extends Model
     protected $table = 'faq';
 
     protected $fillable = [
-        'faqid`',
+        'id`',
         'question',
         'answer',
     ];

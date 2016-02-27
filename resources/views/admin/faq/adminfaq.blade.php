@@ -9,7 +9,7 @@
     </header>
     <main>
     	<div class="centre">
-            <div id="content">                
+            <div id="content">
                 <a href="faqadd" class="button" id="faqpop"><span data-hover="Add new FAQ">Add new FAQ</span></a>
                 <table>
                     <tr>
@@ -20,12 +20,11 @@
                     </tr>
                     @foreach($faq as $faqs)
                     <tr>
-                        <td>{{ $faqs->faqid }}</td>
+                        <td>{{ $faqs->id }}</td>
                         <td><strong>{{ $faqs->question }}</strong></td>
                         <td>{{ $faqs->answer }}</td>
                         <td>
-                          <a href="#" class="tablebutton"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="tablebutton"><i class="fa fa-trash-o"></i></a>
+                          <a href="{{URL::route('faqdel',array('id' => $faqs->id))}}" id="tablebutton"><i class="fa fa-trash-o"></i></a>
                         </td>
                     </tr>
                     @endforeach

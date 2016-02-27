@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Faq;
+use App\Models\UserAdmin;
 use View;
+use Session;
 
 class FaqController extends Controller
 {
@@ -36,6 +38,28 @@ class FaqController extends Controller
             'answer' => $request->input('answer'),
         ]);
         return View('admin/faq/faqadded');
+    }
+
+    public function savefaqedit(Request $request)
+    {
+
+      $editid = $request->input('id');
+
+      $useredit = faq::find($editid);
+
+      $input = $request->all();
+
+      $useredit->fill($input)->save();
+
+      Session::flash('flash_message', 'Edited');
+
+      return redirect()->back();
+    }
+
+
+    public function faqdel($id){
+        Faq::destroy($id);
+        return redirect('adminfaq');
     }
 
 }

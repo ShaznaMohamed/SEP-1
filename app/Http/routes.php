@@ -491,6 +491,15 @@ Route::group(['middleware' => ['web']], function () {
     'uses' => '\App\Http\Controllers\FaqController@postFaq',
   ]);
 
+  Route::get('/faqdel/{id}', [
+    'uses' => '\App\Http\Controllers\FaqController@faqdel',
+    'as' => 'faqdel',
+  ]);
+
+  Route::post('/faqedit', [
+    'uses' => '\App\Http\Controllers\FaqController@savefaqEdit',
+  ]);
+
   /*
   |--------------------------------------------------------------------------
   | Users
