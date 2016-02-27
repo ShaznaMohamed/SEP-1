@@ -472,6 +472,33 @@ $(document).ready(function () {
 				$('#cboxClose').remove();
 			}
 		});
+
+		$('.editpop').colorbox({
+			iframe:true,
+			opacity: '.6',
+			transition: 'fade',
+			innerWidth: 800,
+			innerHeight: 700,
+			fixed: true,
+			onLoad: function() {
+				$('#colorbox').addClass('formpopper');
+				$('#cboxClose').remove();
+			}
+		});
+
+		$('.delpop').colorbox({
+			iframe:true,
+			opacity: '.6',
+			transition: 'fade',
+			innerWidth: 400,
+			innerHeight: 300,
+			fixed: true,
+			onLoad: function() {
+				$('#colorbox').addClass('formpopper');
+				$('#cboxClose').remove();
+			}
+		});
+
 		$('.commentpop').colorbox({
 			iframe:true,
 			opacity: '.6',

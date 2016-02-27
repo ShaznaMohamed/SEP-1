@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="/css/global.css">
   <link class="colour" rel="stylesheet" href="/css/colour-blue.css">
   <link class="pattern" rel="stylesheet" href="/css/pattern-horns.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-</head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></head>
 <body class="fullwidth">
   <!-- Navigation | START -->
   <div id="nav">

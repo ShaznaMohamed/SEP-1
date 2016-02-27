@@ -517,6 +517,19 @@ Route::group(['middleware' => ['web']], function () {
       'uses' => '\App\Http\Controllers\UserController@userAdd',
     ]);
 
+    Route::get('/adminuseredit/{id}', [
+      'uses' => '\App\Http\Controllers\UserController@getuserEdit',
+      'as' => 'adminuseredit',
+    ]);
+
+    Route::post('/adminuseredit', [
+      'uses' => '\App\Http\Controllers\UserController@userEdit',
+    ]);
+
+    Route::get('/adminuserdel/{id}', [
+      'uses' => '\App\Http\Controllers\UserController@adminuserdel',
+      'as' => 'adminuserdel',
+    ]);
 
 /*
 |--------------------------------------------------------------------------

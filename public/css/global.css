@@ -153,12 +153,12 @@ form button { padding:0; cursor:pointer; border:none; }
 .hover .button:hover, .hover form button:hover { background:#000; }
 .hover .button:hover span, .hover form button:hover span { transform:translateY(-100%); -webkit-transform:translateY(-100%); -ms-transform:translateY(-100%); }
 
-.tablebutton, form button { height:50px; padding:0 25px; font:800 12px/50px 'Open Sans', sans-serif; color:#666; letter-spacing:1.2px; text-align:center; text-transform:uppercase; display:inline-block; border-radius:5px; overflow:hidden; }
-.tablebutton span, form button span { position:relative; display:inline-block; }
-.tablebutton span:before, form button span:before { position:absolute; top:100%; content:attr(data-hover); }
+#tablebutton, form button { height:50px; padding:0 25px; font:800 12px/50px 'Open Sans', sans-serif; color:#666; letter-spacing:1.2px; text-align:center; text-transform:uppercase; display:inline-block; border-radius:5px; overflow:hidden; }
+#tablebutton span, form button span { position:relative; display:inline-block; }
+#tablebutton span:before, form button span:before { position:absolute; top:100%; content:attr(data-hover); }
 form button { padding:0; cursor:pointer; border:none; }
-.hover .tablebutton:hover, .hover form button:hover { background:#bdc3c7;color:#FFF; }
-.hover .tablebutton:hover span, .hover form button:hover span { transform:translateY(-100%); -webkit-transform:translateY(-100%); -ms-transform:translateY(-100%); }
+.hover #tablebutton:hover, .hover form button:hover { background:#bdc3c7;color:#FFF; }
+.hover #tablebutton:hover span, .hover form button:hover span { transform:translateY(-100%); -webkit-transform:translateY(-100%); -ms-transform:translateY(-100%); }
 
 /* 2.4 - List Items (Rooms & Specials) */
 

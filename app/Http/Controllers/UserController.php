@@ -10,8 +10,11 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Support\Facades\Input;
 use Laracasts\FlashServiceProvider;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Redirect;
 use View;
+use Session;
+
 
 class UserController extends Controller
 {
@@ -28,6 +31,11 @@ class UserController extends Controller
 
   public function getAdded(){
     return View('admin/user/useradded');
+  }
+
+  public function adminuserdel($id){
+      UserAdmin::destroy($id);
+      return redirect('adminusers');
   }
 
   public function userAdd(Request $request)
@@ -55,5 +63,28 @@ class UserController extends Controller
     });
     return View('admin/user/useradded');
   }
+
+  public function getuserEdit($id)
+  {
+    $user = UserAdmin::find($id);
+    return View("admin/user/adminuseredit")->with("user", $user);
+  }
+
+  public function userEdit(Request $request)
+  {
+
+    $editid = $request->input('id');
+
+    $useredit = UserAdmin::find($editid);
+
+    $input = $request->all();
+
+    $useredit->fill($input)->save();
+
+    Session::flash('flash_message', 'Edited');
+
+    return redirect()->back();
+  }
+
 
 }
