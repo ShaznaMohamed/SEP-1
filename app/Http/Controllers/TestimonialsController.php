@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Testimonials;
 use View;
+use Session;
 
 class TestimonialsController extends Controller
 {
@@ -43,6 +44,34 @@ class TestimonialsController extends Controller
             'message' => $request->input('message'),
         ]);
         return View('testimonials/testimonialsthankyou');
+    }
+
+    public function adminhide($id)
+    {
+
+      $hide = Testimonials::find($id);
+
+      $hide->hidden = 1;
+
+      $hide->save();
+
+      Session::flash('flash_message', 'Edited');
+
+      return redirect()->back();
+    }
+
+    public function adminshow($id)
+    {
+
+      $hide = Testimonials::find($id);
+
+      $hide->hidden = 0;
+
+      $hide->save();
+
+      Session::flash('flash_message', 'Edited');
+
+      return redirect()->back();
     }
 
 }

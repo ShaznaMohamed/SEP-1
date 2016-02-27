@@ -34,7 +34,6 @@
                         <td>
                           <a href="{{URL::route('adminuseredit',array('id' => $users->id))}}" id="tablebutton" class="editpop"><i class="fa fa-pencil"></i></a>
                           <a href="{{URL::route('adminuserdel',array('id' => $users->id))}}" id="tablebutton"><i class="fa fa-trash-o"></i></a>
-
                         </td>
                     </tr>
                     @endforeach

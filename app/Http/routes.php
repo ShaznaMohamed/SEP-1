@@ -531,6 +531,16 @@ Route::group(['middleware' => ['web']], function () {
       'as' => 'adminuserdel',
     ]);
 
+    Route::get('/admintestimonialhide/{id}', [
+      'uses' => '\App\Http\Controllers\TestimonialsController@adminhide',
+      'as' => 'admintestimonialhide',
+    ]);
+
+    Route::get('/admintestimonialshow/{id}', [
+      'uses' => '\App\Http\Controllers\TestimonialsController@adminshow',
+      'as' => 'admintestimonialshow',
+    ]);
+
 /*
 |--------------------------------------------------------------------------
 | Contact Us
@@ -551,6 +561,11 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('/admincontactusreply', [
       'uses' => '\App\Http\Controllers\ContactController@adminSendForm',
       'as' => 'admincontactusreply',
+  ]);
+
+  Route::get('/admincontactusreplyuser/{id}', [
+      'uses' => '\App\Http\Controllers\ContactController@adminSendFormUser',
+      'as' => 'admincontactusreplyuser',
   ]);
 
   Route::post('/admincontactusreply', [

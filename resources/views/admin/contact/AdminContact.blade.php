@@ -29,7 +29,9 @@
                         <td>{{ $contacts->email }}</td>
                         <td>{{ $contacts->mobile }}</td>
                         <td>{{ $contacts->message }}</td>
-                        <td><a href="#" class="tablebutton"><i class="fa fa-reply"/></a></td>
+                        <td>
+                            <a href="{{URL::route('admincontactusreplyuser',array('id' => $contacts->id))}}" id="tablebutton" class="editpop"><i class="fa fa-reply"></i></a>
+                        </td>
                     </tr>
                     @endforeach
                 </table>

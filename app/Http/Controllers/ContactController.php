@@ -43,6 +43,12 @@ class ContactController extends Controller
       return view('admin/contact/AdminContactReply');
     }
 
+    public function adminSendFormUser($id)
+    {
+      $msg = Contact::find($id);
+      return View("admin/contact/admincontactusreplyuser")->with("msg", $msg);
+    }
+
     public function adminSent()
     {
       return view('admin/contact/AdminContactReplied');
@@ -62,13 +68,6 @@ class ContactController extends Controller
 
     public function adminSend(Request $request)
     {
-        // use ($request)
-        //
-        // Mail::send([], [], function ($message) {
-        //     $message->to($request->input('email'), $request->input('name'))
-        //         ->subject($request->input('subject'))->setBody($request->input('message'));
-        // });
-
         Mail::send([], [],function($message) use ($request)
         {
           $message->to($request->input('email'), $request->input('name'))
@@ -82,9 +81,8 @@ class ContactController extends Controller
             'message' => $request->input('message'),
           ]);
 
-
-
         return redirect()
             ->route('admincontactusreplied');
     }
+
 }
