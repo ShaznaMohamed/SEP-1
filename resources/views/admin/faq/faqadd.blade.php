@@ -14,9 +14,23 @@
     <div class="container">
         <p class="title"><strong>Add a new FAQ</strong></p>
         <form role="form" method="POST" action="{{ route('faqadd')}}">
-            <textarea name="question" id="question" placeholder="Question" required></textarea>
-            <textarea name="answer" id="answer" placeholder="Answer" required></textarea>
-						<button type="submit" class="button"><span data-hover="Add">Add</span></button>
+          <div class="form-group{{ $errors->has('question') ? ' has-error' : '' }}">
+            <div class="field"><textarea name="question" id="question" placeholder="Question" required></textarea></div>
+            @if ($errors->has('question'))
+              <span class="help-block">
+                <strong>{{ $errors->first('question') }}</strong>
+              </span>
+            @endif
+          </div>
+          <div class="form-group{{ $errors->has('answer') ? ' has-error' : '' }}">
+            <div class="field"><textarea name="answer" id="answer" placeholder="Answer" required></textarea></div>
+            @if ($errors->has('answer'))
+              <span class="help-block">
+                <strong>{{ $errors->first('answer') }}</strong>
+              </span>
+            @endif
+          </div>
+    	     <button type="submit" class="button"><span data-hover="Add">Add</span></button>
 						<input type="hidden" name="_token" value="{{ Session::token() }}">
         </form>
     </div>
