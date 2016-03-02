@@ -14,7 +14,8 @@
                 <table>
                     <tr>
                       <th>ID</th>
-                      <th>Name</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
                       <th>Email</th>
                       <th>Address 1</th>
                       <th>Address 2</th>
@@ -25,15 +26,16 @@
                     @foreach($admins as $admin)
                     <tr>
                         <td>{{ $admin->id }}</td>
-                        <td><strong>{{ $admin->name }}</strong></td>
+                        <td><strong>{{ $admin->first }}</strong></td>
+                        <td><strong>{{ $admin->last }}</strong></td>
                         <td>{{ $admin->email }}</td>
                         <td>{{ $admin->address1 }}</td>
                         <td>{{ $admin->address2 }}</td>
                         <td>{{ $admin->address3 }}</td>
                         <td>{{ $admin->mobile }}</td>
                         <td>
-                          <a href="#" class="tablebutton"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="tablebutton"><i class="fa fa-trash-o"></i></a>
+                          <a href="{{URL::route('adminedit',array('id' => $admin->id))}}" id="tablebutton" class="editpop"><i class="fa fa-pencil"></i></a>
+                          <a href="{{URL::route('admindel',array('id' => $admin->id))}}" id="tablebutton"><i class="fa fa-trash-o"></i></a>
                         </td>
                     </tr>
                     @endforeach

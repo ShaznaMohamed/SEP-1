@@ -1,4 +1,3 @@
-
 <html>
 <head>
   <meta charset="utf-8">
@@ -12,14 +11,14 @@
 <body style="font-family: 'Open Sans';">
   <div id="pop" class="popform">
     <div class="container">
-      <p class="title"><strong>Add an Administrator</strong></p>
-      <form role="form" method="POST" action="{{ route('adminadd') }}">
+      <p class="title"><strong>Add Administrator</strong></p>
+      <form role="form" method="POST" action="{{ url('adminadd') }}">
         {!! csrf_field() !!}
         <div class="col"></div>
         <div class="col">
 
           <div class="form-group{{ $errors->has('first') ? ' has-error' : '' }}">
-            <div class="field"><input type="text" class="form-control" name="name" required placeholder="Name" value="{{ old('first') }}"></div>
+            <div class="field"><input type="text" class="form-control" name="first" required placeholder="First name" value="{{ old('first') }}"></div>
             @if ($errors->has('first'))
               <span class="help-block">
                 <strong>{{ $errors->first('name') }}</strong>
@@ -28,7 +27,7 @@
           </div>
 
           <div class="form-group{{ $errors->has('last') ? ' has-error' : '' }}">
-            <div class="field"><input type="text" class="form-control" name="last" required placeholder="Name" value="{{ old('last') }}"></div>
+            <div class="field"><input type="text" class="form-control" name="last" required placeholder="Last name" value="{{ old('last') }}"></div>
             @if ($errors->has('name'))
               <span class="help-block">
                 <strong>{{ $errors->first('last') }}</strong>
@@ -37,7 +36,7 @@
           </div>
 
           <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <div class="field"><input type="email" class="form-control" name="email" required placeholder="E-mail" value="{{ old('email') }}"></div>
+            <div class="field"><input type="text" class="form-control" name="email" required placeholder="Email"></div>
             @if ($errors->has('email'))
               <span class="help-block">
                 <strong>{{ $errors->first('email') }}</strong>
@@ -83,12 +82,9 @@
               </span>
             @endif
           </div>
-
           <div class="form-group">
             <div class="col"></div>
-            <button type="submit" class="button">
-              <i class="fa fa-btn fa-user"></i>Register
-            </button>
+            <button type="submit" class="button">Add</button>
           </div>
         </div>
         <div class="col"></div>

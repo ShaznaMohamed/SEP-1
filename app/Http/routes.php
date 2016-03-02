@@ -483,6 +483,19 @@ Route::group(['middleware' => ['web']], function () {
     'uses' => '\App\Http\Controllers\AdminUsers@postadmin',
   ]);
 
+  Route::get('/admindel/{id}', [
+    'uses' => '\App\Http\Controllers\AdminUsers@admindel',
+    'as' => 'admindel',
+  ]);
+
+  Route::get('/adminedit/{id}', [
+    'uses' => '\App\Http\Controllers\AdminUsers@getAdminEdit',
+    'as' => 'adminedit',
+  ]);
+
+  Route::post('/adminedit', [
+    'uses' => '\App\Http\Controllers\AdminUsers@adminEdit',
+  ]);
   /*
   |--------------------------------------------------------------------------
   | FAQ

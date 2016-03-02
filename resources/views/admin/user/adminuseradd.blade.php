@@ -1,4 +1,3 @@
-
 <html>
 <head>
   <meta charset="utf-8">
@@ -19,7 +18,7 @@
         <div class="col">
 
           <div class="form-group{{ $errors->has('first') ? ' has-error' : '' }}">
-            <div class="field"><input type="text" class="form-control" name="name" required placeholder="First name" value="{{ old('first') }}"></div>
+            <div class="field"><input type="text" class="form-control" name="first" required placeholder="First name" value="{{ old('first') }}"></div>
             @if ($errors->has('first'))
               <span class="help-block">
                 <strong>{{ $errors->first('name') }}</strong>
@@ -32,6 +31,15 @@
             @if ($errors->has('name'))
               <span class="help-block">
                 <strong>{{ $errors->first('last') }}</strong>
+              </span>
+            @endif
+          </div>
+
+          <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+            <div class="field"><input type="text" class="form-control" name="email" required placeholder="Email"></div>
+            @if ($errors->has('email'))
+              <span class="help-block">
+                <strong>{{ $errors->first('email') }}</strong>
               </span>
             @endif
           </div>

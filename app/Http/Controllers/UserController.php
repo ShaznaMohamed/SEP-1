@@ -161,7 +161,7 @@ class UserController extends Controller{
     $this->validate($request, [
       'current_password' => 'required',
       'password' => 'required|confirmed|min:6',
-    ]);   
+    ]);
 
     Mail::send('emails.verify', [], function ($message) {
         $message->to(Auth::user()->email, Auth::user()->name)
@@ -180,7 +180,4 @@ class UserController extends Controller{
     $user = UserAdmin::find($id);
     return View("profile/profileedit")->with("user", $user);
   }
-
-
-
 }
