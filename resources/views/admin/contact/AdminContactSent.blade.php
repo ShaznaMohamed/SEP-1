@@ -20,7 +20,6 @@
                         <th>To</th>
                         <th>Subject</th>
                         <th>Message</th>
-                        <th>Actions</th>
                     </tr>
                     @foreach($contactsent as $contactsents)
                     <tr>
@@ -29,7 +28,6 @@
                         <td>{{ $contactsents->toemail }}</td>
                         <td>{{ $contactsents->subject }}</td>
                         <td>{{ $contactsents->message }}</td>
-                        <td><a href="#" class="tablebutton"><i class="fa fa-reply"/></a></td>
                     </tr>
                     @endforeach
                 </table>

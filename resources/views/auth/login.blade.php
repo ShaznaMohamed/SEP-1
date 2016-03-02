@@ -12,7 +12,7 @@
     <main>
       <div class="centre">
         <div id="contact">
-          {{-- <img src="images/pagemain/login.png" width="1200" height="400" alt="" /> --}}
+          <img src="images/pagemain/login.png" width="1200" height="400" alt="" />
           <form role="form" method="POST" action="{{ url('/login') }}">
             {!! csrf_field() !!}
             <div class="col"></div>
@@ -30,13 +30,12 @@
               @if ($errors->has('password'))
                 <strong>{{ $errors->first('password') }}</strong>
               @endif
+              <div class="form-group" align="center">
+                <button type="submit" class="bbutton"><span data-hover="Login">Login</span></button></br>
+                {{ Html::link('password/reset', 'Forgot password?') }}
+              </div>
+
             </div>
-            <div class="col" style="    visibility: hidden">
-              <div class="field"><input type="text" placeholder="Your Name" /></div>
-              <div class="field"><input type="text" placeholder="Your Name" /></div>
-            </div>
-            <button type="submit"><span data-hover="Login">Login</span></button></br>
-            {{ Html::link('password/reset', 'Forgot password?') }}
           </form>
         </div>
       </main>

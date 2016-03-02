@@ -11,7 +11,7 @@
 	2.1 - Header
 	2.2 - Slideshow
 	2.3 - Buttons
-	2.4 - List Items (Rooms & Specials)
+	2.4 - List Items (Rooms & Specials)syb
 	2.5 - Check Rates Banner
 	2.6 - Select Boxes
 	2.7 - Date Picker
@@ -147,11 +147,19 @@ a img { border:none; }
 /* 2.3 - Buttons */
 
 .button, form button { height:50px; padding:0 25px; font:800 12px/50px 'Open Sans', sans-serif; color:#FFF; letter-spacing:1.2px; text-align:center; text-transform:uppercase; display:inline-block; border-radius:5px; overflow:hidden; }
-.button span, form button span { position:relative; display:inline-block; }
+.button span, form button span { position:relative; display:inline-block; color:#FFF;}
 .button span:before, form button span:before { position:absolute; top:100%; content:attr(data-hover); }
-form button { padding:0; cursor:pointer; border:none; }
+form button { padding:0; cursor:pointer; border:none;}
 .hover .button:hover, .hover form button:hover { background:#000; }
 .hover .button:hover span, .hover form button:hover span { transform:translateY(-100%); -webkit-transform:translateY(-100%); -ms-transform:translateY(-100%); }
+
+.bbutton, form button { height:50px; padding:0 25px; font:800 12px/50px 'Open Sans', sans-serif; color:#FFF; letter-spacing:1.2px; text-align:center; text-transform:uppercase; display:inline-block; border-radius:5px; overflow:hidden; }
+.bbutton span, form button span { position:relative; display:inline-block; }
+.bbutton span:before, form button span:before { position:absolute; top:100%; content:attr(data-hover); }
+form button { padding:0; cursor:pointer; border:none; }
+.hover .bbutton:hover, .hover form button:hover { background:#000; }
+.hover .bbutton:hover span, .hover form button:hover span { transform:translateY(-100%); -webkit-transform:translateY(-100%); -ms-transform:translateY(-100%); }
+
 
 #tablebutton, form button { height:50px; padding:0 25px; font:800 12px/50px 'Open Sans', sans-serif; color:#666; letter-spacing:1.2px; text-align:center; text-transform:uppercase; display:inline-block; border-radius:5px; overflow:hidden; }
 #tablebutton span, form button span { position:relative; display:inline-block; }
@@ -240,7 +248,7 @@ form button { padding:0; cursor:pointer; border:none; }
 main { font:14px/25px 'Open Sans', sans-serif; color:#000; letter-spacing:.4px; background:top left repeat-x; }
 main .centre { padding:70px 50px; }
 main .centre:after { content:""; clear:both; display:block; }
-main h1, main h2 { margin-bottom:30px; font:600 22px/30px 'Open Sans', sans-serif; text-transform:uppercase; letter-spacing:1.2px; position:relative; }
+main h1, main h2 { margin-bottom:30px; font:600 22px/30px 'Open Sans', sans-serif; text-transform:para; letter-spacing:1.2px; position:relative; }
 main h1 strong, main h2 strong { font-weight:800; }
 main h3 { margin-bottom:28px; font:700 16px/26px 'Open Sans', sans-serif; text-transform:uppercase; letter-spacing:1px; }
 main p { margin:0 0 30px; }

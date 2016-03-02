@@ -15,6 +15,7 @@ class Testimonials extends Model
         'email',
         'name',
         'location',
+        'service',
         'title',
         'message',
     ];

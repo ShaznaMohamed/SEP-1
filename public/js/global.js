@@ -433,14 +433,15 @@ $(document).ready(function () {
 			iframe:true,
 			opacity: '.6',
 			transition: 'fade',
-			innerWidth: 450,
-			innerHeight: 615,
+			innerWidth: 500,
+			innerHeight: 760,
 			fixed: true,
 			onLoad: function() {
 				$('#colorbox').addClass('formpopper');
 				$('#cboxClose').remove();
 			}
 		});
+
 		$('#faqpop').colorbox({
 			iframe:true,
 			opacity: '.6',
@@ -458,6 +459,18 @@ $(document).ready(function () {
 			opacity: '.6',
 			transition: 'fade',
 			innerWidth: 800,
+			innerHeight: 600,
+			fixed: true,
+			onLoad: function() {
+				$('#colorbox').addClass('formpopper');
+				$('#cboxClose').remove();
+			}
+		});
+		$('.passpop').colorbox({
+			iframe:true,
+			opacity: '.6',
+			transition: 'fade',
+			innerWidth: 600,
 			innerHeight: 600,
 			fixed: true,
 			onLoad: function() {

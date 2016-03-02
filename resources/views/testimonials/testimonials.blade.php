@@ -67,15 +67,13 @@
 							<figure>
 							<div class="testimonial">
 										<i class="fa fa-quote-left"></i>
+										<p>{{ $testimonialsdata->service }}</p>
 										<h2>{{ $testimonialsdata->title }}</h2>
 										<p>{{ $testimonialsdata->message }}</p>
 										<p class="name">&ndash; <strong>{{ $testimonialsdata->name }}</strong> <span>({{ $testimonialsdata->location }})</span></p>
 								</div>
 						</figure>
 		        @endforeach
-
-
         </div>
-
     </main>
   @endsection

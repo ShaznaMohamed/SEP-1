@@ -12,17 +12,17 @@ class plannerController extends Controller
 {
     public function getdataa()
     {
-        return view('adminplanner');
+        return view('/admin/wedding/adminplanner');
     }
 
     public function getroom()
     {
-        return view('room');
+        return view('/room/room');
     }
 
     public function getroomconfirm()
     {
-        return view('roomconfirm');
+        return view('/admin/room/roomconfirm');
     }
 
     public function insertdata(Request $request)
@@ -56,7 +56,7 @@ class plannerController extends Controller
 
 
         return redirect()
-            ->route('adminplanner')
+            ->route('/admin/wedding/adminplanner')
             ->with('info', 'You request is submitted successfully ');
 
         // return view('room', [' Your booking request is sent successfully.']);

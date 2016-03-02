@@ -14,7 +14,8 @@
                 <table>
                     <tr>
                       <th>ID</th>
-                      <th>Name</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
                       <th>Email</th>
                       <th>Address 1</th>
                       <th>Address 2</th>
@@ -25,7 +26,8 @@
                     @foreach($user as $users)
                     <tr>
                         <td>{{ $users->id }}</td>
-                        <td><strong>{{ $users->name }}</strong></td>
+                        <td><strong>{{ $users->first }}</strong></td>
+                        <td><strong>{{ $users->last }}</strong></td>
                         <td>{{ $users->email }}</td>
                         <td>{{ $users->address1 }}</td>
                         <td>{{ $users->address2 }}</td>

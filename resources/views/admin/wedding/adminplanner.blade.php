@@ -24,7 +24,7 @@
 <body>
 <!--retrieving data from weddingservices table -->
 <div class="centre">
-    <h2>Wedding Planner Details</h2>
+    <h2>Wedding Planner Timetable</h2>
 
     <?php $tabledata = DB::table('planner')->get(); ?>
     <main>

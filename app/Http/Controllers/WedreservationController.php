@@ -21,37 +21,31 @@ class WedreservationController extends  Controller
 {
     public function getdata()
     {
-        return view('weddingform');
+        return view('wedding/weddingform');
     }
 
     public function getwedding()
     {
-        return view('wedding');
+        return view('wedding/wedding');
     }
-
-    public function getLeague()
-    {
-        $getSelectValue = Input::get('halltype');
-
-
-        $my = $_POST['select_halltype'];
-        echo "you have selected".$my;
-    }
-
 
     public function getspecialform()
     {
-        return view('specialform');
+        return view('/admin/wedding/specialform');
     }
+
     public function insertdata(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|string',
+            'firstname' => 'required|string',
+            'lastname' => 'required|string',
+            'city' => 'required|string',
             'email' => 'required|email',
-            'phone' => 'required|numeric',
-            'arrival' => 'required',
-            'departure' => 'required',
+            'phone' => 'required|digits:10',
+            'eventdate' => 'required',
+            'noofrooms'=> 'numeric|max:2',
             'pax'=> 'required|numeric|max:400',
+
 
         ]);
 
@@ -62,30 +56,48 @@ class WedreservationController extends  Controller
 //            ]
 
 
-
+        $message = "Not Assigned";
+        $status = "unconfirmed";
         Wedreservation::create([
-            'name' => $request->input('name'),
+            'firstname' => $request->input('firstname'),
+            'lastname' => $request->input('lastname'),
             'email' => $request->input('email'),
             'phone' => $request->input('phone'),
+            'city' => $request->input('city'),
             'pax' => $request->input('pax'),
-            'arrival' => $request->input('arrival'),
-            'departure' => $request->input('departure'),
+            'eventdate' => $request->input('eventdate'),
+            'eventtype' => $request->input('eventtype'),
             'halltype' => $request->input('halltype'),
-            'message' => $request->input('message'),
+            'noofrooms' => $request->input('noofrooms'),
+
             'sessionn' => $request->input('sessionn'),
             'flexibility' => $request->input('flexibility'),
+            'status' => $status,
+            'message' => $message
 
         ]);
 
 
-//        Mail::send('confirmation', [], function ($message) {
-//            $message->to(Input::get('email'), Input::get('name'))
-//                ->subject('Thank you for Booking in Amalya Reach');
-//        });
+        Mail::send([], [],function($message)
+        {
+
+              $eemail = Input::get('email');
+              $firstname = Input::get('firstname');
+
+
+            $message->to($eemail, $firstname)
+                ->subject("Booking Request Quotation")
+                ->setBody("
+
+                 Thanks for making a booking request. We'll inform the confirmation of your reservation shortly."
+                );
+        });
+
 
 
        return redirect()
-            ->route('weddingform')
+            ->route('wedding/weddingform')
+            ->withInput()
             ->with('info', 'You request is submitted successfully ');
 //        return Redirect::to('/wedding')->with('success',true)->with('message','That was great!');
 
@@ -131,7 +143,30 @@ class WedreservationController extends  Controller
 //    }
 
 
+    public   function quotationemailsending()
+    {
+        $entry = new found();
+        $entry->remember_token = Input::get('_token');
+
+        Mail::send(['/admin/wedding/confirmation'], [],function($message)
+        {
+
+            $eemail = Input::get('email');
+            $firstname = Input::get('firstname');
+
+
+            $message->to($eemail, $firstname)
+                ->subject("Booking Request Quotation")
+                ->setBody("
+
+                 Thanks for making a booking request. We'll inform the confirmation of your reservation shortly."
+                );
+        });
+
+        return redirect()
+            ->route('/wedding/weddingform');
+    }
+
 
 
 }
-

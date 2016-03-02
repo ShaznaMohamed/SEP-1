@@ -6,6 +6,8 @@ use Exception;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+//use Illuminate\Database\Eloquent\PDOException;
+use Illuminate\Database\PDOException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
@@ -36,6 +38,9 @@ class Handler extends ExceptionHandler
         parent::report($e);
     }
 
+    //abort(404);
+
+
     /**
      * Render an exception into an HTTP response.
      *
@@ -45,6 +50,21 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        return parent::render($request, $e);
+      if ($e instanceof \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException)
+      {
+          return response(view('errors.404'), 404);
+      }
+
+      else if($e instanceof NotFoundHttpException)
+      {
+          return response()->view('errors.404', [], 404);
+      }
+
+      // else if($e instanceof \PDOException)
+      // {
+      //     return response()->view('errors.database', [], 404);
+      // }
+
+      return parent::render($request, $e);
     }
 }

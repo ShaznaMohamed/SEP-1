@@ -13,14 +13,19 @@ class roomController extends Controller
 {
     public function getdataaa()
     {
-        return view('adminroom');
+        return view('/admin/room/adminroom');
     }
 
     public function getdatafortable()
     {
-        return view('deluxe');
+        return view('/room/deluxeroom');
     }
 
+    public function posttest()
+    {
+        return view('/admin/room/rommconfirmsub');
+
+    }
 
     public function insertdataa(Request $request)
     {
@@ -51,7 +56,7 @@ class roomController extends Controller
 
 
         return redirect()
-            ->route('adminroom')
+            ->route('/admin/room/adminroom')
             ->with('info', 'You updation is done successfully ');
 
         // return view('room', [' Your booking request is sent successfully.']);

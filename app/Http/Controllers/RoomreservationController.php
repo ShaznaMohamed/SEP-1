@@ -12,17 +12,17 @@ class RoomreservationController extends Controller
 {
     public function getdataa()
     {
-        return view('roomform');
+        return view('/room/roomform');
     }
 
     public function getroom()
     {
-        return view('room');
+        return view('/room/room');
     }
 
     public function getroomconfirm()
     {
-        return view('roomconfirm');
+        return view('/room/roomconfirm');
     }
 
     public function insertdata(Request $request)
@@ -56,7 +56,7 @@ class RoomreservationController extends Controller
 
 
         return redirect()
-            ->route('roomform')
+            ->route('/room/roomform')
             ->with('info', 'You request is submitted successfully ');
 
        // return view('room', [' Your booking request is sent successfully.']);

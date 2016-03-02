@@ -24,26 +24,51 @@
         {
             var noofpax = parseInt(document.getElementById("pax").value);
             var halltype =(document.getElementById("halltype").value);
+            var noofguestroom =(document.getElementById("noofrooms").value);
+            var session =(document.getElementById("session").value);
+            var roomprice = noofguestroom * 2000.00 ;
             var hallprice;
+            var sessionprice;
             if(halltype="samro")
             {
-                hallprice = 15000.00;
+                hallprice = 1500.00;
             }
             else  if(halltype="poolside")
             {
-                hallprice = 18000.00;
+                hallprice = 1800.00;
             }
             else  if(halltype="silver")
             {
-                hallprice = 13000.00;
+                hallprice = 1300.00;
             }
             else  if(halltype="grand")
             {
-                hallprice = 10000.00;
+                hallprice = 1000.00;
             }
 
-            var total = noofpax * hallprice ;
+            if(session="morning")
+            {
+                sessionprice = 1500.00;
+            }
+            else  if(session="afternoon")
+            {
+                sessionprice = 1800.00;
+            }
+            else  if(session="evening")
+            {
+                sessionprice = 1500.00;
+            }
+            else  if(session="halfday")
+            {
+                sessionprice = 2000.00;
+            }
+            else if (session = "fullday")
+            {
+                sessionprice = 3000.00;
+            }
 
+            var totalhall = noofpax * hallprice ;
+            var total = sessionprice + totalhall + roomprice ;
             confirm("The Total Rate you will have to pay is Rs."+ total);
         }
     </script>
@@ -116,46 +141,93 @@
                 <form action="{{route('weddingform')}}" role="form" method="post" novalidate>
 
                     <div class="col">
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : ''}}">
-                        <div class="field"><input name="name" type="text" placeholder="Your Name" id="contact-name" ></div>
-                        @if ($errors->has('name')) <span class="help-block">{{ $errors->first('name') }}</span> @endif
-                    </div>
+                        <h3>Wedding Plan</h3>
+                        <div class="form-group {{ $errors->has('eventdate') ? ' has-error' : ''}}">
+                            <div class="field calendar"><input name="eventdate" type="text" placeholder="Event Date*" id="contact-arrival"  /><i class="fa fa-calendar-o"></i></div>
+                            @if ($errors->has('eventdate')) <span class="help-block">{{ $errors->first('eventdate') }}</span> @endif
+                        </div>
 
-                    <div class="form-group{{ $errors->has('email') ? ' has-error' : ''}}">
-                    <div class="field"><input name="email" type="text" placeholder="Email Address" id="contact-email" /></div>
-                        @if ($errors->has('email')) <span class="help-block">{{ $errors->first('email') }}</span> @endif
-                    </div>
-                    <div class="form-group{{ $errors->has('phone') ? ' has-error' : ''}}">
-                        <div class="field"><input name="phone" type="text" placeholder="Phone Number" id="contact-phone" /></div>
-                        @if ($errors->has('phone')) <span class="help-block">{{ $errors->first('phone') }}</span> @endif
-                    </div>
-                    <div class="form-group{{ $errors->has('halltype') ? ' has-error' : ''}}">
-                        <div class="field"> <select name="halltype" id="halltype" class="infants">
-                                <option value="samro" selected="selected">Samro Reception</option>
-                                <option value="poolside" >Pool side ball room</option>
-                                <option value="silver" >Silver ball room</option>
-                                <option value="grand" >Grand ball room</option>
-                            </select></div>
-                        @if ($errors->has('halltype')) <span class="help-block">{{ $errors->first('halltype') }}</span> @endif
-                    </div>
+
+                        <div class="form-group{{ $errors->has('eventtype') ? ' has-error' : ''}}">
+                            <div class="field"> <select name="eventtype" id="eventtype" class="infants">
+                                    <option value="wedding" selected="selected">Wedding</option>
+                                    <option value="engagement" >Engagement</option>
+                                    <option value="homecoming" >Home Coming</option>
+                                    <option value="reception" >Reception</option>
+                                </select></div>
+                            @if ($errors->has('eventtype')) <span class="help-block">{{ $errors->first('eventtype') }}</span> @endif
+                        </div>
+
+                     <br>
+
+                        <br>
+                            <div><br><br> <input type="text"  hidden="hidden"  value="" name="id"/>
+                            <input type="text"  hidden="hidden"  value="" name="id"/></div>
+                        <!--Already have an account? login-->
+                     <h4>Contact Information</h4>
+
+                        <div class="form-group{{ $errors->has('firstname') ? ' has-error' : ''}}">
+                            <div class="field"><input name="firstname" type="text" placeholder="First Name*" id="firstname" ></div>
+                            @if ($errors->has('firstname')) <span class="help-block">{{ $errors->first('firstname') }}</span> @endif
+                        </div>
+
+                        <div class="form-group{{ $errors->has('lastname') ? ' has-error' : ''}}">
+                            <div class="field"><input name="lastname" type="text" placeholder="Last Name*" id="lastname" ></div>
+                            @if ($errors->has('lastname')) <span class="help-block">{{ $errors->first('lastname') }}</span> @endif
+                        </div>
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : ''}}">
+                            <div class="field"><input name="email" type="text" placeholder="Email Address*" id="contact-email" /></div>
+                            @if ($errors->has('email')) <span class="help-block">{{ $errors->first('email') }}</span> @endif
+                        </div>
+
+
+                        <div class="form-group{{ $errors->has('phone') ? ' has-error' : ''}}">
+                            <div class="field"><input name="phone" type="text" placeholder="Phone Number*" id="contact-phone" /></div>
+                            @if ($errors->has('phone')) <span class="help-block">{{ $errors->first('phone') }}</span> @endif
+                        </div>
+
+                        <div class="form-group{{ $errors->has('city') ? ' has-error' : ''}}">
+                            <div class="field"><input name="city" type="text" placeholder="City*" id="contact-email" /></div>
+                            @if ($errors->has('city')) <span class="help-block">{{ $errors->first('city') }}</span> @endif
+                        </div>
+
 
             </div>
             <div class="col">
-                <div class="form-group {{ $errors->has('arrival') ? ' has-error' : ''}}">
-                    <div class="field calendar"><input name="arrival" type="text" placeholder="Arrival Date" id="contact-arrival" readonly /><i class="fa fa-calendar-o"></i></div>
-                    @if ($errors->has('arrival')) <span class="help-block">{{ $errors->first('arrival') }}</span> @endif
+
+                <input type="text"  hidden="hidden"  value="" name="id"/>
+                <input type="text"  hidden="hidden"  value="" name="id"/>
+                <br>
+                <hr>
+
+
+
+                <div class="form-group{{ $errors->has('noofrooms') ? ' has-error' : ''}}">
+                    <div class="field"><input name="noofrooms" type="text" placeholder="Number of Guest Rooms" id="noofrooms" /></div>
+                    @if ($errors->has('noofrooms')) <span class="help-block">{{ $errors->first('noofrooms') }}</span> @endif
                 </div>
-                <div class="form-group{{ $errors->has('departure') ? ' has-error' : ''}}">
-                    <div class="field calendar"><input name="departure" type="text" placeholder="Departure Date" id="contact-departure" readonly /><i class="fa fa-calendar-o"></i></div>
-                    @if ($errors->has('departure')) <span class="help-block">{{ $errors->first('departure') }}</span> @endif
-                </div>
+
+
                 <div class="form-group{{ $errors->has('pax') ? ' has-error' : ''}}">
-                    <div class="field"><input name="pax" type="text" placeholder="Number of Pax" id="pax" /></div>
+                    <div class="field"><input name="pax" type="text" placeholder="Number of Pax*" id="pax" /></div>
                     @if ($errors->has('pax')) <span class="help-block">{{ $errors->first('pax') }}</span> @endif
                 </div>
+
+
+                <div class="form-group{{ $errors->has('halltype') ? ' has-error' : ''}}">
+                    <div class="field"> <select name="halltype" id="halltype" class="infants">
+                            <option value="samro" selected="selected">Samro Reception</option>
+                            <option value="poolside" >Pool side ball room</option>
+                            <option value="silver" >Silver ball room</option>
+                            <option value="grand" >Grand ball room</option>
+                        </select></div>
+                    @if ($errors->has('halltype')) <span class="help-block">{{ $errors->first('halltype') }}</span> @endif
+                </div>
+
                 <div class="form-group{{ $errors->has('sessionn') ? ' has-error' : ''}}">
                     <div class="select">
-                        <select name="sessionn" id="contact-rrooms" class="infants">
+                        <select name="sessionn" id="session" class="infants">
                             <option value="morning" selected="selected">Morning Session (6.00am - 11.00am)</option>
                             <option value="afternoon" >Afternoon Session (11.00am - 4.00pm)</option>
                             <option value="evening" >Evening Session(5.00pm - 11.00pm)</option>
@@ -165,41 +237,54 @@
                     </div>
                     @if ($errors->has('sessionn')) <span class="help-block">{{ $errors->first('sessionn') }}</span> @endif
                 </div>
+
             </div>
             <div class="col">
+                <input type="text"  hidden="hidden"  value="" name="id"/>
+                <input type="text"  hidden="hidden"  value="" name="id"/>
+                <br>
+                <hr>
+
                 <div class="form-group{{ $errors->has('message') ? ' has-error' : ''}}">
                     <div class="field"><textarea name="message" placeholder="Message" id="contact-message"></textarea></div>
                     @if ($errors->has('message')) <span class="help-block">{{ $errors->first('message') }}</span> @endif
                 </div>
                 <div class="form-group{{ $errors->has('flexibility') ? ' has-error' : ''}}">
                     <div class="field"><select name="flexibility" id="contact-adults" class="adults">
-                            <option value="unconfirmed" >Firm</option>
-                            <option value="unconfirmed" selected="selected">Flexible</option>
+                            <option value="unchecked" >Event Date is Firm</option>
+                            <option value="unchecked" selected="selected">Event Date is Flexible</option>
 
                         </select></div>
-                    @if ($errors->has('flexibility')) <span class="help-block">{{ $errors->first('message') }}</span> @endif
+                    @if ($errors->has('flexibility')) <span class="help-block">{{ $errors->first('flexibility') }}</span> @endif
                 </div>
-            </div>
 
-                </form>
+
+            <br>
             <table>
-                <form>
+
                     <tr>
                     <td>  <div class="form-group">
-                            <h4><input type="submit" name="sub" value="Calculate Total Rate" class="btn btn-default" onclick="calctotal()">
+                            <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                            <h4><input type="submit" name="sub" value="Request for Quotation" class="btn btn-default" >
                                 <span data-hover="Add"></span></h4>
                           </div>
                     </td>
-                    <td></td>
+
+                </tr>
+                </table>
+            </div>
+                </form>
+                <table>
+                    <tr>
                     <td>
                         <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                         <div class="form-group">
-                            <h4><input type="submit" name="sub" value="Send Booking Request" class="btn btn-default"  >
+                            <h4><input type="submit" name="sub" value="Calculate Total Rate" class="btn btn-default" onclick="calctotal()" >
                                 <span data-hover="Add"></span></h4>
                         </div>
                     </td>
                     </tr>
-                </form>
+
             </table>
 
 

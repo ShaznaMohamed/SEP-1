@@ -86,8 +86,10 @@
 
 
             <td>
-                <form action="rommconfirmsub.php?id=$row->id" method="post">
+                <form action="{{route('rommconfirm')}}"  method="post">
                 <div class="form-group">
+                    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                    <input type="text"  hidden="hidden" placeholder="<?php $row->id ?>" value="<?php echo $row->id ?>" name="id"/>
                     <h4><input type="submit" name="subb" value="Check Availability" class="btn btn-default" >
                         <span data-hover="Add"></span></h4>
                 </div>

@@ -11,6 +11,6 @@ class UserAdmin extends Model
 {
     protected $table = 'users';
 
-    protected $fillable = ['name', 'email', 'password', 'address1','address2','address3','mobile'];
+    protected $fillable = ['first','last', 'email', 'password', 'address1','address2','address3','mobile'];
 
 }

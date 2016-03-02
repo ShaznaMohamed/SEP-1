@@ -17,6 +17,7 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Location</th>
+                        <th>Service</th>
                         <th>Title</th>
                         <th>Message</th>
                         <th>Hidden</th>
@@ -28,6 +29,7 @@
                         <td><strong>{{ $testimonial->name }}</strong></td>
                         <td>{{ $testimonial->email }}</td>
                         <td>{{ $testimonial->location }}</td>
+                        <td>{{ $testimonial->service }}</td>
                         <td>{{ $testimonial->title }}</td>
                         <td>{{ $testimonial->message }}</td>
                         <td>{{ $testimonial->hidden }}</td>
