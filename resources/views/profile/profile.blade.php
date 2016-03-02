@@ -4,7 +4,7 @@
   <header>
     <div id="header">
       <div class="h1">
-        <h1><span>Hello {{ $loggeduser->name }}</span>
+        <h1><span>Hello {{ $loggeduser->first }}</span>
           <span class="tagline">Welcome to the world of Amalya</span>
         </div>
       </div>
@@ -50,7 +50,8 @@
         </table>
         <a href="userPasswordChange" id="tablebutton" class="passpop"><span data-hover="Change password">Change password</span></a>
         <a href="userEmailChange" id="tablebutton" class="passpop"><span data-hover="Change email">Change email</span></a>
-        <a href="{{URL::route('userProfileChange',array('id' => $loggeduser->id))}}" id="tablebutton" class="passpop"><span data-hover="Edit Profile">Edit Profile</span></a>
+        <a href="{{URL::route('userProfileChange',array('id' => $loggeduser->id))}}" id="tablebutton" class="editpop"><span data-hover="Edit Profile">Edit Profile</span></a>
+        <a href="https://en.gravatar.com/connect/" id="tablebutton"><span data-hover="Gravatar">Gravatar</span></a>
         </br>
     </div>
   </main>

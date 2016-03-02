@@ -60,7 +60,7 @@
       </br>
         <div class="form-group">
           <div class="col"></div>
-          <button type="submit" class="button">Register</button>
+          <button type="submit" class="button">Save</button>
         </br></br>
           <button class="button" id="refresh"><span data-hover="Go back">Go Back</span></button>
         </div>

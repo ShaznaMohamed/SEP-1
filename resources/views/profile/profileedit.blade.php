@@ -13,22 +13,59 @@
   <div id="pop" class="popform">
     <div class="container">
       <p class="title"><strong>Edit</strong></p>
-      <form role="form" method="POST" action="{{ url('userProfileChange') }}">
+      <form role="form" method="POST" action="{{ url('adminuseredit') }}">
         {!! csrf_field() !!}
         <div class="col"></div>
-        <div class="col">
-          <div class="field"><input type="text" class="form-control" name="id" value="{{ $user->id }}"></div>
-          <div class="field"><input type="text" class="form-control" name="name" value="{{ $user->name }}" required ></div>
-          <div class="field"><input type="text" class="form-control" name="address1" value="{{ $user->address1 }}" required ></div>
-          <div class="field"><input type="text" class="form-control" name="address2" value="{{ $user->address2 }}" required ></div>
-          <div class="field"><input type="text" class="form-control" name="address3" value="{{ $user->address3 }}" required ></div>
-          <div class="field"><input type="text" class="form-control" name="mobile" value="{{ $user->mobile }}" required></div>
-          <div class="form-group">
-            <div class="col"></div>
-            <button type="submit" class="button">Save</button>
-          </div>
-        </br>
+
+        <div class="field"><input type="text" class="form-control" name="id"  readonly="readonly" value="{{$user->id}}"></div>
+
+        <div class="form-group{{ $errors->has('first') ? ' has-error' : '' }}">
+          <div class="field"><input type="text" class="form-control" name="first" required value="{{$user->first}}"></div>
+          @if ($errors->has('name'))
+            <span class="help-block">
+              <strong>{{ $errors->first('name') }}</strong>
+            </span>
+          @endif
+        </div>
+
+        <div class="form-group{{ $errors->has('last') ? ' has-error' : '' }}">
+          <div class="field"><input type="text" class="form-control" name="last" required value="{{$user->last}}"></div>
+          @if ($errors->has('name'))
+            <span class="help-block">
+              <strong>{{ $errors->first('name') }}</strong>
+            </span>
+          @endif
+        </div>
+
+        <div class="form-group{{ $errors->has('address1') ? ' has-error' : '' }}">
+          <div class="field"><input type="text" class="form-control" name="address1" required value="{{$user->address1}}"></div>
+        </div>
+
+        <div class="form-group{{ $errors->has('address2') ? ' has-error' : '' }}">
+          <div class="field"><input type="text" class="form-control" name="address2" required value="{{$user->address2}}"></div>
+        </div>
+
+        <div class="form-group{{ $errors->has('address3') ? ' has-error' : '' }}">
+          <div class="field"><input type="text" class="form-control" name="address3" value="{{$user->address3}}"></div>
+        </div>
+
+        <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
+          <div class="field"><input type="text" class="form-control" name="mobile" required value="{{$user->mobile}}"></div>
+          @if ($errors->has('mobile'))
+            <span class="help-block">
+              <strong>{{ $errors->first('mobile') }}</strong>
+            </span>
+          @endif
+        </div>
+      </br>
+        <div class="form-group">
+          <div class="col"></div>
+          <button type="submit" class="button">Save</button>
+        </br></br>
           <button class="button" id="refresh"><span data-hover="Go back">Go Back</span></button>
+        </div>
+      </div>
+        </br>
           <script type="text/javascript">
           document.getElementById("refresh").onclick = function () {
             window.parent.location.reload();

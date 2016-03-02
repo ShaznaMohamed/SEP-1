@@ -115,8 +115,6 @@ class UserController extends Controller{
 
     $useredit->fill($input)->save();
 
-    Session::flash('flash_message', 'Edited');
-
     return redirect()->back();
   }
 
