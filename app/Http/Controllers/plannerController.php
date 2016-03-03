@@ -10,10 +10,6 @@ use App\Http\Controllers\Controller;
 
 class plannerController extends Controller
 {
-    public function getdataa()
-    {
-        return view('/admin/wedding/adminplanner');
-    }
 
     public function getroom()
     {

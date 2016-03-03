@@ -11,7 +11,9 @@
 <!-- session logics -->
 <?php
         
-        Session::put('user_id', '1');
+        
+
+        Session::put('user_id', $loggeduser->id);
         Session::put('post_id', '1');
         Session::put('parent_id', '1');
 ?>

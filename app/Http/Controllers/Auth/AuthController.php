@@ -53,7 +53,8 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255|alpha',
+            'first' => 'required|max:255|alpha',
+            'last' => 'required|max:255|alpha',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
             'address1' => 'required',
@@ -74,7 +75,8 @@ class AuthController extends Controller
     protected function create(array $data)
     {
        User::create([
-            'name' => $data['name'],
+            'first' => $data['first'],
+            'last' => $data['last'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'address1' => $data['address1'],
@@ -84,13 +86,10 @@ class AuthController extends Controller
         ]);
 
         Mail::send('emails.verify', [], function ($message) {
-            $message->to(Input::get('email'), Input::get('name'))
+            $message->to(Input::get('email'), Input::get('first'))
                 ->subject('Thank you for registering with Amalya Reach');
         });
 
        return User::create();
-
     }
-
-
 }

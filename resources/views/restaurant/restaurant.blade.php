@@ -69,9 +69,18 @@
                     <p>Our unique Third Dimension Food envisions a philosophy based on a threefold foundation of taste, presentation and health.The restaurants at Amalya Reach Hotel combine the best traditions of international fine dining, with a Sri Lankan touch, making the meals here a unique experience.</p>
                     <!-- Menu | START -->
 
+
+										<a href=#breakfast class="button"><span data-hover="Breakfast">Breakfast</span></a>
+										<a href=#lunch class="button"><span data-hover="Lunch">Lunch</span></a>
+										<a href=#dinner class="button"><span data-hover="Dinner">Dinner</span></a>
+										<a href=#nonalcoholic class="button"><span data-hover="Drinks(Non-alcoholic)">Drinks(Non-alcoholic)</span></a>
+										<a href=#coffee class="button"><span data-hover="Coffee">Coffee</span></a>
+										<a href=#alcoholic class="button"><span data-hover="Drinks(Alcoholic)">Drinks(Alcoholic)</span></a>
+
 										<section id="menu">
                     	<h3><i class="fa fa-cutlery"></i> Dining Menu</h3>
                     	<div class="menu">
+												<section id ="breakfast">
                             <h4>
                             	Breakfast <span>7.30am &ndash; 12.00pm</span>
                             	<img alt="" src="/images/dining/hamburger.jpg" width="120" height="120" />
@@ -88,161 +97,113 @@
                                 </li>
 												        @endforeach
                             </ul>
+													</section>
                         </div>
                         <div class="menu">
+													<section id ="lunch">
                             <h4>
                             	Lunch <span>12.00pm &ndash; 3.30pm</span>
                             	<img alt="" src="/images/dining/food1.jpg" width="120" height="120" />
                             </h4>
                             <ul>
-															@foreach($lunchdata as $lunchdata)
+
+															@foreach($luncdata as $luncdata)
 															<li>
-																	<h5>{{ $lunchdata->type }}</h5>
-																	<p>{{ $lunchdata->details }}</p>
+																	<h5>{{ $luncdata->type }}</h5>
+																	<p>{{ $luncdata->details }}</p>
 																	<div class="price">
-																		<div>{{ $lunchdata->price }}</div>
+																		<div>{{ $luncdata->price }}</div>
 																	</div>
 															</li>
-															@endforeach                                
+															@endforeach
+
                             </ul>
+													</section>
                         </div>
                         <div class="menu">
+													<section id ="dinner">
                             <h4>
                             	Dinner <span>5.00pm &ndash; 10.00pm</span>
                             	<img alt="" src="/images/dining/food.jpg" width="120" height="120" />
                             </h4>
                             <ul>
-                                <li>
-																	<h5>Local Cusine<span class="tag" title="Spicy">S</span></h5>
-																	<p>Rice and Curry - With Meat or Vegetarian.</p>
-                                    <div class="price">
-                                    	<div>$25</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Asian Meal <span class="tag" title="Spicy">S</span></h5>
-                                    <p>Fried Rice/Nasi Goreng/Etc.</p>
-                                    <div class="price">
-                                    	<div>$27.5</div>
-                                    </div>
-                                </li>
-                                <li class="featured">
-                                    <h5>Western<span class="tag">Chef's Pick</span></h5>
-                                    <p>Fish and Chips/Chicken and Chips/Meat with Veggie.</p>
-                                    <div class="price">
-                                    	<div>$29</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Special Meals</h5>
-                                    <p>Customize Your Meal.</p>
-                                    <div class="price">
-                                    	<div>$28</div>
-                                        <div><span>+ Potato</span> $30</div>
-                                    </div>
-                                </li>
+
+															@foreach($dinnerdata as $dinnerdata)
+															<li>
+																	<h5>{{ $dinnerdata->type }}</h5>
+																	<p>{{ $dinnerdata->details }}</p>
+																	<div class="price">
+																		<div>{{ $dinnerdata->price }}</div>
+																	</div>
+															</li>
+															@endforeach
+
                             </ul>
+													</section>
                         </div>
                         <h3><i class="fa fa-glass"></i> Drinks Menu</h3>
                     	<div class="menu">
+												<section id ="nonalcoholic">
                             <h4>
-                            	Non-Alcoholic
+                            	Non-Alcoholic<span>Refresh yourself.</span>
                             	<img alt="" src="/images/dining/drink1.jpg" width="120" height="120" />
                             </h4>
                             <ul>
-                                <li>
-                                    <h5>Soft Drinks</h5>
-                                    <p>Fanta/Sprite/Coca cola/Fresh Fruit Jucie.</p>
-                                    <div class="price">
-                                    	<div>$10</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Milkshakes</h5>
-                                    <p>Chocolate/Vanilla/Strawberry.</p>
-                                    <div class="price">
-                                    	<div>$10</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Bottled Spring Water</h5>
-                                    <div class="price">
-                                    	<div>$6</div>
-                                    </div>
-                                </li>
+
+															@foreach($nonalcoholicdata as $nonalcoholicdata)
+															<li>
+																	<h5>{{ $nonalcoholicdata->type }}</h5>
+																	<p>{{ $nonalcoholicdata->details }}</p>
+																	<div class="price">
+																		<div>{{ $nonalcoholicdata->price }}</div>
+																	</div>
+															</li>
+															@endforeach
+
                             </ul>
+													</section>
                         </div>
+												<div class="menu">
+													<section id ="coffee">
+	                            <h4>
+	                            	Coffee<span>From finest baristas.</span>
+	                            	<img alt="" src="/images/dining/drink3.jpg" width="120" height="120" />
+	                            </h4>
+	                            <ul>
+
+																@foreach($coffeedata as $coffeedata)
+																<li>
+																		<h5>{{ $coffeedata->type }}</h5>
+																		<p>{{ $coffeedata->details }}</p>
+																		<div class="price">
+																			<div>{{ $coffeedata->price }}</div>
+																		</div>
+																</li>
+																@endforeach
+
+	                            </ul>
+														</section>
+	                        </div>
                         <div class="menu">
-                            <h4>
-                            	Coffee <span>By Experienced Baristas</span>
-                            	<img alt="" src="/images/dining/drink3.jpg" width="120" height="120" />
-                            </h4>
-                            <ul>
-                                <li>
-                                    <h5>Cappuccino</h5>
-                                    <div class="price">
-                                    	<div>$4.5</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Flat White</h5>
-                                    <div class="price">
-                                    	<div>$4.5</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Latte</h5>
-                                    <div class="price">
-                                    	<div>$4.5</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Macchiato</h5>
-                                    <div class="price">
-                                    	<div>$4</div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="menu">
+													<section id ="alcoholic">
                             <h4>
                             	Alcoholic <span>Local/Foreign</span>
                             	<img alt="" src="/images/dining/drink2.jpg" width="120" height="120" />
                             </h4>
                             <ul>
-                                <li>
-                                    <h5>Local</h5>
-                                    <p>Arrack/Whiskey/Vodka/Etc.</p>
-                                    <div class="price">
-                                    	<div><span>Glass</span> $10</div>
-                                        <div><span>Bottle</span> $59</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Whiskey - Red/Black Label</h5>
-                                    <p>J/Walker.</p>
-                                    <div class="price">
-                                    	<div><span>Glass</span> $12</div>
-                                        <div><span>Bottle</span>Starting From $65</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Wine</h5>
-                                    <p>World Of Fine Wine.</p>
-                                    <div class="price">
-                                    	<div><span>Glass</span> $18</div>
-                                        <div><span>Bottle</span>Starting From $96</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Vodka</h5>
-                                    <p>Russian/Sweden/Australia.</p>
-                                    <div class="price">
-                                    	<div><span>Glass</span> $22</div>
-                                        <div><span>Bottle</span>Starting From $115</div>
-                                    </div>
-                                </li>
+
+															@foreach($alcoholicdata as $alcoholicdata)
+															<li>
+																	<h5>{{ $alcoholicdata->type }}</h5>
+																	<p>{{ $alcoholicdata->details }}</p>
+																	<div class="price">
+																		<div>{{ $alcoholicdata->price }}</div>
+																	</div>
+															</li>
+															@endforeach
+
                             </ul>
+													</section>
                         </div>
                     </section>
                     <!-- Menu | END -->

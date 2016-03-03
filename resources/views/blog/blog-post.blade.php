@@ -16,7 +16,8 @@ $specialData = DB::table('packages')->get();
 
 $reply_data = DB::table('comments')
                     ->join('users', 'users.id', '=', 'comments.user_id')
-                    ->select('users.name', 'comments.body', 'comments.post_id', 'comments.created_at','comments.parent_id')
+                    ->select('users.name', 'comments.body', 'comments.post_id', 'comments.created_at','comments.parent_id' , 'comments.user_id')
+                    ->whereNotNull('comments.parent_id')
                     ->get();
 
 
@@ -27,6 +28,7 @@ $comment_data = DB::table('comments')
                     ->get();
 
 $count = count($comment_data);
+$replycount = count($reply_data);
 
 ?>
     
@@ -78,8 +80,8 @@ $count = count($comment_data);
 	<header>
     	<div id="header">
         	<div class="h1">
-                <div><h1>Our Latest Hotel Awards</h1>
-                <span class="tagline"><strong>Hotel News</strong> &ndash; December 12, 2014</span></div>
+                <div><h1>Our Christmas</h1>
+                <span class="tagline"><strong>Hotel News</strong> &ndash; December 25, 2015</span></div>
             </div>
         </div>
         <!-- Check Rates Banner | START -->
@@ -130,12 +132,14 @@ $count = count($comment_data);
             	<!-- Slideshow | START -->
             	<div id="slideshow">
                 	<div class="slider">
-                    	<img alt="" src="http://dummyimage.com/770x500" width="770" height="500" />
+                    	<img alt="" src="/images/blogs/blog1.jpg" width="770" height="500" />
                     </div>
                 </div>
                 <!-- Slideshow | END -->
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.</p>
-                <blockquote>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</blockquote>
+                <p>Share the joy in Belfast this Christmas. Find that special hand-picked gift with big shopping brands, unique stores and market stands. Bring the family or spend time with friends. 
+
+Belfast has great places to meet, eat and sleep with festive offers and great winter hotel deals. Come by car, bus or train. Join us and celebrate the fantastic festive lights! </p>
+                <blockquote>Christmas Celebrations at AmalayReach.</blockquote>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
                 <p class="fine credit"><i class="fa fa-edit"></i> Posted by <a href="#">Base Admin</a></p>
@@ -150,9 +154,16 @@ $count = count($comment_data);
                         <div class="quote">
                             <p>{{$rs->body}}</p>
                         </div>
-                        <a href="{{route('leaverep')}}" class="comment-reply-link commentpop">Reply to {{$rs->name}}</a><div class="comment-author">{{$rs->name}} <span>on {{$rs->created_at}}</span></div>
+                        <a href="{{route('leaverep')}}?id={{$rs->id}}" class="comment-reply-link commentpop">Reply to {{$rs->name}}</a>
+                        @if (Auth::user())
+                        @if($logvishuser->id == $rs->user_id)
+                        <a href="{{route('editcom')}}?cid={{$rs->id}}&" class="comment-reply-link commentpop"> Edit Comment</a>
+                        @endif
+                        @endif
+                        <div class="comment-author">{{$rs->name}} <span>on {{$rs->created_at}}</span></div>
                         
                         @foreach($reply_data as $res)
+                        
                         @if($rs->id === $res->parent_id)
                         <ol class="children">
                             <li class="comment">

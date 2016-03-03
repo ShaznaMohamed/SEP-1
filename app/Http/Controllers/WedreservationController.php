@@ -42,7 +42,7 @@ class WedreservationController extends  Controller
             'city' => 'required|string',
             'email' => 'required|email',
             'phone' => 'required|digits:10',
-            'eventdate' => 'required',
+            'eventdate' => 'required|unique:wedreservation',
             'noofrooms'=> 'numeric|max:2',
             'pax'=> 'required|numeric|max:400',
 
@@ -96,7 +96,7 @@ class WedreservationController extends  Controller
 
 
        return redirect()
-            ->route('wedding/weddingform')
+            ->route('weddingform')
             ->withInput()
             ->with('info', 'You request is submitted successfully ');
 //        return Redirect::to('/wedding')->with('success',true)->with('message','That was great!');

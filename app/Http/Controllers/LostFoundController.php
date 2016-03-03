@@ -9,8 +9,6 @@ use App\losts;
 use App\found;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
-
-
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Response;
@@ -22,7 +20,6 @@ use Illuminate\Support\Facades\DB;
 use App\documents;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
-
 use App\Models\Wedreservation;
 use Illuminate\Support\Facades\Mail;
 
@@ -30,25 +27,9 @@ class LostFoundController extends Controller
 {
 
 
-//    public function lostview()
-//    {
-//        $customer = DB::table('customer', 'reservation')
-//            ->where('reservation.status','=',"Checked_Out")
-//            ->join('reservation', 'customer.cus_id', '=', 'reservation.cus_id')
-//            ->join('room_reservation_rate', 'reservation.res_id', '=', 'room_reservation_rate.res_id')->get();
-//        $res = DB::table('reservation', 'customer')
-//            ->join('customer', 'reservation.cus_id', '=', 'customer.cus_id')->get();
-//
-//        return view('Housekeeping_views.LostFound')
-//            ->with('founds', found::all())
-//            ->with('customer', $customer)
-//            ->with('res', $res);
-//
-//    }
-
     public function getdata()
     {
-        return view('/admin/wedding/managereservation');
+      return redirect('managereservation');
     }
 
 
@@ -116,12 +97,8 @@ class LostFoundController extends Controller
                     ->update(['flexibility' => "Not Available"]);
             }
 
-            return Redirect::to('managereservation')->with('message2', 'UPDATED SUCCESSFULLY');
+            return redirect('managereservation');
         }
-
-
-
-
     }
 
 
@@ -157,7 +134,7 @@ class LostFoundController extends Controller
                     ->update(['flexibility' => "Not Available"]);
             }
 
-            return Redirect::to('managereservation')->with('message2', 'UPDATED SUCCESSFULLY');
+            return redirect('managereservation');
         }
     }
 
@@ -181,11 +158,143 @@ class LostFoundController extends Controller
 
 
         }
-        return Redirect::to('managereservation')->with('message2', 'UPDATED SUCCESSFULLY');
+        return redirect('managereservation');
     }
 
 
     public   function myemailsendingg()
+    {
+        $entry = new found();
+        $entry->remember_token = Input::get('_token');
+
+        $availablity = Input::get('availability');
+
+        if ( $availablity == "Available") {
+
+
+            Mail::send([], [], function ($message) {
+                // $email = Request::input('email');
+                $halltype = Input::get('halltype');
+                $eemail = Input::get('email');
+                $firstname = Input::get('firstname');
+                $eventdate = Input::get('eventdate');
+                $sessionn = Input::get('sessionn');
+                $pax = Input::get('pax');
+                $eventtype = Input::get('eventtype');
+
+                $message->to($eemail, $firstname)
+                    ->subject("Booking Request Confirmation")
+                    ->setBody("
+
+                  Thank you for reserving with Amalya Reach Holiday Resort
+                  Your Banquet Hall reservation request is confirmed at Amalya.
+
+
+
+                               Your  Reservation Details:
+
+
+                                        Hall Type:        " . $halltype . "
+
+
+                                        Event:            " . $eventtype . "
+
+
+                                        Date:             " . $eventdate . "
+
+
+                                        Session:          " . $sessionn . "
+
+
+                                        Pax:              " . $pax . "
+
+
+                  Now you may plan your wedding with us at Amalya's Luxuries.
+                  Amalya is enthusiastically waiting for your presence."
+                    );
+            });
+
+        }
+
+        else{
+
+            Mail::send([], [], function ($message) {
+                // $email = Request::input('email');
+                $halltype = Input::get('halltype');
+                $eemail = Input::get('email');
+                $firstname = Input::get('firstname');
+                $eventdate = Input::get('eventdate');
+                $sessionn = Input::get('sessionn');
+                $pax = Input::get('pax');
+                $eventtype = Input::get('eventtype');
+
+                $message->to($eemail, $firstname)
+                    ->subject("Booking Request Quotation")
+                    ->setBody("
+
+                  Thank you for reserving with Amalya Reach Holiday Resort
+                  Unfortunately Your Banquet Hall requested is not available on the requested date.
+
+
+
+                               Your  Reservation Details:
+
+
+                                        Hall Type:        " . $halltype . "
+
+
+                                        Event:            " . $eventtype . "
+
+
+                                        Date:             " . $eventdate . "
+
+
+                                        Session:          " . $sessionn . "
+
+
+                                        Pax:              " . $pax . "
+
+
+                  Now you may try for another date or another hall type for better results.
+                  Amalya is enthusiastically waiting for your presence.
+
+                        -Amalya Reach-"
+                    );
+            });
+
+        }
+
+        return redirect('managereservation');
+
+    }
+
+
+    public function assignplanner()
+    {
+        $button = Input::get('abtton');
+        $entry = new found();
+        $entry->remember_token = Input::get('_token');
+
+        if ($button == 'Assign Planner') {
+
+
+            $get_id = Input::get('id');
+            $getplanner = Input::get('name');
+            $selectedhall = Input::get('planner');
+
+            DB::table('wedreservation')
+                ->where('id', $get_id)
+                ->where('status', 'Confirmed')
+                ->update(['message' => $selectedhall]);
+
+
+        }
+        return redirect('managereservation')->withInput();
+
+    }
+
+
+    public   function planneremailsendingg()
     {
         $entry = new found();
         $entry->remember_token = Input::get('_token');
@@ -201,17 +310,28 @@ class LostFoundController extends Controller
             $pax = Input::get('pax');
             $eventtype = Input::get('eventtype');
 
+            $cname = Input::get('name');
+            $cemail = Input::get('uemail');
+            $phone = Input::get('phone');
+
             $message->to($eemail, $firstname)
-                ->subject("Booking Request Confirmation")
+                ->subject("Wedding Hall Planning Notification")
                 ->setBody("
 
-                  Thank you for reserving with Amalya Reach Holiday Resort
-                  Your Banquet Hall reservation request is confirmed at Amalya.
+                  You are assigned to one of the Wedding Hall planning
+                  The assigned reservation details....
 
 
+                                 Customer Details:
 
-                               Your  Reservation Details:
+                                       Name:             ".$cname."
 
+                                       Email:            ".$cemail."
+
+                                       Phone:            ".$phone."
+
+
+                                 Reservation Details:
 
                                         Hall Type:        ".$halltype."
 
@@ -228,38 +348,14 @@ class LostFoundController extends Controller
                                         Pax:              ".$pax."
 
 
-                  Now you may plan your wedding with us at Amalya's Luxuries.
-                  Amalya is enthusiastically waiting for your presence."
+                                      -  Amalya Reach -"
+
+
+
                 );
         });
 
-        return redirect()
-            ->route('managereservation');
-    }
-
-
-    public function assignplanner()
-    {
-        $button = Input::get('abtton');
-        $entry = new found();
-        $entry->remember_token = Input::get('_token');
-
-        if ($button == 'Assign Planner') {
-
-
-            $get_id = Input::get('id');
-            $getplanner = Input::get('planner');
-
-            DB::table('wedreservation')
-                ->where('id', $get_id)
-                ->where('status', 'Confirmed')
-                ->update(['message' => $getplanner]);
-
-
-        }
-        return Redirect::to('managereservation')->with('message2', 'UPDATED SUCCESSFULLY')
-                                                ->withInput();
-
+        return redirect('managereservation');
     }
 
 

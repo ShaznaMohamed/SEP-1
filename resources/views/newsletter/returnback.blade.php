@@ -1,0 +1,1 @@
+<a HREF="javascript:javascript:history.go(-1)">Click here to go back to previous page</a>

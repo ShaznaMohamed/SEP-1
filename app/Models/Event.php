@@ -21,7 +21,6 @@ class Event extends Model
     protected $fillable = [
         'title',
         'first_name',
-        'last_name',
         'venue',
         'pax',
         'arrival_date',
@@ -31,8 +30,9 @@ class Event extends Model
         'type_of_event',
         'preferred_time',
         'email',
-        'confirm_email',
-        'type'
+        'type',
+        'event_handler',
+        'h_email'
 
     ];
 

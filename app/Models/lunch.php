@@ -15,6 +15,6 @@ class Lunch extends Model
         'type',
         'details',
         'price',
-        'l_id',
+        'id',
     ];
 }

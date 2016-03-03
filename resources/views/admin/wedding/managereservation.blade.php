@@ -59,7 +59,7 @@
 
                                 {{--<button type="submit" class="btn btn-success" data-toggle="modal" data-target="#report">Summary</button>--}}
                                 <button id="Print" type="button" id="Print" class="btn btn-success">Print Summary</button>&nbsp;
-                                <input type="button"onclick="tableToExcel('table_ID00', 'W3C Example Table')" class="btn btn-success" id="ExportExcel"  value="Export to Excel">
+                                <!--<input type="button"onclick="tableToExcel('table_ID00', 'W3C Example Table')" class="btn btn-success" id="ExportExcel"  value="Export to Excel">-->
 
                                 <div id="rep" class="modal fade" role="dialog">
                                     <div class="modal-dialog"  style="width: 100%" >
@@ -81,34 +81,36 @@
 
                                                         <div class="col-md-12">
                                                             <div class="col-md-4">
-                                                                <img src="{{asset('/wedimages/reserv.jpg')}}" style="width: 10%;margin-right:60%;margin-top: 3%">
+                                                                <!--<img src="{//{asset('/wedimages/reserv.jpg')}}" style="width: 10%;margin-right:60%;margin-top: 3%">-->
+
                                                             </div>
                                                             <div style="top:-2%; left: 20%; position: absolute; margin-right: 60%;margin-top: 3% ">
 
-                                                                <table style="border: none;" cellpadding="0">
+                                                                {{--<table style="border: none;" cellpadding="0">--}}
 
-                                                                    <tr>
-                                                                        <td>
-                                                                            <p id="heading">
-                                                                                <b>Langdale by Amaya</b><br>
-                                                                                Nanu Oya, Radalla,
-                                                                                Nuwara Eliya.
+                                                                    {{--<tr>--}}
+                                                                        {{--<td>--}}
+                                                                            {{--<p id="heading">--}}
+                                                                                {{--<b>Langdale by Amaya</b><br>--}}
+                                                                                {{--Nanu Oya, Radalla,--}}
+                                                                                {{--Nuwara Eliya.--}}
 
-                                                                            <table id="id" cellpadding="5">
-                                                                                <tr>
-                                                                                    <td>Telephone</td> <td> +94 524 924 959</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>Fax</td> <td>   +94 524 924 831</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>Email</td> <td> res@amayaresorts.com</td>
-                                                                                </tr>
-                                                                            </table>
+                                                                            {{--<table id="id" cellpadding="5">--}}
+                                                                                {{--<tr>--}}
+                                                                                    {{--<td>Telephone</td> <td> +94 524 924 959</td>--}}
+                                                                                {{--</tr>--}}
+                                                                                {{--<tr>--}}
+                                                                                    {{--<td>Fax</td> <td>   +94 524 924 831</td>--}}
+                                                                                {{--</tr>--}}
+                                                                                {{--<tr>--}}
+                                                                                    {{--<td>Email</td> <td> res@amayaresorts.com</td>--}}
+                                                                                {{--</tr>--}}
+                                                                            {{--</table>--}}
 
 
-                                                                        </td>
 
+                                                                    <table>
+                                                                        <tr>
                                                                         <td>
                                                                             <table id="id" cellpadding="5">
 
@@ -126,23 +128,22 @@
 
                                                                         <td>
 
-                                                                            <p id="heading">
-                                                                                <b>Amaya Resorts & Spas</b><br>
-                                                                                Level 27, East Tower, World Trade Centre,
-                                                                                Colombo 1.
+                                                                            {{--<p id="heading">--}}
+                                                                                {{--<b>Amalya Reach Holiday Resort </b><br>--}}
 
-                                                                            <table id="id">
-                                                                                <tr>
-                                                                                    <td>Telephone</td> <td> +94 114 767 846</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>Fax</td> <td>   +94 114 767 867</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>Email</td> <td> reservations@amayaresorts.com</td>
-                                                                                </tr>
-                                                                            </table>
-                                                                            </p>
+
+                                                                            {{--<table id="id">--}}
+                                                                                {{--<tr>--}}
+                                                                                    {{--<td>Telephone</td> <td> +94 114 767 846</td>--}}
+                                                                                {{--</tr>--}}
+                                                                                {{--<tr>--}}
+                                                                                    {{--<td>Fax</td> <td>   +94 114 767 867</td>--}}
+                                                                                {{--</tr>--}}
+                                                                                {{--<tr>--}}
+                                                                                    {{--<td>Email</td> <td> reservations@amayaresorts.com</td>--}}
+                                                                                {{--</tr>--}}
+                                                                            {{--</table>--}}
+                                                                            {{--</p>--}}
                                                                         </td>
 
                                                                     </tr>
@@ -158,8 +159,8 @@
 
                                                         {{--TO HERE--}}
                                                         <br>
-                                                        <h4 style="font-family: sans-serif; text-align: center">Found Registry Report</h4>
 
+                                                        <h4 style="font-family: sans-serif; text-align: center">Wedding Hall Reservation Report</h4>
                                                         <hr style="height: 1px; border: none; background-color: #000000">
 
 
@@ -254,7 +255,7 @@
                                             <th class="col-sm-5">View Details</th>
                                             <th class="col-sm-5">Check Availability</th>
                                             <th class="col-sm-5">Confirm Requests</th>
-                                            <th class="col-sm-5">Send Confirmation Email</th>
+                                            <th class="col-sm-5">Send Email</th>
 
                                         </tr>
                                         </thead>
@@ -363,7 +364,7 @@
                                                                                 </div>
 
                                                                                 <div class="form-group">
-                                                                                    <label for="disabledTextInput" class="col-sm-4 control-label">Flexibility</label>
+                                                                                    <label for="disabledTextInput" class="col-sm-4 control-label">Availability</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text"disabled="true" name="contact" maxlength="100px" id="disabledTextInput"  class="form-control" value={{$found->flexibility}}>
 
@@ -380,7 +381,7 @@
 
 
                                                                                 <div class="form-group">
-                                                                                    <label for="disabledTextInput" class="col-sm-4 control-label">Image</label>
+                                                                                    <label for="disabledTextInput" class="col-sm-4 control-label">Selected Hall Image</label>
                                                                                     <img src="{{asset('/wedimages/vb.jpg') }}"width="50%" height="50%"/>
                                                                                 </div>
                                                                             </div>
@@ -555,7 +556,7 @@
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
                                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                                                                    <h4 class="modal-title custom_align" id="Heading"><strong><font color="green">Send Confirmation Email</font></strong></h4>
+                                                                    <h4 class="modal-title custom_align" id="Heading"><strong><font color="green">Send Quotation Email</font></strong></h4>
                                                                 </div>
                                                                 <div class="modal-body">
                                                                     <fieldset>
@@ -583,6 +584,8 @@
                                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                                                                 <input type="hidden" name="_tokennn" value="{!! csrf_token() !!}">
 
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->id}}" value="{{$found->id}}" name="id"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->flexibility}}" value="{{$found->flexibility}}" name="availability"/>
                                                                                 <input type="text"  hidden="hidden" placeholder="{{$found->email}}" value="{{$found->email}}" name="email"/>
                                                                                 <input type="text"  hidden="hidden" placeholder="{{$found->eventdate}}" value="{{$found->eventdate}}" name="eventdate"/>
                                                                                 <input type="text"  hidden="hidden" placeholder="{{$found->halltype}}" value="{{$found->halltype}}" name="halltype"/>
@@ -692,6 +695,7 @@
                                             <th class="col-sm-5">Status</th>
                                             <th class="col-sm-5">View Details</th>
                                             <th class="col-sm-5">Assign Wedding Planner</th>
+                                            <th class="col-sm-5">Notify Wedding Planner</th>
 
                                         </tr>
                                         </thead>
@@ -811,7 +815,7 @@
                                                                                 </div>
 
                                                                                 <div class="form-group">
-                                                                                    <label for="disabledTextInput" class="col-sm-4 control-label">Flexibility</label>
+                                                                                    <label for="disabledTextInput" class="col-sm-4 control-label">Availability</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text"disabled="true" name="contact" maxlength="100px" id="disabledTextInput"  class="form-control" value={{$found->flexibility}}>
 
@@ -828,7 +832,7 @@
 
 
                                                                                 <div class="form-group">
-                                                                                    <label for="disabledTextInput" class="col-sm-4 control-label">Image</label>
+                                                                                    <label for="disabledTextInput" class="col-sm-4 control-label">Selected Hall Image</label>
                                                                                     <img src="{{asset('/wedimages/vb.jpg') }}"width="50%" height="50%"/>
                                                                                 </div>
                                                                             </div>
@@ -913,11 +917,17 @@
                                                                             ?>
 
 
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-4 control-label">Planner</label>
-                                                                                <div class="col-sm-6">
-                                                                                    <input type="text" readonly name="id" id="TextInput" class="form-control" value="<?php echo $planner ?>">
 
+                                                                            <div class="form-group">
+                                                                                <label class="col-sm-4 control-label">Assigned Planner</label>
+                                                                                <div class="col-sm-6">
+                                                                                    <select class="form-control"  name="planner" id="planner">
+
+                                                                                        <option value="Sarah" >Sarah</option>
+                                                                                        <option value="Louise">Louise</option>
+                                                                                        <option value="Kelly">Kelly</option>
+                                                                                        <option value="Ann">Ann</option>
+                                                                                    </select>
                                                                                 </div><br><br>
                                                                             </div>
 
@@ -927,8 +937,82 @@
                                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                                                                 <input type="hidden" name="_tokenn" value="{!! csrf_token() !!}">
                                                                                 <input type="text"  hidden="hidden" placeholder="{{$found->id}}" value="{{$found->id}}" name="id"/>
-                                                                                <input type="text"  hidden="hidden" placeholder="<?php echo $planner ?>" value="<?php echo $planner ?>" name="planner"/>
                                                                                 <input type="submit" class="btn btn-primary" name="abtton" value="Assign Planner" />
+
+                                                                            </div>
+
+                                                                        </form>
+
+
+                                                                    </fieldset>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </td>
+
+                                                <td align="center">
+                                                    <a type="button" class="btn btn-primary glyphicon glyphicon-envelope" data-toggle="modal" data-target="#plansend{{$found->id}}"></a>
+
+                                                    <div id="plansend{{$found->id}}" class="modal fade" role="dialog">
+                                                        <div class="modal-dialog"  style="width: 40%" >
+
+                                                            <!-- Modal content-->
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                                                                    <h4 class="modal-title custom_align" id="Heading"><strong><font color="green">Notify Wedding Planner</font></strong></h4>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <fieldset>
+
+
+                                                                        <form class="form-horizontal" method="post" action="">
+                                                                            <div class="form-group">
+                                                                                <label class="col-sm-4 control-label">Reservation ID</label>
+                                                                                <div class="col-sm-6">
+                                                                                    <input type="text" readonly name="itemcode2" id="TextInput" class="form-control" value={{$found->id}}>
+                                                                                </div><br><br>
+                                                                            </div>
+
+
+
+                                                                            <div class="form-group">
+                                                                                <label class="col-sm-4 control-label">Assign Planner</label>
+                                                                                <div class="col-sm-6">
+                                                                                    <input type="text" readonly name="itemcode2" id="TextInput" class="form-control" value={{$found->id}}>
+                                                                                </div><br><br>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label class="col-sm-4 control-label">Planner Email</label>
+                                                                                <div class="col-sm-6">
+                                                                                    <input type="text" readonly name="id" id="TextInput" class="form-control" value="{{$found->email}}">
+
+                                                                                </div><br><br>
+                                                                            </div>
+
+
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                                <input type="hidden" name="_tokennn" value="{!! csrf_token() !!}">
+
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->firstname}}" value="{{$found->firstname}}" name="name"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->email}}" value="{{$found->email}}" name="uemail"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->phone}}" value="{{$found->phone}}" name="phone"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$foundd->email}}" value="{{$found->email}}" name="email"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->eventdate}}" value="{{$found->eventdate}}" name="eventdate"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->halltype}}" value="{{$found->halltype}}" name="halltype"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->sessionn}}" value="{{$found->sessionn}}" name="sessionn"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->firstname}}" value="{{$found->firstname}}" name="firstname"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->eventtype}}" value="{{$found->eventtype}}" name="eventtype"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->pax}}" value="{{$found->pax}}" name="pax"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->sessionn}}" value="{{$found->sessionn}}" name="idd"/>
+                                                                                <input type="submit" class="btn btn-primary" name="betnm" value="Send Notification Email" />
 
                                                                             </div>
 
@@ -950,6 +1034,7 @@
                                                     </div>
 
                                                 </td>
+
                                             </tr>
                                         @endforeach
                                         </tbody>
@@ -962,20 +1047,46 @@
                         </div>
                     </div>
 
-
-
-
-
-
-                    <div class="btn-group col-sm-2" style="margin-left: 44%">
-                        <a class="btn btn-warning  btn-block" href="{!! url('housekeepingmain') !!}" style="width:68%">Close
-                        </a>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
 
 </div>
+
+
+<script>
+    $('#Print').click(function(){
+
+        var printContents = document.getElementById("reportt").innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+
+    });
+
+</script>
+
+
+<script>
+
+
+    var tableToExcel = (function() {
+        var uri = 'data:application/vnd.ms-excel;base64,'
+                , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+                , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+                , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+        return function(table, name) {
+            if (!table.nodeType) table = document.getElementById(table)
+            var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+
+            window.location.href = uri + base64(format(template, ctx))
+        }
+    })()
+
+</script>
 </body>

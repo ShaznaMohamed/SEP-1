@@ -18,11 +18,20 @@
             <div class="col"></div>
             <div class="col">
 
-              <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                <div class="field"><input type="text" class="form-control" name="name" required placeholder="Name" value="{{ old('name') }}"></div>
-                @if ($errors->has('name'))
+              <div class="form-group{{ $errors->has('first') ? ' has-error' : '' }}">
+                <div class="field"><input type="text" class="form-control" name="first" required placeholder="First name" value="{{ old('first') }}"></div>
+                @if ($errors->has('first'))
                   <span class="help-block">
-                    <strong>{{ $errors->first('name') }}</strong>
+                    <strong>{{ $errors->first('first') }}</strong>
+                  </span>
+                @endif
+              </div>
+
+              <div class="form-group{{ $errors->has('last') ? ' has-error' : '' }}">
+                <div class="field"><input type="text" class="form-control" name="last" required placeholder="Last name" value="{{ old('last') }}"></div>
+                @if ($errors->has('last'))
+                  <span class="help-block">
+                    <strong>{{ $errors->first('last') }}</strong>
                   </span>
                 @endif
               </div>
@@ -77,9 +86,7 @@
 
               <div class="form-group">
                 <div class="col"></div>
-                <button type="submit" class="btn btn-primary">
-                  <i class="fa fa-btn fa-user"></i>Register
-                </button>
+                <button type="submit" class="button">Register</button>
               </div>
             </div>
             <div class="col"></div>

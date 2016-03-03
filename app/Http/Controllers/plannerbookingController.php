@@ -49,7 +49,7 @@ class plannerbookingController extends Controller
 
 
         return redirect()
-            ->route('/wedding/plannerform')
+            ->route('plannerform')
             ->with('info', 'You request is submitted successfully ');
 
         // return view('room', [' Your booking request is sent successfully.']);

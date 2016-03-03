@@ -17,7 +17,7 @@ class RoomreservationController extends Controller
 
     public function getroom()
     {
-        return view('/room/room');
+        return view('room/room');
     }
 
     public function getroomconfirm()

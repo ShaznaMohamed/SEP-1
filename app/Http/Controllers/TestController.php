@@ -6,6 +6,8 @@ use DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Session;
+use Auth;
+use View;
 
 class TestController extends Controller
 {
@@ -18,20 +20,107 @@ class TestController extends Controller
 
     public function com()
     {
-        return view('blog/leave_a_comment');
+        //return view('blog/leave_a_comment');
+        
+        
+         if (Auth::user())
+         {
+         return view::make('blog/leave_a_comment',[
+             'loggeduser' => Auth::user()
+          ]);
+       }
+        
+        else
+        {
+            return view('blog/LoggingFailed');
+        }
 
     }
+    
+    
 
     public function rep()
     {
-        return view('blog/leave_a_reply');
+        //return view('blog/leave_a_reply');
+        
+        if (Auth::user())
+         {
+         return view::make('blog/leave_a_reply',[
+             'loggeduser' => Auth::user(),
+             'temp' => $_REQUEST['id']
+          ]);
+        }
+        
+        else
+        {
+            return view('blog/LoggingFailed');
+        }
 
     }
 
-    public function blogF()
+    public function editcomment()
     {
-        return View('blog/blog-post');
+        Session::put('tempeditcomid', $_REQUEST['cid']);
+        
+        if (Auth::user())
+         {
+         return view::make('blog/edit_comment',[
+             'loggeduser' => Auth::user(),
+             'tempcommentid' => $_REQUEST['cid']
+          ]);
+        }
+        
+        else
+        {
+            return view('blog/LoggingFailed');
+        }
 
+        
+    }
+    
+    
+    public function posteditcomment(Request $request)
+    {
+        $tID = Session::get('tempeditcomid');
+        $bd = $request->input('body');
+       
+        DB::table('comments')
+            ->where('id', $tID)
+            ->update(array('body' => $bd));
+        
+        
+            return view('blog/SuccessfullyCommented');
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    public function blogF(){
+    
+         if (Auth::user())
+            {
+        
+                    return view::make('blog/blog-post',[
+                                'logvishuser' => Auth::user(),
+                                //'temp' => $_REQUEST['id']
+                                ]);
+        
+        
+            }
+        else
+        {            // check this logic again.. not sure !!!
+                    $arrss = array('id'=>0, 'Ben'=>'37', 'Joe'=>"43");
+                    return view::make('blog/blog-post',[
+                                'logvishuser' => $arrss,
+                                //'temp' => $_REQUEST['id']
+                                ]);
+        
+        }
+    
     }
 
 
@@ -52,10 +141,7 @@ class TestController extends Controller
             'post_id' => $post,
 
         ]);
-            return redirect()
-            ->route('blog-post')
-            ->with('info', 'You commented !');
-
+            return view('blog/SuccessfullyCommented');
 
 
 
@@ -81,10 +167,7 @@ class TestController extends Controller
             'parent_id' => $parent,
 
         ]);
-            return redirect()
-            ->route('blog-post')
-            ->with('info', 'You replied!');
-
+            return view('blog/SuccessfullyCommented');
 
 
     }

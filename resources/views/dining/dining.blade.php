@@ -119,26 +119,33 @@
                   </select>
                   <br></br>
                     <div class="field {{ $errors->has('first_name') ? ' has-error' : ''}}">
-                      <input name="first_name" type="text" placeholder="First Name" id="name" />
-                      @if ($errors->has('first_name'))
-                          <span class="help-block">{{ $errors->first('first_name') }}</span>
-                      @endif
+                      <input name="first_name" type="text" value="{{ $loggeduser->name}}" placeholder="Full Name" id="name" required="true"/>
                     </div>
+										@if ($errors->has('first_name'))
+												<span class="help-block">{{ $errors->first('first_name') }}</span>
+										@endif
 
-                    <div class="field"><input name="last_name" type="text" placeholder="Last Name" id="name" /></div>
-                    <div class="field"><input name="email" type="text" placeholder="Email Address" id="email" />
-                      @if ($errors->has('email'))
-                          <span class="help-block">{{ $errors->first('email') }}</span>
-                      @endif
+                    <div class="field"><input name="email" type="text" value="{{ $loggeduser->email}}" placeholder="Email Address" id="email" required="true"/>
                     </div>
+										@if ($errors->has('email'))
+												<span class="help-block">{{ $errors->first('email') }}</span>
+										@endif
+
+										<div class="field"><input name="phone" type="text" value="{{ $loggeduser->mobile}}" placeholder="Phone Number" id="phone" required="true"/></div>
+										@if ($errors->has('phone'))
+												<span class="help-block">{{ $errors->first('phone') }}</span>
+										@endif
 
                 </div>
                 <div class="col">
-                  <div class="field"><input name="phone" type="text" placeholder="Phone Number" id="phone" /></div>
-                    <div class="field calendar"><input name="arrival_date" type="text" placeholder="Arrival Date" id="contact-arrival" readonly /><i class="fa fa-calendar-o"></i></div>
-                    <div class="field"><input name="arrival_time" type="text" placeholder="Time" id="arrival_time" /></div>
+                    <div class="field calendar"><input name="arrival_date" type="text" placeholder="Date" id="contact-arrival" readonly required="true"/><i class="fa fa-calendar-o"></i></div>
+										@if ($errors->has('arrival_date'))
+												<span class="help-block">{{ $errors->first('arrival_date') }}</span>
+										@endif
+
+                    <div class="field"><input name="arrival_time" type="text" placeholder="Time(e.g. 10.00am)" id="arrival_time" required="true"/></div>
                     <div class="select">
-                        <select name="arrival_adults" id="arrival_adults" class="field">
+                        <select name="arrival_adults" id="arrival_adults" class="field" required="true" on>
                             <option value="1" >1 Adult</option>
                             <option value="2" selected="selected">2 Adults</option>
                             <option value="3" >3 Adults</option>
@@ -147,18 +154,18 @@
                         </select>
                         <br></br>
                     </div>
+										<div class="select">
+	                    <select name="arrival_children" id="arrival_children" class="field" required="true">
+	                        <option value="0" selected="selected">0 Children</option>
+	                        <option value="1" >1 Children</option>
+	                        <option value="2" >2 Children</option>
+	                        <option value="3" >3 Children</option>
+	                        <option value="4" >4 Children</option>
+	                    </select>
+	                      <br></br>
+	                  </div>
                 </div>
                 <div class="col">
-                  <div class="select">
-                    <select name="arrival_children" id="arrival_children" class="field">
-                        <option value="0" selected="selected">0 Children</option>
-                        <option value="1" >1 Children</option>
-                        <option value="2" >2 Children</option>
-                        <option value="3" >3 Children</option>
-                        <option value="4" >4 Children</option>
-                    </select>
-                      <br></br>
-                  </div>
                     <div class="field"><textarea name="notes" placeholder="Additional Notes" id="notes"></textarea></div>
                 </div>
                 <button type="submit" class="btn btn-default"><span data-hover="Send Request">MAKE RESERVATION</span></button>
@@ -173,4 +180,6 @@
         <!-- Google Map | START -->
         <!-- Google Map | END -->
   </main>
+
+
 @endsection

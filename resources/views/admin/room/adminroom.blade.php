@@ -30,7 +30,7 @@
         <tr>
             <td>
 
-                <h3>Room Prices</h3>
+                <h3>Room Features</h3>
 
                 <?php $tabledata = DB::table('room')->get(); ?>
                 <main>
@@ -38,16 +38,49 @@
                         <thead>
                         <th>Room Type</th>
                         <th>Price</th>
+                        <th>Wifi</th>
+                        <th>Aircondition</th>
+                        <th>Cable TV</th>
+                        <th>Telephone</th>
+                        <th>Dining Table</th>
 
+                        <!-- Converting  1 , 0 boolean into understandable values to view -->
                         </thead>
                         <tbody>
                         <?php
                         foreach($tabledata as $row)
                         {
+                        if($row->wifi  == 1)
+                            $wifi = "Available" ;
+                        else
+                            $wifi = "Not Available";
+                        if($row->airconditioned  == 1)
+                            $air = "Available" ;
+                        else
+                            $air = "Not Available";
+                        if($row->cabletv  == 1)
+                            $cable = "Available" ;
+                        else
+                            $cable = "Not Available";
+                        if($row->telephone  == 1)
+                            $tel = "Available" ;
+                        else
+                            $tel = "Not Available";
+                        if($row->diningtable  == 1)
+                            $din = "Available" ;
+                        else
+                            $din = "Not Available";
+
                         ?>
                         <tr>
-                            <td><?php echo $row->roomtype; ?></td>
-                            <td><?php echo $row->price; ?></td>
+                            <td><?php echo $row->roomtype;?></td>
+                            <td><?php echo $row->price;?></td>
+                            <td><?php echo $wifi; ?></td>
+                            <td><?php echo $air; ?></td>
+                            <td><?php echo $cable; ?></td>
+                            <td><?php echo $tel; ?></td>
+                            <td><?php echo $din; ?></td>
+
 
                         </tr>
                         <?php
@@ -57,7 +90,9 @@
 
                     </table>
                 </main>
+        </table>
 </div>
+
 
 </td>
 <!--end of retrieved data showings-->
@@ -68,7 +103,7 @@
         <h3>Update Room Features</h3>
         <main>
             <table>
-                <form action="{{route('adminroom')}}" role="form" method="post" novalidate>
+                <form action="{{ url('adminroom') }}" role="form" method="post" novalidate>
                     <tr>
                         <td>
                             <label for="start_time" class="control-label">Select Room Type</label>
@@ -135,7 +170,7 @@
                     <td>
                         <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                         <div class="form-group">
-                            <h4><input type="submit" name="sub" value="Update" class="btn btn-default" onclick="showmessage()"/>
+                            <h4><input type="submit" name="sub" value="Update" class="btn btn-default" />
                                 <span data-hover="Add"></span></h4>
                         </div>
                     </td>

@@ -50,6 +50,78 @@
                     </div>
                 </div>
             </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Event Management</h2>
+                        <a href="eventmanage" class="button"><span data-hover="Event Management">Event Management</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Dining Management</h2>
+                        <a href="diningmanage" class="button"><span data-hover="Dining Management">Dining Management</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Menu Management</h2>
+                        <a href="menudashboard" class="button"><span data-hover="Menu Management">Menu Management</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Gallery Management</h2>
+                        <a href="upload" class="button"><span data-hover="Manage Pictures">Manage Pictures</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Menu Management</h2>
+                        <a href="menudashboard" class="button"><span data-hover="Menu Management">Menu Management</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Specials</h2>
+                        <a href="specadd" class="button"><span data-hover="Manage Specials">Manage Specials</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Manage Reservations</h2>
+                        <a href="managereservation" class="button"><span data-hover="Manage Reservations">Manage Reservations</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Room Dashboard</h2>
+                        <a href="roomdashboard" class="button"><span data-hover="Manage Reservations">Manage Reservations</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Wedding Dashboard</h2>
+                        <a href="weddingdashboard" class="button"><span data-hover="Manage Reservations">Manage Reservations</span></a>
+                    </div>
+                </div>
+            </figure>
 
         </div>
     </main>

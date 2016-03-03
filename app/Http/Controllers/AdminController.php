@@ -26,4 +26,18 @@ class AdminController extends Controller
     {
         return view('admin/admindashboard');
     }
+
+    public function menu()
+    {
+        return view('admin/menudashboard');
+    }
+
+    public function wedding()
+    {
+        return view('admin/admin/weddingdashboard');
+    }
+    public function room()
+    {
+        return view('admin/admin/roomdashboard');
+    }
 }

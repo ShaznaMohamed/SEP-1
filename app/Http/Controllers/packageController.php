@@ -27,18 +27,16 @@ class packageController extends Controller
     public function postPackUpdate(Request $request)
     {
         $this->validate($request,[
-            'package_name' => 'required',
+            'package_name' => 'required|unique:packages',
             'package_type' => 'required',
-            'price' => 'required',
             'descrip' => 'required',
-            'start_time' => 'required',
+            'start_time' => 'required|date',
             'end_time' => 'required',
         ]);
 
         packageModel::create([
             'package_name' => $request->input('package_name'),
             'package_type' => $request->input('package_type'),
-            'price' => $request->input('price'),
             'descript' => $request->input('descrip'),
             'start_date' => $request->input('start_time'),
             'end_date' => $request->input('end_time'),

@@ -16,7 +16,6 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('first_name');
-            $table->string('last_name');
             $table->string('venue');
             $table->integer('pax');
             $table->string('arrival_date');
@@ -26,7 +25,6 @@ class CreateEventsTable extends Migration
             $table->string('type_of_event');
             $table->string('preferred_time');
             $table->string('email');
-            $table->string('confirm_email');
             $table->string('type');
             $table->string('remember_token')->nullable();
             $table->timestamps();

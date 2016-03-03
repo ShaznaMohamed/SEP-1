@@ -239,7 +239,7 @@ public function uploadImg7() {
       return Redirect::to('upload');
     }
   }
-
+}
   public function uploadImg8() {
         // getting all of the post data
     $file = array('image8' => Input::file('image8'));

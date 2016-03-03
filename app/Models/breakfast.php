@@ -15,6 +15,6 @@ class Breakfast extends Model
         'type',
         'details',
         'price',
-        'b_id',
+        'id',
     ];
 }

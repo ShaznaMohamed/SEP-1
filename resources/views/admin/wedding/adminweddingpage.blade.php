@@ -74,7 +74,7 @@
 <h3>Update Hall Facilities</h3>
 <main>
     <table>
-        <form action="{{route('adminweddingpage')}}" role="form" method="post">
+        <form action="{{ url('adminweddingpage') }}" role="form" method="post">
             <tr>
                 <td>
                 <label for="start_time" class="control-label">Select Hall Type</label>

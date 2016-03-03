@@ -1,10 +1,64 @@
-<?php
-$specialData = DB::table('packages')->orderBy('id','desc')->first();
-?>
-@extends('layouts.master')
-@section('maincontent')
+<!DOCTYPE HTML>
 
-  <header>
+<html>
+<head>
+<?php 
+$specialData = DB::table('packages')->orderBy('id','desc')->first();
+
+?>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
+<link rel="stylesheet" href="/css/global.css">
+<link class="colour" rel="stylesheet" href="/css/colour-gold.css">
+<link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+<!-- Navigation | START -->
+<div id="nav">
+    <div class="centre">
+        <a href="index.html" class="logo"><img alt="" src="/images/logo.png" /></a>
+        <nav>
+            <ul>
+            	<li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
+                <li>{{ Html::link('/', 'Home') }}</li>
+                <li>{{ Html::link('accommodation', 'Accommodation') }}
+                	<ul>
+                    	<li>{{ Html::link('accommodation', 'Accommodation List 1') }}</li>
+                        <li>{{ Html::link('accommodation2', 'Accommodation List 2') }}</li>
+                        <li>{{ Html::link('room', 'Room Detail 1') }}</li>
+                        <li>{{ Html::link('room2', 'Room Detail 2') }}</li>
+                    </ul>
+                </li>
+                <li>{{ Html::link('gallery', 'Gallery') }}</li>                
+                <li>{{ Html::link('specials', 'Special Offers') }}</li> 
+                <li>{{ Html::link('location', 'Location') }}</li>
+                <li>{{ Html::link('about', 'About Us') }}</li>
+                <li>{{ Html::link('about', 'More') }}
+                	<ul>                         
+                        <li>{{ Html::link('guest-book', 'Guest Book') }}</li>                                              
+                        <li><a href="blog.html">Our Blog <i class="fa fa-chevron-right"></i></a>
+                        	<ul>
+                                <li>{{ Html::link('blog', 'Blog Overview') }}</li>
+                                <li>{{ Html::link('blog-post', 'Blog Post') }}</li>
+                            </ul>
+                        </li>                        
+                        <li>{{ Html::link('faqs', 'FAQs') }}</li>
+                        <li><a class="promopopup">Promo Popup</a></li>
+                    </ul>
+                </li>
+            </ul>            
+            <a id="pull"><i class="fa fa-bars"></i></a>
+        </nav> 
+        <a href="contact.php" class="book"><span data-hover="Book Online">Book Online</span> <i class="fa fa-check-circle"></i></a>
+        <div class="shadow"></div>
+    </div>
+</div>
+<!-- Navigation | END -->
+<div id="container">
+	<!-- Header | Start -->
+	<header>
     	<div id="header">
         	<div class="h1">
                 <h1><span>Special Offers</span>
@@ -50,28 +104,27 @@ $specialData = DB::table('packages')->orderBy('id','desc')->first();
             </div>
         </div>
         <!-- Check Rates Banner | END -->
-  </header>
+    </header>
     <!-- Header | END -->
     <!-- Specials | START -->
     <!-- Content | START -->
-  <main>
+    <main>
     	<div class="centre">
         	<div class="special">
             	<div class="img">
-                	<div class="imgcontainer"><img alt="" src="/uploads/specgal.png" width="770" height="400" /></div>
+                	<div class="imgcontainer"><img alt="" src="/images/gallery/specgal.png" width="770" height="400" /></div>
                 </div>
                 <div class="details">
                 	<h2>{{$data}}<br />
                     <span>{{$type}}</span></h2>
                     <p>{{$specialData->descript}}</p>
-                    <p class="price"><strong>Stay from ${{$specialData->price}} per night</strong></p>
                     <p><b>Valide from {{$specialData->start_date}} to {{$specialData->end_date}} </b></p>
                     <a href="contact.php" class="button"><span data-hover="Book Special">Book Special</span></a>
                     <p class="terms"><strong>Terms & Conditions:</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel.</p>
                 </div>
             </div>
         </div>
-  </main>
+    </main>
     <!-- Content | END -->
     <!-- Specials | END -->
     <!-- Sitewide Extras | START -->
@@ -108,4 +161,67 @@ $specialData = DB::table('packages')->orderBy('id','desc')->first();
             <!-- Footer Testimonial | END -->
         </div>
     </div>
-@endsection
+    <!-- Sitewide Extras | END -->
+    <!-- Footer | START -->
+    <footer>
+    	<div id="footer">
+        	<div class="centre">
+                <!-- Subscribe / Social | START -->
+                <div class="news">
+                	<div class="title"><span>News & Offers</span></div>
+                    <div class="subscribe">
+                        <form>
+                            <input name="email" type="text" placeholder="Your email address" />
+                            <button><span data-hover="Sign Up">Sign Up</span></button>
+                        </form>
+                    </div>
+                    <div class="social">
+                    	<a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" title="Google+"><i class="fa fa-google-plus"></i></a>
+                        <a href="#" title="Pinterest"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <!-- Subscribe / Social | END -->
+            	<!-- Contact Details | START -->
+            	<div class="contact">
+                	<p><strong class="phone">+61 8 3456 7890</strong><br />
+                    <a href="mailto:stay@basehotel.com">stay@basehotel.com</a><br /><br />
+                    <i class="fa fa-map-marker"></i> 101 Luxury Street<br />
+                    Perth, WA Australia 6000<br />
+                    <a href="https://www.google.com/maps/dir/Current+Location/-31.957482,115.856868" target="_blank"><strong>Get Directions</strong></a></p>
+                </div>
+                <!-- Contact Details | END -->
+                <div class="dark"></div>
+            </div>
+        </div>
+    	<!-- Footer Links | START -->
+    	<div id="footerlinks">
+        	<div class="centre">
+            	<span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Base Hotel</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><span><a href="http://themeforest.net/item/base-hotel-responsive-booking-gallery-template/10517095?ref=Klayemore" target="_blank">Template By KM</a></span><span></span>
+            </div>
+        </div>
+        <!-- Footer Links | END -->
+    </footer>
+    <!-- Footer | END -->
+</div>
+<!-- Promo Popup | START -->
+<div id="pop">
+	<img alt="" src="http://dummyimage.com/400x150" width="400" height="150" />
+    <div class="container">
+        <p class="title"><strong>Our latest special offers,</strong><br />
+        straight to your inbox</p>
+        <p>Stay up to date with the latest specials from Base Hotel. Subscribe and save on your next stay.</p>
+        <form>
+            <input name="email" type="text" placeholder="Your email address" />
+            <button><span data-hover="Subscribe">Subscribe</span></button>
+        </form>
+        <p class="close closepop"><a>Continue browsing site</a></p>
+        <i class="fa fa-close closepop"></i>
+    </div>
+</div>
+<!-- Promo Popup | END -->
+<script src="/js/plugins.js"></script>
+<script src="/js/global.js"></script>
+</body>
+</html>

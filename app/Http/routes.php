@@ -70,10 +70,6 @@ Route::group(['middleware' => ['web']], function () {
     return View::make('events/hallDetails');
   });
 
-  Route::get('diningsummary', function () {
-    return View::make('dining/diningsummary');
-  });
-
   Route::get('home', function () {
     return View::make('index');
   });
@@ -96,29 +92,45 @@ Route::group(['middleware' => ['web']], function () {
     return View::make('blog/blog-post');
   });
 
-  Route::get('/leavcom', [
+  Route::get('/leavcom',[
     'uses' => '\App\Http\Controllers\TestController@com',
     'as' => 'leavecom',
+
   ]);
 
-  Route::post('/leavcom', [
+  Route::post('/leavcom',[
     'uses' => '\App\Http\Controllers\TestController@postcom',
     'as' => 'leavecom',
+
   ]);
 
-  Route::get('/leavrep', [
+  Route::get('/leavrep',[
     'uses' => '\App\Http\Controllers\TestController@rep',
     'as' => 'leaverep',
+
   ]);
 
-  Route::post('/leavrep', [
+  Route::post('/leavrep',[
     'uses' => '\App\Http\Controllers\TestController@postreply',
     'as' => 'leaverep',
-  ]);
 
+  ]);
   Route::get('/blog-post', [
     'uses' => '\App\Http\Controllers\TestController@blogF',
     'as' => 'blog-post',
+
+  ]);
+
+  Route::get('/editcom',[
+    'uses' => '\App\Http\Controllers\TestController@editcomment',
+    'as' => 'editcom',
+
+  ]);
+
+  Route::post('/editcom',[
+    'uses' => '\App\Http\Controllers\TestController@posteditcomment',
+    'as' => 'editcom',
+
   ]);
 
   /*
@@ -152,6 +164,17 @@ Route::group(['middleware' => ['web']], function () {
   Route::post('/newsletter', [
     'uses' => '\App\Http\Controllers\subscribeController@postSubscribe',
   ]);
+
+  Route::post('/sendnewsletter', [
+    'uses' => '\App\Http\Controllers\subscribeController@postSendNewsletter',
+    'as' => 'sendnewsletter',
+]);
+
+Route::get('/sendnewsletter', [
+    'uses' => '\App\Http\Controllers\subscribeController@getSendNewsletter',
+    'as' => 'sendnewsletter',
+]);
+
 
   /*
   |--------------------------------------------------------------------------
@@ -190,26 +213,41 @@ Route::group(['middleware' => ['web']], function () {
     'as' => 'faq',
   ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Events Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+  Route::get('/events',[
+        'uses' => '\App\Http\Controllers\EventsController@getEvents',
+        'as' => 'events',
+    ]);
 
-  Route::get('/events', [
-    'uses' => '\App\Http\Controllers\EventsController@getEvents',
-    'as' => 'events',
-  ]);
+    Route::post('/events',[
+        'uses' => '\App\Http\Controllers\EventsController@postEvents',
+    ]);
 
-  Route::post('/events', [
-    'uses' => '\App\Http\Controllers\EventsController@postEvents',
-  ]);
+    Route::get('/hallDetails',[
+        'uses' => '\App\Http\Controllers\HallController@index',
+        'as' => 'hallDetails',
+    ]);
 
-  Route::get('/hallDetails', [
-    'uses' => '\App\Http\Controllers\HallController@index',
-    'as' => 'hallDetails',
-  ]);
+    //getting items to Dining manage
+    Route::get('/eventmanage', [
+        'uses' => '\App\Http\Controllers\EventsController@getEventinfo',
+        'as' => 'eventmanage',
+    ]);
+
+    //deleting items from Breakfast menu
+    Route::get('/eventmanage/{id}', [
+      'uses' => '\App\Http\Controllers\EventsController@eventdel',
+      'as' => 'eventmanage',
+    ]);
+
+    //updating event manage
+    Route::get('/eventassign/{id}', [
+      'uses' => '\App\Http\Controllers\EventsController@eventEdit',
+      'as' => 'eventassign',
+    ]);
+
+    Route::post('/eventassign', [
+      'uses' => '\App\Http\Controllers\EventsController@eEdit',
+    ]);
 
   /*
   |--------------------------------------------------------------------------
@@ -217,37 +255,239 @@ Route::group(['middleware' => ['web']], function () {
   |--------------------------------------------------------------------------
   |
   */
-  Route::get('/dining', [
-    'uses' => '\App\Http\Controllers\DiningController@getEvents',
-    'as' => 'dining',
-  ]);
+    Route::get('/dining',[
+        'uses' => '\App\Http\Controllers\DiningController@getEvents',
+        'as' => 'dining',
+    ]);
 
-  Route::post('/dining', [
-    'uses' => '\App\Http\Controllers\DiningController@postEvents',
-  ]);
+    Route::post('/dining',[
+        'uses' => '\App\Http\Controllers\DiningController@postEvents',
+    ]);
+    //getting items to Dining manage
+    Route::get('/diningmanage', [
+        'uses' => '\App\Http\Controllers\DiningController@getDining',
+        'as' => 'diningmanage',
+    ]);
 
-  Route::get('/restaurant', [
-    'uses' => '\App\Http\Controllers\RestaurantController@getMenu',
-    'as' => 'restaurant',
-  ]);
-
-  Route::post('/test', [
-    'uses' => '\App\Http\Controllers\DiningController@posttest',
-    'as' => 'testv',
-  ]);
+    //deleting items from Breakfast menu
+    Route::get('/diningmanage/{id}', [
+      'uses' => '\App\Http\Controllers\DiningController@dinningdel',
+      'as' => 'diningmanage',
+    ]);
 
 
   /*
   |--------------------------------------------------------------------------
-  | Halls,Events,Dining Control Routes
+  | Restaurant Routes
+  |--------------------------------------------------------------------------
+  |
+  */
+  //getting data to restaurant view
+    Route::get('/restaurant',[
+      'uses' => '\App\Http\Controllers\RestaurantController@getMenu',
+      'as' => 'restaurant',
+    ]);
+    //getting data to menu management view
+    Route::get('/menueditb', [
+        'uses' => '\App\Http\Controllers\MenuEditController@getBreakfast',
+        'as' => 'menueditb',
+    ]);
+
+    Route::get('/menueditl', [
+        'uses' => '\App\Http\Controllers\MenuEditController@getLunch',
+        'as' => 'menueditl',
+    ]);
+
+    Route::get('/menueditd', [
+        'uses' => '\App\Http\Controllers\MenuEditController@getDinner',
+        'as' => 'menueditd',
+    ]);
+
+    Route::get('/menueditn', [
+        'uses' => '\App\Http\Controllers\MenuEditController@getNonAlcoholic',
+        'as' => 'menueditn',
+    ]);
+
+    Route::get('/menueditc', [
+        'uses' => '\App\Http\Controllers\MenuEditController@getCoffee',
+        'as' => 'menueditc',
+    ]);
+
+    Route::get('/menuedita', [
+        'uses' => '\App\Http\Controllers\MenuEditController@getAlcoholic',
+        'as' => 'menuedita',
+    ]);
+
+
+    //Breakfast
+    //updating Breakfast menu
+    Route::get('/menuupdate/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@breakfastEdit',
+      'as' => 'menuupdate',
+    ]);
+
+    Route::post('/menuupdate', [
+      'uses' => '\App\Http\Controllers\MenuEditController@bEdit',
+    ]);
+    //adding new elements for Breakfast menu
+    Route::post('/menuadd', [
+      'uses' => '\App\Http\Controllers\MenuEditController@breakfastAdd',
+      'as' => 'menuadd',
+    ]);
+
+    Route::get('/menuadd', [
+      'uses' => '\App\Http\Controllers\MenuEditController@getAdd',
+      'as' => 'menuadd',
+    ]);
+    //deleting items from Breakfast menu
+    Route::get('/menueditb/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@breakfastdel',
+      'as' => 'menueditb',
+    ]);
+
+    //Lunch
+    //updating Lunch menu
+    Route::get('/menuupdatelunch/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@lunchEdit',
+      'as' => 'menuupdatelunch',
+    ]);
+
+    Route::post('/menuupdatelunch', [
+      'uses' => '\App\Http\Controllers\MenuEditController@lEdit',
+    ]);
+    //adding new elements for Lunch menu
+    Route::post('/menuaddlunch', [
+      'uses' => '\App\Http\Controllers\MenuEditController@lunchAdd',
+      'as' => 'menuaddlunch',
+    ]);
+
+    Route::get('/menuaddlunch', [
+      'uses' => '\App\Http\Controllers\MenuEditController@getlunchAdd',
+      'as' => 'menuaddlunch',
+    ]);
+    //deleting items from Lunch menu
+    Route::get('/menueditl/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@lunchdel',
+      'as' => 'menueditl',
+    ]);
+
+
+    //dinner
+    //updating dinner menu
+    Route::get('/menuupdatedinner/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@dinnerEdit',
+      'as' => 'menuupdatedinner',
+    ]);
+
+    Route::post('/menuupdatedinner', [
+      'uses' => '\App\Http\Controllers\MenuEditController@dEdit',
+    ]);
+    //adding new elements for dinner menu
+    Route::post('/menuadddinner', [
+      'uses' => '\App\Http\Controllers\MenuEditController@dinnerAdd',
+      'as' => 'menuadddinner',
+    ]);
+
+    Route::get('/menuadddinner', [
+      'uses' => '\App\Http\Controllers\MenuEditController@getdinnerAdd',
+      'as' => 'menuadddinner',
+    ]);
+    //deleting items from dinner menu
+    Route::get('/menueditd/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@dinnerdel',
+      'as' => 'menueditd',
+    ]);
+
+
+    //dinner
+    //updating dinner menu
+    Route::get('/menuupdatenonalcoholic/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@nonalcoholicEdit',
+      'as' => 'menuupdatenonalcoholic',
+    ]);
+
+    Route::post('/menuupdatenonalcoholic', [
+      'uses' => '\App\Http\Controllers\MenuEditController@nEdit',
+    ]);
+    //adding new elements for dinner menu
+    Route::post('/menuaddnonalcoholic', [
+      'uses' => '\App\Http\Controllers\MenuEditController@nonalcoholicAdd',
+      'as' => 'menuaddnonalcoholic',
+    ]);
+
+    Route::get('/menuaddnonalcoholic', [
+      'uses' => '\App\Http\Controllers\MenuEditController@getnonalcoholicAdd',
+      'as' => 'menuaddnonalcoholic',
+    ]);
+    //deleting items from dinner menu
+    Route::get('/menueditn/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@nonalcoholicdel',
+      'as' => 'menueditn',
+    ]);
+
+    //coffee
+    //updating coffee menu
+    Route::get('/menuupdatecoffee/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@coffeeEdit',
+      'as' => 'menuupdatecoffee',
+    ]);
+
+    Route::post('/menuupdatecoffee', [
+      'uses' => '\App\Http\Controllers\MenuEditController@cEdit',
+    ]);
+    //adding new elements for coffee menu
+    Route::post('/menuaddcoffee', [
+      'uses' => '\App\Http\Controllers\MenuEditController@coffeeAdd',
+      'as' => 'menuaddcoffee',
+    ]);
+
+    Route::get('/menuaddcoffee', [
+      'uses' => '\App\Http\Controllers\MenuEditController@getcoffeeAdd',
+      'as' => 'menuaddcoffee',
+    ]);
+    //deleting items from coffee menu
+    Route::get('/menueditc/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@coffeedel',
+      'as' => 'menueditc',
+    ]);
+
+    //alcoholic
+    //updating alcoholic menu
+    Route::get('/menuupdatealcoholic/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@alcoholicEdit',
+      'as' => 'menuupdatealcoholic',
+    ]);
+
+    Route::post('/menuupdatealcoholic', [
+      'uses' => '\App\Http\Controllers\MenuEditController@aEdit',
+    ]);
+    //adding new elements for alcoholic menu
+    Route::post('/menuaddalcoholic', [
+      'uses' => '\App\Http\Controllers\MenuEditController@alcoholicAdd',
+      'as' => 'menuaddalcoholic',
+    ]);
+
+    Route::get('/menuaddalcoholic', [
+      'uses' => '\App\Http\Controllers\MenuEditController@getalcoholicAdd',
+      'as' => 'menuaddalcoholic',
+    ]);
+    //deleting items from alcoholic menu
+    Route::get('/menuedita/{id}', [
+      'uses' => '\App\Http\Controllers\MenuEditController@alcoholicdel',
+      'as' => 'menuedita',
+    ]);
+
+  /*
+  |--------------------------------------------------------------------------
+  | Halls,Events,Dining Control Routes1
   |--------------------------------------------------------------------------
   |
   */
   Route::get('eventupload', function () {
-    return View::make('events/event_hallupload');
-  });
-  Route::post('apply/upload1', 'event_halluploadController@eventuploadImg1');
-  Route::post('apply/upload2', 'event_halluploadController@eventuploadImg2');
+        return View::make('events/event_hallupload');
+    });
+    Route::post('apply/upload1', 'event_halluploadController@eventuploadImg1');
+    Route::post('apply/upload2', 'event_halluploadController@eventuploadImg2');
 
   /*
   |--------------------------------------------------------------------------
@@ -275,40 +515,38 @@ Route::group(['middleware' => ['web']], function () {
   |
   */
   if ( Request::input('btnn') === 'Check Availability' )
-   {
-       Route::post('/managereservation',[
-           'uses' => '\App\Http\Controllers\LostFoundController@checkhallavailability',
-           'as' => 'managereservation',
-       ]);
-   }
-   elseif ( Request::input('btton') === 'Confirm Reservation' )
-   {
-       Route::post('/managereservation',[
-           'uses' => '\App\Http\Controllers\LostFoundController@confirmreservation',
-           'as' => 'managereservation',
-       ]);
-   }
-   elseif ( Request::input('btnm') === 'Send Email' )
-   {
-       Route::post('/managereservation',[
-           'uses' => '\App\Http\Controllers\LostFoundController@myemailsendingg',
-           'as' => 'managereservation',
-       ]);
-   }
-   elseif ( Request::input('abtton') === 'Assign Planner' )
-   {
-       Route::post('/managereservation',[
-           'uses' => '\App\Http\Controllers\LostFoundController@assignplanner',
-           'as' => 'managereservation',
-       ]);
-   }
+  {
+    Route::post('/managereservation',[
+      'uses' => '\App\Http\Controllers\LostFoundController@checkhallavailability',
+      'as' => 'managereservation',
+    ]);
+  }
+  elseif ( Request::input('btton') === 'Confirm Reservation' )
+  {
+    Route::post('/managereservation',[
+      'uses' => '\App\Http\Controllers\LostFoundController@confirmreservation',
+      'as' => 'managereservation',
+    ]);
+  }
+  elseif ( Request::input('btnm') === 'Send Email' )
+  {
+    Route::post('/managereservation',[
+      'uses' => '\App\Http\Controllers\LostFoundController@myemailsendingg',
+      'as' => 'managereservation',
+    ]);
+  }
+  elseif ( Request::input('abtton') === 'Assign Planner' )
+  {
+    Route::post('/managereservation',[
+      'uses' => '\App\Http\Controllers\LostFoundController@assignplanner',
+      'as' => 'managereservation',
+    ]);
+  }
 
-   Route::get('managereservation', function()
-{
+  Route::get('managereservation', function()
+  {
     return View::make('admin/wedding/managereservation');
-});
-
-
+  });
 
   Route::post('weddingform', [
     'uses' => '\App\Http\Controllers\WedreservationController@insertdata',
@@ -395,14 +633,14 @@ Route::group(['middleware' => ['web']], function () {
   });
 
   Route::get('weddingplanner', function () {
-    return View::make('wedding/planner');
+    return View::make('wedding/weddingplanner');
   });
   Route::get('plannerform', function () {
     return View::make('wedding/plannerform');
   });
   //Rooms
   Route::get('royalsuite', function () {
-    return View::make('royalsuite');
+    return View::make('room/royalsuite');
   });
 
   Route::get('deluxeroom', function () {
@@ -421,7 +659,7 @@ Route::group(['middleware' => ['web']], function () {
     return View::make('room/roomform');
   });
 
-  Route::get('/adminroomconfirmsub.php', function () {
+  Route::get('/roomconfirmsub.php', function () {
     return View::make('rooms/roomconfirmsub');
   });
 
@@ -436,8 +674,66 @@ Route::group(['middleware' => ['web']], function () {
   ]);
 
   Route::get('room', function () {
-    return View::make('room');
+    return View::make('room/room');
   });
+
+
+  /*
+  |--------------------------------------------------------------------------
+  | Check Availability and Advanced Search
+  |--------------------------------------------------------------------------
+  |
+  */
+
+  /*check availability */
+
+
+  Route::get('/checkA',[
+    'uses' => '\App\Http\Controllers\AvailController@indexGet',
+    'as' => 'checkA',
+
+  ]);
+
+  Route::post('/checkA',[
+    'uses' => '\App\Http\Controllers\AvailController@indexPost',
+    'as' => 'checkA',
+
+  ]);
+
+
+  Route::post('/check',[
+    'uses' => '\App\Http\Controllers\AvailController@check',
+    'as' => 'check',
+
+  ]);
+  /* Search
+  ***
+  */
+  Route::get('/inter',[
+    'uses' => '\App\Http\Controllers\WelcomeController@PostsearchRedirect',
+    'as' => 'inter',
+
+  ]);
+
+  Route::get('/getRequest', function()
+  {
+    if(Request::ajax())
+    {
+      return 'Get request has been loaded completely';
+    }
+  });
+
+  Route::post('/advanced-search', function()
+  {
+    if(Request::ajax())
+    {
+      return Response::json(Request::all());
+    }
+  });
+
+  /* Check Avaialbility and Search finish here */
+
+
   /*
   |--------------------------------------------------------------------------
   | Application Routes Endf
@@ -456,6 +752,8 @@ Route::group(['middleware' => ['web']], function () {
   // Route::group(['middleware' => ['auth', 'admin','web']], function(){
 
   Route::get('/dashboard', 'AdminController@index');
+
+  Route::get('/menudashboard', 'AdminController@menu');
 
   /*
   |--------------------------------------------------------------------------
@@ -656,10 +954,13 @@ Route::group(['middleware' => ['web']], function () {
   |
   */
 
+  Route::get('adminroom', function () {
+    return View::make('admin/room/adminroom');
+  });
 
-  Route::post('adminroom', [
+  Route::post('/adminroom', [
     'uses' => '\App\Http\Controllers\roomController@insertdataa',
-    'as' => '/admin/adminroom',
+    'as' => '/adminroom',
   ]);
 
   Route::post('/adminspecialform', [
@@ -677,42 +978,36 @@ Route::group(['middleware' => ['web']], function () {
     'as' => '/adminroomconfirm',
   ]);
 
-  Route::get('/adminadminweddingpage', [
+  Route::get('/adminweddingpage', [
     'uses' => '\App\Http\Controllers\weddingservicesController@getdataa',
-    'as' => '/adminadminweddingpage',
+    'as' => '/adminweddingpage',
   ]);
 
-  Route::post('/adminadminweddingpage', [
+  Route::post('/adminweddingpage', [
     'uses' => '\App\Http\Controllers\WedreservationController@getLeague',
-    'as' => '/adminadminweddingpage',
+    'as' => '/adminweddingpage',
   ]);
 
-  Route::post('/adminadminweddingpage', [
+  Route::post('/adminweddingpage', [
     'uses' => '\App\Http\Controllers\weddingservicesController@insertdata',
-    'as' => '/adminadminweddingpage',
+    'as' => '/adminweddingpage',
   ]);
 
-  Route::get('/adminadminweddingpage', function () {
-    return View::make('/adminadminweddingpage');
-  });
-
-  Route::get('/adminadminroom', [
-    'uses' => '\App\Http\Controllers\roomController@getdataaa',
-    'as' => '/adminadminroom',
-  ]);
-
-  Route::get('/adminadminroom', function () {
-    return View::make('/adminadminroom');
-  });
-
-  Route::get('/adminadminplanner', [
-    'uses' => '\App\Http\Controllers\plannerController@getdataa',
-    'as' => '/adminadminplanner',
-  ]);
-  Route::post('/adminadminplanner', [
+  Route::post('/adminplanner', [
     'uses' => '\App\Http\Controllers\plannerController@insertdata',
-    'as' => '/adminadminplanner',
+    'as' => '/adminplanner',
   ]);
+
+  Route::get('/weddingdashboard', [
+    'uses' => '\App\Http\Controllers\AdminController@wedding',
+    'as' => '/weddingdashboard',
+  ]);
+
+  Route::get('/roomdashboard', [
+    'uses' => '\App\Http\Controllers\AdminController@room',
+    'as' => '/roomdashboard',
+  ]);
+
 
   /*
   |--------------------------------------------------------------------------
