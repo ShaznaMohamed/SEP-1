@@ -67,44 +67,44 @@ return redirect('adminweddingpage');
 
 }
 
-public function insertdata(Request $request)
-{
-  $this->validate($request, [
-    'halltype' => 'required',
-    'advancepayment' => 'required',
-    'minimumpax' => 'required',
-    'additionalhour' => 'required',
-    'fullpayment' => 'required',
-    'corkage' => 'required',
-    'beerlocal' => 'required',
-    'icedcoffee' => 'required',
-    'cutlery' => 'required',
-
-  ]
-);
-
-
-weddingservices::Create([
-  'halltype' => $request->input('halltype'),
-  'advancepayment' => $request->input('advancepayment'),
-  'minimumpax' => $request->input('minimumpax'),
-  'additionalhour' => $request->input('additionalhour'),
-  'fullpayment' => $request->input('fullpayment'),
-  'corkage' => $request->input('corkage'),
-  'beerlocal' => $request->input('beerlocal'),
-  'icedcoffee' => $request->input('icedcoffee'),
-  'cutlery' => $request->input('cutlery'),
-
-]);
-
-
-return redirect('adminweddingpage');
-
-
-
-
-// return view('room', [' Your booking request is sent successfully.']);
-}
+// public function insertdata(Request $request)
+// {
+//   $this->validate($request, [
+//     'halltype' => 'required',
+//     'advancepayment' => 'required',
+//     'minimumpax' => 'required',
+//     'additionalhour' => 'required',
+//     'fullpayment' => 'required',
+//     'corkage' => 'required',
+//     'beerlocal' => 'required',
+//     'icedcoffee' => 'required',
+//     'cutlery' => 'required',
+//
+//   ]
+// );
+//
+//
+// weddingservices::Create([
+//   'halltype' => $request->input('halltype'),
+//   'advancepayment' => $request->input('advancepayment'),
+//   'minimumpax' => $request->input('minimumpax'),
+//   'additionalhour' => $request->input('additionalhour'),
+//   'fullpayment' => $request->input('fullpayment'),
+//   'corkage' => $request->input('corkage'),
+//   'beerlocal' => $request->input('beerlocal'),
+//   'icedcoffee' => $request->input('icedcoffee'),
+//   'cutlery' => $request->input('cutlery'),
+//
+// ]);
+//
+//
+// return redirect('adminweddingpage');
+//
+//
+//
+//
+// // return view('room', [' Your booking request is sent successfully.']);
+// }
 
 public function index()
 {

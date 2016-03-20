@@ -10,6 +10,7 @@
     <main >
     </br>
       <div id="testimonials">
+        <!-- Gets administrator pages as boxes and populates the page accordingly-->
             <figure class="cover">
               <div class="testimonial">
                     <div class="details">

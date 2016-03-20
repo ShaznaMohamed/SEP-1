@@ -1,6 +1,14 @@
 
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.adminmaster')
+@section('maincontent')
+    <header>
+        <div id="header">
+            <div class="h1">
+                <h1><span>Manage Wedding Hall Reservations</span></h1>
+            </div>
+        </div>
+    </header>
+
 <head>
     {{--<script src="jquery-2.1.1.js" language="javascript"></script>--}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -382,7 +390,7 @@
 
                                                                                 <div class="form-group">
                                                                                     <label for="disabledTextInput" class="col-sm-4 control-label">Selected Hall Image</label>
-                                                                                    <img src="{{asset('/wedimages/vb.jpg') }}"width="50%" height="50%"/>
+                                                                                    <img src="{{asset('images/wedimages/vb.jpg') }}"width="50%" height="50%"/>
                                                                                 </div>
                                                                             </div>
 
@@ -425,7 +433,7 @@
 
 
                                                                         <form class="form-horizontal" method="post" action="" role="form">
-                                                                        {{ csrf_token() }}
+
 
 
                                                                             <div class="form-group">
@@ -833,7 +841,7 @@
 
                                                                                 <div class="form-group">
                                                                                     <label for="disabledTextInput" class="col-sm-4 control-label">Selected Hall Image</label>
-                                                                                    <img src="{{asset('/wedimages/vb.jpg') }}"width="50%" height="50%"/>
+                                                                                    <img src="{{asset('images/wedimages/vb.jpg') }}"width="50%" height="50%"/>
                                                                                 </div>
                                                                             </div>
 
@@ -1090,3 +1098,4 @@
 
 </script>
 </body>
+@endsection

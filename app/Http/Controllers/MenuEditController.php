@@ -91,7 +91,7 @@ class MenuEditController extends Controller
 
     Session::flash('flash_message', 'Edited');
 
-    return redirect('menueditb');
+    return redirect('menuadded');
   }
 
   public function breakfastAdd(Request $request)
@@ -104,7 +104,7 @@ class MenuEditController extends Controller
       'price' => $request->input('price'),
     ]);
 
-    return redirect('menueditb');
+    return redirect('menuadded');
   }
 
   public function getAdd()

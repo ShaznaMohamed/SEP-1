@@ -1,17 +1,12 @@
-<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
-      xmlns:padding="http://www.w3.org/1999/xhtml">
-<head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Amalya Reach Holiday Resort | Wedding Banquet Halls Sri Lanka | Parties | Events</title>
-    <link rel="stylesheet" href="/css/global.css">
-    <link class="colour" rel="stylesheet" href="/css/colour-gold.css">
-    <link class="pattern" rel="stylesheet" href="/css/pattern-china.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+@extends('layouts.adminmaster')
+@section('maincontent')
+    <header>
+        <div id="header">
+            <div class="h1">
+                <h1><span>Manage Room Facilities</span></h1>
+            </div>
+        </div>
+    </header>
 
     <script type="text/javascript">
         function showmessage()
@@ -19,7 +14,7 @@
            confirm("succesfully updated");
         }
     </script>
-</head>
+
 
 <body>
 
@@ -183,3 +178,4 @@
 </tr>
 </table>
 </body>
+@endsection

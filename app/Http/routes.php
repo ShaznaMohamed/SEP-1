@@ -50,6 +50,14 @@ Route::group(['middleware' => ['web']], function () {
     return View::make('about/about');
   });
 
+  Route::get('eventassigned', function () {
+    return View::make('events/eventassigned');
+  });
+
+  Route::get('menuadded', function () {
+    return View::make('restaurant/menuadded');
+  });
+
   Route::get('gallery', function () {
     return View::make('gallery/gallery');
   });
@@ -542,6 +550,13 @@ Route::get('/sendnewsletter', [
       'as' => 'managereservation',
     ]);
   }
+  elseif ( Request::input('betnm') === 'Send Notification Email' )
+{
+  Route::post('/managereservation',[
+      'uses' => '\App\Http\Controllers\LostFoundController@planneremailsendingg',
+      'as' => 'managereservation',
+  ]);
+}
 
   Route::get('managereservation', function()
   {
@@ -989,7 +1004,7 @@ Route::get('/sendnewsletter', [
   ]);
 
   Route::post('/adminweddingpage', [
-    'uses' => '\App\Http\Controllers\weddingservicesController@insertdata',
+    'uses' => '\App\Http\Controllers\weddingservicesController@update',
     'as' => '/adminweddingpage',
   ]);
 

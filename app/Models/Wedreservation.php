@@ -13,16 +13,20 @@ class Wedreservation extends Model
     protected $table = 'wedreservation';
 
     protected $fillable = [
-        'name',
+        'firstname',
+        'lastname',
         'email',
         'phone',
+        'city',
         'pax',
-        'arrival',
-        'departure',
+        'eventdate',
+        'eventtype',
         'halltype',
+        'noofrooms',
         'message',
         'sessionn',
         'flexibility',
+        'status'
 
 
     ];

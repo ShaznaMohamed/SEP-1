@@ -108,13 +108,9 @@ class UserController extends Controller{
     ]);
     //Saving edits
     $editid = $request->input('id');
-
     $useredit = UserAdmin::find($editid);
-
     $input = $request->all();
-
     $useredit->fill($input)->save();
-
     return redirect()->back();
   }
 

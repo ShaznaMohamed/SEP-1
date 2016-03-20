@@ -15,13 +15,12 @@
       <a href="dashboard" class="logo"><img alt="" src="/images/logoadmin.png" /></a>
       <nav>
         <ul>
-          {{-- @if(Request::url() === 'wedding')
-              // code
-          @endif --}}
+          <li>{{ Html::link('http://localhost/phpmyadmin', 'phpMyAdmin') }}</li>
+          <li>{{ Html::link('home', 'Back to Website') }}</li>
         </ul>
         <a id="pull"><i class="fa fa-bars"></i></a>
       </nav>
-        <a href="home" class="book"><span data-hover="Back to site">Back to site</span> <i class="fa fa-check-circle"></i></a>
+        <a href="dashboard" class="book"><span data-hover="Dashboard">Dashboard</span> <i class="fa fa-check-circle"></i></a>
       <div class="shadow"></div>
     </div>
   </div>

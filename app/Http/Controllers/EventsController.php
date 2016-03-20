@@ -77,7 +77,7 @@ class EventsController extends Controller
 
       Session::flash('flash_message', 'Edited');
 
-      return redirect('eventmanage');
+      return redirect('eventassigned');
     }
 
 

@@ -21,7 +21,6 @@
           <div class="field"><input type="text" class="form-control" name="details" value="{{ $user->details }}" required="true"></div>
           <div class="field"><input type="text" class="form-control" name="price" value="{{ $user->price }}" required="true"></div>
           <div class="field"><input type="text" hidden="hidden" class="form-control" name="id" value="{{ $user->id }}" required="true"></div>
-
           <div class="form-group">
             <div class="col"></div>
             <button type="submit" class="button">Save</button>
