@@ -104,15 +104,10 @@
                             </td>
                             <td>
                                 <div class="copy" align="100">
-                                    <p>Advance Payment           – Rs.50,000/- (30,000/- Refundable)</p>
-                                    <p>  Minimum Pax             – 150 Pax(for an event)</p>
-                                    <p>  Hall Charges            – 05 Hours Free of Charges</p>
-                                    <p>  Additional Hour         – Rs.10,000/-</p>
-                                    <p>  Full Payment            – 14 Days Prior to the Function</p>
-                                    <p> Corkage                  – Free of Charges</p>
-                                    <p>  Beer Local              – Rs.300/- any Brand</p>
-                                    <p>  Iced Coffee             – 100/- Per Person</p>
-                                    <p>  Cutlery Service         – 100/- per person</p>
+                                  @foreach($halldata as $halldata)
+                                    <p>{{ $halldata->topic }}{{ $halldata->value }}</p>
+                                  @endforeach
+
                                 </div>
                             </td>
                         </tr>

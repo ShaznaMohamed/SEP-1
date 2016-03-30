@@ -478,6 +478,18 @@ $(document).ready(function () {
 				$('#cboxClose').remove();
 			}
 		});
+		$('.historypop').colorbox({
+			iframe:true,
+			opacity: '.6',
+			transition: 'fade',
+			innerWidth: 1000,
+			innerHeight: 800,
+			fixed: true,
+			onLoad: function() {
+				$('#colorbox').addClass('formpopper');
+				$('#cboxClose').remove();
+			}
+		});
 		$('#userpop').colorbox({
 			iframe:true,
 			opacity: '.6',

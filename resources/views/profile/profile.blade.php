@@ -52,6 +52,7 @@
         <a href="userEmailChange" id="tablebutton" class="passpop"><span data-hover="Change email">Change email</span></a>
         <a href="{{URL::route('userProfileChange',array('id' => $loggeduser->id))}}" id="tablebutton" class="editpop"><span data-hover="Edit Profile">Edit Profile</span></a>
         <a href="https://en.gravatar.com/connect/" id="tablebutton"><span data-hover="Gravatar">Gravatar</span></a>
+        <a href="{{URL::route('reservationhistory',array('id' => $loggeduser->id))}}" id="tablebutton" class="historypop"><span data-hover="Reservation History">Reservation History</span></a>
         </br>
     </div>
   </main>

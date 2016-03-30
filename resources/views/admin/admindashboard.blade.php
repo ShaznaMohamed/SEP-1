@@ -86,14 +86,6 @@
             <figure class="cover">
               <div class="testimonial">
                     <div class="details">
-                        <h2>Menu Management</h2>
-                        <a href="menudashboard" class="button"><span data-hover="Menu Management">Menu Management</span></a>
-                    </div>
-                </div>
-            </figure>
-            <figure class="cover">
-              <div class="testimonial">
-                    <div class="details">
                         <h2>Specials</h2>
                         <a href="specadd" class="button"><span data-hover="Manage Specials">Manage Specials</span></a>
                     </div>

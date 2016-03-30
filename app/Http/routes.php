@@ -58,6 +58,10 @@ Route::group(['middleware' => ['web']], function () {
     return View::make('restaurant/menuadded');
   });
 
+  Route::get('hallu', function () {
+    return View::make('events/hallu');
+  });
+
   Route::get('gallery', function () {
     return View::make('gallery/gallery');
   });
@@ -85,6 +89,33 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('local', function () {
     return View::make('misc/local');
   });
+
+  Route::get('paypal', function () {
+    return View::make('paypal/paypal');
+  });
+
+  Route::get('paycomplete', function () {
+    return View::make('paypal/paycomplete');
+  });
+
+  Route::get('staff', function () {
+    return View::make('about/staff');
+  });
+
+  Route::get('blog-post-crud', function () {
+    return View::make('blog-post-crud');
+  });
+
+  /*
+|--------------------------------------------------------------------------
+| Reservation history Routes
+|--------------------------------------------------------------------------
+|
+*/
+  Route::get('/reservationhistory/{id}', [
+    'uses' => '\App\Http\Controllers\HistoryController@getRooms',
+    'as' => 'reservationhistory',
+]);
 
   /*
   |--------------------------------------------------------------------------
@@ -176,12 +207,12 @@ Route::group(['middleware' => ['web']], function () {
   Route::post('/sendnewsletter', [
     'uses' => '\App\Http\Controllers\subscribeController@postSendNewsletter',
     'as' => 'sendnewsletter',
-]);
+  ]);
 
-Route::get('/sendnewsletter', [
+  Route::get('/sendnewsletter', [
     'uses' => '\App\Http\Controllers\subscribeController@getSendNewsletter',
     'as' => 'sendnewsletter',
-]);
+  ]);
 
 
   /*
@@ -221,40 +252,86 @@ Route::get('/sendnewsletter', [
     'as' => 'faq',
   ]);
 
+  /*
+|--------------------------------------------------------------------------
+| Events Routes
+|--------------------------------------------------------------------------
+|
+*/
+
   Route::get('/events',[
-        'uses' => '\App\Http\Controllers\EventsController@getEvents',
-        'as' => 'events',
-    ]);
+    'uses' => '\App\Http\Controllers\EventsController@getEvents',
+    'as' => 'events',
+  ]);
 
-    Route::post('/events',[
-        'uses' => '\App\Http\Controllers\EventsController@postEvents',
-    ]);
+  Route::post('/events',[
+    'uses' => '\App\Http\Controllers\EventsController@postEvents',
+  ]);
 
-    Route::get('/hallDetails',[
-        'uses' => '\App\Http\Controllers\HallController@index',
+  Route::get('/hallDetails',[
+    'uses' => '\App\Http\Controllers\HallController@index',
+    'as' => 'hallDetails',
+  ]);
+
+  //getting items to Dining manage
+  Route::get('/eventmanage', [
+    'uses' => '\App\Http\Controllers\EventsController@getEventinfo',
+    'as' => 'eventmanage',
+  ]);
+
+  //deleting items from Breakfast menu
+  Route::get('/eventmanage/{id}', [
+    'uses' => '\App\Http\Controllers\EventsController@eventdel',
+    'as' => 'eventmanage',
+  ]);
+
+  //updating event manage
+  Route::get('/eventassign/{id}', [
+    'uses' => '\App\Http\Controllers\EventsController@eventEdit',
+    'as' => 'eventassign',
+  ]);
+
+  Route::post('/eventassign', [
+    'uses' => '\App\Http\Controllers\EventsController@eEdit',
+  ]);
+
+  //getting data to hallDetails view
+      Route::get('/hallDetails',[
+        'uses' => '\App\Http\Controllers\HallEditController@getDetails',
         'as' => 'hallDetails',
+      ]);
+
+    //getting data to hall management view
+    Route::get('/halledit', [
+        'uses' => '\App\Http\Controllers\HallEditController@getHallDetails',
+        'as' => 'halledit',
     ]);
 
-    //getting items to Dining manage
-    Route::get('/eventmanage', [
-        'uses' => '\App\Http\Controllers\EventsController@getEventinfo',
-        'as' => 'eventmanage',
+    //adding new elements to hallDetails
+    Route::post('/hallDetailAdd', [
+      'uses' => '\App\Http\Controllers\HallEditController@detailAdd',
+      'as' => 'hallDetailAdd',
     ]);
 
-    //deleting items from Breakfast menu
-    Route::get('/eventmanage/{id}', [
-      'uses' => '\App\Http\Controllers\EventsController@eventdel',
-      'as' => 'eventmanage',
+    Route::get('/hallDetailAdd', [
+      'uses' => '\App\Http\Controllers\HallEditController@getsAdd',
+      'as' => 'hallDetailAdd',
     ]);
 
-    //updating event manage
-    Route::get('/eventassign/{id}', [
-      'uses' => '\App\Http\Controllers\EventsController@eventEdit',
-      'as' => 'eventassign',
+    //updating hallDetails
+    Route::get('/hallDetailUpdate/{id}', [
+      'uses' => '\App\Http\Controllers\HallEditController@hallDetailsEdit',
+      'as' => 'hallDetailUpdate',
     ]);
 
-    Route::post('/eventassign', [
-      'uses' => '\App\Http\Controllers\EventsController@eEdit',
+    Route::post('/hallDetailUpdate', [
+      'uses' => '\App\Http\Controllers\HallEditController@hEdit',
+    ]);
+
+    //deleting items from hallDetails
+    Route::get('/halledit/{id}', [
+      'uses' => '\App\Http\Controllers\HallEditController@detailDelete',
+      'as' => 'halledit',
     ]);
 
   /*
@@ -263,25 +340,25 @@ Route::get('/sendnewsletter', [
   |--------------------------------------------------------------------------
   |
   */
-    Route::get('/dining',[
-        'uses' => '\App\Http\Controllers\DiningController@getEvents',
-        'as' => 'dining',
-    ]);
+  Route::get('/dining',[
+    'uses' => '\App\Http\Controllers\DiningController@getEvents',
+    'as' => 'dining',
+  ]);
 
-    Route::post('/dining',[
-        'uses' => '\App\Http\Controllers\DiningController@postEvents',
-    ]);
-    //getting items to Dining manage
-    Route::get('/diningmanage', [
-        'uses' => '\App\Http\Controllers\DiningController@getDining',
-        'as' => 'diningmanage',
-    ]);
+  Route::post('/dining',[
+    'uses' => '\App\Http\Controllers\DiningController@postEvents',
+  ]);
+  //getting items to Dining manage
+  Route::get('/diningmanage', [
+    'uses' => '\App\Http\Controllers\DiningController@getDining',
+    'as' => 'diningmanage',
+  ]);
 
-    //deleting items from Breakfast menu
-    Route::get('/diningmanage/{id}', [
-      'uses' => '\App\Http\Controllers\DiningController@dinningdel',
-      'as' => 'diningmanage',
-    ]);
+  //deleting items from Breakfast menu
+  Route::get('/diningmanage/{id}', [
+    'uses' => '\App\Http\Controllers\DiningController@dinningdel',
+    'as' => 'diningmanage',
+  ]);
 
 
   /*
@@ -291,199 +368,199 @@ Route::get('/sendnewsletter', [
   |
   */
   //getting data to restaurant view
-    Route::get('/restaurant',[
-      'uses' => '\App\Http\Controllers\RestaurantController@getMenu',
-      'as' => 'restaurant',
-    ]);
-    //getting data to menu management view
-    Route::get('/menueditb', [
-        'uses' => '\App\Http\Controllers\MenuEditController@getBreakfast',
-        'as' => 'menueditb',
-    ]);
+  Route::get('/restaurant',[
+    'uses' => '\App\Http\Controllers\RestaurantController@getMenu',
+    'as' => 'restaurant',
+  ]);
+  //getting data to menu management view
+  Route::get('/menueditb', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getBreakfast',
+    'as' => 'menueditb',
+  ]);
 
-    Route::get('/menueditl', [
-        'uses' => '\App\Http\Controllers\MenuEditController@getLunch',
-        'as' => 'menueditl',
-    ]);
+  Route::get('/menueditl', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getLunch',
+    'as' => 'menueditl',
+  ]);
 
-    Route::get('/menueditd', [
-        'uses' => '\App\Http\Controllers\MenuEditController@getDinner',
-        'as' => 'menueditd',
-    ]);
+  Route::get('/menueditd', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getDinner',
+    'as' => 'menueditd',
+  ]);
 
-    Route::get('/menueditn', [
-        'uses' => '\App\Http\Controllers\MenuEditController@getNonAlcoholic',
-        'as' => 'menueditn',
-    ]);
+  Route::get('/menueditn', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getNonAlcoholic',
+    'as' => 'menueditn',
+  ]);
 
-    Route::get('/menueditc', [
-        'uses' => '\App\Http\Controllers\MenuEditController@getCoffee',
-        'as' => 'menueditc',
-    ]);
+  Route::get('/menueditc', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getCoffee',
+    'as' => 'menueditc',
+  ]);
 
-    Route::get('/menuedita', [
-        'uses' => '\App\Http\Controllers\MenuEditController@getAlcoholic',
-        'as' => 'menuedita',
-    ]);
-
-
-    //Breakfast
-    //updating Breakfast menu
-    Route::get('/menuupdate/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@breakfastEdit',
-      'as' => 'menuupdate',
-    ]);
-
-    Route::post('/menuupdate', [
-      'uses' => '\App\Http\Controllers\MenuEditController@bEdit',
-    ]);
-    //adding new elements for Breakfast menu
-    Route::post('/menuadd', [
-      'uses' => '\App\Http\Controllers\MenuEditController@breakfastAdd',
-      'as' => 'menuadd',
-    ]);
-
-    Route::get('/menuadd', [
-      'uses' => '\App\Http\Controllers\MenuEditController@getAdd',
-      'as' => 'menuadd',
-    ]);
-    //deleting items from Breakfast menu
-    Route::get('/menueditb/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@breakfastdel',
-      'as' => 'menueditb',
-    ]);
-
-    //Lunch
-    //updating Lunch menu
-    Route::get('/menuupdatelunch/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@lunchEdit',
-      'as' => 'menuupdatelunch',
-    ]);
-
-    Route::post('/menuupdatelunch', [
-      'uses' => '\App\Http\Controllers\MenuEditController@lEdit',
-    ]);
-    //adding new elements for Lunch menu
-    Route::post('/menuaddlunch', [
-      'uses' => '\App\Http\Controllers\MenuEditController@lunchAdd',
-      'as' => 'menuaddlunch',
-    ]);
-
-    Route::get('/menuaddlunch', [
-      'uses' => '\App\Http\Controllers\MenuEditController@getlunchAdd',
-      'as' => 'menuaddlunch',
-    ]);
-    //deleting items from Lunch menu
-    Route::get('/menueditl/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@lunchdel',
-      'as' => 'menueditl',
-    ]);
+  Route::get('/menuedita', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getAlcoholic',
+    'as' => 'menuedita',
+  ]);
 
 
-    //dinner
-    //updating dinner menu
-    Route::get('/menuupdatedinner/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@dinnerEdit',
-      'as' => 'menuupdatedinner',
-    ]);
+  //Breakfast
+  //updating Breakfast menu
+  Route::get('/menuupdate/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@breakfastEdit',
+    'as' => 'menuupdate',
+  ]);
 
-    Route::post('/menuupdatedinner', [
-      'uses' => '\App\Http\Controllers\MenuEditController@dEdit',
-    ]);
-    //adding new elements for dinner menu
-    Route::post('/menuadddinner', [
-      'uses' => '\App\Http\Controllers\MenuEditController@dinnerAdd',
-      'as' => 'menuadddinner',
-    ]);
+  Route::post('/menuupdate', [
+    'uses' => '\App\Http\Controllers\MenuEditController@bEdit',
+  ]);
+  //adding new elements for Breakfast menu
+  Route::post('/menuadd', [
+    'uses' => '\App\Http\Controllers\MenuEditController@breakfastAdd',
+    'as' => 'menuadd',
+  ]);
 
-    Route::get('/menuadddinner', [
-      'uses' => '\App\Http\Controllers\MenuEditController@getdinnerAdd',
-      'as' => 'menuadddinner',
-    ]);
-    //deleting items from dinner menu
-    Route::get('/menueditd/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@dinnerdel',
-      'as' => 'menueditd',
-    ]);
+  Route::get('/menuadd', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getAdd',
+    'as' => 'menuadd',
+  ]);
+  //deleting items from Breakfast menu
+  Route::get('/menueditb/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@breakfastdel',
+    'as' => 'menueditb',
+  ]);
+
+  //Lunch
+  //updating Lunch menu
+  Route::get('/menuupdatelunch/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@lunchEdit',
+    'as' => 'menuupdatelunch',
+  ]);
+
+  Route::post('/menuupdatelunch', [
+    'uses' => '\App\Http\Controllers\MenuEditController@lEdit',
+  ]);
+  //adding new elements for Lunch menu
+  Route::post('/menuaddlunch', [
+    'uses' => '\App\Http\Controllers\MenuEditController@lunchAdd',
+    'as' => 'menuaddlunch',
+  ]);
+
+  Route::get('/menuaddlunch', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getlunchAdd',
+    'as' => 'menuaddlunch',
+  ]);
+  //deleting items from Lunch menu
+  Route::get('/menueditl/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@lunchdel',
+    'as' => 'menueditl',
+  ]);
 
 
-    //dinner
-    //updating dinner menu
-    Route::get('/menuupdatenonalcoholic/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@nonalcoholicEdit',
-      'as' => 'menuupdatenonalcoholic',
-    ]);
+  //dinner
+  //updating dinner menu
+  Route::get('/menuupdatedinner/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@dinnerEdit',
+    'as' => 'menuupdatedinner',
+  ]);
 
-    Route::post('/menuupdatenonalcoholic', [
-      'uses' => '\App\Http\Controllers\MenuEditController@nEdit',
-    ]);
-    //adding new elements for dinner menu
-    Route::post('/menuaddnonalcoholic', [
-      'uses' => '\App\Http\Controllers\MenuEditController@nonalcoholicAdd',
-      'as' => 'menuaddnonalcoholic',
-    ]);
+  Route::post('/menuupdatedinner', [
+    'uses' => '\App\Http\Controllers\MenuEditController@dEdit',
+  ]);
+  //adding new elements for dinner menu
+  Route::post('/menuadddinner', [
+    'uses' => '\App\Http\Controllers\MenuEditController@dinnerAdd',
+    'as' => 'menuadddinner',
+  ]);
 
-    Route::get('/menuaddnonalcoholic', [
-      'uses' => '\App\Http\Controllers\MenuEditController@getnonalcoholicAdd',
-      'as' => 'menuaddnonalcoholic',
-    ]);
-    //deleting items from dinner menu
-    Route::get('/menueditn/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@nonalcoholicdel',
-      'as' => 'menueditn',
-    ]);
+  Route::get('/menuadddinner', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getdinnerAdd',
+    'as' => 'menuadddinner',
+  ]);
+  //deleting items from dinner menu
+  Route::get('/menueditd/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@dinnerdel',
+    'as' => 'menueditd',
+  ]);
 
-    //coffee
-    //updating coffee menu
-    Route::get('/menuupdatecoffee/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@coffeeEdit',
-      'as' => 'menuupdatecoffee',
-    ]);
 
-    Route::post('/menuupdatecoffee', [
-      'uses' => '\App\Http\Controllers\MenuEditController@cEdit',
-    ]);
-    //adding new elements for coffee menu
-    Route::post('/menuaddcoffee', [
-      'uses' => '\App\Http\Controllers\MenuEditController@coffeeAdd',
-      'as' => 'menuaddcoffee',
-    ]);
+  //dinner
+  //updating dinner menu
+  Route::get('/menuupdatenonalcoholic/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@nonalcoholicEdit',
+    'as' => 'menuupdatenonalcoholic',
+  ]);
 
-    Route::get('/menuaddcoffee', [
-      'uses' => '\App\Http\Controllers\MenuEditController@getcoffeeAdd',
-      'as' => 'menuaddcoffee',
-    ]);
-    //deleting items from coffee menu
-    Route::get('/menueditc/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@coffeedel',
-      'as' => 'menueditc',
-    ]);
+  Route::post('/menuupdatenonalcoholic', [
+    'uses' => '\App\Http\Controllers\MenuEditController@nEdit',
+  ]);
+  //adding new elements for dinner menu
+  Route::post('/menuaddnonalcoholic', [
+    'uses' => '\App\Http\Controllers\MenuEditController@nonalcoholicAdd',
+    'as' => 'menuaddnonalcoholic',
+  ]);
 
-    //alcoholic
-    //updating alcoholic menu
-    Route::get('/menuupdatealcoholic/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@alcoholicEdit',
-      'as' => 'menuupdatealcoholic',
-    ]);
+  Route::get('/menuaddnonalcoholic', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getnonalcoholicAdd',
+    'as' => 'menuaddnonalcoholic',
+  ]);
+  //deleting items from dinner menu
+  Route::get('/menueditn/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@nonalcoholicdel',
+    'as' => 'menueditn',
+  ]);
 
-    Route::post('/menuupdatealcoholic', [
-      'uses' => '\App\Http\Controllers\MenuEditController@aEdit',
-    ]);
-    //adding new elements for alcoholic menu
-    Route::post('/menuaddalcoholic', [
-      'uses' => '\App\Http\Controllers\MenuEditController@alcoholicAdd',
-      'as' => 'menuaddalcoholic',
-    ]);
+  //coffee
+  //updating coffee menu
+  Route::get('/menuupdatecoffee/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@coffeeEdit',
+    'as' => 'menuupdatecoffee',
+  ]);
 
-    Route::get('/menuaddalcoholic', [
-      'uses' => '\App\Http\Controllers\MenuEditController@getalcoholicAdd',
-      'as' => 'menuaddalcoholic',
-    ]);
-    //deleting items from alcoholic menu
-    Route::get('/menuedita/{id}', [
-      'uses' => '\App\Http\Controllers\MenuEditController@alcoholicdel',
-      'as' => 'menuedita',
-    ]);
+  Route::post('/menuupdatecoffee', [
+    'uses' => '\App\Http\Controllers\MenuEditController@cEdit',
+  ]);
+  //adding new elements for coffee menu
+  Route::post('/menuaddcoffee', [
+    'uses' => '\App\Http\Controllers\MenuEditController@coffeeAdd',
+    'as' => 'menuaddcoffee',
+  ]);
+
+  Route::get('/menuaddcoffee', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getcoffeeAdd',
+    'as' => 'menuaddcoffee',
+  ]);
+  //deleting items from coffee menu
+  Route::get('/menueditc/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@coffeedel',
+    'as' => 'menueditc',
+  ]);
+
+  //alcoholic
+  //updating alcoholic menu
+  Route::get('/menuupdatealcoholic/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@alcoholicEdit',
+    'as' => 'menuupdatealcoholic',
+  ]);
+
+  Route::post('/menuupdatealcoholic', [
+    'uses' => '\App\Http\Controllers\MenuEditController@aEdit',
+  ]);
+  //adding new elements for alcoholic menu
+  Route::post('/menuaddalcoholic', [
+    'uses' => '\App\Http\Controllers\MenuEditController@alcoholicAdd',
+    'as' => 'menuaddalcoholic',
+  ]);
+
+  Route::get('/menuaddalcoholic', [
+    'uses' => '\App\Http\Controllers\MenuEditController@getalcoholicAdd',
+    'as' => 'menuaddalcoholic',
+  ]);
+  //deleting items from alcoholic menu
+  Route::get('/menuedita/{id}', [
+    'uses' => '\App\Http\Controllers\MenuEditController@alcoholicdel',
+    'as' => 'menuedita',
+  ]);
 
   /*
   |--------------------------------------------------------------------------
@@ -492,10 +569,10 @@ Route::get('/sendnewsletter', [
   |
   */
   Route::get('eventupload', function () {
-        return View::make('events/event_hallupload');
-    });
-    Route::post('apply/upload1', 'event_halluploadController@eventuploadImg1');
-    Route::post('apply/upload2', 'event_halluploadController@eventuploadImg2');
+    return View::make('events/event_hallupload');
+  });
+  Route::post('apply/upload1', 'event_halluploadController@eventuploadImg1');
+  Route::post('apply/upload2', 'event_halluploadController@eventuploadImg2');
 
   /*
   |--------------------------------------------------------------------------
@@ -551,12 +628,12 @@ Route::get('/sendnewsletter', [
     ]);
   }
   elseif ( Request::input('betnm') === 'Send Notification Email' )
-{
-  Route::post('/managereservation',[
+  {
+    Route::post('/managereservation',[
       'uses' => '\App\Http\Controllers\LostFoundController@planneremailsendingg',
       'as' => 'managereservation',
-  ]);
-}
+    ]);
+  }
 
   Route::get('managereservation', function()
   {
@@ -594,7 +671,7 @@ Route::get('/sendnewsletter', [
   ]);
 
   Route::post('roomform', [
-    'uses' => '\App\Http\Controllers\RoomreservationController@insertdata',
+    'uses' => '\App\Http\Controllers\RoomreservationController@paypalstart',
     'as' => 'roomform',
   ]);
 

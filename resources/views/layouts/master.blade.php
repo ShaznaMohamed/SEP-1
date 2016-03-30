@@ -17,22 +17,14 @@
       <nav>
         <ul>
           <li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
-          <li>{{ Html::link('room', 'Accommodation') }}
+          <li>{{ Html::link('accommodation', 'Accommodation') }}
             <ul>
-              <li>{{ Html::link('room', 'Rooms') }}</li>
+              <li>{{ Html::link('/room/room', 'Rooms') }}</li>
               <li>{{ Html::link('dining', 'Dining') }}</li>
               <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
             </ul>
           </li>
-          <li>{{ Html::link('wedding', 'Weddings') }}
-            <ul>
-              <li>{{ Html::link('samroreception', 'Samro Reception') }}</li>
-              <li>{{ Html::link('silverballroom', 'Silver Ball Room') }}</li>
-              <li>{{ Html::link('poosideballroom', 'Pool Side Ball Room') }}</li>
-              <li>{{ Html::link('grandballroom', 'Grand Ball Room') }}</li>
-            </ul>
-
-          </li>
+          <li>{{ Html::link('/wedding/wedding', 'Weddings') }}</li>
 
           <li>{{ Html::link('events', 'Events') }}
             <ul>
@@ -65,6 +57,7 @@
                 <li>{{ Html::link('register', 'Register') }}</li>
               @endif
               <li>{{ Html::link('local', 'Local Information') }}</li>
+              <li>{{ Html::link('staff', 'Our Staff') }}</li>
               <li><a class="promopopup">Promo Popup</a></li>
             </ul>
           </li>
@@ -99,9 +92,8 @@
                 <div class="news">
                 	<div class="title"><span>News & Offers</span></div>
                     <div class="subscribe">
-                        <form action="{{route('newsletter')}}" method="get">
+                        <form action="{{route('newsletter')}}" method="post">
                             <input name="email" type="text" placeholder="Your email address" />
-                            {!! csrf_field() !!}
                             <button><span data-hover="Sign Up">Sign Up</span></button>
                         </form>
                     </div>

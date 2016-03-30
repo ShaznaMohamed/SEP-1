@@ -60,10 +60,10 @@ class Handler extends ExceptionHandler
           return response()->view('errors.404', [], 404);
       }
 
-      else if($e instanceof \PDOException)
-      {
-          return response()->view('errors.database', [], 404);
-      }
+      // else if($e instanceof \PDOException)
+      // {
+      //     return response()->view('errors.database', [], 404);
+      // }
 
       return parent::render($request, $e);
     }

@@ -25,6 +25,14 @@ class RoomreservationController extends Controller
         return view('/room/roomconfirm');
     }
 
+    public function paypalstart(Request $request)
+    {
+      $QTY = $request->input('noofrooms');
+      $AMOUNT = $_REQUEST['amt'];
+      echo $AMOUNT;
+    }
+
+
     public function insertdata(Request $request)
     {
         $this->validate($request, [
@@ -46,17 +54,16 @@ class RoomreservationController extends Controller
             'noofrooms' => $request->input('noofrooms'),
             'arrival' => $request->input('arrival'),
             'departure' => $request->input('departure'),
-            'roomtype' => $request->input('roomtype'),
             'message' => $request->input('message'),
             'adult' => $request->input('adult'),
             'children' => $request->input('children'),
-            'status' => $status
+
 
         ]);
 
 
         return redirect()
-            ->route('/room/roomform')
+            ->route('roomform')
             ->with('info', 'You request is submitted successfully ');
 
        // return view('room', [' Your booking request is sent successfully.']);

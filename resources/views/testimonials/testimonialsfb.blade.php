@@ -67,22 +67,11 @@
             	<div class="testimonial">
                     <div class="details">
                         <h2>Find us on Facebook</h2>
-                        <a href="https://www.facebook.com/pages/Amalya-Reach/319871241462448?fref=ts" target="_blank" class="button"><span data-hover="Facebook">Facebook</span></a>
+                        <a href="testimonialsfb" target="_blank" class="button"><span data-hover="Facebook">Facebook</span></a>
                     </div>
                 </div>
             </figure>
-
-						@foreach($testimonialsdata as $testimonialsdata)
-							<figure>
-							<div class="testimonial">
-										<i class="fa fa-quote-left"></i>
-										<p>{{ $testimonialsdata->service }}</p>
-										<h2>{{ $testimonialsdata->title }}</h2>
-										<p>{{ $testimonialsdata->message }}</p>
-										<p class="name">&ndash; <strong>{{ $testimonialsdata->name }}</strong> <span>({{ $testimonialsdata->location }})</span></p>
-								</div>
-						</figure>
-		        @endforeach
+						
         </div>
     </main>
   @endsection

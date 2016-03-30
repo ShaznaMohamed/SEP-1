@@ -116,6 +116,7 @@ $checkerValue = session('checker');
 
 
   $aDate =  date("Y-m-d", strtotime($aDate));
+  $aaDate = date("Y-m-d", strtotime($aDate));
   $dDate =  date("Y-m-d", strtotime($dDate));
 
   //$RaDate = dateTime($aDate);
@@ -429,7 +430,7 @@ $checkerValue = session('checker');
             </div>
             <div class='card-content'>
             <span class='card-title activator grey-text text-darken-4'>". $rd->roomtype . "<i class='material-icons right'>more_vert</i></span>
-            <p><a href='#'>Reserve Now !</a></p>
+            <p><a href='http://localhost:8000/roomform?rid=".$rd->id."&arr=".$aaDate."&dep=".$dDate."'>Reserve Now !</a></p>
             </div>
             <div class='card-reveal'>
             <span class='card-title grey-text text-darken-4'>". $rd->roomtype . "<i class='material-icons right'>close</i></span>

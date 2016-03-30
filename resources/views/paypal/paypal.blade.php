@@ -1,11 +1,11 @@
 @extends('layouts.master')
-
 @section('maincontent')
+    <!-- Header | Start -->
 	<header>
     	<div id="header">
         	<div class="h1">
-                <h1><span>Guest Book</span>
-                <span class="tagline">Testimonials from our Past Guests</span></h1>
+                <h1><span>Payments</span>
+                <span class="tagline"></span></h1>
             </div>
         </div>
         <!-- Check Rates Banner | START -->
@@ -50,39 +50,55 @@
     </header>
     <!-- Header | END -->
     <!-- Content | START -->
-    <main id="guestbook">
-    	<div id="testimonials">
-            <figure class="cover">
-            	<div class="testimonial">
-                	<img alt="" src="images/pagemain/finedining.png" width="770" height="500" />
-                    <div class="details">
-                        <h2>Read what our past guests have said about us</h2>
-                        <p>Your feedback means the world to us, it's how we improve our level of service. Read testimonials from past guests and feel free to share your experience if you've stayed with us before.</p>
-                        <a href="testimonialsform" class="button" id="testimonialpop"><span data-hover="Write in Guest Book">Write in Guest Book</span></a>
-                    </div>
-                </div>
-            </figure>
+    <main>
+			<div class="centre">
 
-						<figure>
-            	<div class="testimonial">
-                    <div class="details">
-                        <h2>Find us on Facebook</h2>
-                        <a href="https://www.facebook.com/pages/Amalya-Reach/319871241462448?fref=ts" target="_blank" class="button"><span data-hover="Facebook">Facebook</span></a>
-                    </div>
-                </div>
-            </figure>
+            <form name="paypal" id="paypal" class="form-vertical" role="form" method="post" action="https://www.sandbox.paypal.com/cgi-bin/webscr">
 
-						@foreach($testimonialsdata as $testimonialsdata)
-							<figure>
-							<div class="testimonial">
-										<i class="fa fa-quote-left"></i>
-										<p>{{ $testimonialsdata->service }}</p>
-										<h2>{{ $testimonialsdata->title }}</h2>
-										<p>{{ $testimonialsdata->message }}</p>
-										<p class="name">&ndash; <strong>{{ $testimonialsdata->name }}</strong> <span>({{ $testimonialsdata->location }})</span></p>
-								</div>
-						</figure>
-		        @endforeach
-        </div>
-    </main>
-  @endsection
+                <input type="hidden" name="cmd" value="_cart">
+
+                <input type="hidden" name="upload" value="1">
+
+                <input type="hidden" name="business" value="chamalsilva321-facilitator@gmail.com">
+
+								<input type="hidden" name="return" value="http://localhost:8000/paycomplete">
+								<input type="hidden" name="cancel_return" value="http://localhost:8000/paypal">
+
+                <input type="hidden" name="item_name_1" value="Room 1">
+
+                <input type="hidden" name="amount_1" value="32000.00">
+                <!-- <input type="hidden" name="shipping_1" value="1.75"> -->
+
+                <!-- <input type="hidden" name="item_name_2" value="Item Name 2">
+
+                <input type="hidden" name="amount_2" value="2.00">
+                <input type="hidden" name="shipping_2" value="2.50"> -->
+
+								<div class="centre">
+					        <h3>Payment Summary</h3>
+					            <div id="contact">
+					                <table>
+					                    <tr>
+																<th>Item</th>
+																<th>Quantity</th>
+					                      <th>Amount</th>
+					                    </tr>
+
+					                    <tr>
+																<td>Room type</td>
+																<td>1</td>
+																<td>Rs. 32000.00</td>
+					                    </tr>
+
+					                </table>
+													<button type="submit" class="btn btn-default"><span data-hover="Payment">Continue</span></button>
+					            </div>
+					        </div>
+
+            </form>
+				</div>
+
+  </main>
+
+
+@endsection
