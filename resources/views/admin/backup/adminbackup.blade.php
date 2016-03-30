@@ -10,7 +10,7 @@
     <main>
     	<div class="centre">
             <div id="content">
-                
+              <a href="adminbackupnow" class="button" id="faqpop"><span data-hover="Backup Now">Backup Now</span></a>
             </div>
         </div>
     </main>

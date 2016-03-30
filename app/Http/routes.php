@@ -858,6 +858,17 @@ Route::group(['middleware' => ['web']], function () {
     'as' => 'adminbackup',
   ]);
 
+  Route::get('/adminbackedup', [
+    'uses' => '\App\Http\Controllers\BackupController@index',
+    'as' => 'adminbackedup',
+  ]);
+
+
+  Route::get('/adminbackupnow', [
+    'uses' => '\App\Http\Controllers\BackupController@BackupNow',
+    'as' => 'adminbackupnow',
+  ]);
+
   Route::get('/adminlist', [
     'uses' => '\App\Http\Controllers\AdminUsers@getAdminList',
     'as' => 'adminlist',
