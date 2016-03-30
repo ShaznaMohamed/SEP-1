@@ -54,6 +54,14 @@
             <figure class="cover">
               <div class="testimonial">
                     <div class="details">
+                        <h2>Application Backup</h2>
+                        <a href="adminbackup" class="button"><span data-hover="Administrator Management">Application Backup</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
                         <h2>Event Management</h2>
                         <a href="eventmanage" class="button"><span data-hover="Event Management">Event Management</span></a>
                     </div>
