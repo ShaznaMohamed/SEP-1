@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Auth;
 
 class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
@@ -28,7 +29,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['first','last', 'email', 'password', 'address1','address2','address3','mobile'];
+    protected $fillable = ['first','last', 'email', 'password', 'address1','address2','address3','mobile','is_admin'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -37,14 +38,8 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $hidden = ['password', 'remember_token'];
 
-    public function isAdmin()
-    {
-        return (bool) $this->attributes['is_admin'];
-    }
-
     public function getGravatarAttribute()
     {
-
         $hash = md5(strtolower(trim($this->attributes['email'])));
         return "http://www.gravatar.com/avatar/".$hash."?s=200";
     }

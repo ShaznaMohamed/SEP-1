@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
 use Laracasts\FlashServiceProvider;
 use Illuminate\Support\Facades\Redirect;
-
+use Auth;
 
 class AuthController extends Controller
 {
@@ -40,7 +40,6 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'logout']);
-
     }
 
     /**
@@ -92,4 +91,17 @@ class AuthController extends Controller
 
        return User::create();
     }
+
+    protected function authenticated()
+    {
+        if(Auth::check()) {
+            if(Auth::user()->is_admin == "1") {
+                return redirect()->intended('dashboard');
+            }
+            else {
+                return redirect()->intended('/');
+            }
+        }
+    }
+
 }

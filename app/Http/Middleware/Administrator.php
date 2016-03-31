@@ -3,24 +3,15 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
+use Auth;
 
 class Administrator {
 
-    // public function handle(Request $request, Closure $next)
-    // {
-    //   if ($request->User()->isAdmin==1) {
-    //       return redirect('/');
-    //   }
-    //   return $next($request);
-    // }
-
-    public function handle(Request $request, Closure $next)
+    public function handle($request, Closure $next)
     {
-        if (!$request->user() || !$request->user()->isAdmin()) {
-            return redirect('/');
+        if(Auth::check() && Auth::user()->is_admin == 1){
+            return $next($request);
         }
-        return $next($request);
+        return redirect('/');
     }
 }
