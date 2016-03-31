@@ -33,7 +33,8 @@
                 price = parseInt(price);
             var total = noofrooms * people * price ;
             //alert(pp);
-           document.getElementById("mytotal").innerHTML = total;
+           //document.getElementById("mytotal").innerHTML = total;
+           document.getElementById("mytotal").value = total;
         }
     </script>
 
@@ -55,7 +56,7 @@
 
             <div id="contact">
                 <img src=images/roomimages/roomform.jpg width="1200" height="400" alt="" />
-                <form action="{{route('roomform')}}?amt={{$planty}}" role="form" method="post" novalidate>
+                <form action="{{route('roomform')}}" role="form" method="post" novalidate>
                     @if(Auth::user())
 
                     <div class="col">
@@ -72,6 +73,11 @@
                         <div class="form-group{{ $errors->has('phone') ? ' has-error' : ''}}">
                         <div class="field"><input name="phone" type="text" value="{{$loggedUser->mobile}}" id="contact-phone" /></div>
                             @if ($errors->has('phone')) <span class="help-block">{{ $errors->first('phone') }}</span> @endif
+                        </div>
+
+                        <div class="form-group{{ $errors->has('type') ? ' has-error' : ''}}">
+                        <div class="field"><input name="type" type="text" id="type" value="{{$resultSet->roomtype}}" readonly /></div>
+                            @if ($errors->has('type')) <span class="help-block">{{ $errors->first('type') }}</span> @endif
                         </div>
 
 
@@ -154,29 +160,27 @@
                     </div>
 
 
-                    <table>
 
-                        <tr>
-                            <td>
+
+
+                               <label for="mytotal" style="font-size:20px;">Total(Rs.)</label>
+                               <input style="font-size:20px;  float:left;" readonly id="mytotal" name="mytotal"/>
                                 <div class="form-group">
-                                    <h4><input type="button" name="sub" value="Calculate Total Rate" class="btn btn-default" onclick="calctotalrate()">
-                                        <span data-hover="Add"></span></h4>
+                                    <button type="button" class="btn btn-default" onclick="calctotalrate()"><span data-hover="Total">CALCULATE</span></button>
+                                    <button type="submit" class="btn btn-default"><span data-hover="Payment">PROCEED</span></button>
                                 </div>
-                            </td>
 
-                            <td>
+
+
 
                     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 
 
-                        <input type="submit" name="sub" value="Send Booking Request" />
-                        <span data-hover="Send Booking Request"></span>
-                            </td>
 
-                        </tr>
-                        <button type="button" class="btn btn-default" onclick="calctotalrate()"><span data-hover="Send Request">SUBMIT</span></button>
-                        <p id="mytotal">Total</p>
-                      </table>
+
+
+
+
                 </form>
             </div>
 

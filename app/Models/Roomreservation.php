@@ -24,11 +24,10 @@ class Roomreservation extends Model
         'adult',
         'children',
         'status',
+        'price',
 
 
     ];
 
 
 }
-
-

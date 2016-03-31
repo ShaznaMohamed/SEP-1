@@ -747,9 +747,9 @@ Route::group(['middleware' => ['web']], function () {
     return View::make('room/juniorsuites');
   });
 
-  Route::get('roomform', function () {
-    return View::make('room/roomform');
-  });
+  // Route::get('roomform', function () {
+  //   return View::make('room/roomform');
+  // });
 
   Route::get('/roomconfirmsub.php', function () {
     return View::make('rooms/roomconfirmsub');

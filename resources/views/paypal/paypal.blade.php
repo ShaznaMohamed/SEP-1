@@ -57,16 +57,16 @@
 
                 <input type="hidden" name="cmd" value="_cart">
 
-                <input type="hidden" name="upload" value="1">
+                <input type="hidden" name="upload" value="{{$quantity}}">
 
                 <input type="hidden" name="business" value="chamalsilva321-facilitator@gmail.com">
 
 								<input type="hidden" name="return" value="http://localhost:8000/paycomplete">
 								<input type="hidden" name="cancel_return" value="http://localhost:8000/paypal">
 
-                <input type="hidden" name="item_name_1" value="Room 1">
+                <input type="hidden" name="item_name_1" value="{{$type}}">
 
-                <input type="hidden" name="amount_1" value="32000.00">
+                <input type="hidden" name="amount_1" value="{{$amount}}">
                 <!-- <input type="hidden" name="shipping_1" value="1.75"> -->
 
                 <!-- <input type="hidden" name="item_name_2" value="Item Name 2">
@@ -81,13 +81,13 @@
 					                    <tr>
 																<th>Item</th>
 																<th>Quantity</th>
-					                      <th>Amount</th>
+					                      <th>Amount(Rs.)</th>
 					                    </tr>
 
 					                    <tr>
-																<td>Room type</td>
-																<td>1</td>
-																<td>Rs. 32000.00</td>
+																<td>{{$type}}</td>
+																<td>{{$quantity}}</td>
+																<td>{{$amount}}</td>
 					                    </tr>
 
 					                </table>

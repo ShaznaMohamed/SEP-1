@@ -28,8 +28,38 @@ class RoomreservationController extends Controller
     public function paypalstart(Request $request)
     {
       $QTY = $request->input('noofrooms');
-      $AMOUNT = $_REQUEST['amt'];
-      echo $AMOUNT;
+      $AMOUNT = $request->input('mytotal');
+
+      $this->validate($request, [
+          'name' => 'required|string',
+          'email' => 'required|email',
+          'phone' => 'required|numeric|min:10',
+          'arrival' => 'required',
+          'departure' => 'required',
+          'noofrooms'=> 'required|numeric|max:12',
+
+      ]
+      );
+
+      $status = "unconfirmed";
+      Roomreservation::create([
+          'name' => $request->input('name'),
+          'email' => $request->input('email'),
+          'phone' => $request->input('phone'),
+          'noofrooms' => $request->input('noofrooms'),
+          'arrival' => $request->input('arrival'),
+          'departure' => $request->input('departure'),
+          'message' => $request->input('message'),
+          'adult' => $request->input('adult'),
+          'children' => $request->input('children'),
+          'price' => $AMOUNT,
+          'roomtype' => $request->input('type'),
+
+
+      ]);
+
+      return view('paypal/paypal')->with('quantity',$QTY)->with('amount',$AMOUNT)->with('type' , $request->input('type'));
+
     }
 
 
