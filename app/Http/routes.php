@@ -21,16 +21,14 @@ Route::get('testemail', function () {
 });
 
 /*
-|**************************************************************************
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
-|**************************************************************************
+|
 | This route group applies the "web" middleware group to every route
 | it contains. The "web" middleware group is defined in your HTTP
 | kernel and includes session state, CSRF protection, and more.
-|
-*/
+|*/
 
 Route::group(['middleware' => ['web']], function () {
 
@@ -106,7 +104,7 @@ Route::group(['middleware' => ['web']], function () {
     return View::make('blog-post-crud');
   });
 
-  /*
+/*
 |--------------------------------------------------------------------------
 | Reservation history Routes
 |--------------------------------------------------------------------------
@@ -117,12 +115,12 @@ Route::group(['middleware' => ['web']], function () {
     'as' => 'reservationhistory',
 ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Blog posts and comments
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Blog posts and comments
+|--------------------------------------------------------------------------
+|
+*/
   Route::get('blog', function () {
     return View::make('blog/blog');
   });
@@ -177,16 +175,10 @@ Route::group(['middleware' => ['web']], function () {
 |Chat
 |--------------------------------------------------------------------------
 */
-
-
-Route::get('/chat',[
-'uses' => '\App\Http\Controllers\ChatController@index',
-'as' => 'chat',
-
-                    ]);
-
-
-
+  Route::get('/chat',[
+  'uses' => '\App\Http\Controllers\ChatController@index',
+  'as' => 'chat',
+  ]);
 
 /*
 |--------------------------------------------------------------------------
@@ -194,34 +186,28 @@ Route::get('/chat',[
 |--------------------------------------------------------------------------
 */
 
+  Route::get('/report',[
+  'uses' => '\App\Http\Controllers\ReportController@index',
+  'as' => 'report',
+  ]);
 
-Route::get('/report',[
-'uses' => '\App\Http\Controllers\ReportController@index',
-'as' => 'report',
-
-                    ]);
-
-Route::get('/reportindex',[
-'uses' => '\App\Http\Controllers\ReportController@indexes',
-'as' => 'reportindex',
-
-                    ]);
+  Route::get('/reportindex',[
+  'uses' => '\App\Http\Controllers\ReportController@indexes',
+  'as' => 'reportindex',
+  ]);
 
 
-Route::post('/reportindex',[
-'uses' => '\App\Http\Controllers\ReportController@Postindexes',
-'as' => 'reportindex',
+  Route::post('/reportindex',[
+  'uses' => '\App\Http\Controllers\ReportController@Postindexes',
+  'as' => 'reportindex',
+  ]);
 
-                    ]);
-
-
-
-  /*
-  |--------------------------------------------------------------------------
-  | Contact Us Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Contact Us Routes
+|--------------------------------------------------------------------------
+|
+*/
 
   Route::get('contact', [
     'uses' => '\App\Http\Controllers\ContactController@getContact',
@@ -232,12 +218,12 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\ContactController@postContact',
   ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Newsletter Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Newsletter Routes
+|--------------------------------------------------------------------------
+|
+*/
 
   Route::get('/newsletter', [
     'uses' => '\App\Http\Controllers\subscribeController@getSubscribe',
@@ -259,12 +245,12 @@ Route::post('/reportindex',[
   ]);
 
 
-  /*
-  |--------------------------------------------------------------------------
-  | Testimonials Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Testimonials Routes
+|--------------------------------------------------------------------------
+|
+*/
   Route::get('admintestimonials', [
     'uses' => '\App\Http\Controllers\TestimonialsController@getReviewAdmin',
     'as' => 'AdminTestimonials',
@@ -284,19 +270,19 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\TestimonialsController@postReview',
   ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | FAQ Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| FAQ Routes
+|--------------------------------------------------------------------------
+|
+*/
 
   Route::get('/faq', [
     'uses' => '\App\Http\Controllers\FaqController@getFaq',
     'as' => 'faq',
   ]);
 
-  /*
+/*
 |--------------------------------------------------------------------------
 | Events Routes
 |--------------------------------------------------------------------------
@@ -378,12 +364,12 @@ Route::post('/reportindex',[
       'as' => 'halledit',
     ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Dining Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Dining Routes
+|--------------------------------------------------------------------------
+|
+*/
   Route::get('/dining',[
     'uses' => '\App\Http\Controllers\DiningController@getEvents',
     'as' => 'dining',
@@ -405,12 +391,12 @@ Route::post('/reportindex',[
   ]);
 
 
-  /*
-  |--------------------------------------------------------------------------
-  | Restaurant Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Restaurant Routes
+|--------------------------------------------------------------------------
+|
+*/
   //getting data to restaurant view
   Route::get('/restaurant',[
     'uses' => '\App\Http\Controllers\RestaurantController@getMenu',
@@ -446,7 +432,6 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\MenuEditController@getAlcoholic',
     'as' => 'menuedita',
   ]);
-
 
   //Breakfast
   //updating Breakfast menu
@@ -499,8 +484,6 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\MenuEditController@lunchdel',
     'as' => 'menueditl',
   ]);
-
-
   //dinner
   //updating dinner menu
   Route::get('/menuupdatedinner/{id}', [
@@ -526,8 +509,6 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\MenuEditController@dinnerdel',
     'as' => 'menueditd',
   ]);
-
-
   //dinner
   //updating dinner menu
   Route::get('/menuupdatenonalcoholic/{id}', [
@@ -553,7 +534,6 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\MenuEditController@nonalcoholicdel',
     'as' => 'menueditn',
   ]);
-
   //coffee
   //updating coffee menu
   Route::get('/menuupdatecoffee/{id}', [
@@ -569,7 +549,6 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\MenuEditController@coffeeAdd',
     'as' => 'menuaddcoffee',
   ]);
-
   Route::get('/menuaddcoffee', [
     'uses' => '\App\Http\Controllers\MenuEditController@getcoffeeAdd',
     'as' => 'menuaddcoffee',
@@ -579,7 +558,6 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\MenuEditController@coffeedel',
     'as' => 'menueditc',
   ]);
-
   //alcoholic
   //updating alcoholic menu
   Route::get('/menuupdatealcoholic/{id}', [
@@ -595,7 +573,6 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\MenuEditController@alcoholicAdd',
     'as' => 'menuaddalcoholic',
   ]);
-
   Route::get('/menuaddalcoholic', [
     'uses' => '\App\Http\Controllers\MenuEditController@getalcoholicAdd',
     'as' => 'menuaddalcoholic',
@@ -606,24 +583,24 @@ Route::post('/reportindex',[
     'as' => 'menuedita',
   ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Halls,Events,Dining Control Routes1
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Halls,Events,Dining Control Routes1
+|--------------------------------------------------------------------------
+|
+*/
   Route::get('eventupload', function () {
     return View::make('events/event_hallupload');
   });
   Route::post('apply/upload1', 'event_halluploadController@eventuploadImg1');
   Route::post('apply/upload2', 'event_halluploadController@eventuploadImg2');
 
-  /*
-  |--------------------------------------------------------------------------
-  | Specials Control Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Specials Control Routes
+|--------------------------------------------------------------------------
+|
+*/
   Route::get('specadd', [
     'uses' => '\App\Http\Controllers\packageController@editPackages',
     // return View::make('specialsManage');
@@ -637,12 +614,12 @@ Route::post('/reportindex',[
   Route::post('apply/spec2', 'packageController@postPackUpdate');
   Route::post('apply/spec1', 'galleryController@uploadspecials');
 
-  /*
-  |--------------------------------------------------------------------------
-  | Weddings and Rooms
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Weddings and Rooms
+|--------------------------------------------------------------------------
+|
+*/
   if ( Request::input('btnn') === 'Check Availability' )
   {
     Route::post('/managereservation',[
@@ -705,7 +682,6 @@ Route::post('/reportindex',[
       ]);
     }
 
-
   Route::get('weddingform', [
     'uses' => '\App\Http\Controllers\WedreservationController@getdata',
     'as' => 'weddingform',
@@ -755,7 +731,6 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\plannerbookingController@insertdata',
     'as' => 'plannerform',
   ]);
-
 
   Route::get('wedding', function () {
     return View::make('wedding');
@@ -808,10 +783,6 @@ Route::post('/reportindex',[
     return View::make('room/juniorsuites');
   });
 
-  // Route::get('roomform', function () {
-  //   return View::make('room/roomform');
-  // });
-
   Route::get('/roomconfirmsub.php', function () {
     return View::make('rooms/roomconfirmsub');
   });
@@ -830,38 +801,28 @@ Route::post('/reportindex',[
     return View::make('room/room');
   });
 
-
-  /*
-  |--------------------------------------------------------------------------
-  | Check Availability and Advanced Search
-  |--------------------------------------------------------------------------
-  |
-  */
-
-  /*check availability */
-
-
+/*
+|--------------------------------------------------------------------------
+| Check Availability and Advanced Search
+|--------------------------------------------------------------------------
+|
+*/
   Route::get('/checkA',[
     'uses' => '\App\Http\Controllers\AvailController@indexGet',
     'as' => 'checkA',
-
   ]);
 
   Route::post('/checkA',[
     'uses' => '\App\Http\Controllers\AvailController@indexPost',
     'as' => 'checkA',
-
   ]);
-
 
   Route::post('/check',[
     'uses' => '\App\Http\Controllers\AvailController@check',
     'as' => 'check',
 
   ]);
-  /* Search
-  ***
-  */
+
   Route::get('/inter',[
     'uses' => '\App\Http\Controllers\WelcomeController@PostsearchRedirect',
     'as' => 'inter',
@@ -884,22 +845,19 @@ Route::post('/reportindex',[
     }
   });
 
-  /* Check Avaialbility and Search finish here */
-
-  /*
-  |--------------------------------------------------------------------------
-  | Application Routes Endf
-  |--------------------------------------------------------------------------
-  */
+/*
+|--------------------------------------------------------------------------
+|Application Routes End
+|--------------------------------------------------------------------------
+*/
   });
 
-  /*
-  /**************************************************************************
-  |--------------------------------------------------------------------------
-  | Administrator Routes
-  |--------------------------------------------------------------------------
-  |**************************************************************************
-  */
+/*
+|--------------------------------------------------------------------------
+| Administrator Routes
+|--------------------------------------------------------------------------
+|
+*/
 
   Route::group(['middleware' => 'admin'], function(){
 
@@ -907,12 +865,12 @@ Route::post('/reportindex',[
 
   Route::get('/menudashboard', 'AdminController@menu');
 
-  /*
-  |--------------------------------------------------------------------------
-  | Adminitrator Control
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Adminitrator Control
+|--------------------------------------------------------------------------
+|
+*/
   Route::get('/adminbackup', [
     'uses' => '\App\Http\Controllers\BackupController@index',
     'as' => 'adminbackup',
@@ -928,6 +886,18 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\BackupController@BackupNow',
     'as' => 'adminbackupnow',
   ]);
+
+  Route::get('/adminbackuplist', [
+    'uses' => '\App\Http\Controllers\BackupController@BackupList',
+    'as' => 'adminbackuplist',
+  ]);
+
+  Route::get('/adminbackupclean', [
+    'uses' => '\App\Http\Controllers\BackupController@BackupClean',
+    'as' => 'adminbackupclean',
+  ]);
+
+
 
   Route::get('/adminlist', [
     'uses' => '\App\Http\Controllers\AdminUsers@getAdminList',
@@ -961,12 +931,13 @@ Route::post('/reportindex',[
   Route::post('/adminedit', [
     'uses' => '\App\Http\Controllers\AdminUsers@adminEdit',
   ]);
-  /*
-  |--------------------------------------------------------------------------
-  | FAQ
-  |--------------------------------------------------------------------------
-  |
-  */
+
+/*
+|--------------------------------------------------------------------------
+| FAQ
+|--------------------------------------------------------------------------
+|
+*/
 
   Route::get('/adminfaq', [
     'uses' => '\App\Http\Controllers\FaqController@getFaqAdmin',
@@ -996,12 +967,12 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\FaqController@savefaqEdit',
   ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Users
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Users
+|--------------------------------------------------------------------------
+|
+*/
 
   Route::get('/adminusers', [
     'uses' => '\App\Http\Controllers\UserController@getuserAdmin',
@@ -1076,12 +1047,12 @@ Route::post('/reportindex',[
     'uses' => '\App\Http\Controllers\UserController@userProfileChange',
   ]);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Contact Us
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Contact Us
+|--------------------------------------------------------------------------
+|
+*/
 
   Route::get('/admincontactus', [
     'uses' => '\App\Http\Controllers\ContactController@index',
@@ -1114,12 +1085,12 @@ Route::post('/reportindex',[
   ]);
 
 
-  /*
-  |--------------------------------------------------------------------------
-  | Wedding and Room
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Wedding and Room
+|--------------------------------------------------------------------------
+|
+*/
 
   Route::get('adminroom', function () {
     return View::make('admin/room/adminroom');
@@ -1187,7 +1158,6 @@ Route::post('/reportindex',[
 
   /* Room reservation admin management */
 
-
     if ( Request::input('assbtton') === 'Assign Room Assistant' )
    {
      Route::post('/roomconfirm',[
@@ -1209,16 +1179,14 @@ Route::post('/reportindex',[
           'as' => 'roomconfirm',
       ]);
     }
-
-
    /* End of room reservatoin admin edit */
 
-  /*
-  |--------------------------------------------------------------------------
-  | Gallery Control Routes
-  |--------------------------------------------------------------------------
-  |
-  */
+/*
+|--------------------------------------------------------------------------
+| Gallery Control Routes
+|--------------------------------------------------------------------------
+|
+*/
 
   Route::get('upload', function () {
     return View::make('gallery/galleryUpload');

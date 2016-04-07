@@ -20,4 +20,20 @@ class BackupController extends Controller
       return View("admin/backup/backedup")->with("output", $output);
     }
 
+    public function BackupList()
+    {
+      Artisan::call('backup:list');
+      $output=(Artisan::output());
+
+      return View("admin/backup/backedup")->with("output", $output);
+    }
+
+    public function BackupClean()
+    {
+      Artisan::call('backup:clean');
+      $output=(Artisan::output());
+
+      return View("admin/backup/backedup")->with("output", $output);
+    }
+
 }
