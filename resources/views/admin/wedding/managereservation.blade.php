@@ -69,6 +69,79 @@
                                 <button id="Print" type="button" id="Print" class="btn btn-success">Print Summary</button>&nbsp;
                                 <!--<input type="button"onclick="tableToExcel('table_ID00', 'W3C Example Table')" class="btn btn-success" id="ExportExcel"  value="Export to Excel">-->
 
+
+                                <!--error , success message displaying -->
+                                @if(Session::has('message1'))
+                                    <div class="alert alert-danger">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>Failed</strong> {{ Session::get('message1', '') }}
+                                    </div>
+
+                                @endif
+
+                                @if(Session::has('message4'))
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>Success!</strong> {{ Session::get('message4', '') }}
+                                    </div>
+                                @endif
+
+                                @if(Session::has('message2'))
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>Success!</strong> {{ Session::get('message2', '') }}
+                                    </div>
+                                @endif
+
+                                @if(Session::has('message3'))
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>Success!</strong> {{ Session::get('message3', '') }}
+                                    </div>
+                                @endif
+
+                                @if(Session::has('message5'))
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>Success!</strong> {{ Session::get('message3', '') }}
+                                    </div>
+                                @endif
+
+                                @if(Session::has('message6'))
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>Success!</strong> {{ Session::get('message6', '') }}
+                                    </div>
+                                @endif
+
+                                @if(Session::has('message7'))
+                                    <div class="alert alert-danger">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>Failed!</strong> {{ Session::get('message7', '') }}
+                                    </div>
+                                @endif
+
+                                @if(Session::has('message8'))
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>Success!</strong> {{ Session::get('message8', '') }}
+                                    </div>
+                                @endif
+
+                                @if(Session::has('message9'))
+                                    <div class="alert alert-danger">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>Failed!</strong> {{ Session::get('message9', '') }}
+                                    </div>
+                                @endif
+
+                                @if(Session::has('message10'))
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>Success!</strong> {{ Session::get('message10', '') }}
+                                    </div>
+                                @endif
+
                                 <div id="rep" class="modal fade" role="dialog">
                                     <div class="modal-dialog"  style="width: 100%" >
 
@@ -640,9 +713,92 @@
 
                     <div class="tab-pane" id="two">
 
+
+
+
+                            {{--<button type="submit" class="btn btn-success" data-toggle="modal" data-target="#report">Summary</button>--}}
+
+
                         <div class="col-md-12">
                             <hr style="margin-top: 5%">
                             <h4><font class="text-muted">Wedding Planner Details</font></h4>
+
+                            <td align="center">
+                                <div align="right">
+                                <a type="button"  class="btn btn-success"  data-toggle="modal" data-target="#newplanner{{$found->id}}">Add New Planner</a>
+                                </div>
+                                <div id="newplanner{{$found->id}}" class="modal fade" role="dialog">
+                                    <div class="modal-dialog"  style="width: 40%" >
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                                                <h4 class="modal-title custom_align" id="Heading"><strong><font color="green">Add New Wedding Planner</font></strong></h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <fieldset>
+
+
+                                                    <form class="form-horizontal" method="post" action="" >
+                                                        <div class="form-group{{ $errors->has('name') ? ' has-error' : ''}}">
+                                                            <label class="col-sm-4 control-label">Name</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" name="name" id="name" class="form-control" >
+                                                                @if ($errors->has('name')) <span class="help-block">{{ $errors->first('name') }}</span> @endif
+                                                            </div><br><br>
+                                                        </div>
+
+                                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : ''}}">
+                                                            <label class="col-sm-4 control-label">Email Address</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" name="email" id="email" class="form-control" >
+                                                                @if ($errors->has('email')) <span class="help-block">{{ $errors->first('email') }}</span> @endif
+                                                            </div><br><br>
+                                                        </div>
+
+                                                         <div class="form-group{{ $errors->has('phone') ? ' has-error' : ''}}">
+                                                             <label class="col-sm-4 control-label">Phone Number</label>
+                                                             <div class="col-sm-6">
+                                                                 <input type="text" name="phone" id="phone" class="form-control" >
+                                                                 @if ($errors->has('phone')) <span class="help-block">{{ $errors->first('phone') }}</span> @endif
+                                                             </div><br><br>
+                                                        </div>
+
+                                                        <div class="form-group{{ $errors->has('monday') ? ' has-error' : ''}}">
+                                                            <label class="col-sm-4 control-label">Address</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" name="monday" id="monday" class="form-control" >
+                                                                @if ($errors->has('monday')) <span class="help-block">{{ $errors->first('monday') }}</span> @endif
+                                                            </div><br><br>
+                                                        </div>
+
+
+                                                        <div class="modal-footer">
+
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            <input type="hidden" name="_tokenn" value="{!! csrf_token() !!}">
+                                                            <input type="text"  hidden="hidden" placeholder="{{$found->id}}" value="{{$found->id}}" name="id"/>
+                                                            <input type="submit" class="btn btn-primary" name="addplannerbtn" value="Add Planner" />
+
+                                                        </div>
+
+                                                    </form>
+
+
+                                                </fieldset>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+
                             <div class="panel-default">
                                 <div class="panel-body">
                                     <table id="table_ID01" class="table table-hover table-condensed table-bordered" >
@@ -655,8 +811,7 @@
                                             <th class="col-sm-2">Name</th>
                                             <th class="col-sm-2">Email</th>
                                             <th class="col-sm-2">Phone</th>
-                                            <th class="col-sm-2">Allocated Hall</th>
-
+                                            <th class="col-sm-2">Address</th>
 
                                         </tr>
                                         </thead>
@@ -899,42 +1054,18 @@
                                                                                 </div><br><br>
                                                                             </div>
 
-                                                                            <?php
-                                                                            $planner = "shaz";
-                                                                            $hall = "{$found->halltype}" ;
-
-                                                                            if ($hall == 'samro')
-                                                                            {
-                                                                                $planner = "Sarah" ;
-                                                                            }
-
-                                                                            if ($hall== 'poolside')
-                                                                            {
-                                                                                $planner = "Louise";
-                                                                            }
-
-                                                                            if ($hall== 'silver')
-                                                                            {
-                                                                                $planner = "Kelly";
-                                                                            }
-
-                                                                            if ($hall== 'grand')
-                                                                            {
-                                                                                $planner = "Ann";
-                                                                            }
-                                                                            ?>
-
-
-
                                                                             <div class="form-group">
-                                                                                <label class="col-sm-4 control-label">Assigned Planner</label>
+                                                                                <label class="col-sm-4 control-label"> Planner</label>
                                                                                 <div class="col-sm-6">
                                                                                     <select class="form-control"  name="planner" id="planner">
 
-                                                                                        <option value="Sarah" >Sarah</option>
-                                                                                        <option value="Louise">Louise</option>
-                                                                                        <option value="Kelly">Kelly</option>
-                                                                                        <option value="Ann">Ann</option>
+                                                                                        <?php $plan = DB::table('planner') ->get();?>
+
+                                                                                            @foreach($plan as $pname)
+                                                                                                <option value="{{$pname->name}}" >{{$pname->name}}</option>
+                                                                                            @endforeach
+
+
                                                                                     </select>
                                                                                 </div><br><br>
                                                                             </div>
@@ -990,19 +1121,12 @@
 
 
                                                                             <div class="form-group">
-                                                                                <label class="col-sm-4 control-label">Assign Planner</label>
+                                                                                <label class="col-sm-4 control-label">Assigned Planner</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="text" readonly name="itemcode2" id="TextInput" class="form-control" value={{$found->id}}>
+                                                                                    <input type="text" readonly name="itemcode2" id="TextInput" class="form-control" value={{$found->message}}>
                                                                                 </div><br><br>
                                                                             </div>
 
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-4 control-label">Planner Email</label>
-                                                                                <div class="col-sm-6">
-                                                                                    <input type="text" readonly name="id" id="TextInput" class="form-control" value="{{$found->email}}">
-
-                                                                                </div><br><br>
-                                                                            </div>
 
 
                                                                             <div class="modal-footer">
@@ -1016,7 +1140,7 @@
                                                                                 <input type="text"  hidden="hidden" placeholder="{{$found->eventdate}}" value="{{$found->eventdate}}" name="eventdate"/>
                                                                                 <input type="text"  hidden="hidden" placeholder="{{$found->halltype}}" value="{{$found->halltype}}" name="halltype"/>
                                                                                 <input type="text"  hidden="hidden" placeholder="{{$found->sessionn}}" value="{{$found->sessionn}}" name="sessionn"/>
-                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->firstname}}" value="{{$found->firstname}}" name="firstname"/>
+                                                                                <input type="text"  hidden="hidden" placeholder="{{$found->message}}" value="{{$found->message}}" name="firstname"/>
                                                                                 <input type="text"  hidden="hidden" placeholder="{{$found->eventtype}}" value="{{$found->eventtype}}" name="eventtype"/>
                                                                                 <input type="text"  hidden="hidden" placeholder="{{$found->pax}}" value="{{$found->pax}}" name="pax"/>
                                                                                 <input type="text"  hidden="hidden" placeholder="{{$found->sessionn}}" value="{{$found->sessionn}}" name="idd"/>

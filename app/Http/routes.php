@@ -173,6 +173,50 @@ Route::group(['middleware' => ['web']], function () {
   ]);
 
   /*
+|--------------------------------------------------------------------------
+|Chat
+|--------------------------------------------------------------------------
+*/
+
+
+Route::get('/chat',[
+'uses' => '\App\Http\Controllers\ChatController@index',
+'as' => 'chat',
+
+                    ]);
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+|Reports
+|--------------------------------------------------------------------------
+*/
+
+
+Route::get('/report',[
+'uses' => '\App\Http\Controllers\ReportController@index',
+'as' => 'report',
+
+                    ]);
+
+Route::get('/reportindex',[
+'uses' => '\App\Http\Controllers\ReportController@indexes',
+'as' => 'reportindex',
+
+                    ]);
+
+
+Route::post('/reportindex',[
+'uses' => '\App\Http\Controllers\ReportController@Postindexes',
+'as' => 'reportindex',
+
+                    ]);
+
+
+
+  /*
   |--------------------------------------------------------------------------
   | Contact Us Routes
   |--------------------------------------------------------------------------
@@ -635,6 +679,14 @@ Route::group(['middleware' => ['web']], function () {
     ]);
   }
 
+  elseif ( Request::input('addplannerbtn') === 'Add Planner' )
+  {
+    Route::post('/managereservation',[
+        'uses' => '\App\Http\Controllers\LostFoundController@addnewplanner',
+        'as' => 'managereservation',
+    ]);
+  }
+
   Route::get('managereservation', function()
   {
     return View::make('admin/wedding/managereservation');
@@ -644,6 +696,15 @@ Route::group(['middleware' => ['web']], function () {
     'uses' => '\App\Http\Controllers\WedreservationController@insertdata',
     'as' => 'weddingform',
   ]);
+
+  if ( Request::input('submitcalc') === 'Calculate Total Rate' )
+    {
+      Route::post('/weddingform',[
+          'uses' => '\App\Http\Controllers\WedreservationController@calculateTotalPrice',
+          'as' => 'weddingform',
+      ]);
+    }
+
 
   Route::get('weddingform', [
     'uses' => '\App\Http\Controllers\WedreservationController@getdata',
@@ -697,7 +758,7 @@ Route::group(['middleware' => ['web']], function () {
 
 
   Route::get('wedding', function () {
-    return View::make('wedding/wedding');
+    return View::make('wedding');
   });
 
   Route::get('samroreception', function () {
@@ -1064,10 +1125,20 @@ Route::group(['middleware' => ['web']], function () {
     return View::make('admin/room/adminroom');
   });
 
+  if ( Request::input('subadminroom') === 'Update' )
+  {
   Route::post('/adminroom', [
     'uses' => '\App\Http\Controllers\roomController@insertdataa',
     'as' => '/adminroom',
   ]);
+  }
+  elseif ( Request::input('ub') === 'Add' )
+  {
+   Route::post('/adminroom',[
+       'uses' => '\App\Http\Controllers\roomController@addnewroom',
+       'as' => 'adminroom',
+   ]);
+  }
 
   Route::post('/adminspecialform', [
     'uses' => '\App\Http\Controllers\WedreservationController@index',
@@ -1079,9 +1150,9 @@ Route::group(['middleware' => ['web']], function () {
     'as' => '/adminspecialform',
   ]);
 
-  Route::get('/adminroomconfirm', [
+  Route::get('/roomconfirm', [
     'uses' => '\App\Http\Controllers\RoomreservationController@getroomconfirm',
-    'as' => '/adminroomconfirm',
+    'as' => '/roomconfirm',
   ]);
 
   Route::get('/adminweddingpage', [
@@ -1114,6 +1185,33 @@ Route::group(['middleware' => ['web']], function () {
     'as' => '/roomdashboard',
   ]);
 
+  /* Room reservation admin management */
+
+
+    if ( Request::input('assbtton') === 'Assign Room Assistant' )
+   {
+     Route::post('/roomconfirm',[
+         'uses' => '\App\Http\Controllers\RoomassistantController@assignroomassistant',
+         'as' => 'roomconfirm',
+     ]);
+   }
+   elseif ( Request::input('beotnm') === 'Send Notification Email' )
+   {
+     Route::post('/roomconfirm',[
+         'uses' => '\App\Http\Controllers\RoomassistantController@roomassistantemailsending',
+         'as' => 'roomconfirm',
+     ]);
+   }
+    elseif ( Request::input('addassistantbtn') === 'Add Assistant' )
+    {
+      Route::post('/roomconfirm',[
+          'uses' => '\App\Http\Controllers\RoomassistantController@addnewassistant',
+          'as' => 'roomconfirm',
+      ]);
+    }
+
+
+   /* End of room reservatoin admin edit */
 
   /*
   |--------------------------------------------------------------------------

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use App\Models\weddingservices;
 use Illuminate\Redis\Database;
@@ -25,20 +28,29 @@ class weddingservicesController extends Controller
 
   public function update(Request $request)
   {
+    $button = Input::get('updtebtn');
 
-    $this->validate($request, [
+    if ($button == 'Update') {
+
+      $rules = array(
       'halltype' => 'required',
-      'advancepayment' => 'required',
-      'minimumpax' => 'required',
-      'additionalhour' => 'required',
-      'fullpayment' => 'required',
-      'corkage' => 'required',
-      'beerlocal' => 'required',
-      'icedcoffee' => 'required',
-      'cutlery' => 'required',
+      'advancepayment' => 'required|numeric',
+      'minimumpax' => 'required|numeric',
+      'additionalhour' => 'required|numeric',
+      'fullpayment' => 'required|numeric',
+      'corkage' => 'required|numeric',
+      'beerlocal' => 'required|numeric',
+      'icedcoffee' => 'required|numeric',
+      'cutlery' => 'required|numeric',
 
-    ]
+
   );
+      $validator = Validator::make(Input::all(), $rules);
+      if ($validator->fails()) {
+
+        return Redirect::to('adminweddingpage')->withErrors($validator)->withInput()->with('message19', 'WEDDING FACILITIES UPDATION FAILED');
+
+      } else {
 
   $selectedhall = $_POST['halltype'];
   $advance = $_POST['advancepayment'];
@@ -63,48 +75,50 @@ class weddingservicesController extends Controller
 
 ]);
 
-return redirect('adminweddingpage');
+        return Redirect::to('adminweddingpage')->withErrors($validator)->withInput()->with('message20', 'WEDDING HALL FEATURES UPDATED SUCCESSFULLY');
+      }
+    }
 
 }
 
-// public function insertdata(Request $request)
-// {
-//   $this->validate($request, [
-//     'halltype' => 'required',
-//     'advancepayment' => 'required',
-//     'minimumpax' => 'required',
-//     'additionalhour' => 'required',
-//     'fullpayment' => 'required',
-//     'corkage' => 'required',
-//     'beerlocal' => 'required',
-//     'icedcoffee' => 'required',
-//     'cutlery' => 'required',
+//public function insertdata(Request $request)
+//{
+//  $this->validate($request, [
+//    'halltype' => 'required',
+//    'advancepayment' => 'required',
+//    'minimumpax' => 'required',
+//    'additionalhour' => 'required',
+//    'fullpayment' => 'required',
+//    'corkage' => 'required',
+//    'beerlocal' => 'required',
+//    'icedcoffee' => 'required',
+//    'cutlery' => 'required',
 //
-//   ]
-// );
-//
-//
-// weddingservices::Create([
-//   'halltype' => $request->input('halltype'),
-//   'advancepayment' => $request->input('advancepayment'),
-//   'minimumpax' => $request->input('minimumpax'),
-//   'additionalhour' => $request->input('additionalhour'),
-//   'fullpayment' => $request->input('fullpayment'),
-//   'corkage' => $request->input('corkage'),
-//   'beerlocal' => $request->input('beerlocal'),
-//   'icedcoffee' => $request->input('icedcoffee'),
-//   'cutlery' => $request->input('cutlery'),
-//
-// ]);
+//  ]
+//);
 //
 //
-// return redirect('adminweddingpage');
+//weddingservices::Create([
+//  'halltype' => $request->input('halltype'),
+//  'advancepayment' => $request->input('advancepayment'),
+//  'minimumpax' => $request->input('minimumpax'),
+//  'additionalhour' => $request->input('additionalhour'),
+//  'fullpayment' => $request->input('fullpayment'),
+//  'corkage' => $request->input('corkage'),
+//  'beerlocal' => $request->input('beerlocal'),
+//  'icedcoffee' => $request->input('icedcoffee'),
+//  'cutlery' => $request->input('cutlery'),
+//
+//]);
+//
+//
+//return redirect('adminweddingpage');
 //
 //
 //
 //
-// // return view('room', [' Your booking request is sent successfully.']);
-// }
+//// return view('room', [' Your booking request is sent successfully.']);
+//}
 
 public function index()
 {

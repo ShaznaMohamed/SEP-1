@@ -5,6 +5,7 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\reservation;
+use App\Models\planner;
 use App\losts;
 use App\found;
 use Illuminate\Support\Facades\Storage;
@@ -31,8 +32,6 @@ class LostFoundController extends Controller
     {
       return redirect('managereservation');
     }
-
-
 
     public function addfound()
     {
@@ -101,40 +100,52 @@ class LostFoundController extends Controller
         }
     }
 
-
+/*this checks the reservation requested wedding hall availability
+  The requested wedding hall date, wedding hall type are taken into consideratoin
+  when a new reservation is to be made, before that the same requested date and hall type is checked in the database
+  inorder to identify the whether it is already booked or not*/
     public function checkhallavailability()
     {
 
         $button = Input::get('btnn');
 
+        //triggering the availability checking button click
         if ($button == 'Check Availability') {
 
+            //getting the input values from the selected reservation request
             $halltype = Input::get('halltype');
             $edate = Input::get('eventdate');
             $rid = Input::get('id');
+
+            //handling the token macth
             $entry = new found();
             $entry->remember_token = Input::get('_token');
 
+            //query for checking same hall and date
             $tabledata = DB::table('wedreservation')
                 ->where('status', 'Confirmed')
                 ->where('eventdate', $edate)
                 ->where('halltype', $halltype)
                 ->get();
 
-
+            //if same hall for same date is already booked
             if ($tabledata == null) {
 
                 DB::table('wedreservation')
                     ->where('id', $rid)
                     ->update(['flexibility' => "Available"]);
+                return Redirect::to('managereservation')->with('message8', 'HALL IS AVAILABLE');
 
+           //if same hall for same date is not already booked
             } else {
                 DB::table('wedreservation')
                     ->where('id', $rid)
                     ->update(['flexibility' => "Not Available"]);
+
+                return Redirect::to('managereservation')->with('message7', 'HALL IS NOT AVAILABLE ');
             }
 
-            return redirect('managereservation');
+
         }
     }
 
@@ -148,17 +159,27 @@ class LostFoundController extends Controller
 
         if ($button == 'Confirm Reservation') {
 
+             $get_id = Input::get('id');
 
-            $get_id = Input::get('id');
+             $my = " ";
+             $found = DB::table('wedreservation') ->where('id', $get_id )->get();
+             foreach($found as $foundd)
+             {
+                      $my = $foundd->flexibility;
+             }
+                if ( $my == 'Available')
+                {
+                    DB::table('wedreservation')
+                        ->where('id', $get_id)
+                        ->where('flexibility', 'Available')
+                        ->update(['status' => "Confirmed"]);
 
-            DB::table('wedreservation')
-                ->where('id', $get_id)
-                ->where('flexibility', 'Available')
-                ->update(['status' => "Confirmed"]);
-
+                    return Redirect::to('managereservation')->with('message10', 'RESERVATION REQUEST CONFIRMED SUCCESSFULLY');
+                }else
+                    return Redirect::to('managereservation')->with('message9', 'RESERVATION REQUEST IS NOT CONFIRMED AS THE HALL IS NOT AVAIALBLE');
 
         }
-        return redirect('managereservation');
+
     }
 
 
@@ -264,7 +285,7 @@ class LostFoundController extends Controller
 
         }
 
-        return redirect('managereservation');
+        return Redirect::to('managereservation')->with('message5', 'EMAIL SENT SUCCESSFULLY');
 
     }
 
@@ -289,7 +310,7 @@ class LostFoundController extends Controller
 
 
         }
-        return redirect('managereservation')->withInput();
+        return Redirect::to('managereservation')->with('message3', 'WEDDING PLANNER ASSIGNED SUCCESSFULLY');
 
     }
 
@@ -313,6 +334,11 @@ class LostFoundController extends Controller
             $cname = Input::get('name');
             $cemail = Input::get('uemail');
             $phone = Input::get('phone');
+
+            //selecting the relevant assistant email
+            $tabledata = DB::table('planner')->where('name', $firstname)->get();
+            foreach($tabledata as $row)
+                $eemail=$row->email;
 
             $message->to($eemail, $firstname)
                 ->subject("Wedding Hall Planning Notification")
@@ -355,7 +381,57 @@ class LostFoundController extends Controller
                 );
         });
 
-        return redirect('managereservation');
+        return Redirect::to('managereservation')->with('message2', 'NOTIFICATION EMAIL SENT SUCCESSFULLY');
+    }
+
+
+    public function addnewplanner(Request $request)
+    {
+
+        $button = Input::get('addplannerbtn');
+
+        if ($button == 'Add Planner') {
+
+            $rules = array(
+                'name' => 'required|string',
+                'email' => 'required|email',
+                'phone' => 'required|digits:10',
+                'monday' => 'required|string',
+
+            );
+            $validator = Validator::make(Input::all(), $rules);
+            if ($validator->fails()) {
+
+                return Redirect::to('managereservation')->withErrors($validator)->withInput()->with('message1', 'ADDING NEW PLANNER IS FAILED');
+
+            } else {
+                $tuesday = "Available";
+                $wednesday = "Available";
+                $thursday = "Available";
+                $saturday = "Available";
+                $friday = "Available";
+                $status = "Available";
+
+                planner::create([
+                    'name' => $request->input('name'),
+                    'email' => $request->input('email'),
+                    'phone' => $request->input('phone'),
+                    'monday' => $request->input('monday'),
+                    'tuesday' => $tuesday,
+                    'wednesday' => $wednesday,
+                    'thursday' => $thursday,
+                    'friday' => $friday,
+                    'saturday' => $saturday,
+                    'status' => $status
+
+                ]);
+
+
+                return Redirect::to('managereservation')->withErrors($validator)->withInput()->with('message4', 'SUCCESSFULLY NEW PLANNER IS ADDED');
+            }
+        }
+
+        // return view('room', [' Your booking request is sent successfully.']);
     }
 
 

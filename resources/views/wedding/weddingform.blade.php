@@ -10,25 +10,26 @@
         function calctotal()
         {
             var noofpax = parseInt(document.getElementById("pax").value);
-            var halltype =(document.getElementById("halltype").value);
+            var halltype =document.getElementById("halltype").value;
             var noofguestroom =(document.getElementById("noofrooms").value);
-            var session =(document.getElementById("session").value);
+            var session =document.getElementById("session").value;
             var roomprice = noofguestroom * 2000.00 ;
             var hallprice;
             var sessionprice;
+
             if(halltype="samro")
             {
                 hallprice = 1500.00;
             }
-            else  if(halltype="poolside")
+            if(halltype="poolside")
             {
                 hallprice = 1800.00;
             }
-            else  if(halltype="silver")
+            if(halltype="silver")
             {
                 hallprice = 1300.00;
             }
-            else  if(halltype="grand")
+            if(halltype="grand")
             {
                 hallprice = 1000.00;
             }
@@ -37,19 +38,19 @@
             {
                 sessionprice = 1500.00;
             }
-            else  if(session="afternoon")
+            if(session="afternoon")
             {
                 sessionprice = 1800.00;
             }
-            else  if(session="evening")
+            if(session="evening")
             {
                 sessionprice = 1500.00;
             }
-            else  if(session="halfday")
+            if(session="halfday")
             {
                 sessionprice = 2000.00;
             }
-            else if (session = "fullday")
+            if (session = "fullday")
             {
                 sessionprice = 3000.00;
             }
@@ -75,15 +76,42 @@
     <main>
         <div class="centre">
 
-            <div id="contact">
+           <div id="contact">
 
                 <img src="/images/wedimages/reserv.jpg" width="1200" height="400" alt="" />
+
+
                 <form action="{{route('weddingform')}}" role="form" method="post" novalidate>
+                    @if(Session::has('message17'))
+                        <div class="alert alert-danger">
+                            <label class="close"  data-dismiss="alert" aria-hidden="true"></label>
+                            <strong style="color: red">Failed!</strong> {{ Session::get('message17', '') }}
+                        </div>
+                    @endif
+
+                    @if(Session::has('message18'))
+                        <div class="alert alert-success">
+                            <label class="close" data-dismiss="alert" aria-hidden="true"></label>
+                            <strong style="color: green">Success!</strong> {{ Session::get('message18', '') }}
+                        </div>
+                    @endif
+                        @if(Session::has('message26'))
+                            <div class="alert alert-danger">
+                                <label class="close"  data-dismiss="alert" aria-hidden="true"></label>
+                                <strong style="color: red">Failed!</strong> {{ Session::get('message26', '') }}
+                            </div>
+                        @endif
+                        @if(Session::has('message27'))
+                            <div class="alert alert-success">
+                                <label class="close" data-dismiss="alert" aria-hidden="true"></label>
+                                <strong style="color: green">Success!</strong> {{ Session::get('message27', '') }}
+                            </div>
+                        @endif
 
                     <div class="col">
                         <h3>Wedding Plan</h3>
                         <div class="form-group {{ $errors->has('eventdate') ? ' has-error' : ''}}">
-                            <div class="field calendar"><input name="eventdate" type="text" placeholder="Event Date*" id="contact-arrival"  /><i class="fa fa-calendar-o"></i></div>
+                            <div class="field calendar"><input name="eventdate" type="text" placeholder="Event Date*" id="contact-arrival" value="{{old('eventdate')}}"  /><i class="fa fa-calendar-o"></i></div>
                             @if ($errors->has('eventdate')) <span class="help-block">{{ $errors->first('eventdate') }}</span> @endif
                         </div>
 
@@ -107,28 +135,28 @@
                      <h4>Contact Information</h4>
 
                         <div class="form-group{{ $errors->has('firstname') ? ' has-error' : ''}}">
-                            <div class="field"><input name="firstname" type="text" placeholder="First Name*" id="firstname" ></div>
+                            <div class="field"><input name="firstname" type="text" placeholder="First Name*" id="firstname" value="{{old('firstname')}}" ></div>
                             @if ($errors->has('firstname')) <span class="help-block">{{ $errors->first('firstname') }}</span> @endif
                         </div>
 
                         <div class="form-group{{ $errors->has('lastname') ? ' has-error' : ''}}">
-                            <div class="field"><input name="lastname" type="text" placeholder="Last Name*" id="lastname" ></div>
+                            <div class="field"><input name="lastname" type="text" placeholder="Last Name*" id="lastname" value="{{old('lastname')}}" ></div>
                             @if ($errors->has('lastname')) <span class="help-block">{{ $errors->first('lastname') }}</span> @endif
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : ''}}">
-                            <div class="field"><input name="email" type="text" placeholder="Email Address*" id="contact-email" /></div>
+                            <div class="field"><input name="email" type="text" placeholder="Email Address*" id="contact-email" value="{{old('email')}}" /></div>
                             @if ($errors->has('email')) <span class="help-block">{{ $errors->first('email') }}</span> @endif
                         </div>
 
 
                         <div class="form-group{{ $errors->has('phone') ? ' has-error' : ''}}">
-                            <div class="field"><input name="phone" type="text" placeholder="Phone Number*" id="contact-phone" /></div>
+                            <div class="field"><input name="phone" type="text" placeholder="Phone Number*" id="contact-phone" value="{{old('phone')}}"  /></div>
                             @if ($errors->has('phone')) <span class="help-block">{{ $errors->first('phone') }}</span> @endif
                         </div>
 
                         <div class="form-group{{ $errors->has('city') ? ' has-error' : ''}}">
-                            <div class="field"><input name="city" type="text" placeholder="City*" id="contact-email" /></div>
+                            <div class="field"><input name="city" type="text" placeholder="City*" id="contact-email" value="{{old('city')}}" /></div>
                             @if ($errors->has('city')) <span class="help-block">{{ $errors->first('city') }}</span> @endif
                         </div>
 
@@ -144,13 +172,13 @@
 
 
                 <div class="form-group{{ $errors->has('noofrooms') ? ' has-error' : ''}}">
-                    <div class="field"><input name="noofrooms" type="text" placeholder="Number of Guest Rooms" id="noofrooms" /></div>
+                    <div class="field"><input name="noofrooms" type="text" placeholder="Number of Guest Rooms" id="noofrooms" value="{{old('noofrooms')}}" /></div>
                     @if ($errors->has('noofrooms')) <span class="help-block">{{ $errors->first('noofrooms') }}</span> @endif
                 </div>
 
 
                 <div class="form-group{{ $errors->has('pax') ? ' has-error' : ''}}">
-                    <div class="field"><input name="pax" type="text" placeholder="Number of Pax*" id="pax" /></div>
+                    <div class="field"><input name="pax" type="text" placeholder="Number of Pax*" id="pax" value="{{old('pax')}}" /></div>
                     @if ($errors->has('pax')) <span class="help-block">{{ $errors->first('pax') }}</span> @endif
                 </div>
 
@@ -186,7 +214,7 @@
                 <hr>
 
                 <div class="form-group{{ $errors->has('message') ? ' has-error' : ''}}">
-                    <div class="field"><textarea name="message" placeholder="Message" id="contact-message"></textarea></div>
+                    <div class="field"><textarea name="message" placeholder="Message" id="contact-message" value="{{old('message')}}"></textarea></div>
                     @if ($errors->has('message')) <span class="help-block">{{ $errors->first('message') }}</span> @endif
                 </div>
                 <div class="form-group{{ $errors->has('flexibility') ? ' has-error' : ''}}">
@@ -213,18 +241,19 @@
                 </tr>
                 </table>
             </div>
-                </form>
+
                 <table>
+
                     <tr>
                     <td>
                         <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                         <div class="form-group">
-                            <h4><input type="submit" name="sub" value="Calculate Total Rate" class="btn btn-default" onclick="calctotal()" >
+                            <h4><input type="submit" name="submitcalc" value="Calculate Total Rate" class="btn btn-default"  >
                                 <span data-hover="Add"></span></h4>
                         </div>
                     </td>
                     </tr>
-
+                    </form>
             </table>
 
 

@@ -98,7 +98,7 @@
 
                     </tr>
                     <tr>
-                        <td><strong>Full Payment</strong></td>
+                        <td><strong>Hall price per plate</strong></td>
                         <td><?php echo $row->fullpayment; ?></td>
 
                     </tr>

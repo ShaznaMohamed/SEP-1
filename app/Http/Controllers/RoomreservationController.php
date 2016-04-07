@@ -22,7 +22,7 @@ class RoomreservationController extends Controller
 
     public function getroomconfirm()
     {
-        return view('/room/roomconfirm');
+        return view('/admin/room/roomconfirm');
     }
 
     public function paypalstart(Request $request)
@@ -41,7 +41,7 @@ class RoomreservationController extends Controller
       ]
       );
 
-      $status = "unconfirmed";
+      $status = "unassigned";
       Roomreservation::create([
           'name' => $request->input('name'),
           'email' => $request->input('email'),
