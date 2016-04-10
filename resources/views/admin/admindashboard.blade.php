@@ -55,7 +55,7 @@
               <div class="testimonial">
                     <div class="details">
                         <h2>Application Backup</h2>
-                        <a href="adminbackup" class="button"><span data-hover="Administrator Management">Application Backup</span></a>
+                        <a href="adminbackup" class="button"><span data-hover="Application Backup">Application Backup</span></a>
                     </div>
                 </div>
             </figure>
