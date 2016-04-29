@@ -15,7 +15,7 @@ class TestimonialsController extends Controller
   public function getReviewAdmin()
   {
     return view::make('admin\testimonials\AdminTestimonials',[
-      'testimonials' => testimonials::where('hidden', '=', 0)->paginate(5)
+      'testimonials' => testimonials::paginate(5)
     ]);
   }
   /*

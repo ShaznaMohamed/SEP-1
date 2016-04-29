@@ -251,9 +251,9 @@ Route::group(['middleware' => ['web']], function () {
 |--------------------------------------------------------------------------
 |
 */
-  Route::get('admintestimonials', [
+  Route::get('admintestimonialsview', [
     'uses' => '\App\Http\Controllers\TestimonialsController@getReviewAdmin',
-    'as' => 'adminTestimonials',
+    'as' => 'admintestimonialsview',
   ]);
 
   Route::get('/testimonials', [
