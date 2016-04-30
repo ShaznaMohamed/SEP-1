@@ -58,7 +58,7 @@
                     <div class="details">
                         <h2>Read what our past guests have said about us</h2>
                         <p>Your feedback means the world to us, it's how we improve our level of service. Read testimonials from past guests and feel free to share your experience if you've stayed with us before.</p>
-                        <a href="reviewform" class="button" id="testimonialpop"><span data-hover="Write in Guest Book">Write in Guest Book</span></a>
+                        <a href="testimonialsform" class="button" id="testimonialpop"><span data-hover="Write in Guest Book">Write in Guest Book</span></a>
                     </div>
                 </div>
             </figure>
@@ -72,14 +72,14 @@
                 </div>
             </figure>
 
-						@foreach($reviewdata as $reviewdata)
+						@foreach($testimonialsdata as $testimonialsdata)
 							<figure>
 							<div class="testimonial">
 										<i class="fa fa-quote-left"></i>
-										<p>{{ $reviewdata->service }}</p>
-										<h2>{{ $reviewdata->title }}</h2>
-										<p>{{ $reviewdata->message }}</p>
-										<p class="name">&ndash; <strong>{{ $reviewdata->name }}</strong> <span>({{ $reviewdata->location }})</span></p>
+										<p>{{ $testimonialsdata->service }}</p>
+										<h2>{{ $testimonialsdata->title }}</h2>
+										<p>{{ $testimonialsdata->message }}</p>
+										<p class="name">&ndash; <strong>{{ $testimonialsdata->name }}</strong> <span>({{ $testimonialsdata->location }})</span></p>
 								</div>
 						</figure>
 		        @endforeach

@@ -116,12 +116,12 @@ Route::get('/reviews', [
   'as' => 'reviews',
 ]);
 
-Route::get('/reviewsform', [
+Route::get('/reviewform', [
   'uses' => '\App\Http\Controllers\ReviewController@getForm',
-  'as' => 'reviewsform',
+  'as' => 'reviewform',
 ]);
 
-Route::post('/reviewsform', [
+Route::post('/reviewform', [
   'uses' => '\App\Http\Controllers\ReviewController@postReview',
 ]);
 

@@ -23,7 +23,7 @@
               <div class="testimonial">
                     <div class="details">
                         <h2>Testimonial Management</h2>
-                        <a href="admintestimonials" class="button"><span data-hover="Testimonial Management">Testimonial Management</span></a>
+                        <a href="adminreviews" class="button"><span data-hover="Testimonial Management">Testimonial Management</span></a>
                     </div>
                 </div>
             </figure>

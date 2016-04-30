@@ -16,6 +16,38 @@ class ReviewController extends Controller
     ]);
   }
 
+  public function getForm(){
+    return View('reviews/reviewform');
+  }
+
+  public function getThankYou(){
+    return View('reviews/reviewthankyou');
+  }
+
+  public function postReview(Request $request)
+  {
+    $this->validate($request, [
+      'name' => 'required||min:4',
+      'location' => 'required|min:4',
+      'email' => 'required|email',
+      'service' => 'required|min:20',
+      'title' => 'required|min:15',
+      'message' => 'required|min:30',
+    ]);
+
+    Testimonials::create([
+      'email' => $request->input('email'),
+      'name' => $request->input('name'),
+      'location' => $request->input('location'),
+      'service' => $request->input('service'),
+      'title' => $request->input('title'),
+      'message' => $request->input('message'),
+    ]);
+    return View('reviews/reviewthankyou');
+  }
+
+  //Administrator Control
+
   public function adminreviews()
   {
     return view::make('reviews/reviewmanage',[
