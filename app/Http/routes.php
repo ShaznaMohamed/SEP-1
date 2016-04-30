@@ -106,6 +106,18 @@ Route::group(['middleware' => ['web']], function () {
 
 /*
 |--------------------------------------------------------------------------
+| Reviews
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::get('/reviews', [
+  'uses' => '\App\Http\Controllers\ReviewController@showReviewsAll',
+  'as' => 'reviews',
+]);
+
+/*
+|--------------------------------------------------------------------------
 | Reservation history Routes
 |--------------------------------------------------------------------------
 |
@@ -245,30 +257,6 @@ Route::group(['middleware' => ['web']], function () {
   ]);
 
 
-/*
-|--------------------------------------------------------------------------
-| Testimonials Routes
-|--------------------------------------------------------------------------
-|
-*/
-  Route::get('admintestimonialsview', [
-    'uses' => '\App\Http\Controllers\TestimonialsController@getReviewAdmin',
-    'as' => 'admintestimonialsview',
-  ]);
-
-  Route::get('/testimonials', [
-    'uses' => '\App\Http\Controllers\TestimonialsController@getReview',
-    'as' => 'testimonials',
-  ]);
-
-  Route::get('/testimonialsform', [
-    'uses' => '\App\Http\Controllers\TestimonialsController@getForm',
-    'as' => 'testimonialsform',
-  ]);
-
-  Route::post('/testimonialsform', [
-    'uses' => '\App\Http\Controllers\TestimonialsController@postReview',
-  ]);
 
 /*
 |--------------------------------------------------------------------------
@@ -867,7 +855,7 @@ Route::group(['middleware' => ['web']], function () {
 
 /*
 |--------------------------------------------------------------------------
-| Adminitrator Control
+| Administrator Control
 |--------------------------------------------------------------------------
 |
 */
@@ -880,7 +868,6 @@ Route::group(['middleware' => ['web']], function () {
     'uses' => '\App\Http\Controllers\BackupController@index',
     'as' => 'adminbackedup',
   ]);
-
 
   Route::get('/adminbackupnow', [
     'uses' => '\App\Http\Controllers\BackupController@BackupNow',
@@ -896,8 +883,6 @@ Route::group(['middleware' => ['web']], function () {
     'uses' => '\App\Http\Controllers\BackupController@BackupClean',
     'as' => 'adminbackupclean',
   ]);
-
-
 
   Route::get('/adminlist', [
     'uses' => '\App\Http\Controllers\AdminUsers@getAdminList',
@@ -931,6 +916,14 @@ Route::group(['middleware' => ['web']], function () {
   Route::post('/adminedit', [
     'uses' => '\App\Http\Controllers\AdminUsers@adminEdit',
   ]);
+
+/*
+|--------------------------------------------------------------------------
+| Reviews
+|--------------------------------------------------------------------------
+|
+*/
+
 
 /*
 |--------------------------------------------------------------------------
@@ -1005,16 +998,6 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('/adminuserdel/{id}', [
     'uses' => '\App\Http\Controllers\UserController@adminuserdel',
     'as' => 'adminuserdel',
-  ]);
-
-  Route::get('/admintestimonialhide/{id}', [
-    'uses' => '\App\Http\Controllers\TestimonialsController@adminhide',
-    'as' => 'admintestimonialhide',
-  ]);
-
-  Route::get('/admintestimonialshow/{id}', [
-    'uses' => '\App\Http\Controllers\TestimonialsController@adminshow',
-    'as' => 'admintestimonialshow',
   ]);
 
   //Edit Email
