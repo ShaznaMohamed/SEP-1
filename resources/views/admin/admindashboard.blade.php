@@ -31,7 +31,7 @@
               <div class="testimonial">
                     <div class="details">
                         <h2>Email Management</h2>
-                        <a href="admincontactus" class="button"><span data-hover="Email Management">Email Management</span></a>
+                        <a href="inbox" class="button"><span data-hover="Email Management">Email Management</span></a>
                     </div>
                 </div>
             </figure>

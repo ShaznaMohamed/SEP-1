@@ -19,12 +19,12 @@
           <li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
           <li>{{ Html::link('accommodation', 'Accommodation') }}
             <ul>
-              <li>{{ Html::link('/room/room', 'Rooms') }}</li>
+              <li>{{ Html::link('room', 'Rooms') }}</li>
               <li>{{ Html::link('dining', 'Dining') }}</li>
               <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
             </ul>
           </li>
-          <li>{{ Html::link('/wedding/wedding', 'Weddings') }}</li>
+          <li>{{ Html::link('wedding', 'Weddings') }}</li>
 
           <li>{{ Html::link('events', 'Events') }}
             <ul>
@@ -36,7 +36,7 @@
           <li>{{ Html::link('gallery', 'Gallery') }}</li>
           <li>{{ Html::link('specials', 'Offers') }}</li>
           <li>{{ Html::link('location', 'Location') }}</li>
-          <li>{{ Html::link('testimonials', 'Testimonials') }}</li>
+          <li>{{ Html::link('reviews', 'Testimonials') }}</li>
           <li>{{ Html::link('blog', 'Blog') }}</li>
           <li>{{ Html::link('contact', 'Contact Us') }}
           <ul>
