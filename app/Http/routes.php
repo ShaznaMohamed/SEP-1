@@ -116,6 +116,15 @@ Route::get('/reviews', [
   'as' => 'reviews',
 ]);
 
+Route::get('/reviewsform', [
+  'uses' => '\App\Http\Controllers\ReviewController@getForm',
+  'as' => 'reviewsform',
+]);
+
+Route::post('/reviewsform', [
+  'uses' => '\App\Http\Controllers\ReviewController@postReview',
+]);
+
 /*
 |--------------------------------------------------------------------------
 | Reservation history Routes
@@ -924,6 +933,20 @@ Route::get('/reviews', [
 |
 */
 
+  Route::get('/reviewhide/{id}', [
+    'uses' => '\App\Http\Controllers\ReviewController@reviewhide',
+    'as' => 'reviewhide',
+  ]);
+
+  Route::get('/reviewshow/{id}', [
+    'uses' => '\App\Http\Controllers\ReviewController@reviewshow',
+    'as' => 'reviewshow',
+  ]);
+
+  Route::get('adminreviews', [
+    'uses' => '\App\Http\Controllers\ReviewController@adminreviews',
+    'as' => 'adminreviews',
+  ]);
 
 /*
 |--------------------------------------------------------------------------

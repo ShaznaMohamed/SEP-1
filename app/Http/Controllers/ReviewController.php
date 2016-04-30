@@ -15,4 +15,34 @@ class ReviewController extends Controller
       'reviewdata' => testimonials::where('hidden', '=', 0)->paginate(5)
     ]);
   }
+
+  public function adminreviews()
+  {
+    return view::make('reviews/reviewmanage',[
+      'reviewsdata' => testimonials::paginate(5)
+    ]);
+  }
+
+  public function reviewhide($id)
+  {
+    $hide = Testimonials::find($id);
+
+    $hide->hidden = 1;
+
+    $hide->save();
+
+    return redirect()->back();
+  }
+
+  public function reviewshow($id)
+  {
+
+    $hide = Testimonials::find($id);
+
+    $hide->hidden = 0;
+
+    $hide->save();
+
+    return redirect()->back();
+  }
 }

@@ -23,22 +23,22 @@
                         <th>Hidden</th>
                         <th>Actions</th>
                     </tr>
-                    @foreach($testimonials as $testimonial)
+                    @foreach($reviewsdata as $reviewdata)
                     <tr>
-                        <td>{{ $testimonial->id }}</td>
-                        <td><strong>{{ $testimonial->name }}</strong></td>
-                        <td>{{ $testimonial->email }}</td>
-                        <td>{{ $testimonial->location }}</td>
-                        <td>{{ $testimonial->service }}</td>
-                        <td>{{ $testimonial->title }}</td>
-                        <td>{{ $testimonial->message }}</td>
-                        <td>{{ $testimonial->hidden }}</td>
-                        <td><a href="{{URL::route('admintestimonialhide',array('id' => $testimonial->id))}}" id="tablebutton"><i class="fa fa-eye-slash"></i></a>
-                        <a href="{{URL::route('admintestimonialshow',array('id' => $testimonial->id))}}" id="tablebutton"><i class="fa fa-eye"></i></a></td>
+                        <td>{{ $reviewdata->id }}</td>
+                        <td><strong>{{ $reviewdata->name }}</strong></td>
+                        <td>{{ $reviewdata->email }}</td>
+                        <td>{{ $reviewdata->location }}</td>
+                        <td>{{ $reviewdata->service }}</td>
+                        <td>{{ $reviewdata->title }}</td>
+                        <td>{{ $reviewdata->message }}</td>
+                        <td>{{ $reviewdata->hidden }}</td>
+                        <td><a href="{{URL::route('reviewhide',array('id' => $reviewdata->id))}}" id="tablebutton"><i class="fa fa-eye-slash"></i></a>
+                        <a href="{{URL::route('reviewshow',array('id' => $reviewdata->id))}}" id="tablebutton"><i class="fa fa-eye"></i></a></td>
                     </tr>
                     @endforeach
                 </table>
-                {{$testimonials->links()}}
+                {{$reviewsdata->links()}}
             </div>
         </div>
     </main>
