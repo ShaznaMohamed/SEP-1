@@ -11,15 +11,6 @@
 |
 */
 
-// Test Email
-use Illuminate\Support\Facades\Mail;
-
-Route::get('testemail', function () {
-  Mail::send('emails.test', ['name' => 'Novica'], function ($message) {
-    $message->to('dsr931108@gmail.com', 'Some guy')->subject('Welcome');
-  });
-});
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -853,12 +844,17 @@ Route::post('/reviewform', [
 |--------------------------------------------------------------------------
 | Administrator Routes
 |--------------------------------------------------------------------------
-|
 */
 
   Route::group(['middleware' => 'admin'], function(){
 
   Route::get('/dashboard', 'AdminController@index');
+
+/*
+|--------------------------------------------------------------------------
+| Menu Control
+|--------------------------------------------------------------------------
+*/
 
   Route::get('/menudashboard', 'AdminController@menu');
 
@@ -866,8 +862,8 @@ Route::post('/reviewform', [
 |--------------------------------------------------------------------------
 | Administrator Control
 |--------------------------------------------------------------------------
-|
 */
+
   Route::get('/adminbackup', [
     'uses' => '\App\Http\Controllers\BackupController@index',
     'as' => 'adminbackup',
@@ -930,7 +926,6 @@ Route::post('/reviewform', [
 |--------------------------------------------------------------------------
 | Reviews
 |--------------------------------------------------------------------------
-|
 */
 
   Route::get('/reviewhide/{id}', [
@@ -952,7 +947,6 @@ Route::post('/reviewform', [
 |--------------------------------------------------------------------------
 | FAQ
 |--------------------------------------------------------------------------
-|
 */
 
   Route::get('/adminfaq', [
@@ -987,7 +981,6 @@ Route::post('/reviewform', [
 |--------------------------------------------------------------------------
 | Users
 |--------------------------------------------------------------------------
-|
 */
 
   Route::get('/adminusers', [
@@ -1057,45 +1050,42 @@ Route::post('/reviewform', [
 |--------------------------------------------------------------------------
 | Contact Us
 |--------------------------------------------------------------------------
-|
 */
 
-  Route::get('/admincontactus', [
-    'uses' => '\App\Http\Controllers\ContactController@index',
-    'as' => 'admincontactus',
+  Route::get('/inbox', [
+    'uses' => '\App\Http\Controllers\MailController@index',
+    'as' => 'inbox',
   ]);
 
-  Route::get('/admincontactsent', [
-    'uses' => '\App\Http\Controllers\ContactController@indexSent',
-    'as' => 'admincontactussent',
+  Route::get('/sent', [
+    'uses' => '\App\Http\Controllers\MailController@indexSent',
+    'as' => 'sent',
   ]);
 
-  Route::get('/admincontactusreply', [
-    'uses' => '\App\Http\Controllers\ContactController@adminSendForm',
-    'as' => 'admincontactusreply',
+  Route::get('/replyuser/{id}', [
+    'uses' => '\App\Http\Controllers\MailController@adminSendFormUser',
+    'as' => 'replyuser',
   ]);
 
-  Route::get('/admincontactusreplyuser/{id}', [
-    'uses' => '\App\Http\Controllers\ContactController@adminSendFormUser',
-    'as' => 'admincontactusreplyuser',
+  Route::get('/reply', [
+    'uses' => '\App\Http\Controllers\MailController@adminSendForm',
+    'as' => 'reply',
   ]);
 
-  Route::post('/admincontactusreply', [
-    'uses' => '\App\Http\Controllers\ContactController@adminSend',
-    'as' => 'admincontactusreply',
+  Route::post('/reply', [
+    'uses' => '\App\Http\Controllers\MailController@adminSend',
+    'as' => 'reply',
   ]);
 
-  Route::get('/admincontactusreplied', [
-    'uses' => '\App\Http\Controllers\ContactController@adminSent',
-    'as' => 'admincontactusreplied',
+  Route::get('/replied', [
+    'uses' => '\App\Http\Controllers\MailController@adminSent',
+    'as' => 'replied',
   ]);
-
 
 /*
 |--------------------------------------------------------------------------
 | Wedding and Room
 |--------------------------------------------------------------------------
-|
 */
 
   Route::get('adminroom', function () {
@@ -1191,7 +1181,6 @@ Route::post('/reviewform', [
 |--------------------------------------------------------------------------
 | Gallery Control Routes
 |--------------------------------------------------------------------------
-|
 */
 
   Route::get('upload', function () {

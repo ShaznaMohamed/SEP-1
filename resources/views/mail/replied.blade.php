@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/css/global.css">
-  <link class="colour" rel="stylesheet" href="/css/colour-gold.css">
+  <link class="colour" rel="stylesheet" href="/css/colour-blue.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/conclick="window.close()"ss/font-awesome.min.css">
   <script src="system/js/plugins.js"></script>
   <script src="system/js/global.js"></script>
@@ -12,10 +12,9 @@
 <body>
   <div id="pop" class="popform">
     <div class="container">
-      <p class="title"><strong>Thank you for sharing your experience withus</strong></p>
-      <p>Your review would help to make our service better for everyone</p>
+      <p class="title"><strong>Message Sent</strong></p>
       <form>
-      <button class="btn btn-default" id="refresh"><span data-hover="See your review">See your review</span></button>
+      <button class="button" id="refresh"><span data-hover="Go back">Go Back</span></button>
       <script type="text/javascript">
       document.getElementById("refresh").onclick = function () {
         window.parent.location.reload();
