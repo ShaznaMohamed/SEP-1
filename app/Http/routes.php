@@ -721,7 +721,7 @@ Route::post('/reviewform', [
   ]);
 
   Route::get('wedding', function () {
-    return View::make('wedding');
+    return View::make('wedding/wedding');
   });
 
   Route::get('samroreception', function () {

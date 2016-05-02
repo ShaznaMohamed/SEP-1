@@ -207,14 +207,14 @@
                         <td>
 
                             <label for="start_time" class="control-label">Select Room Type</label>
-                            <div class="form-group{{ $errors->has('roomtype') ? ' has-error' : ''}}">
-                                <div class="field"> <select name="roomtype" id="rooms" class="infants" onchange="getvalues()">
+                            <div class="form-group{{ $errors->has('roomtypee') ? ' has-error' : ''}}">
+                                <div class="field"> <select name="roomtypee" id="rooms" class="infants" onchange="getvalues()">
                                         <option value="royal" selected="selected">Royal Room</option>
                                         <option value="deluxe" >Deluxe</option>
                                         <option value="premier" >Premier Suite</option>
                                         <option value="junior" >Junior Suite</option>
                                     /</select></div>
-                                @if ($errors->has('roomtype')) <span class="help-block">{{ $errors->first('roomtype') }}</span> @endif
+                                @if ($errors->has('roomtypee')) <span class="help-block">{{ $errors->first('roomtypee') }}</span> @endif
                             </div>
                         </td>
 

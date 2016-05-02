@@ -15,22 +15,30 @@
     <div class="centre">
       <a href="/" class="logo"><img alt="" src="/images/logo.png" /></a>
       <nav>
-        <ul>
-          <li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
-          <li>{{ Html::link('accommodation', 'Accommodation') }}
-            <ul>
-              <li>{{ Html::link('room', 'Rooms') }}</li>
-              <li>{{ Html::link('dining', 'Dining') }}</li>
-              <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
-            </ul>
-          </li>
-          <li>{{ Html::link('wedding', 'Weddings') }}</li>
-
-          <li>{{ Html::link('events', 'Events') }}
-            <ul>
-            <li>{{ Html::link('hallDetails', 'Hall Details') }}</li>
-            </ul>
+          <ul>
+            <li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
+            <li>{{ Html::link('room', 'Accommodation') }}
+              <ul>
+                <li>{{ Html::link('room', 'Rooms') }}</li>
+                <li>{{ Html::link('dining', 'Dining') }}</li>
+                <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
+              </ul>
             </li>
+            <li>{{ Html::link('wedding', 'Weddings') }}
+  		<ul>
+                <li>{{ Html::link('samroreception', 'Samro Reception') }}</li>
+                <li>{{ Html::link('silverballroom', 'Silver Ball Room') }}</li>
+                <li>{{ Html::link('poosideballroom', 'Pool Side Ball Room') }}</li>
+                <li>{{ Html::link('grandballroom', 'Grand Ball Room') }}</li>
+              </ul>
+
+            </li>
+
+            <li>{{ Html::link('events', 'Events') }}
+              <ul>
+              <li>{{ Html::link('hallDetails', 'Hall Details') }}</li>
+              </ul>
+              </li>
 
 
           <li>{{ Html::link('gallery', 'Gallery') }}</li>

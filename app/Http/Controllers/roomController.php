@@ -32,7 +32,7 @@ class roomController extends Controller
          if ($button == 'Update') {
 
              $rules = array(
-                'roomtype' => 'required',
+                'roomtypee' => 'required',
                 'price' => 'required',
 
 
@@ -51,7 +51,7 @@ class roomController extends Controller
         $telephone = Input::has('telephone') ? true : false;
         $diningtable = Input::has('diningtable') ? true : false;
 
-        $selectedroom = Input::get('roomtype');
+        $selectedroom = $_POST['roomtypee'];
         $price = $_POST['price'];
 
         DB::table('room')
