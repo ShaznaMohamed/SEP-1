@@ -25,6 +25,7 @@ class Roomreservation extends Model
         'children',
         'status',
         'price',
+        'roomID'
 
 
     ];

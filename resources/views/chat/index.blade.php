@@ -47,6 +47,35 @@
     background: rgba(255,255,255,0.5);
     margin: 0 0 10px 0;
 }
+    
+    
+    
+dateEl {
+    color: dimgray;
+    display: block;
+    font-size: 12px;
+    text-align-last: right;
+    margin-top: 2px;
+    
+}
+    
+unameEl {
+    font-size: 30px;
+    border-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: darkmagenta;
+    color: darkslateblue;
+    display: block;
+    
+}
+    
+msgEl {
+    display: block;
+    font-size: 20px;
+    margin-top: 8px;
+    
+}    
 </style>
 
   <script src='https://cdn.firebase.com/js/client/2.4.0/firebase.js'></script>
@@ -87,14 +116,15 @@
    postButton.addEventListener("click", function() {
      var msgUser = usernameInput.value;
      var msgText = textInput.value;
-     
+     var msgDate = Date();
+       
        
        if(msgText == ""){
            alert('Message Cant be empty');
            
        }
        else{
-     myFirebase.push({username:temp, text:msgText});
+     myFirebase.push({username:temp, text:msgText, date:msgDate});
      textInput.value = "";
        }
    });
@@ -103,15 +133,19 @@
    myFirebase.on('child_added', function(snapshot) {
         var msg = snapshot.val();
 
-        var msgUsernameElement = document.createElement("b");
+        var msgUsernameElement = document.createElement("unameEl");
         msgUsernameElement.textContent = msg.username;
 
-        var msgTextElement = document.createElement("p");
+        var msgTextElement = document.createElement("msgEl");
         msgTextElement.textContent = msg.text;
+       
+        var msgDateElement = document.createElement("dateEl");
+        msgDateElement.textContent = msg.date;
 
         var msgElement = document.createElement("div");
         msgElement.appendChild(msgUsernameElement);
         msgElement.appendChild(msgTextElement);
+        msgElement.appendChild(msgDateElement);
         msgElement.className = "msg";
         document.getElementById("results").appendChild(msgElement);
       });

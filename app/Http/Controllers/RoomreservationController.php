@@ -7,6 +7,7 @@ use App\Models\Roomreservation;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
 
 class RoomreservationController extends Controller
 {
@@ -41,6 +42,10 @@ class RoomreservationController extends Controller
       ]
       );
 
+      $temproom = DB::table('room')
+          ->where('roomtype','=', $request->input('type'))
+          ->value('id');
+
       $status = "unassigned";
       Roomreservation::create([
           'name' => $request->input('name'),
@@ -54,6 +59,8 @@ class RoomreservationController extends Controller
           'children' => $request->input('children'),
           'price' => $AMOUNT,
           'roomtype' => $request->input('type'),
+          'roomID' => $temproom,
+
 
 
       ]);

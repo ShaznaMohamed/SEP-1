@@ -158,28 +158,23 @@
 
 
                     </div>
-
-
-
-
-
-                               <label for="mytotal" style="font-size:20px;">Total(Rs.)</label>
+                    <table>
+                      <tr>
+                        <td>
+                               <label style="font-size:20px;">Total(Rs.) :</label>
+                        </td>
+                        <td>
                                <input style="font-size:20px;  float:left;" readonly id="mytotal" name="mytotal"/>
+                        </td>
+                      </tr>
+                    </table>
+
                                 <div class="form-group">
                                     <button type="button" class="btn btn-default" onclick="calctotalrate()"><span data-hover="Total">CALCULATE</span></button>
                                     <button type="submit" class="btn btn-default"><span data-hover="Payment">PROCEED</span></button>
                                 </div>
 
-
-
-
                     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-
-
-
-
-
-
 
                 </form>
             </div>

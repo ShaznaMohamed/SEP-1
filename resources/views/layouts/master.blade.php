@@ -15,40 +15,38 @@
     <div class="centre">
       <a href="/" class="logo"><img alt="" src="/images/logo.png" /></a>
       <nav>
-          <ul>
-            <li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
-            <li>{{ Html::link('room', 'Accommodation') }}
-              <ul>
-                <li>{{ Html::link('room', 'Rooms') }}</li>
-                <li>{{ Html::link('dining', 'Dining') }}</li>
-                <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
-              </ul>
-            </li>
-            <li>{{ Html::link('wedding', 'Weddings') }}
-  		<ul>
-                <li>{{ Html::link('samroreception', 'Samro Reception') }}</li>
-                <li>{{ Html::link('silverballroom', 'Silver Ball Room') }}</li>
-                <li>{{ Html::link('poosideballroom', 'Pool Side Ball Room') }}</li>
-                <li>{{ Html::link('grandballroom', 'Grand Ball Room') }}</li>
-              </ul>
+        <ul>
+          <li class="mobile"><a href="contact.php" class="navbook">Book Online</a></li>
+          <li>{{ Html::link('room', 'Accommodation') }}
+            <ul>
+              <li>{{ Html::link('dining', 'Dining') }}</li>
+              <li>{{ Html::link('restaurant', 'Restaurant') }}</li>
+            </ul>
+          </li>
+          <li>{{ Html::link('wedding', 'Weddings') }}
+		          <ul>
+              <li>{{ Html::link('samroreception', 'Samro Reception') }}</li>
+              <li>{{ Html::link('silverballroom', 'Silver Ball Room') }}</li>
+              <li>{{ Html::link('poosideballroom', 'Pool Side Ball Room') }}</li>
+              <li>{{ Html::link('grandballroom', 'Grand Ball Room') }}</li>
+            </ul>
 
+          <li>{{ Html::link('events', 'Events') }}
+            <ul>
+            <li>{{ Html::link('hallDetails', 'Hall Details') }}</li>
+            </ul>
             </li>
-
-            <li>{{ Html::link('events', 'Events') }}
-              <ul>
-              <li>{{ Html::link('hallDetails', 'Hall Details') }}</li>
-              </ul>
-              </li>
 
 
           <li>{{ Html::link('gallery', 'Gallery') }}</li>
           <li>{{ Html::link('specials', 'Offers') }}</li>
           <li>{{ Html::link('location', 'Location') }}</li>
           <li>{{ Html::link('reviews', 'Testimonials') }}</li>
-          <li>{{ Html::link('blog', 'Blog') }}</li>
+          <li>{{ Html::link('blog-post', 'Blog') }}</li>
           <li>{{ Html::link('contact', 'Contact Us') }}
           <ul>
             <li>{{ Html::link('about', 'About Us') }}</li>
+            <li>{{ Html::link('chat', 'Live chat with admin') }}</li>
           </ul>
           </li>
           <li>{{ Html::link('faq', 'FAQ') }}</li>
@@ -127,7 +125,7 @@
     	<!-- Footer Links | START -->
     	<div id="footerlinks">
         <div class="centre">
-          <span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Amalya Reach Holiday Resort</strong></span><a href="index.html">Home</a><a href="sitemap.html">Sitemap</a><a href="faq">FAQ</a><span>
+          <span>Copyright &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> <strong>Amalya Reach Holiday Resort</strong></span><a href="/">Home</a><a href="sitemap">Sitemap</a><a href="faq">FAQ</a><span>
         </div>
       </div>
         <!-- Footer Links | END -->

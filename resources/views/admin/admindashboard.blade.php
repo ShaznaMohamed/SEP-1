@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </figure>
-            <figure class="cover">
+                        <figure class="cover">
               <div class="testimonial">
                     <div class="details">
                         <h2>FAQ Management</h2>
@@ -56,6 +56,14 @@
                     <div class="details">
                         <h2>Application Backup</h2>
                         <a href="adminbackup" class="button"><span data-hover="Application Backup">Application Backup</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Hall Details Management</h2>
+                        <a href="halledit" class="button"><span data-hover="Hall Details Management">Hall Details Management</span></a>
                     </div>
                 </div>
             </figure>
@@ -120,6 +128,14 @@
                     <div class="details">
                         <h2>Wedding Dashboard</h2>
                         <a href="weddingdashboard" class="button"><span data-hover="Manage Reservations">Manage Reservations</span></a>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cover">
+              <div class="testimonial">
+                    <div class="details">
+                        <h2>Report Management</h2>
+                        <a href="reportindex" class="button"><span data-hover="Report Management">Report Management</span></a>
                     </div>
                 </div>
             </figure>

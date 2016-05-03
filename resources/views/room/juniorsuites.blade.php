@@ -74,7 +74,6 @@
                         Enjoy a stay in this large high-floor suite, complete with scenic views, seating area and range of convenient amenities. Take advantage of Executive Lounge access, offering complimentary breakfast and refreshments.
 
                         Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV. Special touches include a plush bathrobe, slippers and daily newspaper.</p>
-                    <a href="{{url('roomform')}}" class="button"><span data-hover="Book Room">Book Room</span></a>
                 </article>
                 {{--<ul class="pagination">--}}
                 {{--<li><span>1</span></li>--}}

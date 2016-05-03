@@ -67,8 +67,8 @@ Route::group(['middleware' => ['web']], function () {
     return View::make('sitemap');
   });
 
-  Route::get('hallDetails', function () {
-    return View::make('events/hallDetails');
+  Route::get('halls', function () {
+    return View::make('events/hdetails');
   });
 
   Route::get('home', function () {

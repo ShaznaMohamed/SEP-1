@@ -61,9 +61,7 @@
                     <p class="intro">Unwind in a traditional Royal Suite offering a sofa and coffee table. Enjoy breathtaking views from the large windows or sit back in the easy chair and watch a movie. Take in the stunning ocean view from this stylish guest room, featuring 1 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the TV.</p>
 
                     <p>Spoil yourself in this luxurious Art Deco-style 50m²/538sq.ft suite offering seating area with sofa and Executive Lounge access with free breakfast and refreshments. Catch up on work at the desk, keep in touch with internet access or relax in the marble bathroom. Some rooms have a sea view or dining table. Refresh in the bathroom with separate tub and shower. Special touches include newspapers, bathrobe, slippers, mineral water and fruit.</p>
-                    <a href="{{url('roomform')}}" class="button"><span data-hover="Book Room">Book Room</span></a>
                 </article>
-
             </div>
             <!-- Sidebar | START -->
             <!--price retrieving from database-->

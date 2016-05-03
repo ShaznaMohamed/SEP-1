@@ -65,7 +65,6 @@
                         Relax in this Art Deco-style guest room, featuring 1 king bed and a seating area with sofa. Work away at the desk and browse online with WiFi (fees apply) or unwind with a movie on the 32-inch LCD TV.
 
                         Refresh in the bathroom with separate tub and shower. Special touches include a selection of magazines and daily newspaper.</p>
-                    <a href="{{url('roomform')}}" class="button"><span data-hover="Book Room">Book Room</span></a>
                 </article>
 
             </div>

@@ -8,56 +8,56 @@
         <div class="item">
           <div class="details">
             <div class="title"><span>Your gateaway to the heaven</span></div>
-            <div class="buttoncontainer"><a href="accommodation" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
+            <div class="buttoncontainer"><a href="gallery" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
           </div>
           <img alt="" src="images/slideshow/1.png" width="1800" height="800" />
         </div>
         <div class="item">
           <div class="details">
-            {{-- <div class="title"><span>Absolute Waterfront Luxury</span></div>
-            <div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div> --}}
+              <div class="title"><span>Heaven is where the food is tasty</span></div>
+              <div class="buttoncontainer"><a href="room" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
           </div>
           <img alt="" src="images/slideshow/2.png" width="1800" height="800" />
         </div>
         <div class="item">
           <div class="details">
-            {{-- <div class="title"><span>Absolute Waterfront Luxury</span></div>
-            <div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div> --}}
+            <div class="title"><span>Crunchiness to the crispy yum</span></div>
+            <div class="buttoncontainer"><a href="room" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
           </div>
           <img alt="" src="images/slideshow/3.png" width="1800" height="800" />
         </div>
         <div class="item">
           <div class="details">
-            {{-- <div class="title"><span>Absolute Waterfront Luxury</span></div>
-            <div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div> --}}
+            <div class="title"><span>Made with love</span></div>
+            <div class="buttoncontainer"><a href="room" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
           </div>
           <img alt="" src="images/slideshow/4.png" width="1800" height="800" />
         </div>
         <div class="item">
           <div class="details">
-            {{-- <div class="title"><span>Absolute Waterfront Luxury</span></div>
-            <div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div> --}}
+            <div class="title"><span>For the color crazy</span></div>
+            <div class="buttoncontainer"><a href="gallery" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
           </div>
           <img alt="" src="images/slideshow/5.png" width="1800" height="800" />
         </div>
         <div class="item">
           <div class="details">
-            {{-- <div class="title"><span>Absolute Waterfront Luxury</span></div>
-            <div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div> --}}
+            <div class="title"><span>Minimal elegance</span></div>
+            <div class="buttoncontainer"><a href="gallery" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
           </div>
           <img alt="" src="images/slideshow/6.png" width="1800" height="800" />
         </div>
         <div class="item">
           <div class="details">
-            {{-- <div class="title"><span>Absolute Waterfront Luxury</span></div>
-            <div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div> --}}
+            <div class="title"><span>Just the way you like it</span></div>
+            <div class="buttoncontainer"><a href="gallery" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
           </div>
           <img alt="" src="images/slideshow/7.png" width="1800" height="800" />
         </div>
         <div class="item">
           <div class="details">
-            {{-- <div class="title"><span>Absolute Waterfront Luxury</span></div>
-            <div class="buttoncontainer"><a href="about.html" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div> --}}
+            <div class="title"><span>For the Vegetarian in you</span></div>
+            <div class="buttoncontainer"><a href="gallery" class="button"><span data-hover="Explore The Hotel">Explore The Hotel</span></a></div>
           </div>
           <img alt="" src="images/slideshow/8.png" width="1800" height="800" />
         </div>

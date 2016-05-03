@@ -25,7 +25,7 @@ class HallEditController extends Controller
   {
 
     $halldetails = HallDetails::all();
-    return view("events/HallDetails")->with("halldata", $halldetails);
+    return view("events/hallDetails")->with("halldata", $halldetails);
   }
 
 
