@@ -15,8 +15,10 @@
       <a href="dashboard" class="logo"><img alt="" src="/images/logoadmin.png" /></a>
       <nav>
         <ul>
-          <li>{{ Html::link('http://localhost/phpmyadmin', 'phpMyAdmin') }}</li>
+          <li>{{ Html::link('http://www.douknow.asia/phpmyadmin', 'phpMyAdmin') }}</li>
           <li>{{ Html::link('home', 'Back to Website') }}</li>
+          <li>{{ Html::link('logout', 'Logout') }}</li>
+
         </ul>
         <a id="pull"><i class="fa fa-bars"></i></a>
       </nav>
