@@ -583,6 +583,37 @@ Route::post('/reviewform', [
   Route::post('apply/upload1', 'event_halluploadController@eventuploadImg1');
   Route::post('apply/upload2', 'event_halluploadController@eventuploadImg2');
 
+
+  //Edit Email
+  Route::get('userEmailChange', [
+    'uses' => '\App\Http\Controllers\UserController@userEmailChangeForm',
+    'as' => 'userEmailChange',
+  ]);
+
+  Route::post('/userEmailChange', [
+    'uses' => '\App\Http\Controllers\UserController@userEmailChange',
+  ]);
+
+  //Edit Password
+  Route::get('/userPasswordChange', [
+    'uses' => '\App\Http\Controllers\UserController@userPasswordChangeForm',
+    'as' => 'userpasswordChange',
+  ]);
+
+  Route::post('/userPasswordChange', [
+    'uses' => '\App\Http\Controllers\UserController@userPasswordChange',
+  ]);
+
+  //Edit Profile
+  Route::get('/userProfileChange/{id}', [
+    'uses' => '\App\Http\Controllers\UserController@userProfileChangeForm',
+    'as' => 'userProfileChange',
+  ]);
+
+  Route::post('/userProfileChange', [
+    'uses' => '\App\Http\Controllers\UserController@userProfileChange',
+  ]);
+
 /*
 |--------------------------------------------------------------------------
 | Specials Control Routes
@@ -1016,35 +1047,6 @@ Route::post('/reviewform', [
     'as' => 'adminuserdel',
   ]);
 
-  //Edit Email
-  Route::get('userEmailChange', [
-    'uses' => '\App\Http\Controllers\UserController@userEmailChangeForm',
-    'as' => 'userEmailChange',
-  ]);
-
-  Route::post('/userEmailChange', [
-    'uses' => '\App\Http\Controllers\UserController@userEmailChange',
-  ]);
-
-  //Edit Password
-  Route::get('/userPasswordChange', [
-    'uses' => '\App\Http\Controllers\UserController@userPasswordChangeForm',
-    'as' => 'userpasswordChange',
-  ]);
-
-  Route::post('/userPasswordChange', [
-    'uses' => '\App\Http\Controllers\UserController@userPasswordChange',
-  ]);
-
-  //Edit Profile
-  Route::get('/userProfileChange/{id}', [
-    'uses' => '\App\Http\Controllers\UserController@userProfileChangeForm',
-    'as' => 'userProfileChange',
-  ]);
-
-  Route::post('/userProfileChange', [
-    'uses' => '\App\Http\Controllers\UserController@userProfileChange',
-  ]);
 
 /*
 |--------------------------------------------------------------------------
