@@ -14,8 +14,15 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
 use Laracasts\FlashServiceProvider;
 use Illuminate\Support\Facades\Redirect;
-
 use View;
+
+
+/*
+*
+*
+This controller is responsible for the email management of the system.
+It has an inbox, sent message and compose messae functions. 
+*/
 
 class ContactController extends Controller
 {

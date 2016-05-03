@@ -24,6 +24,13 @@ use Illuminate\Support\Facades\Input;
 use App\Models\Wedreservation;
 use Illuminate\Support\Facades\Mail;
 
+/*
+*
+*
+This controller is responsible for the management of wedding hall reservations by the
+administrator. Admin can send email to the customer and allocate wedding planner and send notifications
+*/
+
 class LostFoundController extends Controller
 {
 

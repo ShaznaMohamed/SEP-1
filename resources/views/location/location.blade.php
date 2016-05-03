@@ -36,7 +36,7 @@
 		<!-- Check Rates Banner | START -->
 		<div id="check">
 			<div class="centre">
-				<form action="contact.php" method="post">
+				<form action="{{route('checkA')}}" method="get">
 					<div class="field calendar"><input name="arrival" type="text" placeholder="Arrival" id="arrival" readonly /><i class="fa fa-calendar-o"></i></div>
 					<div class="field calendar"><input name="departure" type="text" placeholder="Departure" id="departure" readonly /><i class="fa fa-calendar-o"></i></div>
 					<div class="field select">

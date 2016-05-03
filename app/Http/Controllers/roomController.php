@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use DB;
 
+/*
+*
+*
+This controller is responsible for the updating of the room services of the system such as
+room prices and services.
+*/
+
 class roomController extends Controller
 {
 
@@ -22,7 +29,6 @@ class roomController extends Controller
     public function posttest()
     {
         return view('rommconfirmsub');
-
     }
 
     public function insertdataa(Request $request)

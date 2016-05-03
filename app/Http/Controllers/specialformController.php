@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\Input;
 
 use DB;
 
+/*
+*
+*
+This controller is responsible for the management of specials for the  halls of the webiste.
+It can manipulate the data of the special offers such as prices and other basic details.
+*/
+
 class specialformController extends Controller
 {
 

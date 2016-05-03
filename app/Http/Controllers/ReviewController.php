@@ -7,6 +7,13 @@ use App\Models\Testimonials;
 use View;
 use Session;
 
+/*
+*
+*
+This controller is responsible for the managemet of the reviews done by the users.
+Administrators can only hide the reviews but not delete them.
+*/
+
 class ReviewController extends Controller
 {
   public function showReviewsAll()

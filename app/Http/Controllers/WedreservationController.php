@@ -18,6 +18,12 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use DB;
 
 
+/*
+*
+*
+This controller is responsible for the management wedding hall reservation request submission the webiste.
+It can manipulate sending email regarding the request submission confirmation to the customer
+*/
 class WedreservationController extends  Controller
 {
     public function getdata()

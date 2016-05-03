@@ -16,6 +16,12 @@ use View;
 use Auth;
 use Session;
 
+/*
+*
+*
+This controller is responsible for the management of users in the system.
+Administrators can view the users and add new users to the system.
+*/
 
 class UserController extends Controller{
 

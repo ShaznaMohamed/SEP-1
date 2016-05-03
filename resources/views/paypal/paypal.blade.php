@@ -61,8 +61,8 @@
 
                 <input type="hidden" name="business" value="chamalsilva321-facilitator@gmail.com">
 
-								<input type="hidden" name="return" value="http://localhost:8000/paycomplete">
-								<input type="hidden" name="cancel_return" value="http://localhost:8000/paypal">
+								<input type="hidden" name="return" value="http://www.douknow.asia/paycomplete">
+								<input type="hidden" name="cancel_return" value="http://www.douknow.asia/paypal">
 
                 <input type="hidden" name="item_name_1" value="{{$type}}">
 

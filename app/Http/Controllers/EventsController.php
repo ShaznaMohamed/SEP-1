@@ -13,12 +13,19 @@ use Illuminate\Support\Facades\Redirect;
 use View;
 use Session;
 use Auth;
-
 use Illuminate\Http\Request;
 use App\Models\Event;
 use Illuminate\Support\Facades\Mail;
 use DB;
 use Illuminate\Support\Facades\Input;
+
+
+/*
+*
+*
+Events Controller manages the reservations of meetings and events.
+It inserts data to the events table for future reference.
+*/
 
 class EventsController extends Controller
 {

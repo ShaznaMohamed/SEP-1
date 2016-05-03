@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Redirect;
 use View;
 use Session;
 use DB;
-
 use App\Models\breakfast;
 use App\Models\lunch;
 use App\Models\dinner;

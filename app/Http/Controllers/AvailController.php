@@ -7,6 +7,14 @@ use App\Models\packageModel;
 use DB;
 use App\Http\Controllers\Controller;
 
+
+/*
+*
+*
+This controller is responsible for showing the available rooms in the hotel.
+It makes a new view the results of the search query.
+*/
+
 class AvailController extends Controller
 {
 
@@ -19,17 +27,7 @@ class AvailController extends Controller
         ]);
 
         session(['checker' => '1']);
-        //$users = DB::table('room')->paginate(1);
-        //return view('displayckeckAvail', ['users' => $users]);
         return view('displayckeckAvail');
-
-/*
-            return redirect()
-            ->route('check')
-            ->with('info', 'You have added a new package !' );
-
-*/
-
     }
 
     public function check()

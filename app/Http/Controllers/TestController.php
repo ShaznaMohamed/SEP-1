@@ -9,6 +9,13 @@ use Session;
 use Auth;
 use View;
 
+/*
+*
+*
+This controller is responsible for blog post management. Users can edit, reply or leave comment
+to the blog post using this function.
+*/
+
 class TestController extends Controller
 {
 

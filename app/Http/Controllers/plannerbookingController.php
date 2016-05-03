@@ -7,7 +7,12 @@ use App\Models\plannerbooking;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+/*
+*
+*
+This controller is responsible for the management of weding planners for the wedding hall reservation of the webiste.
+It isused for submitting planner equests for wedding hall reservation.
+*/
 class plannerbookingController extends Controller
 {
     public function getdataa()

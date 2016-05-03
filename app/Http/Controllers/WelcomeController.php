@@ -4,6 +4,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 
+/*
+*
+*
+This Controller is responsible for Advanced search. ALl the queries for the all the combination of then
+advanced search parameters are done here. 
+*/
+
 class WelcomeController extends Controller
 {
 

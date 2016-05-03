@@ -8,6 +8,14 @@ use App\Models\UserAdmin;
 use View;
 use Session;
 
+
+/*
+*
+*
+This controller is responsible for the management of FAQ sections of the website.
+Administrators can add new FAQs and edit or delete the existing FAQs. 
+*/
+
 class FaqController extends Controller
 {
   /*

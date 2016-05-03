@@ -15,7 +15,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Redirect;
 use View;
 use Session;
-
 use App\Models\breakfast;
 use App\Models\lunch;
 use App\Models\dinner;
@@ -23,6 +22,13 @@ use App\Models\nonalcoholic;
 use App\Models\coffee;
 use App\Models\alcoholic;
 
+
+/*
+*
+*
+This controller manages the menu items in the restaurant menu pages.
+It can add update or delete the menu items.
+*/
 
 class MenuEditController extends Controller
 {

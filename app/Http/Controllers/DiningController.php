@@ -12,12 +12,19 @@ use Illuminate\Support\Facades\Redirect;
 use View;
 use Session;
 use Auth;
-
 use Illuminate\Http\Request;
 use App\Models\Dining;
 use Illuminate\Support\Facades\Mail;
 use DB;
 use Illuminate\Support\Facades\Input;
+
+
+/*
+*
+*
+This controller is responsible for the management of reservations related to
+the restaurant.
+*/
 
 class DiningController extends Controller
 {
@@ -25,12 +32,10 @@ class DiningController extends Controller
     public function index()
     {
         return view('dining/dining');
-
     }
 
     public function getEvents()
     {
-        //return view('dining/dining');
         if(Auth::user())
         {
           return view::make('dining/dining', [
@@ -47,7 +52,6 @@ class DiningController extends Controller
           $dining = Dining::all();
 
           return view('dining/diningmanage', ['dining' => $dining]);
-
     }
 
     public function dinningdel($id){
@@ -69,23 +73,7 @@ class DiningController extends Controller
 
         ]);
 
-        // $arr_date = $request->input('arrival_date');
-        // $date =	DB::table('dining')->where('arrival_date', '=', $arr_date)->get();
-        //
          $type = "Dining";
-        //
-        // if(count($date>0)){
-        //
-        //   echo "<script> alert('asas'); </script>";
-        //
-        //   return redirect()
-        //       ->route('dining')
-        //
-        //
-        // }
-        // else {
-
-
 
         Dining::create([
             'title' => $request->input('title'),
@@ -105,12 +93,8 @@ class DiningController extends Controller
             $message->to(Input::get('email'), Input::get('first_name'))->subject('Thank you for registering with Amalya Reach.')->setbody('Hi,  We will get back to you soon.');
         });
 
-
         return redirect()
             ->route('restaurant')
             ->with('info', 'Reservation was succesful, Thank you.');
           }
-    // }
-
-
-}
+    }

@@ -13,6 +13,12 @@ use Laracasts\FlashServiceProvider;
 use Illuminate\Support\Facades\Redirect;
 use View;
 
+/*
+*
+*
+This controller is responsible for the management Administrators in the system.
+Administrator information manipulation is done through add, edit and delete.
+*/
 class AdminUsers extends Controller
 {
   public function getAdminList()

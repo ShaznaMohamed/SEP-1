@@ -15,9 +15,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Redirect;
 use View;
 use Session;
-
 use App\Models\HallDetails;
 
+/*
+*
+*
+This controller is responsible for the management event halls of the webiste.
+It can manipulate the data of the halls such as prices and other basic details.
+*/
 
 class HallEditController extends Controller
 {

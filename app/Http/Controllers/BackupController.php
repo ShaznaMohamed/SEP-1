@@ -6,6 +6,15 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Artisan;
 
+
+/*
+*
+*
+Backup Controller manages the taking of backups in the system.
+There are two types of backups as Application backup and Database backup.
+Also the controller schedules backups using cron jobs in the server.
+*/
+
 class BackupController extends Controller
 {
     public function index()

@@ -7,18 +7,12 @@ use Illuminate\Http\Request;
 
 class HallController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     *
-     */
 
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
+  /*
+  *
+  *
+  This controllers returns a view of the hall details page.
+  */
     public function index()
     {
         return view('events/hallDetails');

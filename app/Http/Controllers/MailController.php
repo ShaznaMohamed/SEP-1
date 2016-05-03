@@ -16,6 +16,15 @@ use Laracasts\FlashServiceProvider;
 use Illuminate\Support\Facades\Redirect;
 use View;
 
+
+/*
+*
+*
+This controller is responsible for the management emails in and out of the system.
+Users can send mails to the Administrator using the contact us page and the Administrators
+can view them and reply to them accordingly. Or else then can compoe or view sent messages.
+*/
+
 class MailController extends Controller
 {
   public function index()

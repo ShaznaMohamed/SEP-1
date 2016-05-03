@@ -14,6 +14,12 @@ use Illuminate\Redis\Database;
 
 use DB;
 
+/*
+*
+*
+This controller is responsible for the management of wedding services of the wedding halls.
+It can manipulate the data of the services and charges.
+*/
 class weddingservicesController extends Controller
 {
   public function getdataa()

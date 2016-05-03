@@ -8,7 +8,13 @@ use App\Models\Roomreservation;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
-
+/*
+*
+*
+This controller is responsible for calculatibg totlal price for the room when the parameters such as
+numer of rooms, adulst or children and othe room facilities and then directs the user in to the payment page.
+Insertion of reservations data is done here.
+*/
 class RoomreservationController extends Controller
 {
     public function getdataa()

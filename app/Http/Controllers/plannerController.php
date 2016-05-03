@@ -7,6 +7,12 @@ use App\Models\planner;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+/*
+*
+*
+This controller is responsible for the management of wedding hall planners of the webiste.
+It can manipulate the data of the planners such as timetable and other basic details.
+*/
 
 class plannerController extends Controller
 {

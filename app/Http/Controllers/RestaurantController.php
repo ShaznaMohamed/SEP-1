@@ -10,6 +10,13 @@ use App\Models\nonalcoholic;
 use App\Models\coffee;
 use App\Models\alcoholic;
 
+/*
+*
+*
+This controller is responsible for the populating of menu items in the restaurant view
+after taking them from the databse.
+*/
+
 class RestaurantController extends Controller
 {
     public function getMenu()

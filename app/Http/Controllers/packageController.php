@@ -7,6 +7,14 @@ use App\Models\packageModel;
 use DB;
 use App\Http\Controllers\Controller;
 
+
+/*
+*
+*
+This controller is responsible for the updating of the special packages of the system such as
+discounts and promos.
+*/
+
 class packageController extends Controller
 {
     public function editPackages()

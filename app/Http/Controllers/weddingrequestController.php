@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\weddingrequests;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
+/*
+*
+*
+This controller is responsible for the reservation of wedding halls the webiste.
+It can manipulate sending reservation requests.
+*/
 
 class weddingrequestController extends Controller
 {
@@ -32,14 +38,9 @@ class weddingrequestController extends Controller
                 'eventtype' => 'required',
                 'halltype' => 'required',
                 'eventdate' => 'required',
-
                 'sessionn' => 'required',
                 'pax' => 'required|numeric',
-
                 'noofrooms' => 'required|numeric',
-
-
-
                 'firstname' => 'required|string',
                 'lastname' => 'required|string',
                 'email' => 'required|email',
@@ -48,11 +49,7 @@ class weddingrequestController extends Controller
 
             'required' => 'The :attribute field is required.'
            ]
-
-
-
-
-        );
+      );
 
 
         $status = "unconfirmed";
@@ -77,9 +74,6 @@ class weddingrequestController extends Controller
             'message' => $request->input('message'),
 
             'status' => $status
-
-
-
         ]);
 
 

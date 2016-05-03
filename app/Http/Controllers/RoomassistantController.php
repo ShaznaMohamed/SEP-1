@@ -14,6 +14,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
+/*
+*
+*
+This controller is responsible for the management of room assistant for room reservation of the webiste.
+It can manipulate the data of the room assistant and assigning room assistants for relavent room reservatoina
+and send notification emails.
+*/
 class RoomassistantController extends Controller
 {
     public function assignroomassistant()
