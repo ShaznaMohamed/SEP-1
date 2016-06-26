@@ -74,9 +74,9 @@
                 <!--Start of retrieved services showings-->
                 <?php $tabledata = DB::table('weddingservices')->where('halltype', 'grand')->get(); ?>
                 <table>
-                    <?php
-                    foreach($tabledata as $row)
-                    ?>
+
+                    @foreach($tabledata as $row)
+
                     <tr>
                         <th>Services</th>
                         <th>Charges</th>
@@ -122,6 +122,7 @@
                         <td><?php echo $row->cutlery; ?></td>
 
                     </tr>
+                    @endforeach
                 </table>
                 <!--end of retrieved sevices showing-->
 

@@ -121,17 +121,19 @@
         <div class="box">
           <i class="fa fa-trophy"></i>
           <h3>Rated #1 on TripAdvisor</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.</p>
+          <p>
+            Corpus Amalya Reach: Dance on the river. Run in the surf. Make a splash in tropically sunny Amalya Reach, Homagama! There are miles of rivers for fishing, boating and floating. Attractions are waiting to be explored and our conveniently located hotels and condos are just minutes from everything including art festivals and sporting events. Amalya Reach is an attractive location for the whole family!</p>
         </div>
         <div class="box">
           <i class="fa fa-cutlery"></i>
           <h3>Award-Winning Restaurant</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.</p>
+          <p>It’s the attention to every last detail that puts Amalya head and shoulders above the competition. Which other restaurant would designits Amalya chefs’ aprons, Homagama, from high-tech fabrics that are dirt and water repellent so they require less washing? And how many restaurants save the leftover filtered water for the staff to drink as well as have their wine, all of which is organic or biodynamic, delivered by bicycle?</p>
         </div>
         <div class="box">
           <i class="fa fa-user"></i>
           <h3>24 Hour Concierge Service</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.</p>
+          <p>
+            Your Amalya does many things to make your busy life easier, including helping you feel secure at home. Even though Amalya Reach has secured access entry, your reach is also at the front desk at all times to monitor entry to the complex. At Amalya Reach, we ensure our residents always have what they need when they need it. This means there is someone onsite at all times of the day, every day, providing top-notch concierge services.</p>
         </div>
       </section>
       <!-- USP Boxes | END -->

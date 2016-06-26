@@ -30,6 +30,7 @@
             var people = child + noofadult ;
             //var price = document.getElementById("priceh").value;
             var price = {{$resultSet->price}};
+            //var price = 8900;
                 price = parseInt(price);
             var total = noofrooms * people * price ;
             //alert(pp);

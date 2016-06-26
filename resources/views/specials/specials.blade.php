@@ -134,7 +134,7 @@ $specialData = DB::table('packages')->orderBy('id','desc')->first();
                     <span>{{$type}}</span></h2>
                     <p>{{$specialData->descript}}</p>
                     <p><b>Valide from {{$specialData->start_date}} to {{$specialData->end_date}} </b></p>
-                    <a href="contact.php" class="button"><span data-hover="Book Special">Book Special</span></a>
+                    <a href="#" class="button"><span data-hover="Book Special">Book Special</span></a>
                     <p class="terms"><strong>Terms & Conditions:</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel.</p>
                 </div>
             </div>
